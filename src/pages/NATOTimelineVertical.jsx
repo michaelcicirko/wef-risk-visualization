@@ -43,42 +43,45 @@ const PAUSE_DURATION = 1000;
 const BASE_YEAR_DURATION = 1500;
 const TOTAL_DURATION = Math.ceil(currentTime);
 const VISIBLE_COUNT = 5; // Number of visible members in the feed
-const MEMBER_REVEAL_DELAY = 400; // ms between each member reveal
+const MEMBER_REVEAL_DELAY = 200; // ms between each member reveal (founding members)
 
 function NATOTimelineVertical() {
   const [year, setYear] = useState(YEAR_START);
   const [isPlaying, setIsPlaying] = useState(true);
+  const yearRef = useRef(YEAR_START); // Track year in ref to avoid effect restart
   const [visibleMembers, setVisibleMembers] = useState(() => {
     // Start with just Belgium (first founding member alphabetically)
     const belgium = natoMembers.find(m => m.country === 'Belgium');
     return belgium ? [belgium] : [];
   });
   const [animationPhase, setAnimationPhase] = useState('revealing-founders'); // 'revealing-founders' | 'year-advance' | 'revealing-year-members'
-  const [foundingRevealedCount, setFoundingRevealedCount] = useState(1); // Belgium is already showing
-  const [yearRevealedCount, setYearRevealedCount] = useState(0); // Members revealed for current join year
   const [currentYearMembers, setCurrentYearMembers] = useState([]); // Members to reveal for current year
   const listRef = useRef(null);
   const lastProcessedYear = useRef(YEAR_START);
   const isFirstMemberOfYear = useRef(true); // Track if first member of current year
+  
+  // Use refs for counters to prevent useEffect from restarting
+  const foundingRevealedCountRef = useRef(1); // Belgium already showing (index 1)
+  const yearRevealedCountRef = useRef(0); // Members revealed for current join year
   
   // Get founding members sorted alphabetically
   const foundingMembers = useMemo(() => {
     return natoMembers.filter(m => m.founding).sort((a, b) => a.country.localeCompare(b.country));
   }, []);
   
-  // State machine animation loop
+  // State machine animation loop - using refs for counters and year to prevent restarts
   useEffect(() => {
     if (!isPlaying) return;
     
     let timeoutId;
     
     const runAnimation = () => {
-      const currentYearInt = Math.floor(year);
+      const currentYearInt = Math.floor(yearRef.current);
       
       if (animationPhase === 'revealing-founders') {
         // Reveal founding members one by one while holding at 1949
-        if (foundingRevealedCount < foundingMembers.length) {
-          const nextMember = foundingMembers[foundingRevealedCount];
+        if (foundingRevealedCountRef.current < foundingMembers.length) {
+          const nextMember = foundingMembers[foundingRevealedCountRef.current];
           setVisibleMembers(prev => {
             if (prev.find(m => m.id === nextMember.id)) return prev;
             return [...prev, nextMember].sort((a, b) => {
@@ -86,7 +89,7 @@ function NATOTimelineVertical() {
               return a.country.localeCompare(b.country);
             });
           });
-          setFoundingRevealedCount(foundingRevealedCount + 1);
+          foundingRevealedCountRef.current += 1;
           timeoutId = setTimeout(runAnimation, MEMBER_REVEAL_DELAY);
         } else {
           // All founding members revealed - start year countdown
@@ -111,6 +114,7 @@ function NATOTimelineVertical() {
           setCurrentYearMembers(nextYearMembers);
           
           // BATCH: Update year AND first member in same render cycle
+          yearRef.current = nextYear;
           setYear(nextYear);
           const firstMember = nextYearMembers[0];
           setVisibleMembers(prev => {
@@ -123,21 +127,35 @@ function NATOTimelineVertical() {
           
           if (nextYearMembers.length > 1) {
             // More members to reveal - switch to reveal phase
-            setYearRevealedCount(1); // First member already added
+            yearRevealedCountRef.current = 1; // First member already added
             setAnimationPhase('revealing-year-members');
             timeoutId = setTimeout(runAnimation, MEMBER_REVEAL_DELAY);
           } else {
-            // Only one member - continue advancing after brief pause
+            // Only one member - continue advancing after brief pause (200ms)
             timeoutId = setTimeout(() => {
               runAnimation();
-            }, 250);
+            }, 200);
           }
         } else {
-          // No members next year - just advance year quickly
+          // No members next year - advance year quickly
+          // Check gap to next join year for speed multiplier
+          const nextJoinYear = JOIN_YEARS.find(y => y > nextYear);
+          const gapToNextJoin = nextJoinYear ? nextJoinYear - nextYear : 0;
           const isGapYear = !JOIN_YEARS.includes(nextYear);
-          const delay = isGapYear ? 150 : 250;
           
+          // Speed: 400ms normal, 100ms for big gaps (>3 years to next join)
+          let delay;
+          if (gapToNextJoin > 3) {
+            delay = 100; // Fast for big gaps
+          } else if (isGapYear) {
+            delay = 400; // Normal speed for gaps
+          } else {
+            delay = 400; // Normal speed for years leading to joins
+          }
+          
+          console.log(`Year ${currentYearInt} → ${nextYear}, delay: ${delay}ms, gap: ${gapToNextJoin}`);
           timeoutId = setTimeout(() => {
+            yearRef.current = nextYear;
             setYear(nextYear);
             runAnimation();
           }, delay);
@@ -145,8 +163,8 @@ function NATOTimelineVertical() {
         
       } else if (animationPhase === 'revealing-year-members') {
         // Reveal remaining members for current year (index 0 already added with year)
-        if (yearRevealedCount < currentYearMembers.length) {
-          const nextMember = currentYearMembers[yearRevealedCount];
+        if (yearRevealedCountRef.current < currentYearMembers.length) {
+          const nextMember = currentYearMembers[yearRevealedCountRef.current];
           setVisibleMembers(prev => {
             if (prev.find(m => m.id === nextMember.id)) return prev;
             return [...prev, nextMember].sort((a, b) => {
@@ -154,13 +172,13 @@ function NATOTimelineVertical() {
               return a.country.localeCompare(b.country);
             });
           });
-          setYearRevealedCount(yearRevealedCount + 1);
+          yearRevealedCountRef.current += 1;
           // Schedule next member with delay
           timeoutId = setTimeout(runAnimation, MEMBER_REVEAL_DELAY);
         } else {
-          // All members revealed - resume year advance
+          // All members revealed - resume year advance (200ms)
           setAnimationPhase('year-advance');
-          timeoutId = setTimeout(runAnimation, 250);
+          timeoutId = setTimeout(runAnimation, 200);
         }
       }
     };
@@ -169,14 +187,15 @@ function NATOTimelineVertical() {
     timeoutId = setTimeout(runAnimation, PAUSE_DURATION);
     
     return () => clearTimeout(timeoutId);
-  }, [isPlaying, animationPhase, foundingRevealedCount, year, foundingMembers, currentYearMembers, yearRevealedCount]);
+  }, [isPlaying, animationPhase, foundingMembers, currentYearMembers]);
   
   const handleReplay = useCallback(() => {
     setYear(YEAR_START);
+    yearRef.current = YEAR_START;
     const belgium = natoMembers.find(m => m.country === 'Belgium');
     setVisibleMembers(belgium ? [belgium] : []);
-    setFoundingRevealedCount(1);
-    setYearRevealedCount(0);
+    foundingRevealedCountRef.current = 1;
+    yearRevealedCountRef.current = 0;
     setCurrentYearMembers([]);
     setAnimationPhase('revealing-founders');
     lastProcessedYear.current = YEAR_START;
