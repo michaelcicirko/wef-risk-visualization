@@ -16,7 +16,7 @@ export function TimelineSlider({ year, onYearChange }) {
   return (
     <div className={styles.container}>
       <div className={styles.yearDisplay}>
-        <span className={styles.yearLabel}>{formatYearLabel(year)}</span>
+        <span className={styles.yearLabel}>{formatYearLabel(Math.round(year))}</span>
       </div>
       
       <div className={styles.sliderWrapper}>

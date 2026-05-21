@@ -14,10 +14,13 @@ import styles from './D3Chart.module.css';
 export function D3Chart({ data }) {
   const svgRef = useRef(null);
   
-  // Chart dimensions
-  const margin = { top: 20, right: 300, bottom: 20, left: 40 };
-  const width = 800 - margin.left - margin.right;
-  const height = 500 - margin.top - margin.bottom;
+  // Chart dimensions - dynamic based on data
+  const margin = { top: 20, right: 40, bottom: 20, left: 40 };
+  const width = 600 - margin.left - margin.right;
+  const barHeight = 42; // Height per bar (slightly smaller to fit)
+  const barGap = 6; // Gap between bars
+  const totalBars = data?.length || 10;
+  const height = (totalBars * barHeight) + ((totalBars - 1) * barGap) + 20; // +20 for safety padding
   
   useEffect(() => {
     if (!data || data.length === 0) return;
@@ -52,7 +55,8 @@ export function D3Chart({ data }) {
     const yScale = scaleBand()
       .domain(data.map(d => d.displayRank))
       .range([0, height])
-      .padding(0.1);
+      .paddingInner(barGap / barHeight)
+      .paddingOuter(0);
     
     // DATA JOIN: Bars with object constancy via key function (d.id)
     const bars = g.select('.bars')
@@ -64,7 +68,7 @@ export function D3Chart({ data }) {
       .append('rect')
       .attr('class', 'bar')
       .attr('x', 0)
-      .attr('height', yScale.bandwidth())
+      .attr('height', barHeight)
       .attr('rx', 4) // Rounded corners
       .attr('y', d => yScale(d.displayRank))
       .attr('width', barWidth)
@@ -94,14 +98,14 @@ export function D3Chart({ data }) {
       .attr('text-anchor', 'end')
       .attr('dominant-baseline', 'middle')
       .attr('x', -10)
-      .attr('y', d => yScale(d.displayRank) + yScale.bandwidth() / 2)
+      .attr('y', d => yScale(d.displayRank) + barHeight / 2)
       .text(d => d.displayRank)
       .attr('opacity', 0);
     
     const ranksUpdate = ranksEnter.merge(ranks);
     ranksUpdate
       .transition().duration(300).ease(easeCubicOut)
-      .attr('y', d => yScale(d.displayRank) + yScale.bandwidth() / 2)
+      .attr('y', d => yScale(d.displayRank) + barHeight / 2)
       .text(d => d.displayRank)
       .attr('opacity', 1);
     
@@ -117,7 +121,7 @@ export function D3Chart({ data }) {
       .attr('class', 'label')
       .attr('dominant-baseline', 'middle')
       .attr('x', 10)
-      .attr('y', d => yScale(d.displayRank) + yScale.bandwidth() / 2)
+      .attr('y', d => yScale(d.displayRank) + barHeight / 2)
       .text(d => d.title)
       .attr('fill', 'white')
       .attr('opacity', 0);
@@ -125,7 +129,7 @@ export function D3Chart({ data }) {
     const labelsUpdate = labelsEnter.merge(labels);
     labelsUpdate
       .transition().duration(300).ease(easeCubicOut)
-      .attr('y', d => yScale(d.displayRank) + yScale.bandwidth() / 2)
+      .attr('y', d => yScale(d.displayRank) + barHeight / 2)
       .text(d => d.title)
       .attr('opacity', 1);
     

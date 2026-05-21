@@ -1,16 +1,50 @@
-import { useState } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { D3Chart } from './components/D3Chart.jsx';
 import { TimelineSlider } from './components/TimelineSlider.jsx';
 import { useInterpolatedData } from './hooks/useInterpolatedData.js';
-import { categoryColors, YEAR_MIN } from './data/risks.js';
+import { categoryColors, YEAR_MIN, YEAR_MAX } from './data/risks.js';
 import styles from './App.module.css';
 
 function App() {
   // Start at 2026 (current rankings)
   const [year, setYear] = useState(YEAR_MIN);
+  const [isPlaying, setIsPlaying] = useState(true);
   
   // Get interpolated data based on current year
   const data = useInterpolatedData(year);
+  
+  // Auto-play animation: 10 seconds total from 2026 to 2036
+  useEffect(() => {
+    if (!isPlaying) return;
+    
+    const totalDuration = 10000; // 10 seconds in ms
+    const startTime = Date.now();
+    const yearRange = YEAR_MAX - YEAR_MIN;
+    
+    const animate = () => {
+      const elapsed = Date.now() - startTime;
+      const progress = Math.min(elapsed / totalDuration, 1);
+      
+      // Calculate current year based on progress
+      const currentYear = YEAR_MIN + (yearRange * progress);
+      setYear(currentYear);
+      
+      if (progress < 1) {
+        requestAnimationFrame(animate);
+      } else {
+        // Animation complete, pause at end
+        setIsPlaying(false);
+      }
+    };
+    
+    const animationId = requestAnimationFrame(animate);
+    return () => cancelAnimationFrame(animationId);
+  }, [isPlaying]);
+  
+  const handleReplay = useCallback(() => {
+    setYear(YEAR_MIN);
+    setIsPlaying(true);
+  }, []);
   
   return (
     <div className={styles.app}>
@@ -22,9 +56,6 @@ function App() {
       </header>
       
       <main className={styles.main}>
-        <D3Chart data={data} />
-        <TimelineSlider year={year} onYearChange={setYear} />
-        
         <div className={styles.legend}>
           <h3 className={styles.legendTitle}>Risk Categories</h3>
           <div className={styles.legendItems}>
@@ -40,6 +71,24 @@ function App() {
               </div>
             ))}
           </div>
+        </div>
+        
+        <div className={styles.chartWrapper}>
+          <D3Chart data={data} />
+          <div className={styles.yearDisplay}>
+            <span className={styles.yearNumber}>{Math.round(year)}</span>
+          </div>
+        </div>
+        <TimelineSlider year={year} onYearChange={setYear} />
+        
+        <div className={styles.controls}>
+          <button 
+            className={styles.replayButton}
+            onClick={handleReplay}
+            disabled={isPlaying}
+          >
+            {isPlaying ? 'Playing...' : 'Replay Animation'}
+          </button>
         </div>
         
         <footer className={styles.footer}>
