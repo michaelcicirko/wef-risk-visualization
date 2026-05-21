@@ -1,0 +1,45 @@
+/* World Economic Forum Risk Category Colors */
+
+:root {
+  /* Category Colors */
+  --color-geopolitical: #e67e22;
+  --color-societal: #e74c3c;
+  --color-environmental: #27ae60;
+  --color-technological: #8e44ad;
+  --color-economic: #3498db;
+
+  /* Text Colors */
+  --text-primary: #333333;
+  --text-secondary: #666666;
+  --text-white: #ffffff;
+
+  /* Background */
+  --bg-page: #f5f5f5;
+  --bg-chart: #ffffff;
+}
+
+/* Category Classes */
+.geopolitical {
+  background-color: var(--color-geopolitical);
+  fill: var(--color-geopolitical);
+}
+
+.societal {
+  background-color: var(--color-societal);
+  fill: var(--color-societal);
+}
+
+.environmental {
+  background-color: var(--color-environmental);
+  fill: var(--color-environmental);
+}
+
+.technological {
+  background-color: var(--color-technological);
+  fill: var(--color-technological);
+}
+
+.economic {
+  background-color: var(--color-economic);
+  fill: var(--color-economic);
+}

@@ -1,0 +1,25 @@
+{
+  "name": "wef-risk-visualization",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "typescript": "~6.0.2",
+    "vite": "^8.0.12"
+  },
+  "dependencies": {
+    "d3-array": "^3.2.4",
+    "d3-ease": "^3.0.1",
+    "d3-interpolate": "^3.0.1",
+    "d3-scale": "^4.0.2",
+    "d3-selection": "^3.0.0",
+    "d3-transition": "^3.0.1",
+    "react": "^19.2.6",
+    "react-dom": "^19.2.6"
+  }
+}
