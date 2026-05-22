@@ -23,6 +23,20 @@ function Dashboard() {
       description: 'Animated vertical feed showing NATO expansion. Scrolling list reveals members as years progress, with large year display fixed on the right.',
       thumbnail: '/nato-timeline-vertical-thumb.png',
       path: '/nato-timeline-vertical'
+    },
+    {
+      id: 'nato-timeline-vertical-population',
+      title: 'NATO Timeline — Population View',
+      description: 'Same vertical feed animation with population data displayed under each country name. Shows all 32 NATO members with their current populations.',
+      thumbnail: '/nato-timeline-vertical-population-thumb.png',
+      path: '/nato-timeline-vertical-population'
+    },
+    {
+      id: 'nato-timeline-vertical-population-3',
+      title: 'NATO Timeline — Population View (3 Visible)',
+      description: 'Same population timeline but shows only 3 countries at a time for a more compact vertical feed.',
+      thumbnail: '/nato-timeline-vertical-population-3-thumb.png',
+      path: '/nato-timeline-vertical-population-3'
     }
   ];
 

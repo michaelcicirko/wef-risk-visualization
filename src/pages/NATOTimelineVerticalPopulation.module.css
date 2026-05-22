@@ -1,0 +1,330 @@
+/* NATO Timeline Vertical Page with Population */
+.page {
+  min-height: 100vh;
+  background: white;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* Navigation */
+.nav {
+  padding: 12px 40px;
+  border-bottom: 1px solid #e0e0e0;
+  flex-shrink: 0;
+}
+
+.backLink {
+  font-size: 0.85rem;
+  color: #2c5282;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s;
+}
+
+.backLink:hover {
+  color: #1a365d;
+}
+
+/* Header */
+.header {
+  text-align: center;
+  padding: 16px 20px 12px;
+  flex-shrink: 0;
+}
+
+.title {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #333;
+  margin: 0 0 4px 0;
+}
+
+.subtitle {
+  font-size: 0.85rem;
+  color: #666;
+  margin: 0;
+}
+
+/* Main Content */
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 40px 16px;
+}
+
+/* Content Layout - Centered with year vertically centered */
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 80px;
+  width: 100%;
+  max-width: 900px;
+  min-height: calc(100vh - 180px); /* Fill viewport minus nav/header */
+}
+
+/* Left: Member List Container - clean, no background/border */
+.listContainer {
+  flex-shrink: 0;
+  height: auto;
+  max-height: none;
+  overflow: visible;
+  background: transparent;
+  border: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Member List - clean text list */
+.memberList {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  position: relative;
+}
+
+/* Member Row - with population stacked under country name */
+.memberRow {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 6px 0;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+.flag {
+  font-size: 2.6rem;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+/* Member Info - country name and population stacked */
+.memberInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  flex: 1;
+  min-width: 0;
+}
+
+.countryName {
+  font-size: 2rem;
+  font-weight: 400;
+  color: #333;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1.2;
+}
+
+.population {
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: #888;
+  line-height: 1.2;
+}
+
+.yearJoined {
+  font-size: 1.5rem;
+  color: #888;
+  font-weight: 400;
+  flex-shrink: 0;
+  font-variant-numeric: tabular-nums;
+}
+
+.foundingBadge {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #ff00ff;
+  background: transparent;
+  padding: 0;
+  border-radius: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  flex-shrink: 0;
+}
+
+/* Right: Year Section */
+.yearSection {
+  flex: 0 0 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.yearDisplay {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 8rem;
+  font-weight: 700;
+  color: #333;
+  line-height: 1;
+}
+
+.yearNumber {
+  display: block;
+  transition: color 0.3s ease;
+}
+
+.yearHighlight {
+  color: #ff00ff;
+}
+
+/* Counter */
+.counter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+
+.counterNumber {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #2c5282;
+  line-height: 1;
+}
+
+.counterLabel {
+  font-size: 0.85rem;
+  color: #666;
+  text-transform: lowercase;
+}
+
+/* Controls */
+.controls {
+  display: flex;
+  gap: 12px;
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid #e0e0e0;
+}
+
+.controlButton {
+  background: transparent;
+  color: #2c5282;
+  border: 2px solid #2c5282;
+  padding: 10px 28px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  min-width: 100px;
+}
+
+.controlButton:hover:not(:disabled) {
+  background: #2c5282;
+  color: white;
+}
+
+.controlButton:disabled {
+  border-color: #a0aec0;
+  color: #a0aec0;
+  cursor: not-allowed;
+}
+
+/* Timing Controls */
+.timingControls {
+  margin-top: 20px;
+  margin-bottom: 40px;
+  padding: 16px;
+  background: #f7fafc;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+  width: 100%;
+  max-width: 600px;
+}
+
+.timingGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, auto);
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.timingField {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.timingField label {
+  font-size: 11px;
+  font-weight: 600;
+  color: #4a5568;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+.timingField input {
+  padding: 8px 10px;
+  border: 1px solid #cbd5e0;
+  border-radius: 4px;
+  font-size: 13px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.timingField input:focus {
+  outline: none;
+  border-color: #2c5282;
+  box-shadow: 0 0 0 2px rgba(44, 82, 130, 0.1);
+}
+
+.confirmButton {
+  background: #2c5282;
+  color: white;
+  border: none;
+  padding: 10px 28px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  width: 100%;
+}
+
+.confirmButton:hover {
+  background: #1a365d;
+}
+
+/* Progress Bar */
+.progressContainer {
+  width: 100%;
+  max-width: 600px;
+  height: 4px;
+  background: #e0e0e0;
+  border-radius: 2px;
+  overflow: hidden;
+  margin-top: 20px;
+  flex-shrink: 0;
+}
+
+.progressBar {
+  height: 100%;
+  background: #2c5282;
+  border-radius: 2px;
+  transition: width 0.3s ease;
+}
+
+/* Footer */
+.footer {
+  margin-top: auto;
+  padding: 16px;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.source {
+  font-size: 0.8rem;
+  color: #888;
+  margin: 0;
+}
