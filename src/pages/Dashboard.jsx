@@ -37,6 +37,13 @@ function Dashboard() {
       description: 'Same population timeline but shows only 3 countries at a time for a more compact vertical feed.',
       thumbnail: '/nato-timeline-vertical-population-3-thumb.png',
       path: '/nato-timeline-vertical-population-3'
+    },
+    {
+      id: 'nato-timeline-vertical-population-1',
+      title: 'NATO Timeline — Population View (Single)',
+      description: 'Focus on one country at a time with population data. Clean view with large year counter as the only date reference.',
+      thumbnail: '/nato-timeline-vertical-population-1-thumb.png',
+      path: '/nato-timeline-vertical-population-1'
     }
   ];
 

@@ -5,6 +5,7 @@ import NATOTimelineHorizontal from './pages/NATOTimelineHorizontal.jsx';
 import NATOTimelineVertical from './pages/NATOTimelineVertical.jsx';
 import NATOTimelineVerticalPopulation from './pages/NATOTimelineVerticalPopulation.jsx';
 import NATOTimelineVerticalPopulation3 from './pages/NATOTimelineVerticalPopulation3.jsx';
+import NATOTimelineVerticalPopulation1 from './pages/NATOTimelineVerticalPopulation1.jsx';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path="/nato-timeline-vertical" element={<NATOTimelineVertical />} />
         <Route path="/nato-timeline-vertical-population" element={<NATOTimelineVerticalPopulation />} />
         <Route path="/nato-timeline-vertical-population-3" element={<NATOTimelineVerticalPopulation3 />} />
+        <Route path="/nato-timeline-vertical-population-1" element={<NATOTimelineVerticalPopulation1 />} />
       </Routes>
     </Router>
   );
