@@ -43,7 +43,7 @@ const PAUSE_DURATION = 1000;
 const BASE_YEAR_DURATION = 1500;
 const TOTAL_DURATION = Math.ceil(currentTime);
 const VISIBLE_COUNT = 5; // Number of visible members in the feed
-const MEMBER_REVEAL_DELAY = 200; // ms between each member reveal (founding members)
+const MEMBER_REVEAL_DELAY = 400; // ms between each member reveal (founding members)
 
 function NATOTimelineVertical() {
   const [year, setYear] = useState(YEAR_START);
@@ -63,6 +63,24 @@ function NATOTimelineVertical() {
   // Use refs for counters to prevent useEffect from restarting
   const foundingRevealedCountRef = useRef(1); // Belgium already showing (index 1)
   const yearRevealedCountRef = useRef(0); // Members revealed for current join year
+  
+  // Timing controls - editable via UI
+  const [foundingRevealDelay, setFoundingRevealDelay] = useState(400);
+  const [yearNormalDelay, setYearNormalDelay] = useState(400);
+  const [yearBigGapDelay, setYearBigGapDelay] = useState(200);
+  const [afterMemberRevealDelay, setAfterMemberRevealDelay] = useState(200);
+  const [afterFoundingDelay, setAfterFoundingDelay] = useState(400);
+  const [containerWidth, setContainerWidth] = useState(500);
+  
+  // Input state for timing controls
+  const [timingInputs, setTimingInputs] = useState({
+    foundingRevealDelay: 400,
+    yearNormalDelay: 400,
+    yearBigGapDelay: 200,
+    afterMemberRevealDelay: 200,
+    afterFoundingDelay: 400,
+    containerWidth: 500
+  });
   
   // Get founding members sorted alphabetically
   const foundingMembers = useMemo(() => {
@@ -90,11 +108,11 @@ function NATOTimelineVertical() {
             });
           });
           foundingRevealedCountRef.current += 1;
-          timeoutId = setTimeout(runAnimation, MEMBER_REVEAL_DELAY);
+          timeoutId = setTimeout(runAnimation, foundingRevealDelay);
         } else {
           // All founding members revealed - start year countdown
           setAnimationPhase('year-advance');
-          timeoutId = setTimeout(runAnimation, 500);
+          timeoutId = setTimeout(runAnimation, afterFoundingDelay);
         }
         
       } else if (animationPhase === 'year-advance') {
@@ -129,12 +147,12 @@ function NATOTimelineVertical() {
             // More members to reveal - switch to reveal phase
             yearRevealedCountRef.current = 1; // First member already added
             setAnimationPhase('revealing-year-members');
-            timeoutId = setTimeout(runAnimation, MEMBER_REVEAL_DELAY);
+            timeoutId = setTimeout(runAnimation, foundingRevealDelay);
           } else {
-            // Only one member - continue advancing after brief pause (200ms)
+            // Only one member - continue advancing after brief pause
             timeoutId = setTimeout(() => {
               runAnimation();
-            }, 200);
+            }, afterMemberRevealDelay);
           }
         } else {
           // No members next year - advance year quickly
@@ -143,20 +161,22 @@ function NATOTimelineVertical() {
           const gapToNextJoin = nextJoinYear ? nextJoinYear - nextYear : 0;
           const isGapYear = !JOIN_YEARS.includes(nextYear);
           
-          // Speed: 400ms normal, 100ms for big gaps (>3 years to next join)
+          // Speed: normal year delay, faster for big gaps
           let delay;
           if (gapToNextJoin > 3) {
-            delay = 100; // Fast for big gaps
+            delay = yearBigGapDelay; // Fast for big gaps
           } else if (isGapYear) {
-            delay = 400; // Normal speed for gaps
+            delay = yearNormalDelay; // Normal speed for gaps
           } else {
-            delay = 400; // Normal speed for years leading to joins
+            delay = yearNormalDelay; // Normal speed for years leading to joins
           }
           
-          console.log(`Year ${currentYearInt} → ${nextYear}, delay: ${delay}ms, gap: ${gapToNextJoin}`);
+          // Step 1: Update year (triggers render)
+          yearRef.current = nextYear;
+          setYear(nextYear);
+          
+          // Step 2: Schedule next animation step AFTER delay (allows render)
           timeoutId = setTimeout(() => {
-            yearRef.current = nextYear;
-            setYear(nextYear);
             runAnimation();
           }, delay);
         }
@@ -174,11 +194,11 @@ function NATOTimelineVertical() {
           });
           yearRevealedCountRef.current += 1;
           // Schedule next member with delay
-          timeoutId = setTimeout(runAnimation, MEMBER_REVEAL_DELAY);
+          timeoutId = setTimeout(runAnimation, foundingRevealDelay);
         } else {
-          // All members revealed - resume year advance (200ms)
+          // All members revealed - resume year advance
           setAnimationPhase('year-advance');
-          timeoutId = setTimeout(runAnimation, 200);
+          timeoutId = setTimeout(runAnimation, afterMemberRevealDelay);
         }
       }
     };
@@ -187,7 +207,7 @@ function NATOTimelineVertical() {
     timeoutId = setTimeout(runAnimation, PAUSE_DURATION);
     
     return () => clearTimeout(timeoutId);
-  }, [isPlaying, animationPhase, foundingMembers, currentYearMembers]);
+  }, [isPlaying, animationPhase, foundingMembers, currentYearMembers, foundingRevealDelay, yearNormalDelay, yearBigGapDelay, afterMemberRevealDelay, afterFoundingDelay]);
   
   const handleReplay = useCallback(() => {
     setYear(YEAR_START);
@@ -240,7 +260,7 @@ function NATOTimelineVertical() {
         {/* Content Container */}
         <div className={styles.content}>
           {/* Left: Member List - exactly 10 items, fade in at bottom, fade out at top */}
-          <div className={styles.listContainer}>
+          <div className={styles.listContainer} style={{ width: `${containerWidth}px` }}>
             <div className={styles.memberList}>
               <AnimatePresence mode="popLayout">
                 {displayMembers.map((member, index) => (
@@ -304,6 +324,91 @@ function NATOTimelineVertical() {
             disabled={isPlaying}
           >
             Replay
+          </button>
+        </div>
+        
+        {/* Timing Controls */}
+        <div className={styles.timingControls}>
+          <div className={styles.timingGrid}>
+            <div className={styles.timingField}>
+              <label>Founding Reveal (ms)</label>
+              <input
+                type="number"
+                value={timingInputs.foundingRevealDelay}
+                onChange={(e) => setTimingInputs(prev => ({ ...prev, foundingRevealDelay: parseInt(e.target.value) || 0 }))}
+                min="50"
+                max="2000"
+                step="50"
+              />
+            </div>
+            <div className={styles.timingField}>
+              <label>Year Normal (ms)</label>
+              <input
+                type="number"
+                value={timingInputs.yearNormalDelay}
+                onChange={(e) => setTimingInputs(prev => ({ ...prev, yearNormalDelay: parseInt(e.target.value) || 0 }))}
+                min="50"
+                max="2000"
+                step="50"
+              />
+            </div>
+            <div className={styles.timingField}>
+              <label>Year Big Gap (ms)</label>
+              <input
+                type="number"
+                value={timingInputs.yearBigGapDelay}
+                onChange={(e) => setTimingInputs(prev => ({ ...prev, yearBigGapDelay: parseInt(e.target.value) || 0 }))}
+                min="50"
+                max="2000"
+                step="50"
+              />
+            </div>
+            <div className={styles.timingField}>
+              <label>After Member (ms)</label>
+              <input
+                type="number"
+                value={timingInputs.afterMemberRevealDelay}
+                onChange={(e) => setTimingInputs(prev => ({ ...prev, afterMemberRevealDelay: parseInt(e.target.value) || 0 }))}
+                min="50"
+                max="2000"
+                step="50"
+              />
+            </div>
+            <div className={styles.timingField}>
+              <label>After Founding (ms)</label>
+              <input
+                type="number"
+                value={timingInputs.afterFoundingDelay}
+                onChange={(e) => setTimingInputs(prev => ({ ...prev, afterFoundingDelay: parseInt(e.target.value) || 0 }))}
+                min="50"
+                max="2000"
+                step="50"
+              />
+            </div>
+            <div className={styles.timingField}>
+              <label>Container Width (px)</label>
+              <input
+                type="number"
+                value={timingInputs.containerWidth}
+                onChange={(e) => setTimingInputs(prev => ({ ...prev, containerWidth: parseInt(e.target.value) || 300 }))}
+                min="300"
+                max="800"
+                step="10"
+              />
+            </div>
+          </div>
+          <button 
+            className={styles.confirmButton}
+            onClick={() => {
+              setFoundingRevealDelay(timingInputs.foundingRevealDelay);
+              setYearNormalDelay(timingInputs.yearNormalDelay);
+              setYearBigGapDelay(timingInputs.yearBigGapDelay);
+              setAfterMemberRevealDelay(timingInputs.afterMemberRevealDelay);
+              setAfterFoundingDelay(timingInputs.afterFoundingDelay);
+              setContainerWidth(timingInputs.containerWidth);
+            }}
+          >
+            Confirm
           </button>
         </div>
         
