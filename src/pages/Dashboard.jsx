@@ -51,6 +51,13 @@ function Dashboard() {
       description: 'Countries highlight on a zoomable world map as time advances, with a live member list populating alongside — demonstrates geo-temporal storytelling.',
       tag: 'Map · Geo-temporal · Interactive',
       path: '/nato-timeline-map'
+    },
+    {
+      id: 'nato-globe',
+      title: '3D Globe Timeline',
+      description: 'Countries illuminate on an auto-rotating 3D globe as time advances — the camera tracks each joining nation. Optimised for screen recording.',
+      tag: '3D Globe · Auto-rotating · Geo-temporal',
+      path: '/nato-globe'
     }
   ];
 
@@ -65,7 +72,7 @@ function Dashboard() {
 
       <main className={styles.main}>
         <div className={styles.grid}>
-          {visualizations.map((viz) => (
+          {[...visualizations].reverse().map((viz) => (
             <Link 
               key={viz.id} 
               to={viz.path} 

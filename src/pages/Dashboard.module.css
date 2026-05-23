@@ -8,7 +8,7 @@
 /* Header */
 .header {
   text-align: center;
-  padding: 60px 20px 40px;
+  padding: 36px 20px 24px;
 }
 
 .title {
@@ -35,8 +35,8 @@
 /* Grid Layout */
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-  gap: 30px;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 16px;
 }
 
 /* Card */
@@ -45,8 +45,8 @@
   text-decoration: none;
   background: white;
   border: 2px solid #e0e0e0;
-  border-radius: 12px;
-  padding: 30px;
+  border-radius: 10px;
+  padding: 18px 20px;
   transition: all 0.2s ease;
 }
 
@@ -74,22 +74,22 @@
 
 .cardTitle {
   font-family: 'Source Sans Pro', sans-serif;
-  font-size: 1.5rem;
+  font-size: 1.1rem;
   font-weight: 700;
   color: #333;
-  margin: 0 0 12px 0;
+  margin: 0 0 8px 0;
 }
 
 .cardDescription {
-  font-size: 0.95rem;
+  font-size: 0.82rem;
   color: #666;
-  line-height: 1.5;
-  margin: 0 0 20px 0;
+  line-height: 1.45;
+  margin: 0 0 12px 0;
   flex-grow: 1;
 }
 
 .cardLink {
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   font-weight: 600;
   color: #2c5282;
   margin-top: auto;
@@ -132,6 +132,6 @@
   }
 
   .card {
-    padding: 24px;
+    padding: 16px 18px;
   }
 }
