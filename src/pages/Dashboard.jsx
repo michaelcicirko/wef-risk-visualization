@@ -58,6 +58,48 @@ function Dashboard() {
       description: 'Countries illuminate on an auto-rotating 3D globe as time advances — the camera tracks each joining nation. Optimised for screen recording.',
       tag: '3D Globe · Auto-rotating · Geo-temporal',
       path: '/nato-globe'
+    },
+    {
+      id: 'scatter-plot',
+      title: 'Scatter Plot',
+      description: 'Points appear one-by-one on a two-axis chart — year joined vs population on a log scale — demonstrating animated sequential reveal on a coordinate plane.',
+      tag: 'Scatter Plot · Log Scale · Sequential',
+      path: '/scatter-plot'
+    },
+    {
+      id: 'heatmap',
+      title: 'Heatmap Matrix',
+      description: 'A grid of cells where colour intensity encodes rank severity — risks as rows, years as columns — demonstrating sequential animated reveal across a matrix.',
+      tag: 'Heatmap · Matrix · Sequential',
+      path: '/heatmap'
+    },
+    {
+      id: 'bubble-chart',
+      title: 'Bubble Chart',
+      description: 'Category risk scores encoded as bubble area — bubbles expand and contract with spring physics as the time state advances between years.',
+      tag: 'Bubble Chart · Force Layout · Animated',
+      path: '/bubble-chart'
+    },
+    {
+      id: 'radial-chart',
+      title: 'Radial / Donut Chart',
+      description: 'Category share of total risk score shown as arc proportions — segments morph smoothly between time states, with hover interaction and a live score legend.',
+      tag: 'Radial · Donut · Proportional',
+      path: '/radial-chart'
+    },
+    {
+      id: 'network-graph',
+      title: 'Network Graph',
+      description: 'Force-directed network of WEF global risk interconnections — causal links between risks reveal one by one, with hover to highlight connected nodes.',
+      tag: 'Network · Force-directed · Causal Links',
+      path: '/network-graph'
+    },
+    {
+      id: 'treemap',
+      title: 'Treemap — NATO Defence Spending',
+      description: 'Hierarchical rectangles where area encodes % of GDP spent on defence — grouped by region, colour-coded by spend level, with 2021/2022/2023 snapshots showing the post-Ukraine surge.',
+      tag: 'Treemap · Hierarchy · Comparative',
+      path: '/treemap'
     }
   ];
 

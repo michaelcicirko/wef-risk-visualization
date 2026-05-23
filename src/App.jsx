@@ -8,6 +8,12 @@ import NATOTimelineVerticalPopulation3 from './pages/NATOTimelineVerticalPopulat
 import NATOTimelineVerticalPopulation1 from './pages/NATOTimelineVerticalPopulation1.jsx';
 import NATOTimelineMap from './pages/NATOTimelineMap.jsx';
 import NATOGlobe from './pages/NATOGlobe.jsx';
+import ScatterPlot from './pages/ScatterPlot.jsx';
+import Heatmap from './pages/Heatmap.jsx';
+import BubbleChart from './pages/BubbleChart.jsx';
+import RadialChart from './pages/RadialChart.jsx';
+import NetworkGraph from './pages/NetworkGraph.jsx';
+import Treemap from './pages/Treemap.jsx';
 
 function App() {
   return (
@@ -22,6 +28,12 @@ function App() {
         <Route path="/nato-timeline-vertical-population-1" element={<NATOTimelineVerticalPopulation1 />} />
         <Route path="/nato-timeline-map" element={<NATOTimelineMap />} />
         <Route path="/nato-globe" element={<NATOGlobe />} />
+        <Route path="/scatter-plot" element={<ScatterPlot />} />
+        <Route path="/heatmap" element={<Heatmap />} />
+        <Route path="/bubble-chart" element={<BubbleChart />} />
+        <Route path="/radial-chart" element={<RadialChart />} />
+        <Route path="/network-graph" element={<NetworkGraph />} />
+        <Route path="/treemap" element={<Treemap />} />
       </Routes>
     </Router>
   );
