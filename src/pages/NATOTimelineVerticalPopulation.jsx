@@ -39,11 +39,9 @@ for (let i = 0; i < JOIN_YEARS.length - 1; i++) {
 TIME_SEGMENTS.push([2024, 2024, 3, "End at 2024"]);
 currentTime += 500;
 
-const PAUSE_DURATION = 1000;
 const BASE_YEAR_DURATION = 1500;
 const TOTAL_DURATION = Math.ceil(currentTime);
 const VISIBLE_COUNT = 5; // Number of visible members in the feed
-const MEMBER_REVEAL_DELAY = 400; // ms between each member reveal (founding members)
 
 // Format population number to compact format (e.g., "Current Population: 11.8M")
 function formatPopulation(pop) {
@@ -63,9 +61,12 @@ function NATOTimelineVerticalPopulation() {
   const [isPlaying, setIsPlaying] = useState(true);
   const yearRef = useRef(YEAR_START); // Track year in ref to avoid effect restart
   const [visibleMembers, setVisibleMembers] = useState(() => {
-    // Start with just Belgium (first founding member alphabetically)
-    const belgium = natoMembers.find(m => m.country === 'Belgium');
-    return belgium ? [belgium] : [];
+    // Start with first 5 founding members (alphabetically)
+    const founding = natoMembers
+      .filter(m => m.founding)
+      .sort((a, b) => a.country.localeCompare(b.country))
+      .slice(0, 5);
+    return founding;
   });
   const [animationPhase, setAnimationPhase] = useState('revealing-founders'); // 'revealing-founders' | 'year-advance' | 'revealing-year-members'
   const [currentYearMembers, setCurrentYearMembers] = useState([]); // Members to reveal for current year
@@ -74,24 +75,22 @@ function NATOTimelineVerticalPopulation() {
   const isFirstMemberOfYear = useRef(true); // Track if first member of current year
   
   // Use refs for counters to prevent useEffect from restarting
-  const foundingRevealedCountRef = useRef(1); // Belgium already showing (index 1)
+  const foundingRevealedCountRef = useRef(5); // First 5 founding members already showing
   const yearRevealedCountRef = useRef(0); // Members revealed for current join year
   
-  // Timing controls - editable via UI
-  const [foundingRevealDelay, setFoundingRevealDelay] = useState(400);
-  const [yearNormalDelay, setYearNormalDelay] = useState(400);
-  const [yearBigGapDelay, setYearBigGapDelay] = useState(200);
-  const [afterMemberRevealDelay, setAfterMemberRevealDelay] = useState(200);
-  const [afterFoundingDelay, setAfterFoundingDelay] = useState(400);
+  // Timing controls - editable via UI (4 controls)
+  const [initialHold, setInitialHold] = useState(3000); // Initial hold before animation starts
+  const [memberRevealDelay, setMemberRevealDelay] = useState(1500); // Delay between member reveals (all types)
+  const [yearNormalDelay, setYearNormalDelay] = useState(400); // Year counter when < 3 years gap
+  const [yearBigGapDelay, setYearBigGapDelay] = useState(200); // Year counter when > 3 years gap
   const [containerWidth, setContainerWidth] = useState(550);
   
   // Input state for timing controls
   const [timingInputs, setTimingInputs] = useState({
-    foundingRevealDelay: 400,
+    initialHold: 3000,
+    memberRevealDelay: 1500,
     yearNormalDelay: 400,
     yearBigGapDelay: 200,
-    afterMemberRevealDelay: 200,
-    afterFoundingDelay: 400,
     containerWidth: 550
   });
   
@@ -110,22 +109,35 @@ function NATOTimelineVerticalPopulation() {
       const currentYearInt = Math.floor(yearRef.current);
       
       if (animationPhase === 'revealing-founders') {
-        // Reveal founding members one by one while holding at 1949
+        // Reveal founding members 5 at a time while holding at 1949
         if (foundingRevealedCountRef.current < foundingMembers.length) {
-          const nextMember = foundingMembers[foundingRevealedCountRef.current];
+          const batchSize = 5;
+          const remaining = foundingMembers.length - foundingRevealedCountRef.current;
+          const toReveal = Math.min(batchSize, remaining);
+          
+          const newMembers = foundingMembers.slice(
+            foundingRevealedCountRef.current,
+            foundingRevealedCountRef.current + toReveal
+          );
+          
           setVisibleMembers(prev => {
-            if (prev.find(m => m.id === nextMember.id)) return prev;
-            return [...prev, nextMember].sort((a, b) => {
+            const existingIds = new Set(prev.map(m => m.id));
+            const membersToAdd = newMembers.filter(m => !existingIds.has(m.id));
+            return [...prev, ...membersToAdd].sort((a, b) => {
               if (a.year !== b.year) return a.year - b.year;
               return a.country.localeCompare(b.country);
             });
           });
-          foundingRevealedCountRef.current += 1;
-          timeoutId = setTimeout(runAnimation, foundingRevealDelay);
+          foundingRevealedCountRef.current += toReveal;
+          
+          // Hold using memberRevealDelay, then check if more batches needed
+          const isLastBatch = foundingRevealedCountRef.current >= foundingMembers.length;
+          const delay = memberRevealDelay;
+          timeoutId = setTimeout(runAnimation, delay);
         } else {
-          // All founding members revealed - start year countdown
+          // All founding members revealed - hold then start year countdown
           setAnimationPhase('year-advance');
-          timeoutId = setTimeout(runAnimation, afterFoundingDelay);
+          timeoutId = setTimeout(runAnimation, memberRevealDelay);
         }
         
       } else if (animationPhase === 'year-advance') {
@@ -140,32 +152,37 @@ function NATOTimelineVerticalPopulation() {
         const nextYearMembers = getNewMembersForYear(nextYear);
         
         if (nextYearMembers.length > 0) {
-          // Next year has members - batch year update + first member together
+          // Next year has members - batch year update + up to 5 members together
           lastProcessedYear.current = nextYear;
           setCurrentYearMembers(nextYearMembers);
           
-          // BATCH: Update year AND first member in same render cycle
+          // BATCH: Update year AND up to 5 members in same render cycle
           yearRef.current = nextYear;
           setYear(nextYear);
-          const firstMember = nextYearMembers[0];
+          
+          const batchSize = 5;
+          const toReveal = Math.min(batchSize, nextYearMembers.length);
+          const membersToAdd = nextYearMembers.slice(0, toReveal);
+          
           setVisibleMembers(prev => {
-            if (prev.find(m => m.id === firstMember.id)) return prev;
-            return [...prev, firstMember].sort((a, b) => {
+            const existingIds = new Set(prev.map(m => m.id));
+            const newMembers = membersToAdd.filter(m => !existingIds.has(m.id));
+            return [...prev, ...newMembers].sort((a, b) => {
               if (a.year !== b.year) return a.year - b.year;
               return a.country.localeCompare(b.country);
             });
           });
           
-          if (nextYearMembers.length > 1) {
+          if (nextYearMembers.length > toReveal) {
             // More members to reveal - switch to reveal phase
-            yearRevealedCountRef.current = 1; // First member already added
+            yearRevealedCountRef.current = toReveal; // Members already added
             setAnimationPhase('revealing-year-members');
-            timeoutId = setTimeout(runAnimation, foundingRevealDelay);
+            timeoutId = setTimeout(runAnimation, memberRevealDelay);
           } else {
-            // Only one member - continue advancing after brief pause
+            // All members revealed for this year - hold then continue
             timeoutId = setTimeout(() => {
               runAnimation();
-            }, afterMemberRevealDelay);
+            }, memberRevealDelay);
           }
         } else {
           // No members next year - advance year quickly
@@ -195,39 +212,51 @@ function NATOTimelineVerticalPopulation() {
         }
         
       } else if (animationPhase === 'revealing-year-members') {
-        // Reveal remaining members for current year (index 0 already added with year)
+        // Reveal remaining members for current year 5 at a time
         if (yearRevealedCountRef.current < currentYearMembers.length) {
-          const nextMember = currentYearMembers[yearRevealedCountRef.current];
+          const batchSize = 5;
+          const remaining = currentYearMembers.length - yearRevealedCountRef.current;
+          const toReveal = Math.min(batchSize, remaining);
+          
+          const newMembers = currentYearMembers.slice(
+            yearRevealedCountRef.current,
+            yearRevealedCountRef.current + toReveal
+          );
+          
           setVisibleMembers(prev => {
-            if (prev.find(m => m.id === nextMember.id)) return prev;
-            return [...prev, nextMember].sort((a, b) => {
+            const existingIds = new Set(prev.map(m => m.id));
+            const membersToAdd = newMembers.filter(m => !existingIds.has(m.id));
+            return [...prev, ...membersToAdd].sort((a, b) => {
               if (a.year !== b.year) return a.year - b.year;
               return a.country.localeCompare(b.country);
             });
           });
-          yearRevealedCountRef.current += 1;
-          // Schedule next member with delay
-          timeoutId = setTimeout(runAnimation, foundingRevealDelay);
+          yearRevealedCountRef.current += toReveal;
+          // Schedule next batch with member reveal delay
+          timeoutId = setTimeout(runAnimation, memberRevealDelay);
         } else {
-          // All members revealed - resume year advance
+          // All members revealed for this year - hold then resume year advance
           setAnimationPhase('year-advance');
-          timeoutId = setTimeout(runAnimation, afterMemberRevealDelay);
+          timeoutId = setTimeout(runAnimation, memberRevealDelay);
         }
       }
     };
     
-    // Start animation after initial pause
-    timeoutId = setTimeout(runAnimation, PAUSE_DURATION);
+    // Start animation after initial hold
+    timeoutId = setTimeout(runAnimation, initialHold);
     
     return () => clearTimeout(timeoutId);
-  }, [isPlaying, animationPhase, foundingMembers, currentYearMembers, foundingRevealDelay, yearNormalDelay, yearBigGapDelay, afterMemberRevealDelay, afterFoundingDelay]);
+  }, [isPlaying, animationPhase, foundingMembers, currentYearMembers, initialHold, memberRevealDelay, yearNormalDelay, yearBigGapDelay]);
   
   const handleReplay = useCallback(() => {
     setYear(YEAR_START);
     yearRef.current = YEAR_START;
-    const belgium = natoMembers.find(m => m.country === 'Belgium');
-    setVisibleMembers(belgium ? [belgium] : []);
-    foundingRevealedCountRef.current = 1;
+    const founding = natoMembers
+      .filter(m => m.founding)
+      .sort((a, b) => a.country.localeCompare(b.country))
+      .slice(0, 5);
+    setVisibleMembers(founding);
+    foundingRevealedCountRef.current = 5;
     yearRevealedCountRef.current = 0;
     setCurrentYearMembers([]);
     setAnimationPhase('revealing-founders');
@@ -295,7 +324,6 @@ function NATOTimelineVerticalPopulation() {
                       <span className={styles.countryName}>{member.country}</span>
                       <span className={styles.population}>{formatPopulation(member.population)}</span>
                     </div>
-                    <span className={styles.yearJoined}>{member.year}</span>
                     {member.founding && (
                       <span className={styles.foundingBadge}>Founding</span>
                     )}
@@ -347,18 +375,29 @@ function NATOTimelineVerticalPopulation() {
         <div className={styles.timingControls}>
           <div className={styles.timingGrid}>
             <div className={styles.timingField}>
-              <label>Founding Reveal (ms)</label>
+              <label>Initial Hold (ms)</label>
               <input
                 type="number"
-                value={timingInputs.foundingRevealDelay}
-                onChange={(e) => setTimingInputs(prev => ({ ...prev, foundingRevealDelay: parseInt(e.target.value) || 0 }))}
-                min="50"
-                max="2000"
-                step="50"
+                value={timingInputs.initialHold}
+                onChange={(e) => setTimingInputs(prev => ({ ...prev, initialHold: parseInt(e.target.value) || 0 }))}
+                min="500"
+                max="10000"
+                step="100"
               />
             </div>
             <div className={styles.timingField}>
-              <label>Year Normal (ms)</label>
+              <label>Member Reveal (ms)</label>
+              <input
+                type="number"
+                value={timingInputs.memberRevealDelay}
+                onChange={(e) => setTimingInputs(prev => ({ ...prev, memberRevealDelay: parseInt(e.target.value) || 0 }))}
+                min="200"
+                max="5000"
+                step="100"
+              />
+            </div>
+            <div className={styles.timingField}>
+              <label>Year Normal Gap (ms)</label>
               <input
                 type="number"
                 value={timingInputs.yearNormalDelay}
@@ -380,28 +419,6 @@ function NATOTimelineVerticalPopulation() {
               />
             </div>
             <div className={styles.timingField}>
-              <label>After Member (ms)</label>
-              <input
-                type="number"
-                value={timingInputs.afterMemberRevealDelay}
-                onChange={(e) => setTimingInputs(prev => ({ ...prev, afterMemberRevealDelay: parseInt(e.target.value) || 0 }))}
-                min="50"
-                max="2000"
-                step="50"
-              />
-            </div>
-            <div className={styles.timingField}>
-              <label>After Founding (ms)</label>
-              <input
-                type="number"
-                value={timingInputs.afterFoundingDelay}
-                onChange={(e) => setTimingInputs(prev => ({ ...prev, afterFoundingDelay: parseInt(e.target.value) || 0 }))}
-                min="50"
-                max="2000"
-                step="50"
-              />
-            </div>
-            <div className={styles.timingField}>
               <label>Container Width (px)</label>
               <input
                 type="number"
@@ -416,11 +433,10 @@ function NATOTimelineVerticalPopulation() {
           <button 
             className={styles.confirmButton}
             onClick={() => {
-              setFoundingRevealDelay(timingInputs.foundingRevealDelay);
+              setInitialHold(timingInputs.initialHold);
+              setMemberRevealDelay(timingInputs.memberRevealDelay);
               setYearNormalDelay(timingInputs.yearNormalDelay);
               setYearBigGapDelay(timingInputs.yearBigGapDelay);
-              setAfterMemberRevealDelay(timingInputs.afterMemberRevealDelay);
-              setAfterFoundingDelay(timingInputs.afterFoundingDelay);
               setContainerWidth(timingInputs.containerWidth);
             }}
           >
