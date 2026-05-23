@@ -263,9 +263,9 @@ function NATOTimelineVerticalPopulation3() {
       </nav>
 
       <header className={styles.header}>
-        <h1 className={styles.title}>NATO Timeline — Population View (3 Visible)</h1>
+        <h1 className={styles.title}>Windowed Feed (3 Items)</h1>
         <p className={styles.subtitle}>
-          Expansion from 12 to 32 members with population (1949–2024) — Shows 3 countries at a time
+          Example: Compact windowed feed showing 3 entries at a time
         </p>
       </header>
       

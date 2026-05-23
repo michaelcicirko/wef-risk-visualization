@@ -250,9 +250,9 @@ function NATOTimelineVertical() {
       </nav>
 
       <header className={styles.header}>
-        <h1 className={styles.title}>NATO Timeline — Vertical Feed</h1>
+        <h1 className={styles.title}>Vertical Feed Timeline</h1>
         <p className={styles.subtitle}>
-          Expansion from 12 to 32 members (1949–2024)
+          Example: Event-driven entries scrolling into a live feed
         </p>
       </header>
       

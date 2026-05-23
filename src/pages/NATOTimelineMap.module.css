@@ -1,0 +1,385 @@
+.page {
+  min-height: 100vh;
+  background: #0d0d1a;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+}
+
+.nav {
+  padding: 16px 24px;
+}
+
+.backLink {
+  color: #7f8c8d;
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.2s;
+}
+
+.backLink:hover {
+  color: #ffffff;
+}
+
+.header {
+  padding: 8px 24px 16px;
+  text-align: center;
+}
+
+.title {
+  font-size: 28px;
+  font-weight: 700;
+  margin: 0 0 6px;
+  letter-spacing: -0.5px;
+}
+
+.subtitle {
+  font-size: 14px;
+  color: #7f8c8d;
+  margin: 0;
+}
+
+.main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding: 0 24px 24px;
+  gap: 16px;
+}
+
+/* ── Content row: panel + map side by side ── */
+.contentRow {
+  display: flex;
+  gap: 0;
+  height: 540px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+/* ── Left member panel ── */
+.memberPanel {
+  width: 240px;
+  flex-shrink: 0;
+  background: #13132a;
+  border-right: 1px solid #2a2a4a;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.panelHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  border-bottom: 1px solid #2a2a4a;
+  flex-shrink: 0;
+}
+
+.panelTitle {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #7f8c8d;
+}
+
+.panelCount {
+  font-size: 11px;
+  color: #5a5a8a;
+}
+
+.memberList {
+  flex: 1;
+  overflow-y: auto;
+  padding: 8px 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.memberList::-webkit-scrollbar {
+  width: 4px;
+}
+
+.memberList::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.memberList::-webkit-scrollbar-thumb {
+  background: #2a2a4a;
+  border-radius: 2px;
+}
+
+.memberItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 16px;
+  font-size: 13px;
+}
+
+.memberFlag {
+  font-size: 16px;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.memberName {
+  color: #d0d0e0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* ── Map ── */
+.mapContainer {
+  position: relative;
+  flex: 1;
+  background: #0d0d1a;
+  overflow: hidden;
+}
+
+.mapSvg {
+  width: 100%;
+  height: 100%;
+  display: block;
+  cursor: grab;
+}
+
+.mapSvg:active {
+  cursor: grabbing;
+}
+
+/* ── Year overlay ── */
+.yearOverlay {
+  position: absolute;
+  top: 20px;
+  right: 28px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  pointer-events: none;
+}
+
+.yearNumber {
+  font-size: 72px;
+  font-weight: 900;
+  color: #ffffff;
+  line-height: 1;
+  letter-spacing: -2px;
+  text-shadow: 0 0 30px rgba(255, 255, 255, 0.15);
+  transition: color 0.3s ease;
+}
+
+.memberCount {
+  font-size: 14px;
+  color: #7f8c8d;
+  margin-top: 4px;
+  text-align: right;
+}
+
+/* ── Flying label ── */
+.flyingLabel {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 12px;
+  background: #ffffff;
+  border: 2px solid #ff00ff;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #0d0d1a;
+  white-space: nowrap;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  z-index: 10;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+.flyingLabelAppear {
+  opacity: 1;
+  transition: opacity 0.25s ease;
+}
+
+.flyingLabelFade {
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+
+/* ── Controls ── */
+.controls {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  align-items: center;
+}
+
+.controlButton {
+  background: #1e1e2e;
+  color: #ffffff;
+  border: 1px solid #3a3a5a;
+  border-radius: 6px;
+  padding: 8px 20px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.controlButton:hover {
+  background: #2a2a3a;
+  border-color: #5a5a8a;
+}
+
+.controlButton:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.zoomHint {
+  font-size: 11px;
+  color: #4a4a6a;
+  margin-left: 4px;
+}
+
+/* ── Timing controls ── */
+.timingControls {
+  background: #1e1e2e;
+  border: 1px solid #2a2a3a;
+  border-radius: 8px;
+  padding: 16px;
+}
+
+.timingGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.timingField {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.timingField label {
+  font-size: 11px;
+  color: #7f8c8d;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.timingField input {
+  background: #0d0d1a;
+  border: 1px solid #3a3a5a;
+  border-radius: 4px;
+  color: #ffffff;
+  padding: 6px 8px;
+  font-size: 13px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.confirmButton {
+  background: #1a5276;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 24px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.confirmButton:hover {
+  background: #2471a3;
+}
+
+/* ── Progress bar ── */
+.progressContainer {
+  height: 3px;
+  background: #2a2a3a;
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.progressBar {
+  height: 100%;
+  background: #1a5276;
+  border-radius: 2px;
+  transition: width 0.3s ease;
+}
+
+/* ── Scrubber ── */
+.scrubberContainer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.scrubberYear {
+  font-size: 11px;
+  color: #5a5a8a;
+  flex-shrink: 0;
+  font-variant-numeric: tabular-nums;
+}
+
+.scrubber {
+  flex: 1;
+  -webkit-appearance: none;
+  appearance: none;
+  height: 4px;
+  background: #2a2a4a;
+  border-radius: 2px;
+  outline: none;
+  cursor: pointer;
+}
+
+.scrubber::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #1a5276;
+  border: 2px solid #ffffff;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+}
+
+.scrubber::-webkit-slider-thumb:hover {
+  background: #2471a3;
+  transform: scale(1.2);
+}
+
+.scrubber::-moz-range-thumb {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #1a5276;
+  border: 2px solid #ffffff;
+  cursor: pointer;
+}
+
+.scrubber::-webkit-slider-runnable-track {
+  background: linear-gradient(
+    to right,
+    #1a5276 calc((var(--progress, 0)) * 1%),
+    #2a2a4a calc((var(--progress, 0)) * 1%)
+  );
+  height: 4px;
+  border-radius: 2px;
+}
+
+.footer {
+  text-align: center;
+}
+
+.source {
+  font-size: 11px;
+  color: #4a4a6a;
+  margin: 0;
+}

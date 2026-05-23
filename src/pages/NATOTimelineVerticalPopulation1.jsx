@@ -263,9 +263,9 @@ function NATOTimelineVerticalPopulation1() {
       </nav>
 
       <header className={styles.header}>
-        <h1 className={styles.title}>NATO Timeline — Population View (Single)</h1>
+        <h1 className={styles.title}>Single-Focus Feed</h1>
         <p className={styles.subtitle}>
-          Expansion from 12 to 32 members with population (1949–2024) — One country at a time
+          Example: High-impact sequential reveal, one entry at a time
         </p>
       </header>
       

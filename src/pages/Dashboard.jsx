@@ -5,54 +5,61 @@ function Dashboard() {
   const visualizations = [
     {
       id: 'risk-timeline',
-      title: 'Global Risks Timeline',
-      description: 'Animated bar chart showing top 10 global risks from 2026 to 2036 with smooth transitions between time states.',
-      thumbnail: '/risk-timeline-thumb.png',
+      title: 'Animated Bar Chart',
+      description: 'Ranked bar chart with smooth animated transitions between time states — demonstrates how changing data rankings can be visualised over time.',
+      tag: 'Bar Chart · Time Series',
       path: '/risk-timeline'
     },
     {
       id: 'nato-timeline-horizontal',
-      title: 'NATO Timeline — Horizontal Grid',
-      description: 'Animated timeline showing NATO expansion in a 3-column grid layout. 12 founding members (1949) to 32 members (2024).',
-      thumbnail: '/nato-timeline-horizontal-thumb.png',
+      title: 'Animated Grid Timeline',
+      description: 'Cards reveal progressively in a responsive grid as a year counter advances — demonstrates staggered entry animations for list-based data.',
+      tag: 'Grid · Progressive Reveal',
       path: '/nato-timeline-horizontal'
     },
     {
       id: 'nato-timeline-vertical',
-      title: 'NATO Timeline — Vertical Feed',
-      description: 'Animated vertical feed showing NATO expansion. Scrolling list reveals members as years progress, with large year display fixed on the right.',
-      thumbnail: '/nato-timeline-vertical-thumb.png',
+      title: 'Vertical Feed Timeline',
+      description: 'Entries scroll into a vertical feed as time progresses, with a prominent year counter fixed to the right — suitable for event-driven datasets.',
+      tag: 'Vertical Feed · Event Timeline',
       path: '/nato-timeline-vertical'
     },
     {
       id: 'nato-timeline-vertical-population',
-      title: 'NATO Timeline — Population View',
-      description: 'Same vertical feed animation with population data displayed under each country name. Shows all 32 NATO members with their current populations.',
-      thumbnail: '/nato-timeline-vertical-population-thumb.png',
+      title: 'Vertical Feed + Data Attribute',
+      description: 'Extends the vertical feed with a secondary data attribute shown beneath each entry — demonstrates multi-field storytelling within a timeline.',
+      tag: 'Vertical Feed · Multi-field',
       path: '/nato-timeline-vertical-population'
     },
     {
       id: 'nato-timeline-vertical-population-3',
-      title: 'NATO Timeline — Population View (3 Visible)',
-      description: 'Same population timeline but shows only 3 countries at a time for a more compact vertical feed.',
-      thumbnail: '/nato-timeline-vertical-population-3-thumb.png',
+      title: 'Windowed Feed (3 Items)',
+      description: 'A windowed view that shows only 3 entries at a time — demonstrates a compact, focused feed ideal for screen recording or presentation.',
+      tag: 'Windowed Feed · Compact',
       path: '/nato-timeline-vertical-population-3'
     },
     {
       id: 'nato-timeline-vertical-population-1',
-      title: 'NATO Timeline — Population View (Single)',
-      description: 'Focus on one country at a time with population data. Clean view with large year counter as the only date reference.',
-      thumbnail: '/nato-timeline-vertical-population-1-thumb.png',
+      title: 'Single-Focus Feed',
+      description: 'One entry at a time with full visual emphasis — demonstrates a high-impact sequential reveal format suited to broadcast or slide-based output.',
+      tag: 'Single Focus · Sequential',
       path: '/nato-timeline-vertical-population-1'
+    },
+    {
+      id: 'nato-timeline-map',
+      title: 'Interactive Geo Map Timeline',
+      description: 'Countries highlight on a zoomable world map as time advances, with a live member list populating alongside — demonstrates geo-temporal storytelling.',
+      tag: 'Map · Geo-temporal · Interactive',
+      path: '/nato-timeline-map'
     }
   ];
 
   return (
     <div className={styles.dashboard}>
       <header className={styles.header}>
-        <h1 className={styles.title}>WEF Visualizations Dashboard</h1>
+        <h1 className={styles.title}>Visualisation Capabilities</h1>
         <p className={styles.subtitle}>
-          Interactive data visualizations from the World Economic Forum
+          A showcase of interactive data visualisation formats — each example demonstrates a different approach to animated, time-based storytelling.
         </p>
       </header>
 
@@ -65,9 +72,10 @@ function Dashboard() {
               className={styles.card}
             >
               <div className={styles.cardContent}>
+                {viz.tag && <span className={styles.cardTag}>{viz.tag}</span>}
                 <h2 className={styles.cardTitle}>{viz.title}</h2>
                 <p className={styles.cardDescription}>{viz.description}</p>
-                <span className={styles.cardLink}>View Visualization →</span>
+                <span className={styles.cardLink}>View Example →</span>
               </div>
             </Link>
           ))}
@@ -76,7 +84,7 @@ function Dashboard() {
 
       <footer className={styles.footer}>
         <p className={styles.source}>
-          Source: World Economic Forum Global Risks Perception Survey
+          Example data: NATO Membership Records · WEF Global Risks Perception Survey
         </p>
       </footer>
     </div>

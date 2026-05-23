@@ -292,9 +292,9 @@ function NATOTimelineVerticalPopulation() {
       </nav>
 
       <header className={styles.header}>
-        <h1 className={styles.title}>NATO Timeline — Population View</h1>
+        <h1 className={styles.title}>Vertical Feed + Data Attribute</h1>
         <p className={styles.subtitle}>
-          Expansion from 12 to 32 members with population (1949–2024)
+          Example: Multi-field timeline feed with secondary data per entry
         </p>
       </header>
       

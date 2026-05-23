@@ -171,9 +171,9 @@ function NATOTimelineHorizontal() {
       </nav>
 
       <header className={styles.header}>
-        <h1 className={styles.title}>NATO Membership Timeline</h1>
+        <h1 className={styles.title}>Animated Grid Timeline</h1>
         <p className={styles.subtitle}>
-          Expansion from 12 to 32 members (1949–2024)
+          Example: Progressive card reveal in a responsive grid layout
         </p>
       </header>
       

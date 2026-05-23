@@ -49,9 +49,9 @@ function RiskTimeline() {
       </nav>
 
       <header className={styles.header}>
-        <h1 className={styles.title}>Global Risks by Severity</h1>
+        <h1 className={styles.title}>Animated Bar Chart</h1>
         <p className={styles.subtitle}>
-          Top 10 risks ranked over time (2026–2036)
+          Example: Ranked data with animated transitions over time
         </p>
       </header>
       
