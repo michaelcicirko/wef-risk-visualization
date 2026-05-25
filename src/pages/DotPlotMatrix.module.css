@@ -1,0 +1,41 @@
+.page { min-height: 100vh; background: #0d0d1a; color: #ffffff; display: flex; flex-direction: column; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
+.nav { padding: 16px 24px; }
+.backLink { color: #7f8c8d; text-decoration: none; font-size: 14px; transition: color 0.2s; }
+.backLink:hover { color: #ffffff; }
+.header { padding: 8px 24px 16px; text-align: center; }
+.title { font-size: 26px; font-weight: 700; margin: 0 0 6px; letter-spacing: -0.5px; }
+.subtitle { font-size: 13px; color: #7f8c8d; margin: 0 auto; max-width: 620px; line-height: 1.6; }
+
+.main { flex: 1; display: flex; flex-direction: column; padding: 0 24px 32px; gap: 14px; max-width: 980px; margin: 0 auto; width: 100%; box-sizing: border-box; }
+
+.controlsBar { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; }
+.sortGroup { display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
+.sortLabel { font-size: 12px; color: #7f8c8d; }
+.sortBtn { background: #1e1e2e; color: #7f8c8d; border: 1px solid #3a3a5a; border-radius: 6px; padding: 5px 12px; font-size: 12px; cursor: pointer; transition: all 0.2s; }
+.sortBtnActive { background: #1a3a5a; color: #4fc3f7; border-color: #4fc3f7; }
+.btnGroup { display: flex; gap: 8px; }
+.btn { background: #1e1e2e; color: #ffffff; border: 1px solid #3a3a5a; border-radius: 6px; padding: 7px 18px; font-size: 13px; cursor: pointer; transition: background 0.2s; }
+.btn:hover { background: #2a2a3a; }
+
+.infoCard { display: flex; align-items: center; gap: 10px; background: #13131f; border: 1px solid #2a2a4a; border-radius: 8px; padding: 10px 16px; min-height: 44px; opacity: 0; transform: translateY(-4px); transition: opacity 0.25s, transform 0.25s; flex-wrap: wrap; }
+.infoCardVisible { opacity: 1; transform: translateY(0); }
+.infoDot { width: 12px; height: 12px; border-radius: 50%; flex-shrink: 0; }
+.infoTitle { font-weight: 700; color: #ffffff; font-size: 13px; flex: 1; min-width: 120px; }
+.infoCat { font-size: 11px; font-weight: 700; text-transform: capitalize; }
+.scoreBadge { font-size: 12px; color: #aaaacc; background: #1e1e2e; padding: 3px 8px; border-radius: 10px; }
+.scoreBadge strong { color: #ffffff; }
+.infoHint { font-size: 12px; color: #5a5a8a; width: 100%; text-align: center; }
+
+.chartWrapper { background: #13131f; border: 1px solid #2a2a4a; border-radius: 12px; overflow: hidden; }
+.svg { width: 100%; height: auto; display: block; }
+
+.sizeLegend { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; justify-content: center; }
+.sizeLegendLabel { font-size: 11px; color: #7f8c8d; }
+.sizeItem { display: flex; align-items: center; gap: 4px; font-size: 11px; color: #7f8c8d; }
+
+.legend { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
+.legendItem { display: flex; align-items: center; gap: 6px; font-size: 12px; color: #aaaacc; }
+.legendDot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
+
+.footer { text-align: center; }
+.source { font-size: 11px; color: #4a4a6a; margin: 0; }

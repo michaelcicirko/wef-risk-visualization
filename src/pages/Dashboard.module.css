@@ -32,71 +32,52 @@
   padding: 20px 40px 60px;
 }
 
-/* Grid Layout */
+/* Grid Layout - 3 columns minimum */
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 16px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 6px;
 }
 
-/* Card */
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Minimalist Compact Card */
 .card {
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-decoration: none;
   background: white;
-  border: 2px solid #e0e0e0;
-  border-radius: 10px;
-  padding: 18px 20px;
-  transition: all 0.2s ease;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 8px 12px;
+  transition: all 0.1s ease;
+  min-height: 32px;
 }
 
 .card:hover {
   border-color: #2c5282;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  transform: translateY(-2px);
-}
-
-.cardContent {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-}
-
-.cardTag {
-  display: inline-block;
-  font-size: 0.75rem;
-  font-weight: 600;
-  color: #2c5282;
-  text-transform: uppercase;
-  letter-spacing: 0.6px;
-  margin: 0 0 8px 0;
+  background: #f5f7f9;
 }
 
 .cardTitle {
-  font-family: 'Source Sans Pro', sans-serif;
-  font-size: 1.1rem;
-  font-weight: 700;
-  color: #333;
-  margin: 0 0 8px 0;
-}
-
-.cardDescription {
-  font-size: 0.82rem;
-  color: #666;
-  line-height: 1.45;
-  margin: 0 0 12px 0;
-  flex-grow: 1;
-}
-
-.cardLink {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   font-size: 0.8rem;
-  font-weight: 600;
-  color: #2c5282;
-  margin-top: auto;
-}
-
-.card:hover .cardLink {
-  color: #1a365d;
+  font-weight: 500;
+  color: #444;
+  text-align: center;
+  margin: 0;
+  line-height: 1.2;
 }
 
 /* Footer */

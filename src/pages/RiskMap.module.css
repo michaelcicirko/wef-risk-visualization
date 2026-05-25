@@ -1,0 +1,31 @@
+.page { min-height: 100vh; background: #0d0d1a; color: #ffffff; display: flex; flex-direction: column; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
+.nav { padding: 16px 24px; }
+.backLink { color: #7f8c8d; text-decoration: none; font-size: 14px; transition: color 0.2s; }
+.backLink:hover { color: #ffffff; }
+.header { padding: 8px 24px 16px; text-align: center; }
+.title { font-size: 26px; font-weight: 700; margin: 0 0 6px; letter-spacing: -0.5px; }
+.subtitle { font-size: 13px; color: #7f8c8d; margin: 0 auto; max-width: 620px; line-height: 1.6; }
+
+.main { flex: 1; display: flex; flex-direction: column; padding: 0 24px 32px; gap: 14px; max-width: 1000px; margin: 0 auto; width: 100%; box-sizing: border-box; }
+
+.controlsBar { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; }
+.yearPills { display: flex; gap: 8px; }
+.yearPill { background: #1e1e2e; color: #7f8c8d; border: 1px solid #3a3a5a; border-radius: 20px; padding: 5px 18px; font-size: 13px; font-weight: 600; cursor: pointer; transition: all 0.2s; }
+.yearPillActive { background: #1a5276; color: #ffffff; border-color: #2471a3; }
+.stats { display: flex; gap: 8px; flex-wrap: wrap; }
+.statBadge { background: #1e1e2e; border: 1px solid #3a3a5a; border-radius: 20px; padding: 5px 14px; font-size: 12px; font-weight: 600; }
+
+.mapWrapper { border-radius: 12px; overflow: hidden; border: 1px solid #2a2a4a; }
+
+.popup { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; min-width: 160px; }
+.popupFlag { font-size: 15px; margin-bottom: 8px; }
+.popupRow { display: flex; justify-content: space-between; font-size: 13px; margin-bottom: 4px; color: #ccccee; }
+.popupTarget { font-size: 11px; color: #7f8c8d; margin-top: 6px; }
+
+.colourScale { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; justify-content: center; }
+.scaleLabel { font-size: 11px; color: #7f8c8d; }
+.scaleItem { display: flex; align-items: center; gap: 5px; font-size: 11px; color: #aaaacc; }
+.scaleDot { width: 12px; height: 12px; border-radius: 3px; flex-shrink: 0; }
+
+.footer { text-align: center; }
+.source { font-size: 11px; color: #4a4a6a; margin: 0; }

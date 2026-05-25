@@ -1,6 +1,176 @@
 /* WMO Extreme Events Visualization Styles */
 
 .page {
+  width: 100vw;
+  height: 100vh;
+  background: #0a0a14;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* Navigation */
+.nav {
+  padding: 16px 24px;
+  background: #13131f;
+  border-bottom: 1px solid #2a2a4a;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-shrink: 0;
+}
+
+.backLink {
+  color: #7f8c8d;
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.2s;
+  white-space: nowrap;
+}
+
+.backLink:hover {
+  color: #ffffff;
+}
+
+.title {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0;
+  flex: 1;
+  color: #ffffff;
+}
+
+.subtitle {
+  font-size: 13px;
+  color: #7f8c8d;
+  margin: 0;
+}
+
+.globeContainer {
+  flex: 1;
+  position: relative;
+  min-height: 0;
+}
+
+/* Info Panel */
+.infoPanel {
+  position: absolute;
+  top: 80px;
+  right: 20px;
+  width: 380px;
+  max-height: calc(100vh - 100px);
+  background: rgba(19, 19, 31, 0.95);
+  border: 1px solid #2a2a4a;
+  border-radius: 12px;
+  padding: 24px;
+  overflow-y: auto;
+  backdrop-filter: blur(10px);
+  z-index: 100;
+}
+
+.closeButton {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: none;
+  border: none;
+  color: #7f8c8d;
+  font-size: 24px;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.closeButton:hover {
+  color: #ffffff;
+}
+
+.eventHeader {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+  padding-right: 30px;
+}
+
+.eventTypeBadge {
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.significantBadge {
+  padding: 4px 10px;
+  background: rgba(255, 193, 7, 0.2);
+  color: #ffc107;
+  border: 1px solid rgba(255, 193, 7, 0.3);
+  border-radius: 6px;
+  font-size: 11px;
+  font-weight: 500;
+}
+
+.eventCountry {
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0 0 20px 0;
+  color: #ffffff;
+}
+
+.eventMeta {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.metaItem {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.metaItem label {
+  font-size: 11px;
+  color: #7f8c8d;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.metaItem span {
+  font-size: 14px;
+  color: #ffffff;
+}
+
+.severe {
+  color: #e74c3c;
+  font-weight: 600;
+}
+
+.descriptionSection {
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid #2a2a4a;
+}
+
+.descriptionSection h4 {
+  font-size: 12px;
+  color: #7f8c8d;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin: 0 0 12px 0;
+}
+
+.descriptionSection p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #bdc3c7;
+  margin: 0;
+}
+
+/* Legacy styles for compatibility */
+.pageLegacy {
   min-height: 100vh;
   background: #0d0d1a;
   color: #ffffff;

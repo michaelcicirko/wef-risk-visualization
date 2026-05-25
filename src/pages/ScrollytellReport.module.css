@@ -1,0 +1,374 @@
+.page {
+  background: #0d0d1a;
+  color: #ffffff;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  position: relative;
+}
+
+/* Progress bar */
+.progressBar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #e67e22, #3498db, #27ae60);
+  z-index: 100;
+  transition: width 0.1s linear;
+}
+
+.nav {
+  position: fixed;
+  top: 10px;
+  left: 24px;
+  z-index: 99;
+}
+
+.backLink {
+  color: rgba(255,255,255,0.5);
+  text-decoration: none;
+  font-size: 13px;
+  transition: color 0.2s;
+  background: rgba(13,13,26,0.8);
+  padding: 6px 12px;
+  border-radius: 20px;
+  border: 1px solid #2a2a4a;
+  backdrop-filter: blur(8px);
+}
+
+.backLink:hover { color: #ffffff; }
+
+/* Hero */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 80px 24px 60px;
+  background: radial-gradient(ellipse at center top, #1a1a3a 0%, #0d0d1a 60%);
+}
+
+.heroTag {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #e67e22;
+  margin-bottom: 20px;
+  border: 1px solid #e67e2244;
+  padding: 4px 14px;
+  border-radius: 20px;
+}
+
+.heroTitle {
+  font-size: clamp(42px, 7vw, 88px);
+  font-weight: 900;
+  line-height: 1.05;
+  margin: 0 0 24px;
+  letter-spacing: -2px;
+  background: linear-gradient(135deg, #ffffff 40%, #7f8c8d);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.heroSub {
+  font-size: 17px;
+  color: #7f8c8d;
+  max-width: 580px;
+  line-height: 1.7;
+  margin: 0 0 48px;
+}
+
+.scrollHint {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  color: #5a5a8a;
+  font-size: 13px;
+  animation: bounce 2s ease-in-out infinite;
+}
+
+.scrollArrow {
+  font-size: 24px;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(8px); }
+}
+
+/* Sections */
+.section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 80px 24px;
+  border-top: 1px solid #1a1a2e;
+}
+
+.sectionAlt {
+  background: #0f0f22;
+}
+
+.sectionInner {
+  max-width: 1100px;
+  margin: 0 auto;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 60px;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .sectionInner {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+}
+
+.sectionEyebrow {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #3498db;
+  display: block;
+  margin-bottom: 14px;
+}
+
+.sectionTitle {
+  font-size: clamp(26px, 3.5vw, 40px);
+  font-weight: 800;
+  line-height: 1.2;
+  margin: 0 0 18px;
+  letter-spacing: -1px;
+  color: #ffffff;
+}
+
+.sectionBody {
+  font-size: 15px;
+  color: #7f8c8d;
+  line-height: 1.75;
+  margin: 0;
+}
+
+.chartArea {
+  background: #13131f;
+  border: 1px solid #2a2a4a;
+  border-radius: 12px;
+  padding: 24px;
+}
+
+/* Bar chart */
+.barChart {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.barRow {
+  display: grid;
+  grid-template-columns: 180px 1fr 36px;
+  align-items: center;
+  gap: 10px;
+}
+
+.barLabel {
+  font-size: 11px;
+  color: #7f8c8d;
+  text-align: right;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.barTrack {
+  height: 10px;
+  background: #1e1e2e;
+  border-radius: 5px;
+  overflow: hidden;
+  position: relative;
+}
+
+.bar {
+  height: 100%;
+  border-radius: 5px;
+  transform-origin: left center;
+}
+
+.barValue {
+  font-size: 11px;
+  font-weight: 700;
+  text-align: right;
+}
+
+/* Bubble row (category circles) */
+.bubbleRow {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.bubbleCol {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.bubble {
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.bubbleScore {
+  font-size: 16px;
+  font-weight: 900;
+  color: rgba(255,255,255,0.9);
+}
+
+.bubbleCat {
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: capitalize;
+  letter-spacing: 0.5px;
+}
+
+.bubbleDelta {
+  font-size: 10px;
+  font-weight: 600;
+}
+
+/* NATO bars */
+.natoGrid {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.natoRow {
+  display: grid;
+  grid-template-columns: 28px 1fr 40px;
+  align-items: center;
+  gap: 8px;
+}
+
+.natoFlag {
+  font-size: 16px;
+  text-align: center;
+}
+
+.natoTrack {
+  height: 8px;
+  background: #1e1e2e;
+  border-radius: 4px;
+  overflow: visible;
+  position: relative;
+}
+
+.natoBar {
+  height: 100%;
+  border-radius: 4px;
+  transform-origin: left center;
+}
+
+.natoTargetMark {
+  position: absolute;
+  top: -3px;
+  bottom: -3px;
+  width: 2px;
+  background: rgba(0, 255, 136, 0.7);
+  border-radius: 1px;
+}
+
+.natoVal {
+  font-size: 11px;
+  font-weight: 700;
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+.natoLegend {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 14px;
+  flex-wrap: wrap;
+}
+
+.targetLine {
+  display: inline-block;
+  width: 14px;
+  height: 2px;
+  background: rgba(0, 255, 136, 0.7);
+  border-radius: 1px;
+}
+
+.targetLabel {
+  font-size: 11px;
+  color: #7f8c8d;
+}
+
+/* Closing */
+.closing {
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 80px 24px;
+  background: radial-gradient(ellipse at center bottom, #1a1a3a 0%, #0d0d1a 60%);
+  border-top: 1px solid #1a1a2e;
+}
+
+.closingTitle {
+  font-size: clamp(32px, 5vw, 60px);
+  font-weight: 900;
+  letter-spacing: -1.5px;
+  margin: 0 0 20px;
+  background: linear-gradient(135deg, #e74c3c, #e67e22);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.closingBody {
+  font-size: 16px;
+  color: #7f8c8d;
+  max-width: 580px;
+  line-height: 1.75;
+  margin: 0 0 40px;
+}
+
+.closingLinks {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.closingLink {
+  background: #1e1e2e;
+  color: #ffffff;
+  text-decoration: none;
+  border: 1px solid #3a3a5a;
+  border-radius: 8px;
+  padding: 12px 24px;
+  font-size: 13px;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+
+.closingLink:hover {
+  background: #2a2a3a;
+  border-color: #5a5a8a;
+}

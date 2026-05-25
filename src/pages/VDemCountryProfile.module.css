@@ -1,0 +1,469 @@
+.container {
+  min-height: 100vh;
+  background: #0d0d1a;
+  color: #e0e0e0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  padding: 20px 40px;
+  border-bottom: 1px solid #2a2a4a;
+}
+
+.backLink {
+  color: #7f8c8d;
+  text-decoration: none;
+  font-size: 14px;
+  display: inline-block;
+  margin-bottom: 12px;
+  transition: color 0.2s;
+}
+
+.backLink:hover {
+  color: #3498db;
+}
+
+.title {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.subtitle {
+  margin: 8px 0 0;
+  color: #7f8c8d;
+  font-size: 14px;
+}
+
+.main {
+  flex: 1;
+  padding: 20px 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.controls {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 16px 20px;
+  background: #151525;
+  border-radius: 8px;
+  border: 1px solid #2a2a4a;
+}
+
+.controlGroup {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.label {
+  font-size: 12px;
+  color: #7f8c8d;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.select {
+  padding: 10px 16px;
+  background: #1e1e2e;
+  color: #e0e0e0;
+  border: 1px solid #2a2a4a;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  min-width: 280px;
+}
+
+.select:focus {
+  outline: none;
+  border-color: #3498db;
+}
+
+.slider {
+  width: 300px;
+  height: 6px;
+  -webkit-appearance: none;
+  appearance: none;
+  background: #2a2a4a;
+  border-radius: 3px;
+  outline: none;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  background: #3498db;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.yearDisplay {
+  font-size: 20px;
+  font-weight: 600;
+  color: #fff;
+  min-width: 60px;
+  text-align: center;
+  font-variant-numeric: tabular-nums;
+}
+
+.profile {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.countryHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 32px;
+  background: #151525;
+  border-radius: 12px;
+  border: 1px solid #2a2a4a;
+}
+
+.countryInfo {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.countryFlag {
+  width: 64px;
+  height: 64px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.countryDetails {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.countryName {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.countryRegion {
+  font-size: 14px;
+  color: #7f8c8d;
+}
+
+.rankings {
+  display: flex;
+  gap: 16px;
+}
+
+.rankingCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding: 16px 24px;
+  background: #1e1e2e;
+  border-radius: 8px;
+  border: 1px solid #2a2a4a;
+  min-width: 120px;
+}
+
+.rankingLabel {
+  font-size: 11px;
+  color: #7f8c8d;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.rankingValue {
+  font-size: 28px;
+  font-weight: 700;
+  color: #f1c40f;
+  font-variant-numeric: tabular-nums;
+}
+
+.rankingSub {
+  font-size: 11px;
+  color: #5a5a7a;
+}
+
+.indicesGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.indexCard {
+  background: #151525;
+  border-radius: 12px;
+  border: 1px solid #2a2a4a;
+  padding: 20px;
+  transition: border-color 0.2s;
+}
+
+.indexCard:hover {
+  border-color: #3a3a5a;
+}
+
+.indexCard.highlighted {
+  border-color: #3498db;
+  background: linear-gradient(135deg, #151525 0%, #1a2a3a 100%);
+}
+
+.indexHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 12px;
+}
+
+.indexName {
+  margin: 0 0 4px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.indexDesc {
+  margin: 0;
+  font-size: 11px;
+  color: #7f8c8d;
+  line-height: 1.4;
+}
+
+.currentValue {
+  font-size: 24px;
+  font-weight: 700;
+  color: #fff;
+  font-variant-numeric: tabular-nums;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.trendArrow {
+  font-size: 16px;
+}
+
+.trendUp {
+  color: #2ecc71;
+}
+
+.trendDown {
+  color: #e74c3c;
+}
+
+.trendStable {
+  color: #95a5a6;
+}
+
+.sparkline {
+  display: block;
+  margin: 0 -8px;
+}
+
+.noData {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #5a5a7a;
+  font-size: 12px;
+}
+
+.indexStats {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid #2a2a4a;
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+
+.statLabel {
+  font-size: 9px;
+  color: #5a5a7a;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.statValue {
+  font-size: 13px;
+  font-weight: 600;
+  color: #a0a0c0;
+  font-variant-numeric: tabular-nums;
+}
+
+.statYear {
+  font-size: 9px;
+  color: #5a5a7a;
+}
+
+.quickCompare {
+  background: #151525;
+  border-radius: 12px;
+  border: 1px solid #2a2a4a;
+  padding: 20px 24px;
+}
+
+.compareTitle {
+  margin: 0 0 16px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.compareList {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.compareButton {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 14px;
+  background: #1e1e2e;
+  border: 1px solid #2a2a4a;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.compareButton:hover {
+  background: #2a2a4a;
+  border-color: #3a3a5a;
+}
+
+.compareColor {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.compareName {
+  font-size: 13px;
+  color: #e0e0e0;
+}
+
+.compareScore {
+  font-size: 12px;
+  font-weight: 600;
+  color: #a0a0c0;
+  font-variant-numeric: tabular-nums;
+  padding: 2px 6px;
+  background: #0d0d1a;
+  border-radius: 4px;
+}
+
+.compareScore.higher {
+  color: #2ecc71;
+}
+
+.compareScore.lower {
+  color: #e74c3c;
+}
+
+.emptyState {
+  text-align: center;
+  padding: 80px 20px;
+  background: #151525;
+  border-radius: 12px;
+  border: 2px dashed #2a2a4a;
+}
+
+.emptyIcon {
+  font-size: 48px;
+  margin-bottom: 16px;
+}
+
+.emptyState h3 {
+  margin: 0 0 8px;
+  font-size: 18px;
+  color: #fff;
+}
+
+.emptyState p {
+  margin: 0;
+  color: #7f8c8d;
+  font-size: 14px;
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+  .indicesGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .countryHeader {
+    flex-direction: column;
+    gap: 20px;
+    align-items: flex-start;
+  }
+  
+  .rankings {
+    width: 100%;
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 768px) {
+  .header,
+  .main {
+    padding: 16px 20px;
+  }
+  
+  .controls {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .indicesGrid {
+    grid-template-columns: 1fr;
+  }
+  
+  .countryName {
+    font-size: 22px;
+  }
+  
+  .rankingCard {
+    min-width: 100px;
+    padding: 12px 16px;
+  }
+  
+  .rankingValue {
+    font-size: 22px;
+  }
+  
+  .slider {
+    width: 100%;
+  }
+  
+  .select {
+    min-width: auto;
+    width: 100%;
+  }
+}
