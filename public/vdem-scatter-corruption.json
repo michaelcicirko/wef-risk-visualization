@@ -1,0 +1,1456 @@
+{
+  "year": 2025,
+  "source": "V-Dem Institute v16",
+  "axes": {
+    "x": {
+      "key": "democracy",
+      "label": "Electoral Democracy Index (v2x_polyarchy)",
+      "range": [
+        0,
+        1
+      ]
+    },
+    "y": {
+      "key": "corruption",
+      "label": "Political Corruption Index (v2x_corr)",
+      "range": [
+        0,
+        1
+      ]
+    }
+  },
+  "countries": [
+    {
+      "country": "Afghanistan",
+      "code": "AFG",
+      "democracy": 0.069,
+      "corruption": 0.769,
+      "population": null,
+      "region": "Asia"
+    },
+    {
+      "country": "Albania",
+      "code": "ALB",
+      "democracy": 0.484,
+      "corruption": 0.624,
+      "population": null,
+      "region": "Europe"
+    },
+    {
+      "country": "Algeria",
+      "code": "DZA",
+      "democracy": 0.265,
+      "corruption": 0.662,
+      "population": null,
+      "region": "Africa"
+    },
+    {
+      "country": "Angola",
+      "code": "AGO",
+      "democracy": 0.344,
+      "corruption": 0.57,
+      "population": null,
+      "region": "Africa"
+    },
+    {
+      "country": "Argentina",
+      "code": "ARG",
+      "democracy": 0.69,
+      "corruption": 0.415,
+      "population": null,
+      "region": "Americas"
+    },
+    {
+      "country": "Armenia",
+      "code": "ARM",
+      "democracy": 0.614,
+      "corruption": 0.472,
+      "population": null,
+      "region": "Asia"
+    },
+    {
+      "country": "Australia",
+      "code": "AUS",
+      "democracy": 0.844,
+      "corruption": 0.029,
+      "population": null,
+      "region": "Oceania"
+    },
+    {
+      "country": "Austria",
+      "code": "AUT",
+      "democracy": 0.839,
+      "corruption": 0.095,
+      "population": null,
+      "region": "Europe"
+    },
+    {
+      "country": "Azerbaijan",
+      "code": "AZE",
+      "democracy": 0.171,
+      "corruption": 0.89,
+      "population": null,
+      "region": "Asia"
+    },
+    {
+      "country": "Bahrain",
+      "code": "BHR",
+      "democracy": 0.139,
+      "corruption": 0.477,
+      "population": null,
+      "region": "Asia"
+    },
+    {
+      "country": "Bangladesh",
+      "code": "BGD",
+      "democracy": 0.195,
+      "corruption": 0.78,
+      "population": null,
+      "region": "Asia"
+    },
+    {
+      "country": "Barbados",
+      "code": "BRB",
+      "democracy": 0.797,
+      "corruption": 0.073,
+      "population": null,
+      "region": "Americas"
+    },
+    {
+      "country": "Belarus",
+      "code": "BLR",
+      "democracy": 0.163,
+      "corruption": 0.41,
+      "population": null,
+      "region": "Europe"
+    },
+    {
+      "country": "Belgium",
+      "code": "BEL",
+      "democracy": 0.889,
+      "corruption": 0.031,
+      "population": null,
+      "region": "Europe"
+    },
+    {
+      "country": "Benin",
+      "code": "BEN",
+      "democracy": 0.493,
+      "corruption": 0.191,
+      "population": null,
+      "region": "Africa"
+    },
+    {
+      "country": "Bhutan",
+      "code": "BTN",
+      "democracy": 0.566,
+      "corruption": 0.148,
+      "population": null,
+      "region": "Asia"
+    },
+    {
+      "country": "Bolivia",
+      "code": "BOL",
+      "democracy": 0.605,
+      "corruption": 0.763,
+      "population": null,
+      "region": "Americas"
+    },
+    {
+      "country": "Bosnia and Herzegovina",
+      "code": "BIH",
+      "democracy": 0.498,
+      "corruption": 0.726,
+      "population": null,
+      "region": "Europe"
+    },
+    {
+      "country": "Botswana",
+      "code": "BWA",
+      "democracy": 0.665,
+      "corruption": 0.204,
+      "population": null,
+      "region": "Africa"
+    },
+    {
+      "country": "Brazil",
+      "code": "BRA",
+      "democracy": 0.784,
+      "corruption": 0.423,
+      "population": null,
+      "region": "Americas"
+    },
+    {
+      "country": "Bulgaria",
+      "code": "BGR",
+      "democracy": 0.599,
+      "corruption": 0.643,
+      "population": null,
+      "region": "Europe"
+    },
+    {
+      "country": "Burkina Faso",
+      "code": "BFA",
+      "democracy": 0.134,
+      "corruption": 0.373,
+      "population": null,
+      "region": "Africa"
+    },
+    {
+      "country": "Burma/Myanmar",
+      "code": "MMR",
+      "democracy": 0.08,
+      "corruption": 0.859,
+      "population": null,
+      "region": "Asia"
+    },
+    {
+      "country": "Burundi",
+      "code": "BDI",
+      "democracy": 0.185,
+      "corruption": 0.845,
+      "population": null,
+      "region": "Africa"
+    },
+    {
+      "country": "Cambodia",
+      "code": "KHM",
+      "democracy": 0.183,
+      "corruption": 0.904,
+      "population": null,
+      "region": "Asia"
+    },
+    {
+      "country": "Cameroon",
+      "code": "CMR",
+      "democracy": 0.26,
+      "corruption": 0.939,
+      "population": null,
+      "region": "Africa"
+    },
+    {
+      "country": "Canada",
+      "code": "CAN",
+      "democracy": 0.84,
+      "corruption": 0.026,
+      "population": null,
+      "region": "Americas"
+    },
+    {
+      "country": "Cape Verde",
+      "code": "CPV",
+      "democracy": 0.745,
+      "corruption": 0.288,
+      "population": null,
+      "region": "Africa"
+    },
+    {
+      "country": "Central African Republic",
+      "code": "CAF",
+      "democracy": 0.293,
+      "corruption": 0.854,
+      "population": null,
+      "region": "Africa"
+    },
+    {
+      "country": "Chad",
+      "code": "TCD",
+      "democracy": 0.242,
+      "corruption": 0.952,
+      "population": null,
+      "region": "Africa"
+    },
+    {
+      "country": "Chile",
+      "code": "CHL",
+      "democracy": 0.839,
+      "corruption": 0.075,
+      "population": null,
+      "region": "Americas"
+    },
+    {
+      "country": "China",
+      "code": "CHN",
+      "democracy": 0.072,
+      "corruption": 0.554,
+      "population": null,
+      "region": "Asia"
+    },
+    {
+      "country": "Colombia",
+      "code": "COL",
+      "democracy": 0.679,
+      "corruption": 0.388,
+      "population": null,
+      "region": "Americas"
+    },
+    {
+      "country": "Comoros",
+      "code": "COM",
+      "democracy": 0.293,
+      "corruption": 0.774,
+      "population": null,
+      "region": "Africa"
+    },
+    {
+      "country": "Costa Rica",
+      "code": "CRI",
+      "democracy": 0.862,
+      "corruption": 0.206,
+      "population": null,
+      "region": "Americas"
+    },
+    {
+      "country": "Croatia",
+      "code": "HRV",
+      "democracy": 0.686,
+      "corruption": 0.254,
+      "population": null,
+      "region": "Europe"
+    },
+    {
+      "country": "Cuba",
+      "code": "CUB",
+      "democracy": 0.176,
+      "corruption": 0.641,
+      "population": null,
+      "region": "Americas"
+    },
+    {
+      "country": "Cyprus",
+      "code": "CYP",
+      "democracy": 0.773,
+      "corruption": 0.166,
+      "population": null,
+      "region": "Asia"
+    },
+    {
+      "country": "Czechia",
+      "code": "CZE",
+      "democracy": 0.849,
+      "corruption": 0.171,
+      "population": null,
+      "region": "Europe"
+    },
+    {
+      "country": "Democratic Republic of the Congo",
+      "code": "COD",
+      "democracy": 0.306,
+      "corruption": 0.886,
+      "population": null,
+      "region": "Africa"
+    },
+    {
+      "country": "Denmark",
+      "code": "DNK",
+      "democracy": 0.913,
+      "corruption": 0.004,
+      "population": null,
+      "region": "Europe"
+    },
+    {
+      "country": "Djibouti",
+      "code": "DJI",
+      "democracy": 0.25,
+      "corruption": 0.706,
+      "population": null,
+      "region": "Africa"
+    },
+    {
+      "country": "Dominican Republic",
+      "code": "DOM",
+      "democracy": 0.735,
+      "corruption": 0.588,
+      "population": null,
+      "region": "Americas"
+    },
+    {
+      "country": "Ecuador",
+      "code": "ECU",
+      "democracy": 0.607,
+      "corruption": 0.652,
+      "population": null,
+      "region": "Americas"
+    },
+    {
+      "country": "Egypt",
+      "code": "EGY",
+      "democracy": 0.187,
+      "corruption": 0.729,
+      "population": null,
+      "region": "Africa"
+    },
+    {
+      "country": "El Salvador",
+      "code": "SLV",
+      "democracy": 0.321,
+      "corruption": 0.682,
+      "population": null,
+      "region": "Americas"
+    },
+    {
+      "country": "Equatorial Guinea",
+      "code": "GNQ",
+      "democracy": 0.172,
+      "corruption": 0.858,
+      "population": null,
+      "region": "Africa"
+    },
+    {
+      "country": "Eritrea",
+      "code": "ERI",
+      "democracy": 0.069,
+      "corruption": 0.752,
+      "population": null,
+      "region": "Africa"
+    },
+    {
+      "country": "Estonia",
+      "code": "EST",
+      "democracy": 0.887,
+      "corruption": 0.025,
+      "population": null,
+      "region": "Europe"
+    },
+    {
+      "country": "Eswatini",
+      "code": "SWZ",
+      "democracy": 0.128,
+      "corruption": 0.554,
+      "population": null,
+      "region": "Africa"
+    },
+    {
+      "country": "Ethiopia",
+      "code": "ETH",
+      "democracy": 0.257,
+      "corruption": 0.529,
+      "population": null,
+      "region": "Africa"
+    },
+    {
+      "country": "Fiji",
+      "code": "FJI",
+      "democracy": 0.507,
+      "corruption": 0.289,
+      "population": null,
+      "region": "Oceania"
+    },
+    {
+      "country": "Finland",
+      "code": "FIN",
+      "democracy": 0.852,
+      "corruption": 0.031,
+      "population": null,
+      "region": "Europe"
+    },
+    {
+      "country": "France",
+      "code": "FRA",
+      "democracy": 0.865,
+      "corruption": 0.056,
+      "population": null,
+      "region": "Europe"
+    },
+    {
+      "country": "Gabon",
+      "code": "GAB",
+      "democracy": 0.302,
+      "corruption": 0.72,
+      "population": null,
+      "region": "Africa"
+    },
+    {
+      "country": "Georgia",
+      "code": "GEO",
+      "democracy": 0.401,
+      "corruption": 0.289,
+      "population": null,
+      "region": "Asia"
+    },
+    {
+      "country": "Germany",
+      "code": "DEU",
+      "democracy": 0.828,
+      "corruption": 0.024,
+      "population": null,
+      "region": "Europe"
+    },
+    {
+      "country": "Ghana",
+      "code": "GHA",
+      "democracy": 0.711,
+      "corruption": 0.615,
+      "population": null,
+      "region": "Africa"
+    },
+    {
+      "country": "Greece",
+      "code": "GRC",
+      "democracy": 0.741,
+      "corruption": 0.276,
+      "population": null,
+      "region": "Europe"
+    },
+    {
+      "country": "Guatemala",
+      "code": "GTM",
+      "democracy": 0.637,
+      "corruption": 0.616,
+      "population": null,
+      "region": "Americas"
+    },
+    {
+      "country": "Guinea",
+      "code": "GIN",
+      "democracy": 0.187,
+      "corruption": 0.808,
+      "population": null,
+      "region": "Africa"
+    },
+    {
+      "country": "Guinea-Bissau",
+      "code": "GNB",
+      "democracy": 0.252,
+      "corruption": 0.828,
+      "population": null,
+      "region": "Africa"
+    },
+    {
+      "country": "Guyana",
+      "code": "GUY",
+      "democracy": 0.515,
+      "corruption": 0.507,
+      "population": null,
+      "region": "Americas"
+    },
+    {
+      "country": "Haiti",
+      "code": "HTI",
+      "democracy": 0.238,
+      "corruption": 0.786,
+      "population": null,
+      "region": "Americas"
+    },
+    {
+      "country": "Honduras",
+      "code": "HND",
+      "democracy": 0.511,
+      "corruption": 0.752,
+      "population": null,
+      "region": "Americas"
+    },
+    {
+      "country": "Hong Kong",
+      "code": "HKG",
+      "democracy": 0.151,
+      "corruption": 0.085,
+      "population": null,
+      "region": "Asia"
+    },
+    {
+      "country": "Hungary",
+      "code": "HUN",
+      "democracy": 0.421,
+      "corruption": 0.488,
+      "population": null,
+      "region": "Europe"
+    },
+    {
+      "country": "Iceland",
+      "code": "ISL",
+      "democracy": 0.807,
+      "corruption": 0.014,
+      "population": null,
+      "region": "Europe"
+    },
+    {
+      "country": "India",
+      "code": "IND",
+      "democracy": 0.377,
+      "corruption": 0.684,
+      "population": null,
+      "region": "Asia"
+    },
+    {
+      "country": "Indonesia",
+      "code": "IDN",
+      "democracy": 0.462,
+      "corruption": 0.795,
+      "population": null,
+      "region": "Asia"
+    },
+    {
+      "country": "Iran",
+      "code": "IRN",
+      "democracy": 0.159,
+      "corruption": 0.768,
+      "population": null,
+      "region": "Asia"
+    },
+    {
+      "country": "Iraq",
+      "code": "IRQ",
+      "democracy": 0.369,
+      "corruption": 0.892,
+      "population": null,
+      "region": "Asia"
+    },
+    {
+      "country": "Ireland",
+      "code": "IRL",
+      "democracy": 0.887,
+      "corruption": 0.032,
+      "population": null,
+      "region": "Europe"
+    },
+    {
+      "country": "Israel",
+      "code": "ISR",
+      "democracy": 0.694,
+      "corruption": 0.107,
+      "population": null,
+      "region": "Asia"
+    },
+    {
+      "country": "Italy",
+      "code": "ITA",
+      "democracy": 0.745,
+      "corruption": 0.157,
+      "population": null,
+      "region": "Europe"
+    },
+    {
+      "country": "Ivory Coast",
+      "code": "CIV",
+      "democracy": 0.394,
+      "corruption": 0.598,
+      "population": null,
+      "region": "Africa"
+    },
+    {
+      "country": "Jamaica",
+      "code": "JAM",
+      "democracy": 0.805,
+      "corruption": 0.207,
+      "population": null,
+      "region": "Americas"
+    },
+    {
+      "country": "Japan",
+      "code": "JPN",
+      "democracy": 0.819,
+      "corruption": 0.05,
+      "population": null,
+      "region": "Asia"
+    },
+    {
+      "country": "Jordan",
+      "code": "JOR",
+      "democracy": 0.282,
+      "corruption": 0.422,
+      "population": null,
+      "region": "Asia"
+    },
+    {
+      "country": "Kazakhstan",
+      "code": "KAZ",
+      "democracy": 0.259,
+      "corruption": 0.736,
+      "population": null,
+      "region": "Asia"
+    },
+    {
+      "country": "Kenya",
+      "code": "KEN",
+      "democracy": 0.563,
+      "corruption": 0.564,
+      "population": null,
+      "region": "Africa"
+    },
+    {
+      "country": "Kosovo",
+      "code": "XKX",
+      "democracy": 0.631,
+      "corruption": 0.348,
+      "population": null,
+      "region": "Other"
+    },
+    {
+      "country": "Kuwait",
+      "code": "KWT",
+      "democracy": 0.138,
+      "corruption": 0.346,
+      "population": null,
+      "region": "Asia"
+    },
+    {
+      "country": "Kyrgyzstan",
+      "code": "KGZ",
+      "democracy": 0.313,
+      "corruption": 0.793,
+      "population": null,
+      "region": "Asia"
+    },
+    {
+      "country": "Laos",
+      "code": "LAO",
+      "democracy": 0.135,
+      "corruption": 0.765,
+      "population": null,
+      "region": "Asia"
+    },
+    {
+      "country": "Latvia",
+      "code": "LVA",
+      "democracy": 0.834,
+      "corruption": 0.07,
+      "population": null,
+      "region": "Europe"
+    },
+    {
+      "country": "Lebanon",
+      "code": "LBN",
+      "democracy": 0.419,
+      "corruption": 0.83,
+      "population": null,
+      "region": "Asia"
+    },
+    {
+      "country": "Lesotho",
+      "code": "LSO",
+      "democracy": 0.661,
+      "corruption": 0.472,
+      "population": null,
+      "region": "Africa"
+    },
+    {
+      "country": "Liberia",
+      "code": "LBR",
+      "democracy": 0.597,
+      "corruption": 0.877,
+      "population": null,
+      "region": "Africa"
+    },
+    {
+      "country": "Libya",
+      "code": "LBY",
+      "democracy": 0.193,
+      "corruption": 0.811,
+      "population": null,
+      "region": "Africa"
+    },
+    {
+      "country": "Lithuania",
+      "code": "LTU",
+      "democracy": 0.786,
+      "corruption": 0.159,
+      "population": null,
+      "region": "Europe"
+    },
+    {
+      "country": "Luxembourg",
+      "code": "LUX",
+      "democracy": 0.869,
+      "corruption": 0.025,
+      "population": null,
+      "region": "Europe"
+    },
+    {
+      "country": "Madagascar",
+      "code": "MDG",
+      "democracy": 0.361,
+      "corruption": 0.882,
+      "population": null,
+      "region": "Africa"
+    },
+    {
+      "country": "Malawi",
+      "code": "MWI",
+      "democracy": 0.557,
+      "corruption": 0.628,
+      "population": null,
+      "region": "Africa"
+    },
+    {
+      "country": "Malaysia",
+      "code": "MYS",
+      "democracy": 0.504,
+      "corruption": 0.322,
+      "population": null,
+      "region": "Asia"
+    },
+    {
+      "country": "Maldives",
+      "code": "MDV",
+      "democracy": 0.556,
+      "corruption": 0.312,
+      "population": null,
+      "region": "Asia"
+    },
+    {
+      "country": "Mali",
+      "code": "MLI",
+      "democracy": 0.164,
+      "corruption": 0.72,
+      "population": null,
+      "region": "Africa"
+    },
+    {
+      "country": "Malta",
+      "code": "MLT",
+      "democracy": 0.783,
+      "corruption": 0.186,
+      "population": null,
+      "region": "Europe"
+    },
+    {
+      "country": "Mauritania",
+      "code": "MRT",
+      "democracy": 0.328,
+      "corruption": 0.825,
+      "population": null,
+      "region": "Africa"
+    },
+    {
+      "country": "Mauritius",
+      "code": "MUS",
+      "democracy": 0.738,
+      "corruption": 0.356,
+      "population": null,
+      "region": "Africa"
+    },
+    {
+      "country": "Mexico",
+      "code": "MEX",
+      "democracy": 0.469,
+      "corruption": 0.574,
+      "population": null,
+      "region": "Americas"
+    },
+    {
+      "country": "Moldova",
+      "code": "MDA",
+      "democracy": 0.553,
+      "corruption": 0.325,
+      "population": null,
+      "region": "Europe"
+    },
+    {
+      "country": "Mongolia",
+      "code": "MNG",
+      "democracy": 0.535,
+      "corruption": 0.693,
+      "population": null,
+      "region": "Asia"
+    },
+    {
+      "country": "Montenegro",
+      "code": "MNE",
+      "democracy": 0.636,
+      "corruption": 0.43,
+      "population": null,
+      "region": "Europe"
+    },
+    {
+      "country": "Morocco",
+      "code": "MAR",
+      "democracy": 0.259,
+      "corruption": 0.671,
+      "population": null,
+      "region": "Africa"
+    },
+    {
+      "country": "Mozambique",
+      "code": "MOZ",
+      "democracy": 0.279,
+      "corruption": 0.695,
+      "population": null,
+      "region": "Africa"
+    },
+    {
+      "country": "Namibia",
+      "code": "NAM",
+      "democracy": 0.633,
+      "corruption": 0.274,
+      "population": null,
+      "region": "Africa"
+    },
+    {
+      "country": "Nepal",
+      "code": "NPL",
+      "democracy": 0.656,
+      "corruption": 0.561,
+      "population": null,
+      "region": "Asia"
+    },
+    {
+      "country": "Netherlands",
+      "code": "NLD",
+      "democracy": 0.832,
+      "corruption": 0.027,
+      "population": null,
+      "region": "Europe"
+    },
+    {
+      "country": "New Zealand",
+      "code": "NZL",
+      "democracy": 0.849,
+      "corruption": 0.014,
+      "population": null,
+      "region": "Oceania"
+    },
+    {
+      "country": "Nicaragua",
+      "code": "NIC",
+      "democracy": 0.151,
+      "corruption": 0.942,
+      "population": null,
+      "region": "Americas"
+    },
+    {
+      "country": "Niger",
+      "code": "NER",
+      "democracy": 0.227,
+      "corruption": 0.591,
+      "population": null,
+      "region": "Africa"
+    },
+    {
+      "country": "Nigeria",
+      "code": "NGA",
+      "democracy": 0.505,
+      "corruption": 0.834,
+      "population": null,
+      "region": "Africa"
+    },
+    {
+      "country": "North Korea",
+      "code": "PRK",
+      "democracy": 0.083,
+      "corruption": 0.67,
+      "population": null,
+      "region": "Asia"
+    },
+    {
+      "country": "North Macedonia",
+      "code": "MKD",
+      "democracy": 0.562,
+      "corruption": 0.753,
+      "population": null,
+      "region": "Europe"
+    },
+    {
+      "country": "Norway",
+      "code": "NOR",
+      "democracy": 0.89,
+      "corruption": 0.01,
+      "population": null,
+      "region": "Europe"
+    },
+    {
+      "country": "Oman",
+      "code": "OMN",
+      "democracy": 0.175,
+      "corruption": 0.253,
+      "population": null,
+      "region": "Asia"
+    },
+    {
+      "country": "Pakistan",
+      "code": "PAK",
+      "democracy": 0.302,
+      "corruption": 0.802,
+      "population": null,
+      "region": "Asia"
+    },
+    {
+      "country": "Palestine/Gaza",
+      "code": "PSG",
+      "democracy": 0.128,
+      "corruption": 0.372,
+      "population": null,
+      "region": "Other"
+    },
+    {
+      "country": "Palestine/West Bank",
+      "code": "PSE",
+      "democracy": 0.214,
+      "corruption": 0.464,
+      "population": null,
+      "region": "Asia"
+    },
+    {
+      "country": "Panama",
+      "code": "PAN",
+      "democracy": 0.728,
+      "corruption": 0.485,
+      "population": null,
+      "region": "Americas"
+    },
+    {
+      "country": "Papua New Guinea",
+      "code": "PNG",
+      "democracy": 0.467,
+      "corruption": 0.684,
+      "population": null,
+      "region": "Oceania"
+    },
+    {
+      "country": "Paraguay",
+      "code": "PRY",
+      "democracy": 0.581,
+      "corruption": 0.801,
+      "population": null,
+      "region": "Americas"
+    },
+    {
+      "country": "Peru",
+      "code": "PER",
+      "democracy": 0.667,
+      "corruption": 0.63,
+      "population": null,
+      "region": "Americas"
+    },
+    {
+      "country": "Philippines",
+      "code": "PHL",
+      "democracy": 0.392,
+      "corruption": 0.841,
+      "population": null,
+      "region": "Asia"
+    },
+    {
+      "country": "Poland",
+      "code": "POL",
+      "democracy": 0.768,
+      "corruption": 0.081,
+      "population": null,
+      "region": "Europe"
+    },
+    {
+      "country": "Portugal",
+      "code": "PRT",
+      "democracy": 0.822,
+      "corruption": 0.166,
+      "population": null,
+      "region": "Europe"
+    },
+    {
+      "country": "Qatar",
+      "code": "QAT",
+      "democracy": 0.034,
+      "corruption": 0.331,
+      "population": null,
+      "region": "Asia"
+    },
+    {
+      "country": "Republic of the Congo",
+      "code": "COG",
+      "democracy": 0.243,
+      "corruption": 0.841,
+      "population": null,
+      "region": "Africa"
+    },
+    {
+      "country": "Romania",
+      "code": "ROU",
+      "democracy": 0.605,
+      "corruption": 0.419,
+      "population": null,
+      "region": "Europe"
+    },
+    {
+      "country": "Russia",
+      "code": "RUS",
+      "democracy": 0.17,
+      "corruption": 0.783,
+      "population": null,
+      "region": "Europe"
+    },
+    {
+      "country": "Rwanda",
+      "code": "RWA",
+      "democracy": 0.193,
+      "corruption": 0.418,
+      "population": null,
+      "region": "Africa"
+    },
+    {
+      "country": "Sao Tome and Principe",
+      "code": "STP",
+      "democracy": 0.632,
+      "corruption": 0.289,
+      "population": null,
+      "region": "Africa"
+    },
+    {
+      "country": "Saudi Arabia",
+      "code": "SAU",
+      "democracy": 0.016,
+      "corruption": 0.326,
+      "population": null,
+      "region": "Asia"
+    },
+    {
+      "country": "Senegal",
+      "code": "SEN",
+      "democracy": 0.633,
+      "corruption": 0.404,
+      "population": null,
+      "region": "Africa"
+    },
+    {
+      "country": "Serbia",
+      "code": "SRB",
+      "democracy": 0.3,
+      "corruption": 0.794,
+      "population": null,
+      "region": "Europe"
+    },
+    {
+      "country": "Seychelles",
+      "code": "SYC",
+      "democracy": 0.76,
+      "corruption": 0.054,
+      "population": null,
+      "region": "Africa"
+    },
+    {
+      "country": "Sierra Leone",
+      "code": "SLE",
+      "democracy": 0.471,
+      "corruption": 0.571,
+      "population": null,
+      "region": "Africa"
+    },
+    {
+      "country": "Singapore",
+      "code": "SGP",
+      "democracy": 0.434,
+      "corruption": 0.013,
+      "population": null,
+      "region": "Asia"
+    },
+    {
+      "country": "Slovakia",
+      "code": "SVK",
+      "democracy": 0.733,
+      "corruption": 0.29,
+      "population": null,
+      "region": "Europe"
+    },
+    {
+      "country": "Slovenia",
+      "code": "SVN",
+      "democracy": 0.692,
+      "corruption": 0.078,
+      "population": null,
+      "region": "Europe"
+    },
+    {
+      "country": "Solomon Islands",
+      "code": "SLB",
+      "democracy": 0.696,
+      "corruption": 0.602,
+      "population": null,
+      "region": "Oceania"
+    },
+    {
+      "country": "Somalia",
+      "code": "SOM",
+      "democracy": 0.165,
+      "corruption": 0.87,
+      "population": null,
+      "region": "Africa"
+    },
+    {
+      "country": "Somaliland",
+      "code": "SML",
+      "democracy": 0.445,
+      "corruption": 0.559,
+      "population": null,
+      "region": "Other"
+    },
+    {
+      "country": "South Africa",
+      "code": "ZAF",
+      "democracy": 0.743,
+      "corruption": 0.538,
+      "population": null,
+      "region": "Africa"
+    },
+    {
+      "country": "South Korea",
+      "code": "KOR",
+      "democracy": 0.819,
+      "corruption": 0.156,
+      "population": null,
+      "region": "Asia"
+    },
+    {
+      "country": "South Sudan",
+      "code": "SSD",
+      "democracy": 0.133,
+      "corruption": 0.893,
+      "population": null,
+      "region": "Africa"
+    },
+    {
+      "country": "Spain",
+      "code": "ESP",
+      "democracy": 0.822,
+      "corruption": 0.113,
+      "population": null,
+      "region": "Europe"
+    },
+    {
+      "country": "Sri Lanka",
+      "code": "LKA",
+      "democracy": 0.783,
+      "corruption": 0.278,
+      "population": null,
+      "region": "Asia"
+    },
+    {
+      "country": "Sudan",
+      "code": "SDN",
+      "democracy": 0.13,
+      "corruption": 0.719,
+      "population": null,
+      "region": "Africa"
+    },
+    {
+      "country": "Suriname",
+      "code": "SUR",
+      "democracy": 0.781,
+      "corruption": 0.172,
+      "population": null,
+      "region": "Americas"
+    },
+    {
+      "country": "Sweden",
+      "code": "SWE",
+      "democracy": 0.889,
+      "corruption": 0.009,
+      "population": null,
+      "region": "Europe"
+    },
+    {
+      "country": "Switzerland",
+      "code": "CHE",
+      "democracy": 0.882,
+      "corruption": 0.02,
+      "population": null,
+      "region": "Europe"
+    },
+    {
+      "country": "Syria",
+      "code": "SYR",
+      "democracy": 0.128,
+      "corruption": 0.619,
+      "population": null,
+      "region": "Asia"
+    },
+    {
+      "country": "Taiwan",
+      "code": "TWN",
+      "democracy": 0.801,
+      "corruption": 0.214,
+      "population": null,
+      "region": "Asia"
+    },
+    {
+      "country": "Tajikistan",
+      "code": "TJK",
+      "democracy": 0.158,
+      "corruption": 0.893,
+      "population": null,
+      "region": "Asia"
+    },
+    {
+      "country": "Tanzania",
+      "code": "TZA",
+      "democracy": 0.365,
+      "corruption": 0.329,
+      "population": null,
+      "region": "Africa"
+    },
+    {
+      "country": "Thailand",
+      "code": "THA",
+      "democracy": 0.424,
+      "corruption": 0.635,
+      "population": null,
+      "region": "Asia"
+    },
+    {
+      "country": "The Gambia",
+      "code": "GMB",
+      "democracy": 0.641,
+      "corruption": 0.271,
+      "population": null,
+      "region": "Africa"
+    },
+    {
+      "country": "Timor-Leste",
+      "code": "TLS",
+      "democracy": 0.736,
+      "corruption": 0.25,
+      "population": null,
+      "region": "Asia"
+    },
+    {
+      "country": "Togo",
+      "code": "TGO",
+      "democracy": 0.351,
+      "corruption": 0.757,
+      "population": null,
+      "region": "Africa"
+    },
+    {
+      "country": "Trinidad and Tobago",
+      "code": "TTO",
+      "democracy": 0.786,
+      "corruption": 0.1,
+      "population": null,
+      "region": "Americas"
+    },
+    {
+      "country": "Tunisia",
+      "code": "TUN",
+      "democracy": 0.395,
+      "corruption": 0.41,
+      "population": null,
+      "region": "Africa"
+    },
+    {
+      "country": "Türkiye",
+      "code": "TUR",
+      "democracy": 0.293,
+      "corruption": 0.804,
+      "population": null,
+      "region": "Asia"
+    },
+    {
+      "country": "Turkmenistan",
+      "code": "TKM",
+      "democracy": 0.148,
+      "corruption": 0.899,
+      "population": null,
+      "region": "Asia"
+    },
+    {
+      "country": "Uganda",
+      "code": "UGA",
+      "democracy": 0.253,
+      "corruption": 0.889,
+      "population": null,
+      "region": "Africa"
+    },
+    {
+      "country": "Ukraine",
+      "code": "UKR",
+      "democracy": 0.386,
+      "corruption": 0.641,
+      "population": null,
+      "region": "Europe"
+    },
+    {
+      "country": "United Arab Emirates",
+      "code": "ARE",
+      "democracy": 0.104,
+      "corruption": 0.105,
+      "population": null,
+      "region": "Asia"
+    },
+    {
+      "country": "United Kingdom",
+      "code": "GBR",
+      "democracy": 0.772,
+      "corruption": 0.042,
+      "population": null,
+      "region": "Europe"
+    },
+    {
+      "country": "United States of America",
+      "code": "USA",
+      "democracy": 0.735,
+      "corruption": 0.06,
+      "population": null,
+      "region": "Americas"
+    },
+    {
+      "country": "Uruguay",
+      "code": "URY",
+      "democracy": 0.862,
+      "corruption": 0.055,
+      "population": null,
+      "region": "Americas"
+    },
+    {
+      "country": "Uzbekistan",
+      "code": "UZB",
+      "democracy": 0.218,
+      "corruption": 0.823,
+      "population": null,
+      "region": "Asia"
+    },
+    {
+      "country": "Vanuatu",
+      "code": "VUT",
+      "democracy": 0.729,
+      "corruption": 0.332,
+      "population": null,
+      "region": "Oceania"
+    },
+    {
+      "country": "Venezuela",
+      "code": "VEN",
+      "democracy": 0.181,
+      "corruption": 0.968,
+      "population": null,
+      "region": "Americas"
+    },
+    {
+      "country": "Vietnam",
+      "code": "VNM",
+      "democracy": 0.146,
+      "corruption": 0.466,
+      "population": null,
+      "region": "Asia"
+    },
+    {
+      "country": "Yemen",
+      "code": "YEM",
+      "democracy": 0.127,
+      "corruption": 0.902,
+      "population": null,
+      "region": "Asia"
+    },
+    {
+      "country": "Zambia",
+      "code": "ZMB",
+      "democracy": 0.497,
+      "corruption": 0.428,
+      "population": null,
+      "region": "Africa"
+    },
+    {
+      "country": "Zanzibar",
+      "code": "ZZB",
+      "democracy": 0.309,
+      "corruption": 0.524,
+      "population": null,
+      "region": "Other"
+    },
+    {
+      "country": "Zimbabwe",
+      "code": "ZWE",
+      "democracy": 0.268,
+      "corruption": 0.852,
+      "population": null,
+      "region": "Africa"
+    }
+  ]
+}

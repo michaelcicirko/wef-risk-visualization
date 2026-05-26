@@ -3,7 +3,8 @@ import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { scaleLinear, scalePoint } from 'd3-scale';
 import { line, curveMonotoneX } from 'd3-shape';
-import { VDEM_DATA, VDEM_COUNTRIES, DEMOCRACY_INDICES } from '../data/vdemDemocracy.js';
+import { DEMOCRACY_INDICES } from '../data/vdemDemocracy.js';
+import { useVdemData } from '../data/useVdemData.js';
 import styles from './VDemBumpChart.module.css';
 
 const MARGIN = { top: 40, right: 140, bottom: 80, left: 60 };
@@ -22,6 +23,7 @@ const REGION_COLORS = {
 };
 
 function VDemBumpChart() {
+  const { data: VDEM_DATA, loading, error } = useVdemData();
   const [year, setYear] = useState(2020);
   const [isPlaying, setIsPlaying] = useState(false);
   const [selectedIndex, setSelectedIndex] = useState('v2x_polyarchy');
@@ -32,10 +34,20 @@ function VDemBumpChart() {
 
   const indexInfo = DEMOCRACY_INDICES.find(d => d.key === selectedIndex);
 
+  const VDEM_COUNTRIES = useMemo(() => {
+    if (!VDEM_DATA) return [];
+    const seen = new Map();
+    VDEM_DATA.forEach(d => {
+      if (!seen.has(d.country_id)) seen.set(d.country_id, { id: d.country_id, name: d.country_name, code: d.country_text_id, region: d.region });
+    });
+    return Array.from(seen.values());
+  }, [VDEM_DATA]);
+
   // Get all years
   const years = useMemo(() => {
+    if (!VDEM_DATA) return [];
     return [...new Set(VDEM_DATA.map(d => d.year))].sort((a, b) => a - b);
-  }, []);
+  }, [VDEM_DATA]);
 
   // All years for tracking
   const displayYears = useMemo(() => {
@@ -44,6 +56,7 @@ function VDemBumpChart() {
 
   // Calculate rankings for each year
   const rankingData = useMemo(() => {
+    if (!VDEM_DATA) return {};
     const data = {};
     
     displayYears.forEach(y => {
@@ -169,6 +182,9 @@ function VDemBumpChart() {
 
   // Current year rankings
   const currentRankings = rankingData[year] || [];
+
+  if (loading) return <div className={styles.container}>Loading data...</div>;
+  if (error) return <div className={styles.container}>Error loading data: {error}</div>;
 
   return (
     <div className={styles.container}>

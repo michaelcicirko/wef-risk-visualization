@@ -5,7 +5,8 @@ import { scaleLinear, scalePoint } from 'd3-scale';
 import { line, curveMonotoneX } from 'd3-shape';
 import { axisBottom, axisLeft } from 'd3-axis';
 import { select } from 'd3-selection';
-import { VDEM_DATA, VDEM_COUNTRIES, DEMOCRACY_INDICES } from '../data/vdemDemocracy.js';
+import { DEMOCRACY_INDICES } from '../data/vdemDemocracy.js';
+import { useVdemData } from '../data/useVdemData.js';
 import styles from './VDemComparativeLines.module.css';
 
 const MARGIN = { top: 40, right: 180, bottom: 80, left: 70 };
@@ -23,6 +24,7 @@ const REGION_COLORS = {
 };
 
 function VDemComparativeLines() {
+  const { data: VDEM_DATA, loading, error } = useVdemData();
   const [year, setYear] = useState(2020);
   const [isPlaying, setIsPlaying] = useState(false);
   const [selectedIndex, setSelectedIndex] = useState('v2x_polyarchy');
@@ -36,11 +38,13 @@ function VDemComparativeLines() {
 
   // Get all years
   const years = useMemo(() => {
+    if (!VDEM_DATA) return [];
     return [...new Set(VDEM_DATA.map(d => d.year))].sort((a, b) => a - b);
-  }, []);
+  }, [VDEM_DATA]);
 
   // Get all countries with data
   const allCountries = useMemo(() => {
+    if (!VDEM_DATA) return [];
     const countryData = {};
     VDEM_DATA.forEach(d => {
       if (!countryData[d.country_id]) {
@@ -64,6 +68,7 @@ function VDemComparativeLines() {
 
   // Build data for selected countries
   const countryLines = useMemo(() => {
+    if (!VDEM_DATA) return {};
     const lines = {};
     
     selectedCountries.forEach(countryId => {
@@ -157,7 +162,7 @@ function VDemComparativeLines() {
 
   // Calculate average trend
   const averageTrend = useMemo(() => {
-    if (!showTrendLine || selectedCountries.length === 0) return null;
+    if (!showTrendLine || selectedCountries.length === 0 || !VDEM_DATA) return null;
     
     const avgPoints = [];
     years.forEach(y => {
@@ -181,6 +186,7 @@ function VDemComparativeLines() {
 
   // Current year values for selected countries
   const currentValues = useMemo(() => {
+    if (!VDEM_DATA) return [];
     return selectedCountries.map(id => {
       const data = VDEM_DATA.find(d => d.year === year && d.country_id === id);
       const country = allCountries.find(c => c.id === id);
@@ -193,6 +199,9 @@ function VDemComparativeLines() {
       };
     }).filter(d => d.value !== null);
   }, [selectedCountries, year, selectedIndex, allCountries]);
+
+  if (loading) return <div className={styles.container}>Loading data...</div>;
+  if (error) return <div className={styles.container}>Error loading data: {error}</div>;
 
   return (
     <div className={styles.container}>

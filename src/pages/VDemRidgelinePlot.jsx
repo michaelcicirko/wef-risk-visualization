@@ -3,7 +3,8 @@ import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { scaleLinear, scaleBand } from 'd3-scale';
 import { area, curveBasis } from 'd3-shape';
-import { VDEM_DATA, DEMOCRACY_INDICES } from '../data/vdemDemocracy.js';
+import { DEMOCRACY_INDICES } from '../data/vdemDemocracy.js';
+import { useVdemData } from '../data/useVdemData.js';
 import styles from './VDemRidgelinePlot.module.css';
 
 const MARGIN = { top: 40, right: 100, bottom: 60, left: 80 };
@@ -38,6 +39,7 @@ function groupByDecade(data, indexKey) {
 }
 
 function VDemRidgelinePlot() {
+  const { data: VDEM_DATA, loading, error } = useVdemData();
   const [selectedIndex, setSelectedIndex] = useState('v2x_libdem');
   const [hoveredDecade, setHoveredDecade] = useState(null);
 
@@ -45,6 +47,7 @@ function VDemRidgelinePlot() {
 
   // Prepare data
   const decadeData = useMemo(() => {
+    if (!VDEM_DATA) return [];
     const grouped = groupByDecade(VDEM_DATA, selectedIndex);
     const decades = Object.keys(grouped).map(Number).sort((a, b) => a - b);
     
@@ -107,6 +110,9 @@ function VDemRidgelinePlot() {
 
   // Stats for hovered decade
   const hoveredStats = hoveredDecade ? decadeData.find(d => d.decade === hoveredDecade) : null;
+
+  if (loading) return <div className={styles.container}>Loading data...</div>;
+  if (error) return <div className={styles.container}>Error loading data: {error}</div>;
 
   return (
     <div className={styles.container}>
@@ -259,7 +265,7 @@ function VDemRidgelinePlot() {
       </main>
 
       <footer className={styles.footer}>
-        <p>Source: V-Dem Institute v16 • {decadeData.length} decades • {VDEM_DATA.length.toLocaleString()} country-year observations</p>
+        <p>Source: V-Dem Institute v16 • {decadeData.length} decades • {VDEM_DATA?.length.toLocaleString()} country-year observations</p>
       </footer>
     </div>
   );

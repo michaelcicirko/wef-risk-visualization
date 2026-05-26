@@ -1,11 +1,10 @@
 /* NATO Timeline Page - Compact single-screen layout */
 .page {
-  height: 100vh;
+  min-height: 100vh;
   background: white;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   display: flex;
   flex-direction: column;
-  overflow: hidden;
 }
 
 /* Navigation */
@@ -13,6 +12,14 @@
   padding: 12px 40px;
   border-bottom: 1px solid #e0e0e0;
   flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navControls {
+  display: flex;
+  gap: 8px;
 }
 
 .backLink {
@@ -106,11 +113,9 @@
 
 /* Member Grid Container */
 .gridContainer {
-  flex: 1;
   width: 100%;
   max-width: 1000px;
-  overflow-y: auto;
-  min-height: 0;
+  overflow: visible;
   padding: 8px 0;
 }
 
@@ -173,13 +178,6 @@
 }
 
 /* Controls */
-.controls {
-  display: flex;
-  gap: 12px;
-  margin-top: 12px;
-  flex-shrink: 0;
-}
-
 .controlButton {
   background: transparent;
   color: #2c5282;
@@ -236,21 +234,3 @@
   margin: 0;
 }
 
-/* Scrollbar styling for grid */
-.gridContainer::-webkit-scrollbar {
-  width: 6px;
-}
-
-.gridContainer::-webkit-scrollbar-track {
-  background: #f1f1f1;
-  border-radius: 3px;
-}
-
-.gridContainer::-webkit-scrollbar-thumb {
-  background: #c1c1c1;
-  border-radius: 3px;
-}
-
-.gridContainer::-webkit-scrollbar-thumb:hover {
-  background: #a1a1a1;
-}

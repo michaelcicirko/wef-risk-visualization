@@ -1,0 +1,5407 @@
+{
+  "source": "Institute for Economics & Peace — Global Peace Index (via QoG, 2008–2025)",
+  "years": [
+    2008,
+    2009,
+    2010,
+    2011,
+    2012,
+    2013,
+    2014,
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024,
+    2025
+  ],
+  "data": {
+    "2008": [
+      {
+        "country": "Germany",
+        "region": "Europe",
+        "population": 84.1,
+        "gpi": 1.57,
+        "conflict": 1.05,
+        "militarization": 2.16,
+        "safety": 1.65
+      },
+      {
+        "country": "France",
+        "region": "Europe",
+        "population": 68.2,
+        "gpi": 1.72,
+        "conflict": 1.09,
+        "militarization": 2.82,
+        "safety": 1.59
+      },
+      {
+        "country": "United Kingdom",
+        "region": "Europe",
+        "population": 69.6,
+        "gpi": 1.86,
+        "conflict": 1.39,
+        "militarization": 2.58,
+        "safety": 1.81
+      },
+      {
+        "country": "Sweden",
+        "region": "Europe",
+        "population": 10.5,
+        "gpi": 1.45,
+        "conflict": 1.01,
+        "militarization": 2.24,
+        "safety": 1.36
+      },
+      {
+        "country": "Norway",
+        "region": "Europe",
+        "population": 5.5,
+        "gpi": 1.39,
+        "conflict": 1.06,
+        "militarization": 1.92,
+        "safety": 1.35
+      },
+      {
+        "country": "Finland",
+        "region": "Europe",
+        "population": 5.6,
+        "gpi": 1.35,
+        "conflict": 1.01,
+        "militarization": 1.86,
+        "safety": 1.35
+      },
+      {
+        "country": "Poland",
+        "region": "Europe",
+        "population": 37.6,
+        "gpi": 1.57,
+        "conflict": 1.29,
+        "militarization": 1.56,
+        "safety": 1.8
+      },
+      {
+        "country": "Hungary",
+        "region": "Europe",
+        "population": 9.6,
+        "gpi": 1.39,
+        "conflict": 1.21,
+        "militarization": 1.27,
+        "safety": 1.61
+      },
+      {
+        "country": "Russia",
+        "region": "Europe",
+        "population": 144.2,
+        "gpi": 2.94,
+        "conflict": 2.07,
+        "militarization": 3.35,
+        "safety": 3.43
+      },
+      {
+        "country": "Israel",
+        "region": "Middle East",
+        "population": 9.8,
+        "gpi": 2.78,
+        "conflict": 2.25,
+        "militarization": 4.11,
+        "safety": 2.49
+      },
+      {
+        "country": "Saudi Arabia",
+        "region": "Middle East",
+        "population": 36.9,
+        "gpi": 2.09,
+        "conflict": 1.62,
+        "militarization": 2.29,
+        "safety": 2.37
+      },
+      {
+        "country": "Iran",
+        "region": "Middle East",
+        "population": 89.2,
+        "gpi": 2.42,
+        "conflict": 2.23,
+        "militarization": 2.1,
+        "safety": 2.76
+      },
+      {
+        "country": "Turkey",
+        "region": "Middle East",
+        "population": 85.8,
+        "gpi": 2.36,
+        "conflict": 2.33,
+        "militarization": 1.86,
+        "safety": 2.7
+      },
+      {
+        "country": "Yemen",
+        "region": "Middle East",
+        "population": 34.4,
+        "gpi": 2.37,
+        "conflict": 2.01,
+        "militarization": 2.5,
+        "safety": 2.62
+      },
+      {
+        "country": "Syria",
+        "region": "Middle East",
+        "population": 23.2,
+        "gpi": 2.02,
+        "conflict": 1.8,
+        "militarization": 1.84,
+        "safety": 2.28
+      },
+      {
+        "country": "United States",
+        "region": "Americas",
+        "population": 341.8,
+        "gpi": 2.35,
+        "conflict": 1.85,
+        "militarization": 3.02,
+        "safety": 2.34
+      },
+      {
+        "country": "Canada",
+        "region": "Americas",
+        "population": 41,
+        "gpi": 1.42,
+        "conflict": 1.05,
+        "militarization": 1.98,
+        "safety": 1.41
+      },
+      {
+        "country": "Brazil",
+        "region": "Americas",
+        "population": 216.4,
+        "gpi": 2.01,
+        "conflict": 1.2,
+        "militarization": 1.9,
+        "safety": 2.75
+      },
+      {
+        "country": "Mexico",
+        "region": "Americas",
+        "population": 129.4,
+        "gpi": 2.15,
+        "conflict": 1.89,
+        "militarization": 1.71,
+        "safety": 2.65
+      },
+      {
+        "country": "Venezuela",
+        "region": "Americas",
+        "population": 28.4,
+        "gpi": 2.3,
+        "conflict": 1.95,
+        "militarization": 2.01,
+        "safety": 2.77
+      },
+      {
+        "country": "Colombia",
+        "region": "Americas",
+        "population": 52.7,
+        "gpi": 2.65,
+        "conflict": 2.3,
+        "militarization": 1.91,
+        "safety": 3.33
+      },
+      {
+        "country": "China",
+        "region": "Asia-Pacific",
+        "population": 1425.7,
+        "gpi": 2.13,
+        "conflict": 1.8,
+        "militarization": 2.07,
+        "safety": 2.42
+      },
+      {
+        "country": "Japan",
+        "region": "Asia-Pacific",
+        "population": 123.3,
+        "gpi": 1.46,
+        "conflict": 1.41,
+        "militarization": 1.72,
+        "safety": 1.35
+      },
+      {
+        "country": "India",
+        "region": "Asia-Pacific",
+        "population": 1428.6,
+        "gpi": 2.32,
+        "conflict": 2.3,
+        "militarization": 2.53,
+        "safety": 2.27
+      },
+      {
+        "country": "Australia",
+        "region": "Asia-Pacific",
+        "population": 26.6,
+        "gpi": 1.43,
+        "conflict": 1.14,
+        "militarization": 1.52,
+        "safety": 1.61
+      },
+      {
+        "country": "South Korea",
+        "region": "Asia-Pacific",
+        "population": 51.7,
+        "gpi": 1.73,
+        "conflict": 1.64,
+        "militarization": 2.17,
+        "safety": 1.55
+      },
+      {
+        "country": "Pakistan",
+        "region": "Asia-Pacific",
+        "population": 240.5,
+        "gpi": 2.69,
+        "conflict": 2.49,
+        "militarization": 2.58,
+        "safety": 2.96
+      },
+      {
+        "country": "Afghanistan",
+        "region": "Asia-Pacific",
+        "population": 42.2,
+        "gpi": 3.12,
+        "conflict": 3.13,
+        "militarization": 2.59,
+        "safety": 3.44
+      },
+      {
+        "country": "South Africa",
+        "region": "Africa",
+        "population": 60.4,
+        "gpi": 2.19,
+        "conflict": 1.4,
+        "militarization": 1.79,
+        "safety": 3.06
+      },
+      {
+        "country": "Nigeria",
+        "region": "Africa",
+        "population": 223.8,
+        "gpi": 2.37,
+        "conflict": 1.84,
+        "militarization": 1.75,
+        "safety": 3.18
+      },
+      {
+        "country": "Egypt",
+        "region": "Africa",
+        "population": 112.7,
+        "gpi": 1.85,
+        "conflict": 1.4,
+        "militarization": 1.92,
+        "safety": 2.18
+      },
+      {
+        "country": "Ethiopia",
+        "region": "Africa",
+        "population": 126.5,
+        "gpi": 2.27,
+        "conflict": 2.24,
+        "militarization": 2.13,
+        "safety": 2.42
+      },
+      {
+        "country": "Ukraine",
+        "region": "Europe",
+        "population": 37,
+        "gpi": 2.06,
+        "conflict": 1.43,
+        "militarization": 1.9,
+        "safety": 2.65
+      }
+    ],
+    "2009": [
+      {
+        "country": "Germany",
+        "region": "Europe",
+        "population": 84.1,
+        "gpi": 1.59,
+        "conflict": 1.07,
+        "militarization": 2.21,
+        "safety": 1.66
+      },
+      {
+        "country": "France",
+        "region": "Europe",
+        "population": 68.2,
+        "gpi": 1.74,
+        "conflict": 1.08,
+        "militarization": 2.86,
+        "safety": 1.62
+      },
+      {
+        "country": "United Kingdom",
+        "region": "Europe",
+        "population": 69.6,
+        "gpi": 1.87,
+        "conflict": 1.42,
+        "militarization": 2.58,
+        "safety": 1.81
+      },
+      {
+        "country": "Sweden",
+        "region": "Europe",
+        "population": 10.5,
+        "gpi": 1.46,
+        "conflict": 1.02,
+        "militarization": 2.21,
+        "safety": 1.39
+      },
+      {
+        "country": "Norway",
+        "region": "Europe",
+        "population": 5.5,
+        "gpi": 1.37,
+        "conflict": 1.07,
+        "militarization": 1.88,
+        "safety": 1.35
+      },
+      {
+        "country": "Finland",
+        "region": "Europe",
+        "population": 5.6,
+        "gpi": 1.36,
+        "conflict": 1.02,
+        "militarization": 1.88,
+        "safety": 1.35
+      },
+      {
+        "country": "Poland",
+        "region": "Europe",
+        "population": 37.6,
+        "gpi": 1.58,
+        "conflict": 1.3,
+        "militarization": 1.56,
+        "safety": 1.81
+      },
+      {
+        "country": "Hungary",
+        "region": "Europe",
+        "population": 9.6,
+        "gpi": 1.49,
+        "conflict": 1.43,
+        "militarization": 1.26,
+        "safety": 1.68
+      },
+      {
+        "country": "Russia",
+        "region": "Europe",
+        "population": 144.2,
+        "gpi": 3.03,
+        "conflict": 2.33,
+        "militarization": 3.35,
+        "safety": 3.42
+      },
+      {
+        "country": "Israel",
+        "region": "Middle East",
+        "population": 9.8,
+        "gpi": 2.77,
+        "conflict": 2.31,
+        "militarization": 4.11,
+        "safety": 2.41
+      },
+      {
+        "country": "Saudi Arabia",
+        "region": "Middle East",
+        "population": 36.9,
+        "gpi": 2.09,
+        "conflict": 1.41,
+        "militarization": 2.31,
+        "safety": 2.51
+      },
+      {
+        "country": "Iran",
+        "region": "Middle East",
+        "population": 89.2,
+        "gpi": 2.35,
+        "conflict": 2.07,
+        "militarization": 2.09,
+        "safety": 2.74
+      },
+      {
+        "country": "Turkey",
+        "region": "Middle East",
+        "population": 85.8,
+        "gpi": 2.52,
+        "conflict": 2.64,
+        "militarization": 1.96,
+        "safety": 2.79
+      },
+      {
+        "country": "Yemen",
+        "region": "Middle East",
+        "population": 34.4,
+        "gpi": 2.49,
+        "conflict": 2.18,
+        "militarization": 2.49,
+        "safety": 2.78
+      },
+      {
+        "country": "Syria",
+        "region": "Middle East",
+        "population": 23.2,
+        "gpi": 2.11,
+        "conflict": 2.02,
+        "militarization": 1.83,
+        "safety": 2.34
+      },
+      {
+        "country": "United States",
+        "region": "Americas",
+        "population": 341.8,
+        "gpi": 2.4,
+        "conflict": 1.81,
+        "militarization": 3.04,
+        "safety": 2.48
+      },
+      {
+        "country": "Canada",
+        "region": "Americas",
+        "population": 41,
+        "gpi": 1.44,
+        "conflict": 1.05,
+        "militarization": 1.94,
+        "safety": 1.47
+      },
+      {
+        "country": "Brazil",
+        "region": "Americas",
+        "population": 216.4,
+        "gpi": 1.98,
+        "conflict": 1.16,
+        "militarization": 1.9,
+        "safety": 2.69
+      },
+      {
+        "country": "Mexico",
+        "region": "Americas",
+        "population": 129.4,
+        "gpi": 2.2,
+        "conflict": 2.04,
+        "militarization": 1.71,
+        "safety": 2.67
+      },
+      {
+        "country": "Venezuela",
+        "region": "Americas",
+        "population": 28.4,
+        "gpi": 2.37,
+        "conflict": 2.02,
+        "militarization": 2.06,
+        "safety": 2.87
+      },
+      {
+        "country": "Colombia",
+        "region": "Americas",
+        "population": 52.7,
+        "gpi": 2.61,
+        "conflict": 2.27,
+        "militarization": 1.92,
+        "safety": 3.27
+      },
+      {
+        "country": "China",
+        "region": "Asia-Pacific",
+        "population": 1425.7,
+        "gpi": 2.16,
+        "conflict": 2.03,
+        "militarization": 2.07,
+        "safety": 2.32
+      },
+      {
+        "country": "Japan",
+        "region": "Asia-Pacific",
+        "population": 123.3,
+        "gpi": 1.46,
+        "conflict": 1.4,
+        "militarization": 1.72,
+        "safety": 1.34
+      },
+      {
+        "country": "India",
+        "region": "Asia-Pacific",
+        "population": 1428.6,
+        "gpi": 2.38,
+        "conflict": 2.38,
+        "militarization": 2.53,
+        "safety": 2.34
+      },
+      {
+        "country": "Australia",
+        "region": "Asia-Pacific",
+        "population": 26.6,
+        "gpi": 1.44,
+        "conflict": 1.16,
+        "militarization": 1.5,
+        "safety": 1.63
+      },
+      {
+        "country": "South Korea",
+        "region": "Asia-Pacific",
+        "population": 51.7,
+        "gpi": 1.77,
+        "conflict": 1.65,
+        "militarization": 2.2,
+        "safety": 1.62
+      },
+      {
+        "country": "Pakistan",
+        "region": "Asia-Pacific",
+        "population": 240.5,
+        "gpi": 2.93,
+        "conflict": 3.16,
+        "militarization": 2.76,
+        "safety": 2.9
+      },
+      {
+        "country": "Afghanistan",
+        "region": "Asia-Pacific",
+        "population": 42.2,
+        "gpi": 3.24,
+        "conflict": 3.19,
+        "militarization": 2.61,
+        "safety": 3.65
+      },
+      {
+        "country": "South Africa",
+        "region": "Africa",
+        "population": 60.4,
+        "gpi": 2.42,
+        "conflict": 1.8,
+        "militarization": 1.81,
+        "safety": 3.28
+      },
+      {
+        "country": "Nigeria",
+        "region": "Africa",
+        "population": 223.8,
+        "gpi": 2.39,
+        "conflict": 1.91,
+        "militarization": 1.75,
+        "safety": 3.17
+      },
+      {
+        "country": "Egypt",
+        "region": "Africa",
+        "population": 112.7,
+        "gpi": 1.84,
+        "conflict": 1.42,
+        "militarization": 1.92,
+        "safety": 2.15
+      },
+      {
+        "country": "Ethiopia",
+        "region": "Africa",
+        "population": 126.5,
+        "gpi": 2.29,
+        "conflict": 2.25,
+        "militarization": 2.13,
+        "safety": 2.47
+      },
+      {
+        "country": "Ukraine",
+        "region": "Europe",
+        "population": 37,
+        "gpi": 2.12,
+        "conflict": 1.63,
+        "militarization": 1.9,
+        "safety": 2.62
+      }
+    ],
+    "2010": [
+      {
+        "country": "Germany",
+        "region": "Europe",
+        "population": 84.1,
+        "gpi": 1.6,
+        "conflict": 1.07,
+        "militarization": 2.25,
+        "safety": 1.65
+      },
+      {
+        "country": "France",
+        "region": "Europe",
+        "population": 68.2,
+        "gpi": 1.71,
+        "conflict": 1.09,
+        "militarization": 2.84,
+        "safety": 1.56
+      },
+      {
+        "country": "United Kingdom",
+        "region": "Europe",
+        "population": 69.6,
+        "gpi": 1.86,
+        "conflict": 1.39,
+        "militarization": 2.58,
+        "safety": 1.82
+      },
+      {
+        "country": "Sweden",
+        "region": "Europe",
+        "population": 10.5,
+        "gpi": 1.45,
+        "conflict": 1.03,
+        "militarization": 2.19,
+        "safety": 1.35
+      },
+      {
+        "country": "Norway",
+        "region": "Europe",
+        "population": 5.5,
+        "gpi": 1.37,
+        "conflict": 1.07,
+        "militarization": 1.86,
+        "safety": 1.36
+      },
+      {
+        "country": "Finland",
+        "region": "Europe",
+        "population": 5.6,
+        "gpi": 1.37,
+        "conflict": 1.03,
+        "militarization": 1.92,
+        "safety": 1.35
+      },
+      {
+        "country": "Poland",
+        "region": "Europe",
+        "population": 37.6,
+        "gpi": 1.61,
+        "conflict": 1.52,
+        "militarization": 1.57,
+        "safety": 1.7
+      },
+      {
+        "country": "Hungary",
+        "region": "Europe",
+        "population": 9.6,
+        "gpi": 1.48,
+        "conflict": 1.44,
+        "militarization": 1.25,
+        "safety": 1.65
+      },
+      {
+        "country": "Russia",
+        "region": "Europe",
+        "population": 144.2,
+        "gpi": 2.97,
+        "conflict": 2.21,
+        "militarization": 3.38,
+        "safety": 3.37
+      },
+      {
+        "country": "Israel",
+        "region": "Middle East",
+        "population": 9.8,
+        "gpi": 2.75,
+        "conflict": 2.2,
+        "militarization": 4.09,
+        "safety": 2.46
+      },
+      {
+        "country": "Saudi Arabia",
+        "region": "Middle East",
+        "population": 36.9,
+        "gpi": 2.22,
+        "conflict": 1.81,
+        "militarization": 2.38,
+        "safety": 2.46
+      },
+      {
+        "country": "Iran",
+        "region": "Middle East",
+        "population": 89.2,
+        "gpi": 2.43,
+        "conflict": 2.27,
+        "militarization": 2.09,
+        "safety": 2.77
+      },
+      {
+        "country": "Turkey",
+        "region": "Middle East",
+        "population": 85.8,
+        "gpi": 2.38,
+        "conflict": 2.18,
+        "militarization": 1.99,
+        "safety": 2.8
+      },
+      {
+        "country": "Yemen",
+        "region": "Middle East",
+        "population": 34.4,
+        "gpi": 2.54,
+        "conflict": 2.23,
+        "militarization": 2.52,
+        "safety": 2.83
+      },
+      {
+        "country": "Syria",
+        "region": "Middle East",
+        "population": 23.2,
+        "gpi": 2.13,
+        "conflict": 2.01,
+        "militarization": 1.84,
+        "safety": 2.39
+      },
+      {
+        "country": "United States",
+        "region": "Americas",
+        "population": 341.8,
+        "gpi": 2.38,
+        "conflict": 1.77,
+        "militarization": 3.05,
+        "safety": 2.45
+      },
+      {
+        "country": "Canada",
+        "region": "Americas",
+        "population": 41,
+        "gpi": 1.5,
+        "conflict": 1.26,
+        "militarization": 1.88,
+        "safety": 1.47
+      },
+      {
+        "country": "Brazil",
+        "region": "Americas",
+        "population": 216.4,
+        "gpi": 2.01,
+        "conflict": 1.21,
+        "militarization": 1.9,
+        "safety": 2.73
+      },
+      {
+        "country": "Mexico",
+        "region": "Americas",
+        "population": 129.4,
+        "gpi": 2.32,
+        "conflict": 2.17,
+        "militarization": 1.72,
+        "safety": 2.83
+      },
+      {
+        "country": "Venezuela",
+        "region": "Americas",
+        "population": 28.4,
+        "gpi": 2.46,
+        "conflict": 2.12,
+        "militarization": 2.1,
+        "safety": 2.95
+      },
+      {
+        "country": "Colombia",
+        "region": "Americas",
+        "population": 52.7,
+        "gpi": 2.68,
+        "conflict": 2.32,
+        "militarization": 1.92,
+        "safety": 3.4
+      },
+      {
+        "country": "China",
+        "region": "Asia-Pacific",
+        "population": 1425.7,
+        "gpi": 2.18,
+        "conflict": 2.06,
+        "militarization": 2.08,
+        "safety": 2.36
+      },
+      {
+        "country": "Japan",
+        "region": "Asia-Pacific",
+        "population": 123.3,
+        "gpi": 1.45,
+        "conflict": 1.4,
+        "militarization": 1.72,
+        "safety": 1.32
+      },
+      {
+        "country": "India",
+        "region": "Asia-Pacific",
+        "population": 1428.6,
+        "gpi": 2.43,
+        "conflict": 2.62,
+        "militarization": 2.55,
+        "safety": 2.26
+      },
+      {
+        "country": "Australia",
+        "region": "Asia-Pacific",
+        "population": 26.6,
+        "gpi": 1.43,
+        "conflict": 1.1,
+        "militarization": 1.56,
+        "safety": 1.61
+      },
+      {
+        "country": "South Korea",
+        "region": "Asia-Pacific",
+        "population": 51.7,
+        "gpi": 1.81,
+        "conflict": 1.66,
+        "militarization": 2.21,
+        "safety": 1.69
+      },
+      {
+        "country": "Pakistan",
+        "region": "Asia-Pacific",
+        "population": 240.5,
+        "gpi": 2.91,
+        "conflict": 3.17,
+        "militarization": 2.58,
+        "safety": 2.95
+      },
+      {
+        "country": "Afghanistan",
+        "region": "Asia-Pacific",
+        "population": 42.2,
+        "gpi": 3.13,
+        "conflict": 2.97,
+        "militarization": 2.63,
+        "safety": 3.57
+      },
+      {
+        "country": "South Africa",
+        "region": "Africa",
+        "population": 60.4,
+        "gpi": 2.38,
+        "conflict": 1.8,
+        "militarization": 1.82,
+        "safety": 3.19
+      },
+      {
+        "country": "Nigeria",
+        "region": "Africa",
+        "population": 223.8,
+        "gpi": 2.41,
+        "conflict": 1.94,
+        "militarization": 1.76,
+        "safety": 3.19
+      },
+      {
+        "country": "Egypt",
+        "region": "Africa",
+        "population": 112.7,
+        "gpi": 1.85,
+        "conflict": 1.41,
+        "militarization": 1.92,
+        "safety": 2.17
+      },
+      {
+        "country": "Ethiopia",
+        "region": "Africa",
+        "population": 126.5,
+        "gpi": 2.3,
+        "conflict": 2.34,
+        "militarization": 2.11,
+        "safety": 2.42
+      },
+      {
+        "country": "Ukraine",
+        "region": "Europe",
+        "population": 37,
+        "gpi": 2.15,
+        "conflict": 1.64,
+        "militarization": 1.93,
+        "safety": 2.68
+      }
+    ],
+    "2011": [
+      {
+        "country": "Germany",
+        "region": "Europe",
+        "population": 84.1,
+        "gpi": 1.6,
+        "conflict": 1.08,
+        "militarization": 2.27,
+        "safety": 1.64
+      },
+      {
+        "country": "France",
+        "region": "Europe",
+        "population": 68.2,
+        "gpi": 1.67,
+        "conflict": 1.09,
+        "militarization": 2.72,
+        "safety": 1.54
+      },
+      {
+        "country": "United Kingdom",
+        "region": "Europe",
+        "population": 69.6,
+        "gpi": 1.83,
+        "conflict": 1.36,
+        "militarization": 2.58,
+        "safety": 1.78
+      },
+      {
+        "country": "Sweden",
+        "region": "Europe",
+        "population": 10.5,
+        "gpi": 1.43,
+        "conflict": 1.05,
+        "militarization": 2.19,
+        "safety": 1.32
+      },
+      {
+        "country": "Norway",
+        "region": "Europe",
+        "population": 5.5,
+        "gpi": 1.39,
+        "conflict": 1.07,
+        "militarization": 1.95,
+        "safety": 1.35
+      },
+      {
+        "country": "Finland",
+        "region": "Europe",
+        "population": 5.6,
+        "gpi": 1.37,
+        "conflict": 1.05,
+        "militarization": 1.91,
+        "safety": 1.33
+      },
+      {
+        "country": "Poland",
+        "region": "Europe",
+        "population": 37.6,
+        "gpi": 1.55,
+        "conflict": 1.31,
+        "militarization": 1.6,
+        "safety": 1.7
+      },
+      {
+        "country": "Hungary",
+        "region": "Europe",
+        "population": 9.6,
+        "gpi": 1.54,
+        "conflict": 1.45,
+        "militarization": 1.43,
+        "safety": 1.67
+      },
+      {
+        "country": "Russia",
+        "region": "Europe",
+        "population": 144.2,
+        "gpi": 2.89,
+        "conflict": 2.17,
+        "militarization": 3.25,
+        "safety": 3.29
+      },
+      {
+        "country": "Israel",
+        "region": "Middle East",
+        "population": 9.8,
+        "gpi": 2.75,
+        "conflict": 2.14,
+        "militarization": 4.04,
+        "safety": 2.53
+      },
+      {
+        "country": "Saudi Arabia",
+        "region": "Middle East",
+        "population": 36.9,
+        "gpi": 2.16,
+        "conflict": 1.61,
+        "militarization": 2.28,
+        "safety": 2.53
+      },
+      {
+        "country": "Iran",
+        "region": "Middle East",
+        "population": 89.2,
+        "gpi": 2.52,
+        "conflict": 2.46,
+        "militarization": 1.94,
+        "safety": 2.93
+      },
+      {
+        "country": "Turkey",
+        "region": "Middle East",
+        "population": 85.8,
+        "gpi": 2.33,
+        "conflict": 2.12,
+        "militarization": 1.98,
+        "safety": 2.73
+      },
+      {
+        "country": "Yemen",
+        "region": "Middle East",
+        "population": 34.4,
+        "gpi": 2.56,
+        "conflict": 2.27,
+        "militarization": 2.31,
+        "safety": 2.99
+      },
+      {
+        "country": "Syria",
+        "region": "Middle East",
+        "population": 23.2,
+        "gpi": 2.15,
+        "conflict": 2.01,
+        "militarization": 1.8,
+        "safety": 2.46
+      },
+      {
+        "country": "United States",
+        "region": "Americas",
+        "population": 341.8,
+        "gpi": 2.33,
+        "conflict": 1.82,
+        "militarization": 3.06,
+        "safety": 2.31
+      },
+      {
+        "country": "Canada",
+        "region": "Americas",
+        "population": 41,
+        "gpi": 1.42,
+        "conflict": 1.17,
+        "militarization": 1.84,
+        "safety": 1.39
+      },
+      {
+        "country": "Brazil",
+        "region": "Americas",
+        "population": 216.4,
+        "gpi": 1.95,
+        "conflict": 1.04,
+        "militarization": 1.86,
+        "safety": 2.73
+      },
+      {
+        "country": "Mexico",
+        "region": "Americas",
+        "population": 129.4,
+        "gpi": 2.41,
+        "conflict": 2.28,
+        "militarization": 1.68,
+        "safety": 2.99
+      },
+      {
+        "country": "Venezuela",
+        "region": "Americas",
+        "population": 28.4,
+        "gpi": 2.4,
+        "conflict": 2.01,
+        "militarization": 2.17,
+        "safety": 2.88
+      },
+      {
+        "country": "Colombia",
+        "region": "Americas",
+        "population": 52.7,
+        "gpi": 2.61,
+        "conflict": 2.12,
+        "militarization": 1.89,
+        "safety": 3.4
+      },
+      {
+        "country": "China",
+        "region": "Asia-Pacific",
+        "population": 1425.7,
+        "gpi": 2.09,
+        "conflict": 1.83,
+        "militarization": 2.02,
+        "safety": 2.34
+      },
+      {
+        "country": "Japan",
+        "region": "Asia-Pacific",
+        "population": 123.3,
+        "gpi": 1.45,
+        "conflict": 1.4,
+        "militarization": 1.68,
+        "safety": 1.33
+      },
+      {
+        "country": "India",
+        "region": "Asia-Pacific",
+        "population": 1428.6,
+        "gpi": 2.46,
+        "conflict": 2.66,
+        "militarization": 2.49,
+        "safety": 2.33
+      },
+      {
+        "country": "Australia",
+        "region": "Asia-Pacific",
+        "population": 26.6,
+        "gpi": 1.46,
+        "conflict": 1.11,
+        "militarization": 1.68,
+        "safety": 1.62
+      },
+      {
+        "country": "South Korea",
+        "region": "Asia-Pacific",
+        "population": 51.7,
+        "gpi": 1.89,
+        "conflict": 1.85,
+        "militarization": 2.19,
+        "safety": 1.74
+      },
+      {
+        "country": "Pakistan",
+        "region": "Asia-Pacific",
+        "population": 240.5,
+        "gpi": 2.94,
+        "conflict": 3.26,
+        "militarization": 2.49,
+        "safety": 3.02
+      },
+      {
+        "country": "Afghanistan",
+        "region": "Asia-Pacific",
+        "population": 42.2,
+        "gpi": 3.14,
+        "conflict": 3.03,
+        "militarization": 2.55,
+        "safety": 3.6
+      },
+      {
+        "country": "South Africa",
+        "region": "Africa",
+        "population": 60.4,
+        "gpi": 2.34,
+        "conflict": 1.81,
+        "militarization": 1.82,
+        "safety": 3.09
+      },
+      {
+        "country": "Nigeria",
+        "region": "Africa",
+        "population": 223.8,
+        "gpi": 2.43,
+        "conflict": 2.06,
+        "militarization": 1.58,
+        "safety": 3.24
+      },
+      {
+        "country": "Egypt",
+        "region": "Africa",
+        "population": 112.7,
+        "gpi": 2.06,
+        "conflict": 1.62,
+        "militarization": 1.82,
+        "safety": 2.56
+      },
+      {
+        "country": "Ethiopia",
+        "region": "Africa",
+        "population": 126.5,
+        "gpi": 2.27,
+        "conflict": 2.27,
+        "militarization": 2.1,
+        "safety": 2.41
+      },
+      {
+        "country": "Ukraine",
+        "region": "Europe",
+        "population": 37,
+        "gpi": 2.06,
+        "conflict": 1.44,
+        "militarization": 2.02,
+        "safety": 2.57
+      }
+    ],
+    "2012": [
+      {
+        "country": "Germany",
+        "region": "Europe",
+        "population": 84.1,
+        "gpi": 1.58,
+        "conflict": 1.08,
+        "militarization": 2.21,
+        "safety": 1.62
+      },
+      {
+        "country": "France",
+        "region": "Europe",
+        "population": 68.2,
+        "gpi": 1.72,
+        "conflict": 1.11,
+        "militarization": 2.75,
+        "safety": 1.61
+      },
+      {
+        "country": "United Kingdom",
+        "region": "Europe",
+        "population": 69.6,
+        "gpi": 1.82,
+        "conflict": 1.35,
+        "militarization": 2.59,
+        "safety": 1.74
+      },
+      {
+        "country": "Sweden",
+        "region": "Europe",
+        "population": 10.5,
+        "gpi": 1.43,
+        "conflict": 1.06,
+        "militarization": 2.16,
+        "safety": 1.33
+      },
+      {
+        "country": "Norway",
+        "region": "Europe",
+        "population": 5.5,
+        "gpi": 1.41,
+        "conflict": 1.06,
+        "militarization": 1.98,
+        "safety": 1.41
+      },
+      {
+        "country": "Finland",
+        "region": "Europe",
+        "population": 5.6,
+        "gpi": 1.36,
+        "conflict": 1.06,
+        "militarization": 1.83,
+        "safety": 1.34
+      },
+      {
+        "country": "Poland",
+        "region": "Europe",
+        "population": 37.6,
+        "gpi": 1.53,
+        "conflict": 1.29,
+        "militarization": 1.54,
+        "safety": 1.7
+      },
+      {
+        "country": "Hungary",
+        "region": "Europe",
+        "population": 9.6,
+        "gpi": 1.5,
+        "conflict": 1.46,
+        "militarization": 1.28,
+        "safety": 1.65
+      },
+      {
+        "country": "Russia",
+        "region": "Europe",
+        "population": 144.2,
+        "gpi": 2.89,
+        "conflict": 2.17,
+        "militarization": 3.28,
+        "safety": 3.26
+      },
+      {
+        "country": "Israel",
+        "region": "Middle East",
+        "population": 9.8,
+        "gpi": 2.7,
+        "conflict": 2.19,
+        "militarization": 3.96,
+        "safety": 2.43
+      },
+      {
+        "country": "Saudi Arabia",
+        "region": "Middle East",
+        "population": 36.9,
+        "gpi": 2.24,
+        "conflict": 1.81,
+        "militarization": 2.41,
+        "safety": 2.5
+      },
+      {
+        "country": "Iran",
+        "region": "Middle East",
+        "population": 89.2,
+        "gpi": 2.54,
+        "conflict": 2.58,
+        "militarization": 2.12,
+        "safety": 2.77
+      },
+      {
+        "country": "Turkey",
+        "region": "Middle East",
+        "population": 85.8,
+        "gpi": 2.32,
+        "conflict": 2.18,
+        "militarization": 1.95,
+        "safety": 2.68
+      },
+      {
+        "country": "Yemen",
+        "region": "Middle East",
+        "population": 34.4,
+        "gpi": 2.64,
+        "conflict": 2.48,
+        "militarization": 2.38,
+        "safety": 2.96
+      },
+      {
+        "country": "Syria",
+        "region": "Middle East",
+        "population": 23.2,
+        "gpi": 2.69,
+        "conflict": 3.24,
+        "militarization": 2.16,
+        "safety": 2.62
+      },
+      {
+        "country": "United States",
+        "region": "Americas",
+        "population": 341.8,
+        "gpi": 2.31,
+        "conflict": 1.77,
+        "militarization": 3.04,
+        "safety": 2.31
+      },
+      {
+        "country": "Canada",
+        "region": "Americas",
+        "population": 41,
+        "gpi": 1.41,
+        "conflict": 1.17,
+        "militarization": 1.79,
+        "safety": 1.39
+      },
+      {
+        "country": "Brazil",
+        "region": "Americas",
+        "population": 216.4,
+        "gpi": 2,
+        "conflict": 1.21,
+        "militarization": 1.94,
+        "safety": 2.69
+      },
+      {
+        "country": "Mexico",
+        "region": "Americas",
+        "population": 129.4,
+        "gpi": 2.51,
+        "conflict": 2.3,
+        "militarization": 1.81,
+        "safety": 3.13
+      },
+      {
+        "country": "Venezuela",
+        "region": "Americas",
+        "population": 28.4,
+        "gpi": 2.32,
+        "conflict": 1.81,
+        "militarization": 2.23,
+        "safety": 2.81
+      },
+      {
+        "country": "Colombia",
+        "region": "Americas",
+        "population": 52.7,
+        "gpi": 2.61,
+        "conflict": 2.09,
+        "militarization": 1.86,
+        "safety": 3.46
+      },
+      {
+        "country": "China",
+        "region": "Asia-Pacific",
+        "population": 1425.7,
+        "gpi": 2.08,
+        "conflict": 1.83,
+        "militarization": 2.02,
+        "safety": 2.33
+      },
+      {
+        "country": "Japan",
+        "region": "Asia-Pacific",
+        "population": 123.3,
+        "gpi": 1.46,
+        "conflict": 1.4,
+        "militarization": 1.64,
+        "safety": 1.38
+      },
+      {
+        "country": "India",
+        "region": "Asia-Pacific",
+        "population": 1428.6,
+        "gpi": 2.35,
+        "conflict": 2.43,
+        "militarization": 2.48,
+        "safety": 2.28
+      },
+      {
+        "country": "Australia",
+        "region": "Asia-Pacific",
+        "population": 26.6,
+        "gpi": 1.49,
+        "conflict": 1.1,
+        "militarization": 1.75,
+        "safety": 1.66
+      },
+      {
+        "country": "South Korea",
+        "region": "Asia-Pacific",
+        "population": 51.7,
+        "gpi": 1.8,
+        "conflict": 1.85,
+        "militarization": 2.17,
+        "safety": 1.55
+      },
+      {
+        "country": "Pakistan",
+        "region": "Asia-Pacific",
+        "population": 240.5,
+        "gpi": 2.9,
+        "conflict": 2.97,
+        "militarization": 2.61,
+        "safety": 3.07
+      },
+      {
+        "country": "Afghanistan",
+        "region": "Asia-Pacific",
+        "population": 42.2,
+        "gpi": 3.21,
+        "conflict": 3.12,
+        "militarization": 2.68,
+        "safety": 3.62
+      },
+      {
+        "country": "South Africa",
+        "region": "Africa",
+        "population": 60.4,
+        "gpi": 2.32,
+        "conflict": 1.8,
+        "militarization": 1.79,
+        "safety": 3.06
+      },
+      {
+        "country": "Nigeria",
+        "region": "Africa",
+        "population": 223.8,
+        "gpi": 2.54,
+        "conflict": 2.37,
+        "militarization": 1.58,
+        "safety": 3.27
+      },
+      {
+        "country": "Egypt",
+        "region": "Africa",
+        "population": 112.7,
+        "gpi": 2.39,
+        "conflict": 1.92,
+        "militarization": 1.79,
+        "safety": 3.12
+      },
+      {
+        "country": "Ethiopia",
+        "region": "Africa",
+        "population": 126.5,
+        "gpi": 2.37,
+        "conflict": 2.5,
+        "militarization": 2.09,
+        "safety": 2.47
+      },
+      {
+        "country": "Ukraine",
+        "region": "Europe",
+        "population": 37,
+        "gpi": 2,
+        "conflict": 1.44,
+        "militarization": 1.97,
+        "safety": 2.47
+      }
+    ],
+    "2013": [
+      {
+        "country": "Germany",
+        "region": "Europe",
+        "population": 84.1,
+        "gpi": 1.51,
+        "conflict": 1.08,
+        "militarization": 2.04,
+        "safety": 1.55
+      },
+      {
+        "country": "France",
+        "region": "Europe",
+        "population": 68.2,
+        "gpi": 1.75,
+        "conflict": 1.13,
+        "militarization": 2.69,
+        "safety": 1.71
+      },
+      {
+        "country": "United Kingdom",
+        "region": "Europe",
+        "population": 69.6,
+        "gpi": 1.69,
+        "conflict": 1.11,
+        "militarization": 2.53,
+        "safety": 1.66
+      },
+      {
+        "country": "Sweden",
+        "region": "Europe",
+        "population": 10.5,
+        "gpi": 1.42,
+        "conflict": 1.06,
+        "militarization": 2.17,
+        "safety": 1.29
+      },
+      {
+        "country": "Norway",
+        "region": "Europe",
+        "population": 5.5,
+        "gpi": 1.42,
+        "conflict": 1.06,
+        "militarization": 2.02,
+        "safety": 1.4
+      },
+      {
+        "country": "Finland",
+        "region": "Europe",
+        "population": 5.6,
+        "gpi": 1.36,
+        "conflict": 1.06,
+        "militarization": 1.83,
+        "safety": 1.34
+      },
+      {
+        "country": "Poland",
+        "region": "Europe",
+        "population": 37.6,
+        "gpi": 1.51,
+        "conflict": 1.28,
+        "militarization": 1.49,
+        "safety": 1.69
+      },
+      {
+        "country": "Hungary",
+        "region": "Europe",
+        "population": 9.6,
+        "gpi": 1.5,
+        "conflict": 1.46,
+        "militarization": 1.26,
+        "safety": 1.66
+      },
+      {
+        "country": "Russia",
+        "region": "Europe",
+        "population": 144.2,
+        "gpi": 2.89,
+        "conflict": 2.17,
+        "militarization": 3.26,
+        "safety": 3.28
+      },
+      {
+        "country": "Israel",
+        "region": "Middle East",
+        "population": 9.8,
+        "gpi": 2.63,
+        "conflict": 2.1,
+        "militarization": 3.78,
+        "safety": 2.42
+      },
+      {
+        "country": "Saudi Arabia",
+        "region": "Middle East",
+        "population": 36.9,
+        "gpi": 2.13,
+        "conflict": 1.8,
+        "militarization": 2.42,
+        "safety": 2.26
+      },
+      {
+        "country": "Iran",
+        "region": "Middle East",
+        "population": 89.2,
+        "gpi": 2.42,
+        "conflict": 2.38,
+        "militarization": 2.06,
+        "safety": 2.67
+      },
+      {
+        "country": "Turkey",
+        "region": "Middle East",
+        "population": 85.8,
+        "gpi": 2.4,
+        "conflict": 2.48,
+        "militarization": 1.96,
+        "safety": 2.64
+      },
+      {
+        "country": "Yemen",
+        "region": "Middle East",
+        "population": 34.4,
+        "gpi": 2.56,
+        "conflict": 2.56,
+        "militarization": 2.31,
+        "safety": 2.76
+      },
+      {
+        "country": "Syria",
+        "region": "Middle East",
+        "population": 23.2,
+        "gpi": 3.22,
+        "conflict": 3.54,
+        "militarization": 2.3,
+        "safety": 3.51
+      },
+      {
+        "country": "United States",
+        "region": "Americas",
+        "population": 341.8,
+        "gpi": 2.19,
+        "conflict": 1.45,
+        "militarization": 3.02,
+        "safety": 2.29
+      },
+      {
+        "country": "Canada",
+        "region": "Americas",
+        "population": 41,
+        "gpi": 1.4,
+        "conflict": 1.07,
+        "militarization": 1.71,
+        "safety": 1.48
+      },
+      {
+        "country": "Brazil",
+        "region": "Americas",
+        "population": 216.4,
+        "gpi": 2.05,
+        "conflict": 1.27,
+        "militarization": 1.95,
+        "safety": 2.76
+      },
+      {
+        "country": "Mexico",
+        "region": "Americas",
+        "population": 129.4,
+        "gpi": 2.44,
+        "conflict": 2.2,
+        "militarization": 1.8,
+        "safety": 3.07
+      },
+      {
+        "country": "Venezuela",
+        "region": "Americas",
+        "population": 28.4,
+        "gpi": 2.37,
+        "conflict": 1.82,
+        "militarization": 2.24,
+        "safety": 2.92
+      },
+      {
+        "country": "Colombia",
+        "region": "Americas",
+        "population": 52.7,
+        "gpi": 2.58,
+        "conflict": 2.09,
+        "militarization": 1.82,
+        "safety": 3.41
+      },
+      {
+        "country": "China",
+        "region": "Asia-Pacific",
+        "population": 1425.7,
+        "gpi": 2.07,
+        "conflict": 1.83,
+        "militarization": 2.02,
+        "safety": 2.3
+      },
+      {
+        "country": "Japan",
+        "region": "Asia-Pacific",
+        "population": 123.3,
+        "gpi": 1.41,
+        "conflict": 1.4,
+        "militarization": 1.6,
+        "safety": 1.3
+      },
+      {
+        "country": "India",
+        "region": "Asia-Pacific",
+        "population": 1428.6,
+        "gpi": 2.39,
+        "conflict": 2.42,
+        "militarization": 2.42,
+        "safety": 2.41
+      },
+      {
+        "country": "Australia",
+        "region": "Asia-Pacific",
+        "population": 26.6,
+        "gpi": 1.46,
+        "conflict": 1.09,
+        "militarization": 1.76,
+        "safety": 1.59
+      },
+      {
+        "country": "South Korea",
+        "region": "Asia-Pacific",
+        "population": 51.7,
+        "gpi": 1.75,
+        "conflict": 1.85,
+        "militarization": 2.09,
+        "safety": 1.48
+      },
+      {
+        "country": "Pakistan",
+        "region": "Asia-Pacific",
+        "population": 240.5,
+        "gpi": 3.03,
+        "conflict": 3.16,
+        "militarization": 2.63,
+        "safety": 3.23
+      },
+      {
+        "country": "Afghanistan",
+        "region": "Asia-Pacific",
+        "population": 42.2,
+        "gpi": 3.25,
+        "conflict": 3.12,
+        "militarization": 2.53,
+        "safety": 3.8
+      },
+      {
+        "country": "South Africa",
+        "region": "Africa",
+        "population": 60.4,
+        "gpi": 2.36,
+        "conflict": 1.8,
+        "militarization": 1.76,
+        "safety": 3.17
+      },
+      {
+        "country": "Nigeria",
+        "region": "Africa",
+        "population": 223.8,
+        "gpi": 2.55,
+        "conflict": 2.43,
+        "militarization": 1.58,
+        "safety": 3.26
+      },
+      {
+        "country": "Egypt",
+        "region": "Africa",
+        "population": 112.7,
+        "gpi": 2.32,
+        "conflict": 1.83,
+        "militarization": 1.78,
+        "safety": 3.05
+      },
+      {
+        "country": "Ethiopia",
+        "region": "Africa",
+        "population": 126.5,
+        "gpi": 2.36,
+        "conflict": 2.46,
+        "militarization": 2,
+        "safety": 2.51
+      },
+      {
+        "country": "Ukraine",
+        "region": "Europe",
+        "population": 37,
+        "gpi": 2.15,
+        "conflict": 1.65,
+        "militarization": 2.06,
+        "safety": 2.59
+      }
+    ],
+    "2014": [
+      {
+        "country": "Germany",
+        "region": "Europe",
+        "population": 84.1,
+        "gpi": 1.51,
+        "conflict": 1.07,
+        "militarization": 1.92,
+        "safety": 1.62
+      },
+      {
+        "country": "France",
+        "region": "Europe",
+        "population": 68.2,
+        "gpi": 1.78,
+        "conflict": 1.09,
+        "militarization": 2.67,
+        "safety": 1.81
+      },
+      {
+        "country": "United Kingdom",
+        "region": "Europe",
+        "population": 69.6,
+        "gpi": 1.73,
+        "conflict": 1.1,
+        "militarization": 2.55,
+        "safety": 1.75
+      },
+      {
+        "country": "Sweden",
+        "region": "Europe",
+        "population": 10.5,
+        "gpi": 1.41,
+        "conflict": 1.06,
+        "militarization": 2.12,
+        "safety": 1.28
+      },
+      {
+        "country": "Norway",
+        "region": "Europe",
+        "population": 5.5,
+        "gpi": 1.39,
+        "conflict": 1.06,
+        "militarization": 2.1,
+        "safety": 1.29
+      },
+      {
+        "country": "Finland",
+        "region": "Europe",
+        "population": 5.6,
+        "gpi": 1.34,
+        "conflict": 1.06,
+        "militarization": 1.82,
+        "safety": 1.29
+      },
+      {
+        "country": "Poland",
+        "region": "Europe",
+        "population": 37.6,
+        "gpi": 1.49,
+        "conflict": 1.27,
+        "militarization": 1.45,
+        "safety": 1.68
+      },
+      {
+        "country": "Hungary",
+        "region": "Europe",
+        "population": 9.6,
+        "gpi": 1.47,
+        "conflict": 1.46,
+        "militarization": 1.13,
+        "safety": 1.66
+      },
+      {
+        "country": "Russia",
+        "region": "Europe",
+        "population": 144.2,
+        "gpi": 2.99,
+        "conflict": 2.54,
+        "militarization": 3.24,
+        "safety": 3.22
+      },
+      {
+        "country": "Israel",
+        "region": "Middle East",
+        "population": 9.8,
+        "gpi": 2.56,
+        "conflict": 2.06,
+        "militarization": 3.67,
+        "safety": 2.35
+      },
+      {
+        "country": "Saudi Arabia",
+        "region": "Middle East",
+        "population": 36.9,
+        "gpi": 2.04,
+        "conflict": 1.8,
+        "militarization": 2.49,
+        "safety": 2.01
+      },
+      {
+        "country": "Iran",
+        "region": "Middle East",
+        "population": 89.2,
+        "gpi": 2.37,
+        "conflict": 2.32,
+        "militarization": 2.02,
+        "safety": 2.62
+      },
+      {
+        "country": "Turkey",
+        "region": "Middle East",
+        "population": 85.8,
+        "gpi": 2.31,
+        "conflict": 2.14,
+        "militarization": 1.94,
+        "safety": 2.68
+      },
+      {
+        "country": "Yemen",
+        "region": "Middle East",
+        "population": 34.4,
+        "gpi": 2.51,
+        "conflict": 2.4,
+        "militarization": 2.45,
+        "safety": 2.68
+      },
+      {
+        "country": "Syria",
+        "region": "Middle East",
+        "population": 23.2,
+        "gpi": 3.28,
+        "conflict": 3.73,
+        "militarization": 2.49,
+        "safety": 3.42
+      },
+      {
+        "country": "United States",
+        "region": "Americas",
+        "population": 341.8,
+        "gpi": 2.28,
+        "conflict": 1.72,
+        "militarization": 2.99,
+        "safety": 2.3
+      },
+      {
+        "country": "Canada",
+        "region": "Americas",
+        "population": 41,
+        "gpi": 1.33,
+        "conflict": 1.07,
+        "militarization": 1.61,
+        "safety": 1.39
+      },
+      {
+        "country": "Brazil",
+        "region": "Americas",
+        "population": 216.4,
+        "gpi": 2.09,
+        "conflict": 1.22,
+        "militarization": 1.8,
+        "safety": 2.97
+      },
+      {
+        "country": "Mexico",
+        "region": "Americas",
+        "population": 129.4,
+        "gpi": 2.37,
+        "conflict": 2.15,
+        "militarization": 1.71,
+        "safety": 2.99
+      },
+      {
+        "country": "Venezuela",
+        "region": "Americas",
+        "population": 28.4,
+        "gpi": 2.42,
+        "conflict": 1.69,
+        "militarization": 2.3,
+        "safety": 3.09
+      },
+      {
+        "country": "Colombia",
+        "region": "Americas",
+        "population": 52.7,
+        "gpi": 2.6,
+        "conflict": 2.06,
+        "militarization": 1.83,
+        "safety": 3.46
+      },
+      {
+        "country": "China",
+        "region": "Asia-Pacific",
+        "population": 1425.7,
+        "gpi": 2.07,
+        "conflict": 1.82,
+        "militarization": 2.03,
+        "safety": 2.3
+      },
+      {
+        "country": "Japan",
+        "region": "Asia-Pacific",
+        "population": 123.3,
+        "gpi": 1.42,
+        "conflict": 1.4,
+        "militarization": 1.59,
+        "safety": 1.31
+      },
+      {
+        "country": "India",
+        "region": "Asia-Pacific",
+        "population": 1428.6,
+        "gpi": 2.38,
+        "conflict": 2.37,
+        "militarization": 2.44,
+        "safety": 2.41
+      },
+      {
+        "country": "Australia",
+        "region": "Asia-Pacific",
+        "population": 26.6,
+        "gpi": 1.4,
+        "conflict": 1.08,
+        "militarization": 1.72,
+        "safety": 1.48
+      },
+      {
+        "country": "South Korea",
+        "region": "Asia-Pacific",
+        "population": 51.7,
+        "gpi": 1.77,
+        "conflict": 1.85,
+        "militarization": 2.01,
+        "safety": 1.55
+      },
+      {
+        "country": "Pakistan",
+        "region": "Asia-Pacific",
+        "population": 240.5,
+        "gpi": 2.98,
+        "conflict": 3.14,
+        "militarization": 2.58,
+        "safety": 3.14
+      },
+      {
+        "country": "Afghanistan",
+        "region": "Asia-Pacific",
+        "population": 42.2,
+        "gpi": 3.2,
+        "conflict": 3.14,
+        "militarization": 2.49,
+        "safety": 3.7
+      },
+      {
+        "country": "South Africa",
+        "region": "Africa",
+        "population": 60.4,
+        "gpi": 2.35,
+        "conflict": 1.8,
+        "militarization": 1.74,
+        "safety": 3.16
+      },
+      {
+        "country": "Nigeria",
+        "region": "Africa",
+        "population": 223.8,
+        "gpi": 2.68,
+        "conflict": 2.57,
+        "militarization": 1.89,
+        "safety": 3.29
+      },
+      {
+        "country": "Egypt",
+        "region": "Africa",
+        "population": 112.7,
+        "gpi": 2.49,
+        "conflict": 2.25,
+        "militarization": 1.78,
+        "safety": 3.12
+      },
+      {
+        "country": "Ethiopia",
+        "region": "Africa",
+        "population": 126.5,
+        "gpi": 2.29,
+        "conflict": 2.18,
+        "militarization": 2.03,
+        "safety": 2.56
+      },
+      {
+        "country": "Ukraine",
+        "region": "Europe",
+        "population": 37,
+        "gpi": 2.48,
+        "conflict": 2.47,
+        "militarization": 1.97,
+        "safety": 2.77
+      }
+    ],
+    "2015": [
+      {
+        "country": "Germany",
+        "region": "Europe",
+        "population": 84.1,
+        "gpi": 1.48,
+        "conflict": 1.07,
+        "militarization": 1.89,
+        "safety": 1.57
+      },
+      {
+        "country": "France",
+        "region": "Europe",
+        "population": 68.2,
+        "gpi": 1.79,
+        "conflict": 1.1,
+        "militarization": 2.65,
+        "safety": 1.83
+      },
+      {
+        "country": "United Kingdom",
+        "region": "Europe",
+        "population": 69.6,
+        "gpi": 1.69,
+        "conflict": 1.1,
+        "militarization": 2.58,
+        "safety": 1.66
+      },
+      {
+        "country": "Sweden",
+        "region": "Europe",
+        "population": 10.5,
+        "gpi": 1.41,
+        "conflict": 1.06,
+        "militarization": 2.11,
+        "safety": 1.3
+      },
+      {
+        "country": "Norway",
+        "region": "Europe",
+        "population": 5.5,
+        "gpi": 1.38,
+        "conflict": 1.06,
+        "militarization": 1.98,
+        "safety": 1.31
+      },
+      {
+        "country": "Finland",
+        "region": "Europe",
+        "population": 5.6,
+        "gpi": 1.36,
+        "conflict": 1.06,
+        "militarization": 1.89,
+        "safety": 1.31
+      },
+      {
+        "country": "Poland",
+        "region": "Europe",
+        "population": 37.6,
+        "gpi": 1.49,
+        "conflict": 1.26,
+        "militarization": 1.47,
+        "safety": 1.69
+      },
+      {
+        "country": "Hungary",
+        "region": "Europe",
+        "population": 9.6,
+        "gpi": 1.55,
+        "conflict": 1.46,
+        "militarization": 1.13,
+        "safety": 1.85
+      },
+      {
+        "country": "Russia",
+        "region": "Europe",
+        "population": 144.2,
+        "gpi": 3,
+        "conflict": 2.5,
+        "militarization": 3.27,
+        "safety": 3.24
+      },
+      {
+        "country": "Israel",
+        "region": "Middle East",
+        "population": 9.8,
+        "gpi": 2.71,
+        "conflict": 2.48,
+        "militarization": 3.68,
+        "safety": 2.37
+      },
+      {
+        "country": "Saudi Arabia",
+        "region": "Middle East",
+        "population": 36.9,
+        "gpi": 2.08,
+        "conflict": 1.8,
+        "militarization": 2.55,
+        "safety": 2.08
+      },
+      {
+        "country": "Iran",
+        "region": "Middle East",
+        "population": 89.2,
+        "gpi": 2.38,
+        "conflict": 2.26,
+        "militarization": 1.97,
+        "safety": 2.73
+      },
+      {
+        "country": "Turkey",
+        "region": "Middle East",
+        "population": 85.8,
+        "gpi": 2.35,
+        "conflict": 2.01,
+        "militarization": 1.95,
+        "safety": 2.86
+      },
+      {
+        "country": "Yemen",
+        "region": "Middle East",
+        "population": 34.4,
+        "gpi": 2.79,
+        "conflict": 2.78,
+        "militarization": 2.35,
+        "safety": 3.11
+      },
+      {
+        "country": "Syria",
+        "region": "Middle East",
+        "population": 23.2,
+        "gpi": 3.32,
+        "conflict": 3.83,
+        "militarization": 2.55,
+        "safety": 3.4
+      },
+      {
+        "country": "United States",
+        "region": "Americas",
+        "population": 341.8,
+        "gpi": 2.22,
+        "conflict": 1.51,
+        "militarization": 3.02,
+        "safety": 2.32
+      },
+      {
+        "country": "Canada",
+        "region": "Americas",
+        "population": 41,
+        "gpi": 1.33,
+        "conflict": 1.07,
+        "militarization": 1.58,
+        "safety": 1.4
+      },
+      {
+        "country": "Brazil",
+        "region": "Americas",
+        "population": 216.4,
+        "gpi": 2.11,
+        "conflict": 1.04,
+        "militarization": 1.94,
+        "safety": 3.07
+      },
+      {
+        "country": "Mexico",
+        "region": "Americas",
+        "population": 129.4,
+        "gpi": 2.33,
+        "conflict": 2.12,
+        "militarization": 1.66,
+        "safety": 2.96
+      },
+      {
+        "country": "Venezuela",
+        "region": "Americas",
+        "population": 28.4,
+        "gpi": 2.54,
+        "conflict": 1.82,
+        "militarization": 2.3,
+        "safety": 3.29
+      },
+      {
+        "country": "Colombia",
+        "region": "Americas",
+        "population": 52.7,
+        "gpi": 2.65,
+        "conflict": 2.06,
+        "militarization": 1.84,
+        "safety": 3.57
+      },
+      {
+        "country": "China",
+        "region": "Asia-Pacific",
+        "population": 1425.7,
+        "gpi": 2.11,
+        "conflict": 1.81,
+        "militarization": 2.08,
+        "safety": 2.37
+      },
+      {
+        "country": "Japan",
+        "region": "Asia-Pacific",
+        "population": 123.3,
+        "gpi": 1.45,
+        "conflict": 1.4,
+        "militarization": 1.63,
+        "safety": 1.37
+      },
+      {
+        "country": "India",
+        "region": "Asia-Pacific",
+        "population": 1428.6,
+        "gpi": 2.38,
+        "conflict": 2.38,
+        "militarization": 2.43,
+        "safety": 2.41
+      },
+      {
+        "country": "Australia",
+        "region": "Asia-Pacific",
+        "population": 26.6,
+        "gpi": 1.44,
+        "conflict": 1.07,
+        "militarization": 1.72,
+        "safety": 1.58
+      },
+      {
+        "country": "South Korea",
+        "region": "Asia-Pacific",
+        "population": 51.7,
+        "gpi": 1.76,
+        "conflict": 1.85,
+        "militarization": 1.98,
+        "safety": 1.57
+      },
+      {
+        "country": "Pakistan",
+        "region": "Asia-Pacific",
+        "population": 240.5,
+        "gpi": 3,
+        "conflict": 3.24,
+        "militarization": 2.54,
+        "safety": 3.14
+      },
+      {
+        "country": "Afghanistan",
+        "region": "Asia-Pacific",
+        "population": 42.2,
+        "gpi": 3.3,
+        "conflict": 3.21,
+        "militarization": 2.44,
+        "safety": 3.9
+      },
+      {
+        "country": "South Africa",
+        "region": "Africa",
+        "population": 60.4,
+        "gpi": 2.42,
+        "conflict": 1.91,
+        "militarization": 1.72,
+        "safety": 3.26
+      },
+      {
+        "country": "Nigeria",
+        "region": "Africa",
+        "population": 223.8,
+        "gpi": 2.88,
+        "conflict": 3.16,
+        "militarization": 1.77,
+        "safety": 3.37
+      },
+      {
+        "country": "Egypt",
+        "region": "Africa",
+        "population": 112.7,
+        "gpi": 2.31,
+        "conflict": 1.89,
+        "militarization": 1.77,
+        "safety": 2.95
+      },
+      {
+        "country": "Ethiopia",
+        "region": "Africa",
+        "population": 126.5,
+        "gpi": 2.2,
+        "conflict": 2.16,
+        "militarization": 1.81,
+        "safety": 2.49
+      },
+      {
+        "country": "Ukraine",
+        "region": "Europe",
+        "population": 37,
+        "gpi": 2.9,
+        "conflict": 3.34,
+        "militarization": 2.26,
+        "safety": 2.95
+      }
+    ],
+    "2016": [
+      {
+        "country": "Germany",
+        "region": "Europe",
+        "population": 84.1,
+        "gpi": 1.52,
+        "conflict": 1.07,
+        "militarization": 1.83,
+        "safety": 1.7
+      },
+      {
+        "country": "France",
+        "region": "Europe",
+        "population": 68.2,
+        "gpi": 1.93,
+        "conflict": 1.4,
+        "militarization": 2.75,
+        "safety": 1.9
+      },
+      {
+        "country": "United Kingdom",
+        "region": "Europe",
+        "population": 69.6,
+        "gpi": 1.74,
+        "conflict": 1.1,
+        "militarization": 2.56,
+        "safety": 1.77
+      },
+      {
+        "country": "Sweden",
+        "region": "Europe",
+        "population": 10.5,
+        "gpi": 1.45,
+        "conflict": 1.07,
+        "militarization": 2.17,
+        "safety": 1.36
+      },
+      {
+        "country": "Norway",
+        "region": "Europe",
+        "population": 5.5,
+        "gpi": 1.38,
+        "conflict": 1.07,
+        "militarization": 2.07,
+        "safety": 1.26
+      },
+      {
+        "country": "Finland",
+        "region": "Europe",
+        "population": 5.6,
+        "gpi": 1.36,
+        "conflict": 1.07,
+        "militarization": 1.92,
+        "safety": 1.29
+      },
+      {
+        "country": "Poland",
+        "region": "Europe",
+        "population": 37.6,
+        "gpi": 1.5,
+        "conflict": 1.26,
+        "militarization": 1.53,
+        "safety": 1.68
+      },
+      {
+        "country": "Hungary",
+        "region": "Europe",
+        "population": 9.6,
+        "gpi": 1.52,
+        "conflict": 1.46,
+        "militarization": 1.13,
+        "safety": 1.78
+      },
+      {
+        "country": "Russia",
+        "region": "Europe",
+        "population": 144.2,
+        "gpi": 3,
+        "conflict": 2.6,
+        "militarization": 3.29,
+        "safety": 3.17
+      },
+      {
+        "country": "Israel",
+        "region": "Middle East",
+        "population": 9.8,
+        "gpi": 2.62,
+        "conflict": 2.11,
+        "militarization": 3.77,
+        "safety": 2.4
+      },
+      {
+        "country": "Saudi Arabia",
+        "region": "Middle East",
+        "population": 36.9,
+        "gpi": 2.29,
+        "conflict": 2.28,
+        "militarization": 2.62,
+        "safety": 2.18
+      },
+      {
+        "country": "Iran",
+        "region": "Middle East",
+        "population": 89.2,
+        "gpi": 2.36,
+        "conflict": 2.42,
+        "militarization": 1.86,
+        "safety": 2.62
+      },
+      {
+        "country": "Turkey",
+        "region": "Middle East",
+        "population": 85.8,
+        "gpi": 2.6,
+        "conflict": 2.76,
+        "militarization": 1.96,
+        "safety": 2.88
+      },
+      {
+        "country": "Yemen",
+        "region": "Middle East",
+        "population": 34.4,
+        "gpi": 3.23,
+        "conflict": 3.44,
+        "militarization": 2.36,
+        "safety": 3.6
+      },
+      {
+        "country": "Syria",
+        "region": "Middle East",
+        "population": 23.2,
+        "gpi": 3.33,
+        "conflict": 3.83,
+        "militarization": 2.54,
+        "safety": 3.43
+      },
+      {
+        "country": "United States",
+        "region": "Americas",
+        "population": 341.8,
+        "gpi": 2.23,
+        "conflict": 1.67,
+        "militarization": 3.01,
+        "safety": 2.22
+      },
+      {
+        "country": "Canada",
+        "region": "Americas",
+        "population": 41,
+        "gpi": 1.33,
+        "conflict": 1.07,
+        "militarization": 1.61,
+        "safety": 1.38
+      },
+      {
+        "country": "Brazil",
+        "region": "Americas",
+        "population": 216.4,
+        "gpi": 2.23,
+        "conflict": 1.25,
+        "militarization": 2.09,
+        "safety": 3.09
+      },
+      {
+        "country": "Mexico",
+        "region": "Americas",
+        "population": 129.4,
+        "gpi": 2.35,
+        "conflict": 2.17,
+        "militarization": 1.7,
+        "safety": 2.94
+      },
+      {
+        "country": "Venezuela",
+        "region": "Americas",
+        "population": 28.4,
+        "gpi": 2.63,
+        "conflict": 2.02,
+        "militarization": 2.27,
+        "safety": 3.34
+      },
+      {
+        "country": "Colombia",
+        "region": "Americas",
+        "population": 52.7,
+        "gpi": 2.57,
+        "conflict": 2.06,
+        "militarization": 1.85,
+        "safety": 3.37
+      },
+      {
+        "country": "China",
+        "region": "Asia-Pacific",
+        "population": 1425.7,
+        "gpi": 2.12,
+        "conflict": 1.86,
+        "militarization": 2.05,
+        "safety": 2.37
+      },
+      {
+        "country": "Japan",
+        "region": "Asia-Pacific",
+        "population": 123.3,
+        "gpi": 1.47,
+        "conflict": 1.4,
+        "militarization": 1.59,
+        "safety": 1.44
+      },
+      {
+        "country": "India",
+        "region": "Asia-Pacific",
+        "population": 1428.6,
+        "gpi": 2.38,
+        "conflict": 2.35,
+        "militarization": 2.46,
+        "safety": 2.41
+      },
+      {
+        "country": "Australia",
+        "region": "Asia-Pacific",
+        "population": 26.6,
+        "gpi": 1.47,
+        "conflict": 1.07,
+        "militarization": 1.72,
+        "safety": 1.65
+      },
+      {
+        "country": "South Korea",
+        "region": "Asia-Pacific",
+        "population": 51.7,
+        "gpi": 1.81,
+        "conflict": 1.86,
+        "militarization": 1.91,
+        "safety": 1.71
+      },
+      {
+        "country": "Pakistan",
+        "region": "Asia-Pacific",
+        "population": 240.5,
+        "gpi": 2.93,
+        "conflict": 3.16,
+        "militarization": 2.54,
+        "safety": 3.03
+      },
+      {
+        "country": "Afghanistan",
+        "region": "Asia-Pacific",
+        "population": 42.2,
+        "gpi": 3.37,
+        "conflict": 3.48,
+        "militarization": 2.39,
+        "safety": 3.88
+      },
+      {
+        "country": "South Africa",
+        "region": "Africa",
+        "population": 60.4,
+        "gpi": 2.31,
+        "conflict": 1.76,
+        "militarization": 1.7,
+        "safety": 3.11
+      },
+      {
+        "country": "Nigeria",
+        "region": "Africa",
+        "population": 223.8,
+        "gpi": 2.87,
+        "conflict": 3.2,
+        "militarization": 1.66,
+        "safety": 3.38
+      },
+      {
+        "country": "Egypt",
+        "region": "Africa",
+        "population": 112.7,
+        "gpi": 2.43,
+        "conflict": 2.49,
+        "militarization": 1.78,
+        "safety": 2.79
+      },
+      {
+        "country": "Ethiopia",
+        "region": "Africa",
+        "population": 126.5,
+        "gpi": 2.23,
+        "conflict": 2.21,
+        "militarization": 1.68,
+        "safety": 2.59
+      },
+      {
+        "country": "Ukraine",
+        "region": "Europe",
+        "population": 37,
+        "gpi": 2.96,
+        "conflict": 3.21,
+        "militarization": 2.47,
+        "safety": 3.06
+      }
+    ],
+    "2017": [
+      {
+        "country": "Germany",
+        "region": "Europe",
+        "population": 84.1,
+        "gpi": 1.59,
+        "conflict": 1.18,
+        "militarization": 1.9,
+        "safety": 1.74
+      },
+      {
+        "country": "France",
+        "region": "Europe",
+        "population": 68.2,
+        "gpi": 2,
+        "conflict": 1.4,
+        "militarization": 2.75,
+        "safety": 2.06
+      },
+      {
+        "country": "United Kingdom",
+        "region": "Europe",
+        "population": 69.6,
+        "gpi": 1.75,
+        "conflict": 1.11,
+        "militarization": 2.57,
+        "safety": 1.79
+      },
+      {
+        "country": "Sweden",
+        "region": "Europe",
+        "population": 10.5,
+        "gpi": 1.54,
+        "conflict": 1.27,
+        "militarization": 2.13,
+        "safety": 1.42
+      },
+      {
+        "country": "Norway",
+        "region": "Europe",
+        "population": 5.5,
+        "gpi": 1.41,
+        "conflict": 1.27,
+        "militarization": 1.97,
+        "safety": 1.2
+      },
+      {
+        "country": "Finland",
+        "region": "Europe",
+        "population": 5.6,
+        "gpi": 1.44,
+        "conflict": 1.27,
+        "militarization": 1.93,
+        "safety": 1.31
+      },
+      {
+        "country": "Poland",
+        "region": "Europe",
+        "population": 37.6,
+        "gpi": 1.63,
+        "conflict": 1.45,
+        "militarization": 1.49,
+        "safety": 1.86
+      },
+      {
+        "country": "Hungary",
+        "region": "Europe",
+        "population": 9.6,
+        "gpi": 1.6,
+        "conflict": 1.47,
+        "militarization": 1.14,
+        "safety": 1.95
+      },
+      {
+        "country": "Russia",
+        "region": "Europe",
+        "population": 144.2,
+        "gpi": 2.98,
+        "conflict": 2.75,
+        "militarization": 3.27,
+        "safety": 3.01
+      },
+      {
+        "country": "Israel",
+        "region": "Middle East",
+        "population": 9.8,
+        "gpi": 2.58,
+        "conflict": 2.08,
+        "militarization": 3.86,
+        "safety": 2.3
+      },
+      {
+        "country": "Saudi Arabia",
+        "region": "Middle East",
+        "population": 36.9,
+        "gpi": 2.44,
+        "conflict": 2.54,
+        "militarization": 2.69,
+        "safety": 2.28
+      },
+      {
+        "country": "Iran",
+        "region": "Middle East",
+        "population": 89.2,
+        "gpi": 2.39,
+        "conflict": 2.53,
+        "militarization": 1.85,
+        "safety": 2.6
+      },
+      {
+        "country": "Turkey",
+        "region": "Middle East",
+        "population": 85.8,
+        "gpi": 2.7,
+        "conflict": 3.07,
+        "militarization": 1.92,
+        "safety": 2.88
+      },
+      {
+        "country": "Yemen",
+        "region": "Middle East",
+        "population": 34.4,
+        "gpi": 3.15,
+        "conflict": 3.38,
+        "militarization": 2.38,
+        "safety": 3.45
+      },
+      {
+        "country": "Syria",
+        "region": "Middle East",
+        "population": 23.2,
+        "gpi": 3.35,
+        "conflict": 3.83,
+        "militarization": 2.61,
+        "safety": 3.44
+      },
+      {
+        "country": "United States",
+        "region": "Americas",
+        "population": 341.8,
+        "gpi": 2.27,
+        "conflict": 1.79,
+        "militarization": 3,
+        "safety": 2.22
+      },
+      {
+        "country": "Canada",
+        "region": "Americas",
+        "population": 41,
+        "gpi": 1.35,
+        "conflict": 1.07,
+        "militarization": 1.57,
+        "safety": 1.47
+      },
+      {
+        "country": "Brazil",
+        "region": "Americas",
+        "population": 216.4,
+        "gpi": 2.28,
+        "conflict": 1.28,
+        "militarization": 2.16,
+        "safety": 3.16
+      },
+      {
+        "country": "Mexico",
+        "region": "Americas",
+        "population": 129.4,
+        "gpi": 2.45,
+        "conflict": 2.34,
+        "militarization": 1.73,
+        "safety": 3.01
+      },
+      {
+        "country": "Venezuela",
+        "region": "Americas",
+        "population": 28.4,
+        "gpi": 2.64,
+        "conflict": 2.04,
+        "militarization": 2.23,
+        "safety": 3.39
+      },
+      {
+        "country": "Colombia",
+        "region": "Americas",
+        "population": 52.7,
+        "gpi": 2.68,
+        "conflict": 2.05,
+        "militarization": 2.04,
+        "safety": 3.52
+      },
+      {
+        "country": "China",
+        "region": "Asia-Pacific",
+        "population": 1425.7,
+        "gpi": 2.11,
+        "conflict": 1.83,
+        "militarization": 2.04,
+        "safety": 2.37
+      },
+      {
+        "country": "Japan",
+        "region": "Asia-Pacific",
+        "population": 123.3,
+        "gpi": 1.42,
+        "conflict": 1.4,
+        "militarization": 1.59,
+        "safety": 1.31
+      },
+      {
+        "country": "India",
+        "region": "Asia-Pacific",
+        "population": 1428.6,
+        "gpi": 2.35,
+        "conflict": 2.38,
+        "militarization": 2.44,
+        "safety": 2.34
+      },
+      {
+        "country": "Australia",
+        "region": "Asia-Pacific",
+        "population": 26.6,
+        "gpi": 1.47,
+        "conflict": 1.07,
+        "militarization": 1.68,
+        "safety": 1.67
+      },
+      {
+        "country": "South Korea",
+        "region": "Asia-Pacific",
+        "population": 51.7,
+        "gpi": 1.82,
+        "conflict": 1.85,
+        "militarization": 1.93,
+        "safety": 1.71
+      },
+      {
+        "country": "Pakistan",
+        "region": "Asia-Pacific",
+        "population": 240.5,
+        "gpi": 2.84,
+        "conflict": 3.18,
+        "militarization": 2.52,
+        "safety": 2.82
+      },
+      {
+        "country": "Afghanistan",
+        "region": "Asia-Pacific",
+        "population": 42.2,
+        "gpi": 3.43,
+        "conflict": 3.51,
+        "militarization": 2.41,
+        "safety": 3.97
+      },
+      {
+        "country": "South Africa",
+        "region": "Africa",
+        "population": 60.4,
+        "gpi": 2.34,
+        "conflict": 1.78,
+        "militarization": 1.69,
+        "safety": 3.16
+      },
+      {
+        "country": "Nigeria",
+        "region": "Africa",
+        "population": 223.8,
+        "gpi": 2.73,
+        "conflict": 2.84,
+        "militarization": 1.74,
+        "safety": 3.26
+      },
+      {
+        "country": "Egypt",
+        "region": "Africa",
+        "population": 112.7,
+        "gpi": 2.36,
+        "conflict": 2.46,
+        "militarization": 1.8,
+        "safety": 2.63
+      },
+      {
+        "country": "Ethiopia",
+        "region": "Africa",
+        "population": 126.5,
+        "gpi": 2.33,
+        "conflict": 2.46,
+        "militarization": 1.72,
+        "safety": 2.62
+      },
+      {
+        "country": "Ukraine",
+        "region": "Europe",
+        "population": 37,
+        "gpi": 2.87,
+        "conflict": 3.01,
+        "militarization": 2.36,
+        "safety": 3.06
+      }
+    ],
+    "2018": [
+      {
+        "country": "Germany",
+        "region": "Europe",
+        "population": 84.1,
+        "gpi": 1.57,
+        "conflict": 1.08,
+        "militarization": 1.98,
+        "safety": 1.72
+      },
+      {
+        "country": "France",
+        "region": "Europe",
+        "population": 68.2,
+        "gpi": 1.92,
+        "conflict": 1.22,
+        "militarization": 2.76,
+        "safety": 1.99
+      },
+      {
+        "country": "United Kingdom",
+        "region": "Europe",
+        "population": 69.6,
+        "gpi": 1.81,
+        "conflict": 1.11,
+        "militarization": 2.62,
+        "safety": 1.9
+      },
+      {
+        "country": "Sweden",
+        "region": "Europe",
+        "population": 10.5,
+        "gpi": 1.52,
+        "conflict": 1.32,
+        "militarization": 1.99,
+        "safety": 1.42
+      },
+      {
+        "country": "Norway",
+        "region": "Europe",
+        "population": 5.5,
+        "gpi": 1.42,
+        "conflict": 1.26,
+        "militarization": 2.06,
+        "safety": 1.19
+      },
+      {
+        "country": "Finland",
+        "region": "Europe",
+        "population": 5.6,
+        "gpi": 1.44,
+        "conflict": 1.26,
+        "militarization": 1.85,
+        "safety": 1.36
+      },
+      {
+        "country": "Poland",
+        "region": "Europe",
+        "population": 37.6,
+        "gpi": 1.65,
+        "conflict": 1.44,
+        "militarization": 1.62,
+        "safety": 1.84
+      },
+      {
+        "country": "Hungary",
+        "region": "Europe",
+        "population": 9.6,
+        "gpi": 1.6,
+        "conflict": 1.46,
+        "militarization": 1.15,
+        "safety": 1.96
+      },
+      {
+        "country": "Russia",
+        "region": "Europe",
+        "population": 144.2,
+        "gpi": 3.08,
+        "conflict": 2.86,
+        "militarization": 3.29,
+        "safety": 3.14
+      },
+      {
+        "country": "Israel",
+        "region": "Middle East",
+        "population": 9.8,
+        "gpi": 2.67,
+        "conflict": 2.25,
+        "militarization": 3.86,
+        "safety": 2.37
+      },
+      {
+        "country": "Saudi Arabia",
+        "region": "Middle East",
+        "population": 36.9,
+        "gpi": 2.47,
+        "conflict": 2.56,
+        "militarization": 2.74,
+        "safety": 2.3
+      },
+      {
+        "country": "Iran",
+        "region": "Middle East",
+        "population": 89.2,
+        "gpi": 2.47,
+        "conflict": 2.63,
+        "militarization": 1.87,
+        "safety": 2.7
+      },
+      {
+        "country": "Turkey",
+        "region": "Middle East",
+        "population": 85.8,
+        "gpi": 2.75,
+        "conflict": 3.13,
+        "militarization": 1.89,
+        "safety": 2.95
+      },
+      {
+        "country": "Yemen",
+        "region": "Middle East",
+        "population": 34.4,
+        "gpi": 3.15,
+        "conflict": 3.37,
+        "militarization": 2.38,
+        "safety": 3.45
+      },
+      {
+        "country": "Syria",
+        "region": "Middle East",
+        "population": 23.2,
+        "gpi": 3.34,
+        "conflict": 3.83,
+        "militarization": 2.34,
+        "safety": 3.56
+      },
+      {
+        "country": "United States",
+        "region": "Americas",
+        "population": 341.8,
+        "gpi": 2.33,
+        "conflict": 1.88,
+        "militarization": 3.04,
+        "safety": 2.29
+      },
+      {
+        "country": "Canada",
+        "region": "Americas",
+        "population": 41,
+        "gpi": 1.38,
+        "conflict": 1.07,
+        "militarization": 1.54,
+        "safety": 1.54
+      },
+      {
+        "country": "Brazil",
+        "region": "Americas",
+        "population": 216.4,
+        "gpi": 2.35,
+        "conflict": 1.59,
+        "militarization": 2.13,
+        "safety": 3.1
+      },
+      {
+        "country": "Mexico",
+        "region": "Americas",
+        "population": 129.4,
+        "gpi": 2.59,
+        "conflict": 2.58,
+        "militarization": 1.8,
+        "safety": 3.13
+      },
+      {
+        "country": "Venezuela",
+        "region": "Americas",
+        "population": 28.4,
+        "gpi": 2.66,
+        "conflict": 2.24,
+        "militarization": 2.02,
+        "safety": 3.39
+      },
+      {
+        "country": "Colombia",
+        "region": "Americas",
+        "population": 52.7,
+        "gpi": 2.69,
+        "conflict": 2.06,
+        "militarization": 2.16,
+        "safety": 3.49
+      },
+      {
+        "country": "China",
+        "region": "Asia-Pacific",
+        "population": 1425.7,
+        "gpi": 2.07,
+        "conflict": 1.88,
+        "militarization": 2.05,
+        "safety": 2.23
+      },
+      {
+        "country": "Japan",
+        "region": "Asia-Pacific",
+        "population": 123.3,
+        "gpi": 1.44,
+        "conflict": 1.4,
+        "militarization": 1.65,
+        "safety": 1.32
+      },
+      {
+        "country": "India",
+        "region": "Asia-Pacific",
+        "population": 1428.6,
+        "gpi": 2.32,
+        "conflict": 2.38,
+        "militarization": 2.41,
+        "safety": 2.28
+      },
+      {
+        "country": "Australia",
+        "region": "Asia-Pacific",
+        "population": 26.6,
+        "gpi": 1.48,
+        "conflict": 1.07,
+        "militarization": 1.74,
+        "safety": 1.68
+      },
+      {
+        "country": "South Korea",
+        "region": "Asia-Pacific",
+        "population": 51.7,
+        "gpi": 1.82,
+        "conflict": 1.84,
+        "militarization": 1.97,
+        "safety": 1.71
+      },
+      {
+        "country": "Pakistan",
+        "region": "Asia-Pacific",
+        "population": 240.5,
+        "gpi": 2.79,
+        "conflict": 3.15,
+        "militarization": 2.56,
+        "safety": 2.7
+      },
+      {
+        "country": "Afghanistan",
+        "region": "Asia-Pacific",
+        "population": 42.2,
+        "gpi": 3.56,
+        "conflict": 3.63,
+        "militarization": 2.46,
+        "safety": 4.17
+      },
+      {
+        "country": "South Africa",
+        "region": "Africa",
+        "population": 60.4,
+        "gpi": 2.34,
+        "conflict": 1.76,
+        "militarization": 1.68,
+        "safety": 3.18
+      },
+      {
+        "country": "Nigeria",
+        "region": "Africa",
+        "population": 223.8,
+        "gpi": 2.71,
+        "conflict": 2.86,
+        "militarization": 1.91,
+        "safety": 3.13
+      },
+      {
+        "country": "Egypt",
+        "region": "Africa",
+        "population": 112.7,
+        "gpi": 2.42,
+        "conflict": 2.64,
+        "militarization": 2.04,
+        "safety": 2.5
+      },
+      {
+        "country": "Ethiopia",
+        "region": "Africa",
+        "population": 126.5,
+        "gpi": 2.39,
+        "conflict": 2.48,
+        "militarization": 1.67,
+        "safety": 2.77
+      },
+      {
+        "country": "Ukraine",
+        "region": "Europe",
+        "population": 37,
+        "gpi": 2.81,
+        "conflict": 3.04,
+        "militarization": 2.09,
+        "safety": 3.07
+      }
+    ],
+    "2019": [
+      {
+        "country": "Germany",
+        "region": "Europe",
+        "population": 84.1,
+        "gpi": 1.56,
+        "conflict": 1.08,
+        "militarization": 2,
+        "safety": 1.69
+      },
+      {
+        "country": "France",
+        "region": "Europe",
+        "population": 68.2,
+        "gpi": 1.93,
+        "conflict": 1.37,
+        "militarization": 2.77,
+        "safety": 1.9
+      },
+      {
+        "country": "United Kingdom",
+        "region": "Europe",
+        "population": 69.6,
+        "gpi": 1.74,
+        "conflict": 1.11,
+        "militarization": 2.54,
+        "safety": 1.78
+      },
+      {
+        "country": "Sweden",
+        "region": "Europe",
+        "population": 10.5,
+        "gpi": 1.51,
+        "conflict": 1.3,
+        "militarization": 1.85,
+        "safety": 1.47
+      },
+      {
+        "country": "Norway",
+        "region": "Europe",
+        "population": 5.5,
+        "gpi": 1.45,
+        "conflict": 1.26,
+        "militarization": 2.17,
+        "safety": 1.21
+      },
+      {
+        "country": "Finland",
+        "region": "Europe",
+        "population": 5.6,
+        "gpi": 1.38,
+        "conflict": 1.26,
+        "militarization": 1.77,
+        "safety": 1.27
+      },
+      {
+        "country": "Poland",
+        "region": "Europe",
+        "population": 37.6,
+        "gpi": 1.62,
+        "conflict": 1.43,
+        "militarization": 1.54,
+        "safety": 1.82
+      },
+      {
+        "country": "Hungary",
+        "region": "Europe",
+        "population": 9.6,
+        "gpi": 1.59,
+        "conflict": 1.48,
+        "militarization": 1.15,
+        "safety": 1.92
+      },
+      {
+        "country": "Russia",
+        "region": "Europe",
+        "population": 144.2,
+        "gpi": 3.02,
+        "conflict": 2.9,
+        "militarization": 3.24,
+        "safety": 2.99
+      },
+      {
+        "country": "Israel",
+        "region": "Middle East",
+        "population": 9.8,
+        "gpi": 2.6,
+        "conflict": 2.14,
+        "militarization": 3.83,
+        "safety": 2.31
+      },
+      {
+        "country": "Saudi Arabia",
+        "region": "Middle East",
+        "population": 36.9,
+        "gpi": 2.39,
+        "conflict": 2.47,
+        "militarization": 2.67,
+        "safety": 2.23
+      },
+      {
+        "country": "Iran",
+        "region": "Middle East",
+        "population": 89.2,
+        "gpi": 2.61,
+        "conflict": 2.95,
+        "militarization": 1.79,
+        "safety": 2.8
+      },
+      {
+        "country": "Turkey",
+        "region": "Middle East",
+        "population": 85.8,
+        "gpi": 2.71,
+        "conflict": 3.03,
+        "militarization": 1.9,
+        "safety": 2.93
+      },
+      {
+        "country": "Yemen",
+        "region": "Middle East",
+        "population": 34.4,
+        "gpi": 3.26,
+        "conflict": 3.5,
+        "militarization": 2.41,
+        "safety": 3.58
+      },
+      {
+        "country": "Syria",
+        "region": "Middle East",
+        "population": 23.2,
+        "gpi": 3.32,
+        "conflict": 3.83,
+        "militarization": 2.18,
+        "safety": 3.6
+      },
+      {
+        "country": "United States",
+        "region": "Americas",
+        "population": 341.8,
+        "gpi": 2.36,
+        "conflict": 1.82,
+        "militarization": 3.09,
+        "safety": 2.38
+      },
+      {
+        "country": "Canada",
+        "region": "Americas",
+        "population": 41,
+        "gpi": 1.39,
+        "conflict": 1.06,
+        "militarization": 1.53,
+        "safety": 1.58
+      },
+      {
+        "country": "Brazil",
+        "region": "Americas",
+        "population": 216.4,
+        "gpi": 2.46,
+        "conflict": 1.8,
+        "militarization": 2.15,
+        "safety": 3.2
+      },
+      {
+        "country": "Mexico",
+        "region": "Americas",
+        "population": 129.4,
+        "gpi": 2.63,
+        "conflict": 2.62,
+        "militarization": 1.74,
+        "safety": 3.23
+      },
+      {
+        "country": "Venezuela",
+        "region": "Americas",
+        "population": 28.4,
+        "gpi": 2.73,
+        "conflict": 2.25,
+        "militarization": 1.84,
+        "safety": 3.63
+      },
+      {
+        "country": "Colombia",
+        "region": "Americas",
+        "population": 52.7,
+        "gpi": 2.68,
+        "conflict": 2.1,
+        "militarization": 2.01,
+        "safety": 3.5
+      },
+      {
+        "country": "China",
+        "region": "Asia-Pacific",
+        "population": 1425.7,
+        "gpi": 1.97,
+        "conflict": 1.64,
+        "militarization": 2.02,
+        "safety": 2.2
+      },
+      {
+        "country": "Japan",
+        "region": "Asia-Pacific",
+        "population": 123.3,
+        "gpi": 1.41,
+        "conflict": 1.4,
+        "militarization": 1.62,
+        "safety": 1.27
+      },
+      {
+        "country": "India",
+        "region": "Asia-Pacific",
+        "population": 1428.6,
+        "gpi": 2.43,
+        "conflict": 2.59,
+        "militarization": 2.56,
+        "safety": 2.27
+      },
+      {
+        "country": "Australia",
+        "region": "Asia-Pacific",
+        "population": 26.6,
+        "gpi": 1.49,
+        "conflict": 1.11,
+        "militarization": 1.82,
+        "safety": 1.63
+      },
+      {
+        "country": "South Korea",
+        "region": "Asia-Pacific",
+        "population": 51.7,
+        "gpi": 1.79,
+        "conflict": 1.83,
+        "militarization": 2.06,
+        "safety": 1.59
+      },
+      {
+        "country": "Pakistan",
+        "region": "Asia-Pacific",
+        "population": 240.5,
+        "gpi": 2.81,
+        "conflict": 3.24,
+        "militarization": 2.54,
+        "safety": 2.67
+      },
+      {
+        "country": "Afghanistan",
+        "region": "Asia-Pacific",
+        "population": 42.2,
+        "gpi": 3.55,
+        "conflict": 3.63,
+        "militarization": 2.4,
+        "safety": 4.18
+      },
+      {
+        "country": "South Africa",
+        "region": "Africa",
+        "population": 60.4,
+        "gpi": 2.48,
+        "conflict": 1.96,
+        "militarization": 1.85,
+        "safety": 3.27
+      },
+      {
+        "country": "Nigeria",
+        "region": "Africa",
+        "population": 223.8,
+        "gpi": 2.77,
+        "conflict": 2.85,
+        "militarization": 2,
+        "safety": 3.21
+      },
+      {
+        "country": "Egypt",
+        "region": "Africa",
+        "population": 112.7,
+        "gpi": 2.33,
+        "conflict": 2.5,
+        "militarization": 1.96,
+        "safety": 2.45
+      },
+      {
+        "country": "Ethiopia",
+        "region": "Africa",
+        "population": 126.5,
+        "gpi": 2.45,
+        "conflict": 2.57,
+        "militarization": 1.75,
+        "safety": 2.79
+      },
+      {
+        "country": "Ukraine",
+        "region": "Europe",
+        "population": 37,
+        "gpi": 2.73,
+        "conflict": 2.99,
+        "militarization": 2.04,
+        "safety": 2.94
+      }
+    ],
+    "2020": [
+      {
+        "country": "Germany",
+        "region": "Europe",
+        "population": 84.1,
+        "gpi": 1.59,
+        "conflict": 1.07,
+        "militarization": 1.96,
+        "safety": 1.79
+      },
+      {
+        "country": "France",
+        "region": "Europe",
+        "population": 68.2,
+        "gpi": 1.97,
+        "conflict": 1.29,
+        "militarization": 2.77,
+        "safety": 2.04
+      },
+      {
+        "country": "United Kingdom",
+        "region": "Europe",
+        "population": 69.6,
+        "gpi": 1.83,
+        "conflict": 1.36,
+        "militarization": 2.48,
+        "safety": 1.86
+      },
+      {
+        "country": "Sweden",
+        "region": "Europe",
+        "population": 10.5,
+        "gpi": 1.52,
+        "conflict": 1.31,
+        "militarization": 1.71,
+        "safety": 1.58
+      },
+      {
+        "country": "Norway",
+        "region": "Europe",
+        "population": 5.5,
+        "gpi": 1.5,
+        "conflict": 1.25,
+        "militarization": 2.24,
+        "safety": 1.3
+      },
+      {
+        "country": "Finland",
+        "region": "Europe",
+        "population": 5.6,
+        "gpi": 1.4,
+        "conflict": 1.25,
+        "militarization": 1.69,
+        "safety": 1.36
+      },
+      {
+        "country": "Poland",
+        "region": "Europe",
+        "population": 37.6,
+        "gpi": 1.64,
+        "conflict": 1.41,
+        "militarization": 1.5,
+        "safety": 1.9
+      },
+      {
+        "country": "Hungary",
+        "region": "Europe",
+        "population": 9.6,
+        "gpi": 1.55,
+        "conflict": 1.47,
+        "militarization": 1.14,
+        "safety": 1.84
+      },
+      {
+        "country": "Russia",
+        "region": "Europe",
+        "population": 144.2,
+        "gpi": 2.93,
+        "conflict": 2.87,
+        "militarization": 3.23,
+        "safety": 2.81
+      },
+      {
+        "country": "Israel",
+        "region": "Middle East",
+        "population": 9.8,
+        "gpi": 2.61,
+        "conflict": 2.18,
+        "militarization": 3.82,
+        "safety": 2.3
+      },
+      {
+        "country": "Saudi Arabia",
+        "region": "Middle East",
+        "population": 36.9,
+        "gpi": 2.37,
+        "conflict": 2.46,
+        "militarization": 2.59,
+        "safety": 2.23
+      },
+      {
+        "country": "Iran",
+        "region": "Middle East",
+        "population": 89.2,
+        "gpi": 2.77,
+        "conflict": 3.11,
+        "militarization": 1.97,
+        "safety": 2.96
+      },
+      {
+        "country": "Turkey",
+        "region": "Middle East",
+        "population": 85.8,
+        "gpi": 2.74,
+        "conflict": 3.03,
+        "militarization": 1.89,
+        "safety": 3.01
+      },
+      {
+        "country": "Yemen",
+        "region": "Middle East",
+        "population": 34.4,
+        "gpi": 3.26,
+        "conflict": 3.42,
+        "militarization": 2.19,
+        "safety": 3.76
+      },
+      {
+        "country": "Syria",
+        "region": "Middle East",
+        "population": 23.2,
+        "gpi": 3.29,
+        "conflict": 3.83,
+        "militarization": 2.08,
+        "safety": 3.58
+      },
+      {
+        "country": "United States",
+        "region": "Americas",
+        "population": 341.8,
+        "gpi": 2.37,
+        "conflict": 1.85,
+        "militarization": 3.07,
+        "safety": 2.39
+      },
+      {
+        "country": "Canada",
+        "region": "Americas",
+        "population": 41,
+        "gpi": 1.41,
+        "conflict": 1.05,
+        "militarization": 1.54,
+        "safety": 1.62
+      },
+      {
+        "country": "Brazil",
+        "region": "Americas",
+        "population": 216.4,
+        "gpi": 2.47,
+        "conflict": 1.82,
+        "militarization": 1.99,
+        "safety": 3.3
+      },
+      {
+        "country": "Mexico",
+        "region": "Americas",
+        "population": 129.4,
+        "gpi": 2.62,
+        "conflict": 2.63,
+        "militarization": 1.67,
+        "safety": 3.23
+      },
+      {
+        "country": "Venezuela",
+        "region": "Americas",
+        "population": 28.4,
+        "gpi": 2.71,
+        "conflict": 2.25,
+        "militarization": 1.93,
+        "safety": 3.53
+      },
+      {
+        "country": "Colombia",
+        "region": "Americas",
+        "population": 52.7,
+        "gpi": 2.64,
+        "conflict": 2.1,
+        "militarization": 2.04,
+        "safety": 3.4
+      },
+      {
+        "country": "China",
+        "region": "Asia-Pacific",
+        "population": 1425.7,
+        "gpi": 1.93,
+        "conflict": 1.65,
+        "militarization": 2.02,
+        "safety": 2.1
+      },
+      {
+        "country": "Japan",
+        "region": "Asia-Pacific",
+        "population": 123.3,
+        "gpi": 1.42,
+        "conflict": 1.4,
+        "militarization": 1.62,
+        "safety": 1.31
+      },
+      {
+        "country": "India",
+        "region": "Asia-Pacific",
+        "population": 1428.6,
+        "gpi": 2.44,
+        "conflict": 2.53,
+        "militarization": 2.5,
+        "safety": 2.37
+      },
+      {
+        "country": "Australia",
+        "region": "Asia-Pacific",
+        "population": 26.6,
+        "gpi": 1.48,
+        "conflict": 1.08,
+        "militarization": 1.84,
+        "safety": 1.61
+      },
+      {
+        "country": "South Korea",
+        "region": "Asia-Pacific",
+        "population": 51.7,
+        "gpi": 1.75,
+        "conflict": 1.82,
+        "militarization": 2.13,
+        "safety": 1.48
+      },
+      {
+        "country": "Pakistan",
+        "region": "Asia-Pacific",
+        "population": 240.5,
+        "gpi": 2.79,
+        "conflict": 3.23,
+        "militarization": 2.52,
+        "safety": 2.65
+      },
+      {
+        "country": "Afghanistan",
+        "region": "Asia-Pacific",
+        "population": 42.2,
+        "gpi": 3.57,
+        "conflict": 3.63,
+        "militarization": 2.58,
+        "safety": 4.12
+      },
+      {
+        "country": "South Africa",
+        "region": "Africa",
+        "population": 60.4,
+        "gpi": 2.38,
+        "conflict": 1.86,
+        "militarization": 1.78,
+        "safety": 3.15
+      },
+      {
+        "country": "Nigeria",
+        "region": "Africa",
+        "population": 223.8,
+        "gpi": 2.8,
+        "conflict": 3.12,
+        "militarization": 2.03,
+        "safety": 3.05
+      },
+      {
+        "country": "Egypt",
+        "region": "Africa",
+        "population": 112.7,
+        "gpi": 2.37,
+        "conflict": 2.54,
+        "militarization": 2.14,
+        "safety": 2.41
+      },
+      {
+        "country": "Ethiopia",
+        "region": "Africa",
+        "population": 126.5,
+        "gpi": 2.4,
+        "conflict": 2.54,
+        "militarization": 1.66,
+        "safety": 2.76
+      },
+      {
+        "country": "Ukraine",
+        "region": "Europe",
+        "population": 37,
+        "gpi": 2.67,
+        "conflict": 2.92,
+        "militarization": 2,
+        "safety": 2.88
+      }
+    ],
+    "2021": [
+      {
+        "country": "Germany",
+        "region": "Europe",
+        "population": 84.1,
+        "gpi": 1.5,
+        "conflict": 1.06,
+        "militarization": 1.93,
+        "safety": 1.6
+      },
+      {
+        "country": "France",
+        "region": "Europe",
+        "population": 68.2,
+        "gpi": 1.89,
+        "conflict": 1.29,
+        "militarization": 2.78,
+        "safety": 1.86
+      },
+      {
+        "country": "United Kingdom",
+        "region": "Europe",
+        "population": 69.6,
+        "gpi": 1.66,
+        "conflict": 1.11,
+        "militarization": 2.48,
+        "safety": 1.63
+      },
+      {
+        "country": "Sweden",
+        "region": "Europe",
+        "population": 10.5,
+        "gpi": 1.5,
+        "conflict": 1.32,
+        "militarization": 1.75,
+        "safety": 1.5
+      },
+      {
+        "country": "Norway",
+        "region": "Europe",
+        "population": 5.5,
+        "gpi": 1.47,
+        "conflict": 1.24,
+        "militarization": 2.21,
+        "safety": 1.25
+      },
+      {
+        "country": "Finland",
+        "region": "Europe",
+        "population": 5.6,
+        "gpi": 1.39,
+        "conflict": 1.24,
+        "militarization": 1.65,
+        "safety": 1.37
+      },
+      {
+        "country": "Poland",
+        "region": "Europe",
+        "population": 37.6,
+        "gpi": 1.5,
+        "conflict": 1.4,
+        "militarization": 1.45,
+        "safety": 1.61
+      },
+      {
+        "country": "Hungary",
+        "region": "Europe",
+        "population": 9.6,
+        "gpi": 1.44,
+        "conflict": 1.46,
+        "militarization": 1.16,
+        "safety": 1.58
+      },
+      {
+        "country": "Russia",
+        "region": "Europe",
+        "population": 144.2,
+        "gpi": 2.96,
+        "conflict": 2.87,
+        "militarization": 3.23,
+        "safety": 2.88
+      },
+      {
+        "country": "Israel",
+        "region": "Middle East",
+        "population": 9.8,
+        "gpi": 2.5,
+        "conflict": 2.02,
+        "militarization": 3.81,
+        "safety": 2.17
+      },
+      {
+        "country": "Saudi Arabia",
+        "region": "Middle East",
+        "population": 36.9,
+        "gpi": 2.39,
+        "conflict": 2.38,
+        "militarization": 2.64,
+        "safety": 2.32
+      },
+      {
+        "country": "Iran",
+        "region": "Middle East",
+        "population": 89.2,
+        "gpi": 2.75,
+        "conflict": 3.13,
+        "militarization": 2.06,
+        "safety": 2.85
+      },
+      {
+        "country": "Turkey",
+        "region": "Middle East",
+        "population": 85.8,
+        "gpi": 2.72,
+        "conflict": 2.93,
+        "militarization": 1.94,
+        "safety": 3.01
+      },
+      {
+        "country": "Yemen",
+        "region": "Middle East",
+        "population": 34.4,
+        "gpi": 3.37,
+        "conflict": 3.57,
+        "militarization": 2.29,
+        "safety": 3.83
+      },
+      {
+        "country": "Syria",
+        "region": "Middle East",
+        "population": 23.2,
+        "gpi": 3.22,
+        "conflict": 3.65,
+        "militarization": 2.08,
+        "safety": 3.55
+      },
+      {
+        "country": "United States",
+        "region": "Americas",
+        "population": 341.8,
+        "gpi": 2.45,
+        "conflict": 1.8,
+        "militarization": 3.17,
+        "safety": 2.54
+      },
+      {
+        "country": "Canada",
+        "region": "Americas",
+        "population": 41,
+        "gpi": 1.41,
+        "conflict": 1.04,
+        "militarization": 1.52,
+        "safety": 1.65
+      },
+      {
+        "country": "Brazil",
+        "region": "Americas",
+        "population": 216.4,
+        "gpi": 2.47,
+        "conflict": 1.88,
+        "militarization": 1.85,
+        "safety": 3.33
+      },
+      {
+        "country": "Mexico",
+        "region": "Americas",
+        "population": 129.4,
+        "gpi": 2.61,
+        "conflict": 2.64,
+        "militarization": 1.69,
+        "safety": 3.18
+      },
+      {
+        "country": "Venezuela",
+        "region": "Americas",
+        "population": 28.4,
+        "gpi": 2.71,
+        "conflict": 2.07,
+        "militarization": 1.98,
+        "safety": 3.64
+      },
+      {
+        "country": "Colombia",
+        "region": "Americas",
+        "population": 52.7,
+        "gpi": 2.71,
+        "conflict": 2.1,
+        "militarization": 2.13,
+        "safety": 3.5
+      },
+      {
+        "country": "China",
+        "region": "Asia-Pacific",
+        "population": 1425.7,
+        "gpi": 1.99,
+        "conflict": 1.88,
+        "militarization": 2.06,
+        "safety": 2.02
+      },
+      {
+        "country": "Japan",
+        "region": "Asia-Pacific",
+        "population": 123.3,
+        "gpi": 1.4,
+        "conflict": 1.4,
+        "militarization": 1.65,
+        "safety": 1.24
+      },
+      {
+        "country": "India",
+        "region": "Asia-Pacific",
+        "population": 1428.6,
+        "gpi": 2.43,
+        "conflict": 2.53,
+        "militarization": 2.49,
+        "safety": 2.36
+      },
+      {
+        "country": "Australia",
+        "region": "Asia-Pacific",
+        "population": 26.6,
+        "gpi": 1.53,
+        "conflict": 1.06,
+        "militarization": 1.92,
+        "safety": 1.7
+      },
+      {
+        "country": "South Korea",
+        "region": "Asia-Pacific",
+        "population": 51.7,
+        "gpi": 1.81,
+        "conflict": 1.8,
+        "militarization": 2.34,
+        "safety": 1.51
+      },
+      {
+        "country": "Pakistan",
+        "region": "Asia-Pacific",
+        "population": 240.5,
+        "gpi": 2.8,
+        "conflict": 3.2,
+        "militarization": 2.53,
+        "safety": 2.69
+      },
+      {
+        "country": "Afghanistan",
+        "region": "Asia-Pacific",
+        "population": 42.2,
+        "gpi": 3.57,
+        "conflict": 3.63,
+        "militarization": 2.53,
+        "safety": 4.15
+      },
+      {
+        "country": "South Africa",
+        "region": "Africa",
+        "population": 60.4,
+        "gpi": 2.42,
+        "conflict": 1.98,
+        "militarization": 1.76,
+        "safety": 3.16
+      },
+      {
+        "country": "Nigeria",
+        "region": "Africa",
+        "population": 223.8,
+        "gpi": 2.74,
+        "conflict": 2.96,
+        "militarization": 2.01,
+        "safety": 3.05
+      },
+      {
+        "country": "Egypt",
+        "region": "Africa",
+        "population": 112.7,
+        "gpi": 2.4,
+        "conflict": 2.52,
+        "militarization": 1.97,
+        "safety": 2.59
+      },
+      {
+        "country": "Ethiopia",
+        "region": "Africa",
+        "population": 126.5,
+        "gpi": 2.73,
+        "conflict": 3.38,
+        "militarization": 1.77,
+        "safety": 2.81
+      },
+      {
+        "country": "Ukraine",
+        "region": "Europe",
+        "population": 37,
+        "gpi": 2.46,
+        "conflict": 2.68,
+        "militarization": 1.99,
+        "safety": 2.58
+      }
+    ],
+    "2022": [
+      {
+        "country": "Germany",
+        "region": "Europe",
+        "population": 84.1,
+        "gpi": 1.48,
+        "conflict": 1.04,
+        "militarization": 1.83,
+        "safety": 1.62
+      },
+      {
+        "country": "France",
+        "region": "Europe",
+        "population": 68.2,
+        "gpi": 1.89,
+        "conflict": 1.33,
+        "militarization": 2.77,
+        "safety": 1.82
+      },
+      {
+        "country": "United Kingdom",
+        "region": "Europe",
+        "population": 69.6,
+        "gpi": 1.67,
+        "conflict": 1.1,
+        "militarization": 2.44,
+        "safety": 1.68
+      },
+      {
+        "country": "Sweden",
+        "region": "Europe",
+        "population": 10.5,
+        "gpi": 1.57,
+        "conflict": 1.54,
+        "militarization": 1.75,
+        "safety": 1.49
+      },
+      {
+        "country": "Norway",
+        "region": "Europe",
+        "population": 5.5,
+        "gpi": 1.46,
+        "conflict": 1.24,
+        "militarization": 2.2,
+        "safety": 1.25
+      },
+      {
+        "country": "Finland",
+        "region": "Europe",
+        "population": 5.6,
+        "gpi": 1.45,
+        "conflict": 1.44,
+        "militarization": 1.6,
+        "safety": 1.35
+      },
+      {
+        "country": "Poland",
+        "region": "Europe",
+        "population": 37.6,
+        "gpi": 1.54,
+        "conflict": 1.4,
+        "militarization": 1.44,
+        "safety": 1.71
+      },
+      {
+        "country": "Hungary",
+        "region": "Europe",
+        "population": 9.6,
+        "gpi": 1.45,
+        "conflict": 1.44,
+        "militarization": 1.17,
+        "safety": 1.61
+      },
+      {
+        "country": "Russia",
+        "region": "Europe",
+        "population": 144.2,
+        "gpi": 2.9,
+        "conflict": 2.66,
+        "militarization": 3.21,
+        "safety": 2.91
+      },
+      {
+        "country": "Israel",
+        "region": "Middle East",
+        "population": 9.8,
+        "gpi": 2.55,
+        "conflict": 2.19,
+        "militarization": 3.76,
+        "safety": 2.19
+      },
+      {
+        "country": "Saudi Arabia",
+        "region": "Middle East",
+        "population": 36.9,
+        "gpi": 2.34,
+        "conflict": 2.39,
+        "militarization": 2.64,
+        "safety": 2.18
+      },
+      {
+        "country": "Iran",
+        "region": "Middle East",
+        "population": 89.2,
+        "gpi": 2.75,
+        "conflict": 3.08,
+        "militarization": 2.15,
+        "safety": 2.84
+      },
+      {
+        "country": "Turkey",
+        "region": "Middle East",
+        "population": 85.8,
+        "gpi": 2.81,
+        "conflict": 3.07,
+        "militarization": 1.93,
+        "safety": 3.12
+      },
+      {
+        "country": "Yemen",
+        "region": "Middle East",
+        "population": 34.4,
+        "gpi": 3.45,
+        "conflict": 3.67,
+        "militarization": 2.36,
+        "safety": 3.91
+      },
+      {
+        "country": "Syria",
+        "region": "Middle East",
+        "population": 23.2,
+        "gpi": 3.16,
+        "conflict": 3.47,
+        "militarization": 2.09,
+        "safety": 3.53
+      },
+      {
+        "country": "United States",
+        "region": "Americas",
+        "population": 341.8,
+        "gpi": 2.39,
+        "conflict": 1.8,
+        "militarization": 3.1,
+        "safety": 2.44
+      },
+      {
+        "country": "Canada",
+        "region": "Americas",
+        "population": 41,
+        "gpi": 1.39,
+        "conflict": 1.04,
+        "militarization": 1.52,
+        "safety": 1.6
+      },
+      {
+        "country": "Brazil",
+        "region": "Americas",
+        "population": 216.4,
+        "gpi": 2.5,
+        "conflict": 1.97,
+        "militarization": 1.95,
+        "safety": 3.3
+      },
+      {
+        "country": "Mexico",
+        "region": "Americas",
+        "population": 129.4,
+        "gpi": 2.61,
+        "conflict": 2.65,
+        "militarization": 1.78,
+        "safety": 3.13
+      },
+      {
+        "country": "Venezuela",
+        "region": "Americas",
+        "population": 28.4,
+        "gpi": 2.74,
+        "conflict": 2.14,
+        "militarization": 2.05,
+        "safety": 3.63
+      },
+      {
+        "country": "Colombia",
+        "region": "Americas",
+        "population": 52.7,
+        "gpi": 2.76,
+        "conflict": 2.14,
+        "militarization": 2.11,
+        "safety": 3.6
+      },
+      {
+        "country": "China",
+        "region": "Asia-Pacific",
+        "population": 1425.7,
+        "gpi": 2.01,
+        "conflict": 1.89,
+        "militarization": 2.03,
+        "safety": 2.07
+      },
+      {
+        "country": "Japan",
+        "region": "Asia-Pacific",
+        "population": 123.3,
+        "gpi": 1.4,
+        "conflict": 1.4,
+        "militarization": 1.66,
+        "safety": 1.25
+      },
+      {
+        "country": "India",
+        "region": "Asia-Pacific",
+        "population": 1428.6,
+        "gpi": 2.4,
+        "conflict": 2.49,
+        "militarization": 2.4,
+        "safety": 2.38
+      },
+      {
+        "country": "Australia",
+        "region": "Asia-Pacific",
+        "population": 26.6,
+        "gpi": 1.58,
+        "conflict": 1.26,
+        "militarization": 1.95,
+        "safety": 1.63
+      },
+      {
+        "country": "South Korea",
+        "region": "Asia-Pacific",
+        "population": 51.7,
+        "gpi": 1.8,
+        "conflict": 1.8,
+        "militarization": 2.31,
+        "safety": 1.5
+      },
+      {
+        "country": "Pakistan",
+        "region": "Asia-Pacific",
+        "population": 240.5,
+        "gpi": 2.71,
+        "conflict": 2.96,
+        "militarization": 2.56,
+        "safety": 2.65
+      },
+      {
+        "country": "Afghanistan",
+        "region": "Asia-Pacific",
+        "population": 42.2,
+        "gpi": 3.54,
+        "conflict": 3.63,
+        "militarization": 2.45,
+        "safety": 4.12
+      },
+      {
+        "country": "South Africa",
+        "region": "Africa",
+        "population": 60.4,
+        "gpi": 2.4,
+        "conflict": 2.09,
+        "militarization": 1.67,
+        "safety": 3.1
+      },
+      {
+        "country": "Nigeria",
+        "region": "Africa",
+        "population": 223.8,
+        "gpi": 2.72,
+        "conflict": 2.86,
+        "militarization": 1.92,
+        "safety": 3.12
+      },
+      {
+        "country": "Egypt",
+        "region": "Africa",
+        "population": 112.7,
+        "gpi": 2.28,
+        "conflict": 2.38,
+        "militarization": 1.93,
+        "safety": 2.43
+      },
+      {
+        "country": "Ethiopia",
+        "region": "Africa",
+        "population": 126.5,
+        "gpi": 2.87,
+        "conflict": 3.69,
+        "militarization": 1.84,
+        "safety": 2.86
+      },
+      {
+        "country": "Ukraine",
+        "region": "Europe",
+        "population": 37,
+        "gpi": 2.61,
+        "conflict": 2.9,
+        "militarization": 2.09,
+        "safety": 2.71
+      }
+    ],
+    "2023": [
+      {
+        "country": "Germany",
+        "region": "Europe",
+        "population": 84.1,
+        "gpi": 1.46,
+        "conflict": 1.05,
+        "militarization": 1.82,
+        "safety": 1.58
+      },
+      {
+        "country": "France",
+        "region": "Europe",
+        "population": 68.2,
+        "gpi": 1.93,
+        "conflict": 1.39,
+        "militarization": 2.77,
+        "safety": 1.87
+      },
+      {
+        "country": "United Kingdom",
+        "region": "Europe",
+        "population": 69.6,
+        "gpi": 1.64,
+        "conflict": 1.1,
+        "militarization": 2.47,
+        "safety": 1.6
+      },
+      {
+        "country": "Sweden",
+        "region": "Europe",
+        "population": 10.5,
+        "gpi": 1.61,
+        "conflict": 1.54,
+        "militarization": 1.8,
+        "safety": 1.55
+      },
+      {
+        "country": "Norway",
+        "region": "Europe",
+        "population": 5.5,
+        "gpi": 1.53,
+        "conflict": 1.45,
+        "militarization": 2.12,
+        "safety": 1.28
+      },
+      {
+        "country": "Finland",
+        "region": "Europe",
+        "population": 5.6,
+        "gpi": 1.41,
+        "conflict": 1.45,
+        "militarization": 1.61,
+        "safety": 1.27
+      },
+      {
+        "country": "Poland",
+        "region": "Europe",
+        "population": 37.6,
+        "gpi": 1.64,
+        "conflict": 1.64,
+        "militarization": 1.52,
+        "safety": 1.7
+      },
+      {
+        "country": "Hungary",
+        "region": "Europe",
+        "population": 9.6,
+        "gpi": 1.51,
+        "conflict": 1.44,
+        "militarization": 1.25,
+        "safety": 1.71
+      },
+      {
+        "country": "Russia",
+        "region": "Europe",
+        "population": 144.2,
+        "gpi": 3.21,
+        "conflict": 3.67,
+        "militarization": 3.25,
+        "safety": 2.81
+      },
+      {
+        "country": "Israel",
+        "region": "Middle East",
+        "population": 9.8,
+        "gpi": 2.69,
+        "conflict": 2.35,
+        "militarization": 3.77,
+        "safety": 2.38
+      },
+      {
+        "country": "Saudi Arabia",
+        "region": "Middle East",
+        "population": 36.9,
+        "gpi": 2.21,
+        "conflict": 1.91,
+        "militarization": 2.85,
+        "safety": 2.12
+      },
+      {
+        "country": "Iran",
+        "region": "Middle East",
+        "population": 89.2,
+        "gpi": 2.79,
+        "conflict": 3.09,
+        "militarization": 2.17,
+        "safety": 2.92
+      },
+      {
+        "country": "Turkey",
+        "region": "Middle East",
+        "population": 85.8,
+        "gpi": 2.81,
+        "conflict": 3.07,
+        "militarization": 1.93,
+        "safety": 3.1
+      },
+      {
+        "country": "Yemen",
+        "region": "Middle East",
+        "population": 34.4,
+        "gpi": 3.2,
+        "conflict": 3.18,
+        "militarization": 2.21,
+        "safety": 3.79
+      },
+      {
+        "country": "Syria",
+        "region": "Middle East",
+        "population": 23.2,
+        "gpi": 3.15,
+        "conflict": 3.46,
+        "militarization": 2.08,
+        "safety": 3.52
+      },
+      {
+        "country": "United States",
+        "region": "Americas",
+        "population": 341.8,
+        "gpi": 2.39,
+        "conflict": 1.8,
+        "militarization": 3.08,
+        "safety": 2.46
+      },
+      {
+        "country": "Canada",
+        "region": "Americas",
+        "population": 41,
+        "gpi": 1.37,
+        "conflict": 1.04,
+        "militarization": 1.52,
+        "safety": 1.55
+      },
+      {
+        "country": "Brazil",
+        "region": "Americas",
+        "population": 216.4,
+        "gpi": 2.49,
+        "conflict": 1.99,
+        "militarization": 1.84,
+        "safety": 3.3
+      },
+      {
+        "country": "Mexico",
+        "region": "Americas",
+        "population": 129.4,
+        "gpi": 2.59,
+        "conflict": 2.66,
+        "militarization": 1.71,
+        "safety": 3.12
+      },
+      {
+        "country": "Venezuela",
+        "region": "Americas",
+        "population": 28.4,
+        "gpi": 2.72,
+        "conflict": 2.24,
+        "militarization": 2.07,
+        "safety": 3.49
+      },
+      {
+        "country": "Colombia",
+        "region": "Americas",
+        "population": 52.7,
+        "gpi": 2.71,
+        "conflict": 2.17,
+        "militarization": 1.92,
+        "safety": 3.58
+      },
+      {
+        "country": "China",
+        "region": "Asia-Pacific",
+        "population": 1425.7,
+        "gpi": 2.01,
+        "conflict": 1.9,
+        "militarization": 2.03,
+        "safety": 2.07
+      },
+      {
+        "country": "Japan",
+        "region": "Asia-Pacific",
+        "population": 123.3,
+        "gpi": 1.42,
+        "conflict": 1.4,
+        "militarization": 1.69,
+        "safety": 1.27
+      },
+      {
+        "country": "India",
+        "region": "Asia-Pacific",
+        "population": 1428.6,
+        "gpi": 2.3,
+        "conflict": 2.25,
+        "militarization": 2.4,
+        "safety": 2.33
+      },
+      {
+        "country": "Australia",
+        "region": "Asia-Pacific",
+        "population": 26.6,
+        "gpi": 1.54,
+        "conflict": 1.26,
+        "militarization": 1.86,
+        "safety": 1.6
+      },
+      {
+        "country": "South Korea",
+        "region": "Asia-Pacific",
+        "population": 51.7,
+        "gpi": 1.78,
+        "conflict": 1.8,
+        "militarization": 2.24,
+        "safety": 1.5
+      },
+      {
+        "country": "Pakistan",
+        "region": "Asia-Pacific",
+        "population": 240.5,
+        "gpi": 2.73,
+        "conflict": 2.92,
+        "militarization": 2.51,
+        "safety": 2.75
+      },
+      {
+        "country": "Afghanistan",
+        "region": "Asia-Pacific",
+        "population": 42.2,
+        "gpi": 3.22,
+        "conflict": 2.99,
+        "militarization": 2.3,
+        "safety": 3.93
+      },
+      {
+        "country": "South Africa",
+        "region": "Africa",
+        "population": 60.4,
+        "gpi": 2.37,
+        "conflict": 1.95,
+        "militarization": 1.66,
+        "safety": 3.11
+      },
+      {
+        "country": "Nigeria",
+        "region": "Africa",
+        "population": 223.8,
+        "gpi": 2.77,
+        "conflict": 2.92,
+        "militarization": 1.97,
+        "safety": 3.16
+      },
+      {
+        "country": "Egypt",
+        "region": "Africa",
+        "population": 112.7,
+        "gpi": 2.25,
+        "conflict": 2.38,
+        "militarization": 1.83,
+        "safety": 2.41
+      },
+      {
+        "country": "Ethiopia",
+        "region": "Africa",
+        "population": 126.5,
+        "gpi": 2.83,
+        "conflict": 3.51,
+        "militarization": 1.79,
+        "safety": 2.95
+      },
+      {
+        "country": "Ukraine",
+        "region": "Europe",
+        "population": 37,
+        "gpi": 3.09,
+        "conflict": 3.56,
+        "militarization": 2.42,
+        "safety": 3.11
+      }
+    ],
+    "2024": [
+      {
+        "country": "Germany",
+        "region": "Europe",
+        "population": 84.1,
+        "gpi": 1.49,
+        "conflict": 1.05,
+        "militarization": 1.91,
+        "safety": 1.6
+      },
+      {
+        "country": "France",
+        "region": "Europe",
+        "population": 68.2,
+        "gpi": 2,
+        "conflict": 1.6,
+        "militarization": 2.77,
+        "safety": 1.87
+      },
+      {
+        "country": "United Kingdom",
+        "region": "Europe",
+        "population": 69.6,
+        "gpi": 1.64,
+        "conflict": 1.1,
+        "militarization": 2.5,
+        "safety": 1.58
+      },
+      {
+        "country": "Sweden",
+        "region": "Europe",
+        "population": 10.5,
+        "gpi": 1.64,
+        "conflict": 1.55,
+        "militarization": 1.93,
+        "safety": 1.54
+      },
+      {
+        "country": "Norway",
+        "region": "Europe",
+        "population": 5.5,
+        "gpi": 1.57,
+        "conflict": 1.46,
+        "militarization": 2.29,
+        "safety": 1.26
+      },
+      {
+        "country": "Finland",
+        "region": "Europe",
+        "population": 5.6,
+        "gpi": 1.42,
+        "conflict": 1.46,
+        "militarization": 1.62,
+        "safety": 1.27
+      },
+      {
+        "country": "Poland",
+        "region": "Europe",
+        "population": 37.6,
+        "gpi": 1.66,
+        "conflict": 1.63,
+        "militarization": 1.73,
+        "safety": 1.66
+      },
+      {
+        "country": "Hungary",
+        "region": "Europe",
+        "population": 9.6,
+        "gpi": 1.48,
+        "conflict": 1.41,
+        "militarization": 1.26,
+        "safety": 1.66
+      },
+      {
+        "country": "Russia",
+        "region": "Europe",
+        "population": 144.2,
+        "gpi": 3.23,
+        "conflict": 3.7,
+        "militarization": 3.07,
+        "safety": 2.93
+      },
+      {
+        "country": "Israel",
+        "region": "Middle East",
+        "population": 9.8,
+        "gpi": 3.06,
+        "conflict": 3.21,
+        "militarization": 3.77,
+        "safety": 2.58
+      },
+      {
+        "country": "Saudi Arabia",
+        "region": "Middle East",
+        "population": 36.9,
+        "gpi": 2.15,
+        "conflict": 1.6,
+        "militarization": 2.98,
+        "safety": 2.14
+      },
+      {
+        "country": "Iran",
+        "region": "Middle East",
+        "population": 89.2,
+        "gpi": 2.7,
+        "conflict": 3.06,
+        "militarization": 1.95,
+        "safety": 2.83
+      },
+      {
+        "country": "Turkey",
+        "region": "Middle East",
+        "population": 85.8,
+        "gpi": 2.8,
+        "conflict": 3.1,
+        "militarization": 1.94,
+        "safety": 3.05
+      },
+      {
+        "country": "Yemen",
+        "region": "Middle East",
+        "population": 34.4,
+        "gpi": 3.26,
+        "conflict": 3.19,
+        "militarization": 2.26,
+        "safety": 3.88
+      },
+      {
+        "country": "Syria",
+        "region": "Middle East",
+        "population": 23.2,
+        "gpi": 3.12,
+        "conflict": 3.48,
+        "militarization": 2.06,
+        "safety": 3.44
+      },
+      {
+        "country": "United States",
+        "region": "Americas",
+        "population": 341.8,
+        "gpi": 2.4,
+        "conflict": 1.8,
+        "militarization": 3.14,
+        "safety": 2.45
+      },
+      {
+        "country": "Canada",
+        "region": "Americas",
+        "population": 41,
+        "gpi": 1.41,
+        "conflict": 1.05,
+        "militarization": 1.54,
+        "safety": 1.62
+      },
+      {
+        "country": "Brazil",
+        "region": "Americas",
+        "population": 216.4,
+        "gpi": 2.5,
+        "conflict": 2.11,
+        "militarization": 1.79,
+        "safety": 3.26
+      },
+      {
+        "country": "Mexico",
+        "region": "Americas",
+        "population": 129.4,
+        "gpi": 2.67,
+        "conflict": 2.69,
+        "militarization": 1.89,
+        "safety": 3.16
+      },
+      {
+        "country": "Venezuela",
+        "region": "Americas",
+        "population": 28.4,
+        "gpi": 2.64,
+        "conflict": 2.16,
+        "militarization": 2.08,
+        "safety": 3.36
+      },
+      {
+        "country": "Colombia",
+        "region": "Americas",
+        "population": 52.7,
+        "gpi": 2.71,
+        "conflict": 2.23,
+        "militarization": 1.8,
+        "safety": 3.59
+      },
+      {
+        "country": "China",
+        "region": "Asia-Pacific",
+        "population": 1425.7,
+        "gpi": 2.04,
+        "conflict": 1.92,
+        "militarization": 2.06,
+        "safety": 2.1
+      },
+      {
+        "country": "Japan",
+        "region": "Asia-Pacific",
+        "population": 123.3,
+        "gpi": 1.48,
+        "conflict": 1.4,
+        "militarization": 1.73,
+        "safety": 1.38
+      },
+      {
+        "country": "India",
+        "region": "Asia-Pacific",
+        "population": 1428.6,
+        "gpi": 2.24,
+        "conflict": 2.07,
+        "militarization": 2.43,
+        "safety": 2.31
+      },
+      {
+        "country": "Australia",
+        "region": "Asia-Pacific",
+        "population": 26.6,
+        "gpi": 1.49,
+        "conflict": 1.24,
+        "militarization": 1.8,
+        "safety": 1.53
+      },
+      {
+        "country": "South Korea",
+        "region": "Asia-Pacific",
+        "population": 51.7,
+        "gpi": 1.76,
+        "conflict": 1.8,
+        "militarization": 2.14,
+        "safety": 1.5
+      },
+      {
+        "country": "Pakistan",
+        "region": "Asia-Pacific",
+        "population": 240.5,
+        "gpi": 2.71,
+        "conflict": 2.77,
+        "militarization": 2.55,
+        "safety": 2.8
+      },
+      {
+        "country": "Afghanistan",
+        "region": "Asia-Pacific",
+        "population": 42.2,
+        "gpi": 3.22,
+        "conflict": 2.78,
+        "militarization": 2.5,
+        "safety": 3.97
+      },
+      {
+        "country": "South Africa",
+        "region": "Africa",
+        "population": 60.4,
+        "gpi": 2.36,
+        "conflict": 1.91,
+        "militarization": 1.7,
+        "safety": 3.11
+      },
+      {
+        "country": "Nigeria",
+        "region": "Africa",
+        "population": 223.8,
+        "gpi": 2.77,
+        "conflict": 2.98,
+        "militarization": 1.83,
+        "safety": 3.21
+      },
+      {
+        "country": "Egypt",
+        "region": "Africa",
+        "population": 112.7,
+        "gpi": 2.17,
+        "conflict": 2.11,
+        "militarization": 1.84,
+        "safety": 2.42
+      },
+      {
+        "country": "Ethiopia",
+        "region": "Africa",
+        "population": 126.5,
+        "gpi": 2.74,
+        "conflict": 3.15,
+        "militarization": 1.8,
+        "safety": 2.99
+      },
+      {
+        "country": "Ukraine",
+        "region": "Europe",
+        "population": 37,
+        "gpi": 3.17,
+        "conflict": 3.59,
+        "militarization": 3.01,
+        "safety": 2.97
+      }
+    ],
+    "2025": [
+      {
+        "country": "Germany",
+        "region": "Europe",
+        "population": 84.1,
+        "gpi": 1.53,
+        "conflict": 1.1,
+        "militarization": 1.99,
+        "safety": 1.62
+      },
+      {
+        "country": "France",
+        "region": "Europe",
+        "population": 68.2,
+        "gpi": 1.97,
+        "conflict": 1.42,
+        "militarization": 2.77,
+        "safety": 1.93
+      },
+      {
+        "country": "United Kingdom",
+        "region": "Europe",
+        "population": 69.6,
+        "gpi": 1.63,
+        "conflict": 1.07,
+        "militarization": 2.49,
+        "safety": 1.6
+      },
+      {
+        "country": "Sweden",
+        "region": "Europe",
+        "population": 10.5,
+        "gpi": 1.71,
+        "conflict": 1.59,
+        "militarization": 2.08,
+        "safety": 1.58
+      },
+      {
+        "country": "Norway",
+        "region": "Europe",
+        "population": 5.5,
+        "gpi": 1.64,
+        "conflict": 1.46,
+        "militarization": 2.62,
+        "safety": 1.26
+      },
+      {
+        "country": "Finland",
+        "region": "Europe",
+        "population": 5.6,
+        "gpi": 1.42,
+        "conflict": 1.46,
+        "militarization": 1.63,
+        "safety": 1.27
+      },
+      {
+        "country": "Poland",
+        "region": "Europe",
+        "population": 37.6,
+        "gpi": 1.71,
+        "conflict": 1.63,
+        "militarization": 1.83,
+        "safety": 1.72
+      },
+      {
+        "country": "Hungary",
+        "region": "Europe",
+        "population": 9.6,
+        "gpi": 1.5,
+        "conflict": 1.4,
+        "militarization": 1.39,
+        "safety": 1.65
+      },
+      {
+        "country": "Russia",
+        "region": "Europe",
+        "population": 144.2,
+        "gpi": 3.44,
+        "conflict": 4.2,
+        "militarization": 3.06,
+        "safety": 3.06
+      },
+      {
+        "country": "Israel",
+        "region": "Middle East",
+        "population": 9.8,
+        "gpi": 3.11,
+        "conflict": 3.06,
+        "militarization": 3.92,
+        "safety": 2.71
+      },
+      {
+        "country": "Saudi Arabia",
+        "region": "Middle East",
+        "population": 36.9,
+        "gpi": 2.04,
+        "conflict": 1.5,
+        "militarization": 2.82,
+        "safety": 2.04
+      },
+      {
+        "country": "Iran",
+        "region": "Middle East",
+        "population": 89.2,
+        "gpi": 2.75,
+        "conflict": 3.18,
+        "militarization": 2.04,
+        "safety": 2.81
+      },
+      {
+        "country": "Turkey",
+        "region": "Middle East",
+        "population": 85.8,
+        "gpi": 2.85,
+        "conflict": 3.17,
+        "militarization": 1.94,
+        "safety": 3.11
+      },
+      {
+        "country": "Yemen",
+        "region": "Middle East",
+        "population": 34.4,
+        "gpi": 3.26,
+        "conflict": 3.18,
+        "militarization": 2.31,
+        "safety": 3.86
+      },
+      {
+        "country": "Syria",
+        "region": "Middle East",
+        "population": 23.2,
+        "gpi": 3.18,
+        "conflict": 3.54,
+        "militarization": 2.05,
+        "safety": 3.57
+      },
+      {
+        "country": "United States",
+        "region": "Americas",
+        "population": 341.8,
+        "gpi": 2.44,
+        "conflict": 2.02,
+        "militarization": 3.15,
+        "safety": 2.37
+      },
+      {
+        "country": "Canada",
+        "region": "Americas",
+        "population": 41,
+        "gpi": 1.49,
+        "conflict": 1.25,
+        "militarization": 1.53,
+        "safety": 1.65
+      },
+      {
+        "country": "Brazil",
+        "region": "Americas",
+        "population": 216.4,
+        "gpi": 2.47,
+        "conflict": 2.13,
+        "militarization": 1.71,
+        "safety": 3.23
+      },
+      {
+        "country": "Mexico",
+        "region": "Americas",
+        "population": 129.4,
+        "gpi": 2.64,
+        "conflict": 2.67,
+        "militarization": 1.76,
+        "safety": 3.15
+      },
+      {
+        "country": "Venezuela",
+        "region": "Americas",
+        "population": 28.4,
+        "gpi": 2.69,
+        "conflict": 2.24,
+        "militarization": 2.11,
+        "safety": 3.41
+      },
+      {
+        "country": "Colombia",
+        "region": "Americas",
+        "population": 52.7,
+        "gpi": 2.69,
+        "conflict": 2.37,
+        "militarization": 1.76,
+        "safety": 3.48
+      },
+      {
+        "country": "China",
+        "region": "Asia-Pacific",
+        "population": 1425.7,
+        "gpi": 2.09,
+        "conflict": 1.95,
+        "militarization": 2.04,
+        "safety": 2.22
+      },
+      {
+        "country": "Japan",
+        "region": "Asia-Pacific",
+        "population": 123.3,
+        "gpi": 1.44,
+        "conflict": 1.4,
+        "militarization": 1.73,
+        "safety": 1.29
+      },
+      {
+        "country": "India",
+        "region": "Asia-Pacific",
+        "population": 1428.6,
+        "gpi": 2.23,
+        "conflict": 2.1,
+        "militarization": 2.4,
+        "safety": 2.28
+      },
+      {
+        "country": "Australia",
+        "region": "Asia-Pacific",
+        "population": 26.6,
+        "gpi": 1.5,
+        "conflict": 1.25,
+        "militarization": 1.8,
+        "safety": 1.55
+      },
+      {
+        "country": "South Korea",
+        "region": "Asia-Pacific",
+        "population": 51.7,
+        "gpi": 1.74,
+        "conflict": 1.8,
+        "militarization": 2.12,
+        "safety": 1.45
+      },
+      {
+        "country": "Pakistan",
+        "region": "Asia-Pacific",
+        "population": 240.5,
+        "gpi": 2.8,
+        "conflict": 2.93,
+        "militarization": 2.59,
+        "safety": 2.87
+      },
+      {
+        "country": "Afghanistan",
+        "region": "Asia-Pacific",
+        "population": 42.2,
+        "gpi": 3.23,
+        "conflict": 2.77,
+        "militarization": 2.62,
+        "safety": 3.93
+      },
+      {
+        "country": "South Africa",
+        "region": "Africa",
+        "population": 60.4,
+        "gpi": 2.35,
+        "conflict": 2.11,
+        "militarization": 1.67,
+        "safety": 2.95
+      },
+      {
+        "country": "Nigeria",
+        "region": "Africa",
+        "population": 223.8,
+        "gpi": 2.87,
+        "conflict": 3.18,
+        "militarization": 1.92,
+        "safety": 3.22
+      },
+      {
+        "country": "Egypt",
+        "region": "Africa",
+        "population": 112.7,
+        "gpi": 2.16,
+        "conflict": 2.05,
+        "militarization": 1.82,
+        "safety": 2.45
+      },
+      {
+        "country": "Ethiopia",
+        "region": "Africa",
+        "population": 126.5,
+        "gpi": 2.69,
+        "conflict": 3.19,
+        "militarization": 1.67,
+        "safety": 2.92
+      },
+      {
+        "country": "Ukraine",
+        "region": "Europe",
+        "population": 37,
+        "gpi": 3.43,
+        "conflict": 4,
+        "militarization": 3.11,
+        "safety": 3.2
+      }
+    ]
+  }
+}

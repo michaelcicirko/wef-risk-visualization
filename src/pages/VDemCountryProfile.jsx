@@ -4,7 +4,8 @@ import { motion } from 'framer-motion';
 import { scaleLinear } from 'd3-scale';
 import { line, curveMonotoneX } from 'd3-shape';
 import { max, min, extent } from 'd3-array';
-import { VDEM_DATA, VDEM_COUNTRIES, DEMOCRACY_INDICES } from '../data/vdemDemocracy.js';
+import { DEMOCRACY_INDICES } from '../data/vdemDemocracy.js';
+import { useVdemData } from '../data/useVdemData.js';
 import styles from './VDemCountryProfile.module.css';
 
 const SPARK_W = 280;
@@ -137,22 +138,32 @@ function Sparkline({ data, color, indexKey, highlightYear }) {
 }
 
 function VDemCountryProfile() {
+  const { data: VDEM_DATA, loading, error } = useVdemData();
   const [selectedCountryId, setSelectedCountryId] = useState(null);
   const [year, setYear] = useState(2020);
-  
+
+  const VDEM_COUNTRIES = useMemo(() => {
+    if (!VDEM_DATA) return [];
+    const seen = new Map();
+    VDEM_DATA.forEach(d => {
+      if (!seen.has(d.country_id)) seen.set(d.country_id, { id: d.country_id, name: d.country_name, code: d.country_text_id, region: d.region });
+    });
+    return Array.from(seen.values());
+  }, [VDEM_DATA]);
+
   // Get all countries with substantial data
   const countries = useMemo(() => {
+    if (!VDEM_DATA) return [];
+    const countsByCountry = {};
+    VDEM_DATA.forEach(d => { countsByCountry[d.country_id] = (countsByCountry[d.country_id] || 0) + 1; });
     return VDEM_COUNTRIES
-      .filter(c => {
-        const countryData = VDEM_DATA.filter(d => d.country_id === c.id);
-        return countryData.length > 50;
-      })
+      .filter(c => (countsByCountry[c.id] || 0) > 50)
       .sort((a, b) => a.name.localeCompare(b.name));
-  }, []);
+  }, [VDEM_DATA, VDEM_COUNTRIES]);
   
   // Get selected country data
   const countryData = useMemo(() => {
-    if (!selectedCountryId) return null;
+    if (!selectedCountryId || !VDEM_DATA) return null;
     
     const country = countries.find(c => c.id === selectedCountryId);
     if (!country) return null;
@@ -193,7 +204,7 @@ function VDemCountryProfile() {
   
   // Regional ranking
   const regionalRank = useMemo(() => {
-    if (!countryData || !countryData.stats.v2x_polyarchy?.current) return null;
+    if (!countryData || !countryData.stats.v2x_polyarchy?.current || !VDEM_DATA) return null;
     
     const currentScore = countryData.stats.v2x_polyarchy.current;
     const region = countryData.country.region;
@@ -213,7 +224,7 @@ function VDemCountryProfile() {
   
   // Global ranking
   const globalRank = useMemo(() => {
-    if (!countryData || !countryData.stats.v2x_polyarchy?.current) return null;
+    if (!countryData || !countryData.stats.v2x_polyarchy?.current || !VDEM_DATA) return null;
     
     const allCountries = VDEM_DATA.filter(d => 
       d.year === year && d.v2x_polyarchy !== null
@@ -245,6 +256,9 @@ function VDemCountryProfile() {
     if (trend < -0.01) return styles.trendDown;
     return styles.trendStable;
   };
+
+  if (loading) return <div className={styles.container}>Loading data...</div>;
+  if (error) return <div className={styles.container}>Error loading data: {error}</div>;
 
   return (
     <div className={styles.container}>
@@ -396,7 +410,7 @@ function VDemCountryProfile() {
                   .filter(c => c.region === countryData.country.region && c.id !== selectedCountryId)
                   .slice(0, 5)
                   .map(c => {
-                    const theirData = VDEM_DATA.find(d => d.country_id === c.id && d.year === year);
+                    const theirData = VDEM_DATA?.find(d => d.country_id === c.id && d.year === year);
                     const theirScore = theirData?.v2x_polyarchy ?? null;
                     const ourScore = countryData.stats.v2x_polyarchy?.current ?? 0;
                     

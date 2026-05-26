@@ -1,0 +1,4366 @@
+{
+  "id": "sp500",
+  "label": "S&P 500",
+  "children": [
+    {
+      "id": "sector-industrials",
+      "label": "Industrials",
+      "children": [
+        {
+          "id": "sub-industrial-conglomerates",
+          "label": "Industrial Conglomerates",
+          "children": [
+            {
+              "id": "co-mmm",
+              "label": "MMM",
+              "fullName": "3M",
+              "founded": "1902",
+              "hq": "Saint Paul, Minnesota"
+            },
+            {
+              "id": "co-hon",
+              "label": "HON",
+              "fullName": "Honeywell",
+              "founded": "1906",
+              "hq": "Charlotte, North Carolina"
+            }
+          ]
+        },
+        {
+          "id": "sub-building-products",
+          "label": "Building Products",
+          "children": [
+            {
+              "id": "co-aos",
+              "label": "AOS",
+              "fullName": "A. O. Smith",
+              "founded": "1916",
+              "hq": "Milwaukee, Wisconsin"
+            },
+            {
+              "id": "co-alle",
+              "label": "ALLE",
+              "fullName": "Allegion",
+              "founded": "1908",
+              "hq": "Dublin, Ireland"
+            },
+            {
+              "id": "co-bldr",
+              "label": "BLDR",
+              "fullName": "Builders FirstSource",
+              "founded": "1998",
+              "hq": "Irving, Texas"
+            },
+            {
+              "id": "co-carr",
+              "label": "CARR",
+              "fullName": "Carrier Global",
+              "founded": "2020 (1915, United Technologies spinoff)",
+              "hq": "Palm Beach Gardens, Florida"
+            },
+            {
+              "id": "co-jci",
+              "label": "JCI",
+              "fullName": "Johnson Controls",
+              "founded": "1885",
+              "hq": "Cork, Ireland"
+            },
+            {
+              "id": "co-lii",
+              "label": "LII",
+              "fullName": "Lennox International",
+              "founded": "1895",
+              "hq": "Richardson, Texas"
+            },
+            {
+              "id": "co-mas",
+              "label": "MAS",
+              "fullName": "Masco",
+              "founded": "1929",
+              "hq": "Livonia, Michigan"
+            },
+            {
+              "id": "co-tt",
+              "label": "TT",
+              "fullName": "Trane Technologies",
+              "founded": "1871",
+              "hq": "Dublin, Ireland"
+            }
+          ]
+        },
+        {
+          "id": "sub-electrical-components---equipment",
+          "label": "Electrical Components & Equipment",
+          "children": [
+            {
+              "id": "co-ame",
+              "label": "AME",
+              "fullName": "Ametek",
+              "founded": "1930",
+              "hq": "Berwyn, Pennsylvania"
+            },
+            {
+              "id": "co-etn",
+              "label": "ETN",
+              "fullName": "Eaton Corporation",
+              "founded": "1911",
+              "hq": "Dublin, Ireland"
+            },
+            {
+              "id": "co-emr",
+              "label": "EMR",
+              "fullName": "Emerson Electric",
+              "founded": "1890",
+              "hq": "Ferguson, Missouri"
+            },
+            {
+              "id": "co-gnrc",
+              "label": "GNRC",
+              "fullName": "Generac",
+              "founded": "1959",
+              "hq": "Waukesha, Wisconsin"
+            },
+            {
+              "id": "co-rok",
+              "label": "ROK",
+              "fullName": "Rockwell Automation",
+              "founded": "1903",
+              "hq": "Milwaukee, Wisconsin"
+            },
+            {
+              "id": "co-vrt",
+              "label": "VRT",
+              "fullName": "Vertiv",
+              "founded": "2016",
+              "hq": "Westerville, Ohio"
+            }
+          ]
+        },
+        {
+          "id": "sub-human-resource---employment-services",
+          "label": "Human Resource & Employment Services",
+          "children": [
+            {
+              "id": "co-adp",
+              "label": "ADP",
+              "fullName": "Automatic Data Processing",
+              "founded": "1949",
+              "hq": "Roseland, New Jersey"
+            },
+            {
+              "id": "co-payx",
+              "label": "PAYX",
+              "fullName": "Paychex",
+              "founded": "1971",
+              "hq": "Penfield, New York"
+            }
+          ]
+        },
+        {
+          "id": "sub-aerospace---defense",
+          "label": "Aerospace & Defense",
+          "children": [
+            {
+              "id": "co-axon",
+              "label": "AXON",
+              "fullName": "Axon Enterprise",
+              "founded": "1993",
+              "hq": "Scottsdale, Arizona"
+            },
+            {
+              "id": "co-ba",
+              "label": "BA",
+              "fullName": "Boeing",
+              "founded": "1916",
+              "hq": "Arlington, Virginia"
+            },
+            {
+              "id": "co-ge",
+              "label": "GE",
+              "fullName": "GE Aerospace",
+              "founded": "1892",
+              "hq": "Evendale, Ohio"
+            },
+            {
+              "id": "co-gd",
+              "label": "GD",
+              "fullName": "General Dynamics",
+              "founded": "1899",
+              "hq": "Reston, Virginia"
+            },
+            {
+              "id": "co-hwm",
+              "label": "HWM",
+              "fullName": "Howmet Aerospace",
+              "founded": "1888",
+              "hq": "Pittsburgh, Pennsylvania"
+            },
+            {
+              "id": "co-hii",
+              "label": "HII",
+              "fullName": "Huntington Ingalls Industries",
+              "founded": "2011",
+              "hq": "Newport News, Virginia"
+            },
+            {
+              "id": "co-lhx",
+              "label": "LHX",
+              "fullName": "L3Harris",
+              "founded": "2019 (L3 1997, Harris 1895)",
+              "hq": "Melbourne, Florida"
+            },
+            {
+              "id": "co-lmt",
+              "label": "LMT",
+              "fullName": "Lockheed Martin",
+              "founded": "1995",
+              "hq": "Bethesda, Maryland"
+            },
+            {
+              "id": "co-noc",
+              "label": "NOC",
+              "fullName": "Northrop Grumman",
+              "founded": "1994 (Northrop 1939, Grumman 1930)",
+              "hq": "West Falls Church, Virginia[3]"
+            },
+            {
+              "id": "co-rtx",
+              "label": "RTX",
+              "fullName": "RTX Corporation",
+              "founded": "1922",
+              "hq": "Waltham, Massachusetts"
+            },
+            {
+              "id": "co-txt",
+              "label": "TXT",
+              "fullName": "Textron",
+              "founded": "1923",
+              "hq": "Providence, Rhode Island"
+            },
+            {
+              "id": "co-tdg",
+              "label": "TDG",
+              "fullName": "TransDigm Group",
+              "founded": "1993",
+              "hq": "Cleveland, Ohio"
+            }
+          ]
+        },
+        {
+          "id": "sub-data-processing---outsourced-services",
+          "label": "Data Processing & Outsourced Services",
+          "children": [
+            {
+              "id": "co-br",
+              "label": "BR",
+              "fullName": "Broadridge Financial Solutions",
+              "founded": "1962",
+              "hq": "Lake Success, New York"
+            }
+          ]
+        },
+        {
+          "id": "sub-air-freight---logistics",
+          "label": "Air Freight & Logistics",
+          "children": [
+            {
+              "id": "co-chrw",
+              "label": "CHRW",
+              "fullName": "C.H. Robinson",
+              "founded": "1905",
+              "hq": "Eden Prairie, Minnesota"
+            },
+            {
+              "id": "co-expd",
+              "label": "EXPD",
+              "fullName": "Expeditors International",
+              "founded": "1979",
+              "hq": "Seattle, Washington"
+            },
+            {
+              "id": "co-fdx",
+              "label": "FDX",
+              "fullName": "FedEx",
+              "founded": "1971",
+              "hq": "Memphis, Tennessee"
+            },
+            {
+              "id": "co-ups",
+              "label": "UPS",
+              "fullName": "United Parcel Service",
+              "founded": "1907",
+              "hq": "Sandy Springs, Georgia"
+            }
+          ]
+        },
+        {
+          "id": "sub-construction-machinery---heavy-transportation-equipment",
+          "label": "Construction Machinery & Heavy Transportation Equipment",
+          "children": [
+            {
+              "id": "co-cat",
+              "label": "CAT",
+              "fullName": "Caterpillar Inc.",
+              "founded": "1925",
+              "hq": "Irving, Texas"
+            },
+            {
+              "id": "co-cmi",
+              "label": "CMI",
+              "fullName": "Cummins",
+              "founded": "1919",
+              "hq": "Columbus, Indiana"
+            },
+            {
+              "id": "co-pcar",
+              "label": "PCAR",
+              "fullName": "Paccar",
+              "founded": "1905",
+              "hq": "Bellevue, Washington"
+            },
+            {
+              "id": "co-wab",
+              "label": "WAB",
+              "fullName": "Wabtec",
+              "founded": "1999 (1869)",
+              "hq": "Pittsburgh, Pennsylvania"
+            }
+          ]
+        },
+        {
+          "id": "sub-diversified-support-services",
+          "label": "Diversified Support Services",
+          "children": [
+            {
+              "id": "co-ctas",
+              "label": "CTAS",
+              "fullName": "Cintas",
+              "founded": "1929",
+              "hq": "Mason, Ohio"
+            },
+            {
+              "id": "co-cprt",
+              "label": "CPRT",
+              "fullName": "Copart",
+              "founded": "1982",
+              "hq": "Dallas, Texas"
+            },
+            {
+              "id": "co-ldos",
+              "label": "LDOS",
+              "fullName": "Leidos",
+              "founded": "1969",
+              "hq": "Reston, Virginia"
+            }
+          ]
+        },
+        {
+          "id": "sub-construction---engineering",
+          "label": "Construction & Engineering",
+          "children": [
+            {
+              "id": "co-fix",
+              "label": "FIX",
+              "fullName": "Comfort Systems USA",
+              "founded": "1997",
+              "hq": "Houston, Texas"
+            },
+            {
+              "id": "co-eme",
+              "label": "EME",
+              "fullName": "Emcor",
+              "founded": "1994",
+              "hq": "Norwalk, Connecticut"
+            },
+            {
+              "id": "co-j",
+              "label": "J",
+              "fullName": "Jacobs Solutions",
+              "founded": "1947",
+              "hq": "Dallas, Texas"
+            },
+            {
+              "id": "co-pwr",
+              "label": "PWR",
+              "fullName": "Quanta Services",
+              "founded": "1997",
+              "hq": "Houston, Texas"
+            }
+          ]
+        },
+        {
+          "id": "sub-rail-transportation",
+          "label": "Rail Transportation",
+          "children": [
+            {
+              "id": "co-csx",
+              "label": "CSX",
+              "fullName": "CSX Corporation",
+              "founded": "1980",
+              "hq": "Jacksonville, Florida"
+            },
+            {
+              "id": "co-nsc",
+              "label": "NSC",
+              "fullName": "Norfolk Southern",
+              "founded": "1881/1894 (1980)",
+              "hq": "Atlanta, Georgia"
+            },
+            {
+              "id": "co-unp",
+              "label": "UNP",
+              "fullName": "Union Pacific Corporation",
+              "founded": "1862",
+              "hq": "Omaha, Nebraska"
+            }
+          ]
+        },
+        {
+          "id": "sub-agricultural---farm-machinery",
+          "label": "Agricultural & Farm Machinery",
+          "children": [
+            {
+              "id": "co-de",
+              "label": "DE",
+              "fullName": "Deere & Company",
+              "founded": "1837",
+              "hq": "Moline, Illinois"
+            }
+          ]
+        },
+        {
+          "id": "sub-passenger-airlines",
+          "label": "Passenger Airlines",
+          "children": [
+            {
+              "id": "co-dal",
+              "label": "DAL",
+              "fullName": "Delta Air Lines",
+              "founded": "1929",
+              "hq": "Atlanta, Georgia"
+            },
+            {
+              "id": "co-luv",
+              "label": "LUV",
+              "fullName": "Southwest Airlines",
+              "founded": "1967",
+              "hq": "Dallas, Texas"
+            },
+            {
+              "id": "co-ual",
+              "label": "UAL",
+              "fullName": "United Airlines Holdings",
+              "founded": "1967",
+              "hq": "Chicago, Illinois"
+            }
+          ]
+        },
+        {
+          "id": "sub-industrial-machinery---supplies---components",
+          "label": "Industrial Machinery & Supplies & Components",
+          "children": [
+            {
+              "id": "co-dov",
+              "label": "DOV",
+              "fullName": "Dover Corporation",
+              "founded": "1955",
+              "hq": "Downers Grove, Illinois"
+            },
+            {
+              "id": "co-ftv",
+              "label": "FTV",
+              "fullName": "Fortive",
+              "founded": "2016",
+              "hq": "Everett, Washington"
+            },
+            {
+              "id": "co-hubb",
+              "label": "HUBB",
+              "fullName": "Hubbell Incorporated",
+              "founded": "1888",
+              "hq": "Shelton, Connecticut"
+            },
+            {
+              "id": "co-iex",
+              "label": "IEX",
+              "fullName": "IDEX Corporation",
+              "founded": "1988",
+              "hq": "Northbrook, Illinois"
+            },
+            {
+              "id": "co-itw",
+              "label": "ITW",
+              "fullName": "Illinois Tool Works",
+              "founded": "1912",
+              "hq": "Glenview, Illinois"
+            },
+            {
+              "id": "co-ir",
+              "label": "IR",
+              "fullName": "Ingersoll Rand",
+              "founded": "1859",
+              "hq": "Davidson, North Carolina"
+            },
+            {
+              "id": "co-ndsn",
+              "label": "NDSN",
+              "fullName": "Nordson Corporation",
+              "founded": "1935",
+              "hq": "Westlake, Ohio"
+            },
+            {
+              "id": "co-otis",
+              "label": "OTIS",
+              "fullName": "Otis Worldwide",
+              "founded": "2020 (1853, United Technologies spinoff)",
+              "hq": "Farmington, Connecticut"
+            },
+            {
+              "id": "co-ph",
+              "label": "PH",
+              "fullName": "Parker Hannifin",
+              "founded": "1917",
+              "hq": "Cleveland, Ohio"
+            },
+            {
+              "id": "co-pnr",
+              "label": "PNR",
+              "fullName": "Pentair",
+              "founded": "1966",
+              "hq": "Worsley, United Kingdom"
+            },
+            {
+              "id": "co-sna",
+              "label": "SNA",
+              "fullName": "Snap-on",
+              "founded": "1920",
+              "hq": "Kenosha, Wisconsin"
+            },
+            {
+              "id": "co-swk",
+              "label": "SWK",
+              "fullName": "Stanley Black & Decker",
+              "founded": "1843",
+              "hq": "New Britain, Connecticut"
+            },
+            {
+              "id": "co-gww",
+              "label": "GWW",
+              "fullName": "W. W. Grainger",
+              "founded": "1927",
+              "hq": "Lake Forest, Illinois"
+            },
+            {
+              "id": "co-xyl",
+              "label": "XYL",
+              "fullName": "Xylem Inc.",
+              "founded": "2011",
+              "hq": "White Plains, New York"
+            }
+          ]
+        },
+        {
+          "id": "sub-research---consulting-services",
+          "label": "Research & Consulting Services",
+          "children": [
+            {
+              "id": "co-efx",
+              "label": "EFX",
+              "fullName": "Equifax",
+              "founded": "1899",
+              "hq": "Atlanta, Georgia"
+            },
+            {
+              "id": "co-vrsk",
+              "label": "VRSK",
+              "fullName": "Verisk Analytics",
+              "founded": "1971",
+              "hq": "Jersey City, New Jersey"
+            }
+          ]
+        },
+        {
+          "id": "sub-trading-companies---distributors",
+          "label": "Trading Companies & Distributors",
+          "children": [
+            {
+              "id": "co-fast",
+              "label": "FAST",
+              "fullName": "Fastenal",
+              "founded": "1967",
+              "hq": "Winona, Minnesota"
+            },
+            {
+              "id": "co-uri",
+              "label": "URI",
+              "fullName": "United Rentals",
+              "founded": "1997",
+              "hq": "Stamford, Connecticut"
+            }
+          ]
+        },
+        {
+          "id": "sub-heavy-electrical-equipment",
+          "label": "Heavy Electrical Equipment",
+          "children": [
+            {
+              "id": "co-gev",
+              "label": "GEV",
+              "fullName": "GE Vernova",
+              "founded": "2024",
+              "hq": "Cambridge, Massachusetts"
+            }
+          ]
+        },
+        {
+          "id": "sub-cargo-ground-transportation",
+          "label": "Cargo Ground Transportation",
+          "children": [
+            {
+              "id": "co-jbht",
+              "label": "JBHT",
+              "fullName": "J.B. Hunt",
+              "founded": "1961",
+              "hq": "Lowell, Arkansas"
+            },
+            {
+              "id": "co-odfl",
+              "label": "ODFL",
+              "fullName": "Old Dominion",
+              "founded": "1934",
+              "hq": "Thomasville, North Carolina"
+            }
+          ]
+        },
+        {
+          "id": "sub-environmental---facilities-services",
+          "label": "Environmental & Facilities Services",
+          "children": [
+            {
+              "id": "co-rsg",
+              "label": "RSG",
+              "fullName": "Republic Services",
+              "founded": "1998 (1981)",
+              "hq": "Phoenix, Arizona"
+            },
+            {
+              "id": "co-rol",
+              "label": "ROL",
+              "fullName": "Rollins, Inc.",
+              "founded": "1948",
+              "hq": "Atlanta, Georgia"
+            },
+            {
+              "id": "co-vlto",
+              "label": "VLTO",
+              "fullName": "Veralto",
+              "founded": "2023",
+              "hq": "Waltham, Massachusetts"
+            },
+            {
+              "id": "co-wm",
+              "label": "WM",
+              "fullName": "Waste Management",
+              "founded": "1968",
+              "hq": "Houston, Texas"
+            }
+          ]
+        },
+        {
+          "id": "sub-passenger-ground-transportation",
+          "label": "Passenger Ground Transportation",
+          "children": [
+            {
+              "id": "co-uber",
+              "label": "UBER",
+              "fullName": "Uber",
+              "founded": "2009",
+              "hq": "San Francisco, California"
+            }
+          ]
+        }
+      ],
+      "companyCount": 79
+    },
+    {
+      "id": "sector-health-care",
+      "label": "Health Care",
+      "children": [
+        {
+          "id": "sub-health-care-equipment",
+          "label": "Health Care Equipment",
+          "children": [
+            {
+              "id": "co-abt",
+              "label": "ABT",
+              "fullName": "Abbott Laboratories",
+              "founded": "1888",
+              "hq": "North Chicago, Illinois"
+            },
+            {
+              "id": "co-bax",
+              "label": "BAX",
+              "fullName": "Baxter International",
+              "founded": "1931",
+              "hq": "Deerfield, Illinois"
+            },
+            {
+              "id": "co-bdx",
+              "label": "BDX",
+              "fullName": "Becton Dickinson",
+              "founded": "1897",
+              "hq": "Franklin Lakes, New Jersey"
+            },
+            {
+              "id": "co-bsx",
+              "label": "BSX",
+              "fullName": "Boston Scientific",
+              "founded": "1979",
+              "hq": "Marlborough, Massachusetts"
+            },
+            {
+              "id": "co-dxcm",
+              "label": "DXCM",
+              "fullName": "Dexcom",
+              "founded": "1999",
+              "hq": "San Diego, California"
+            },
+            {
+              "id": "co-ew",
+              "label": "EW",
+              "fullName": "Edwards Lifesciences",
+              "founded": "1958",
+              "hq": "Irvine, California"
+            },
+            {
+              "id": "co-gehc",
+              "label": "GEHC",
+              "fullName": "GE HealthCare",
+              "founded": "1994",
+              "hq": "Chicago, Illinois"
+            },
+            {
+              "id": "co-idxx",
+              "label": "IDXX",
+              "fullName": "Idexx Laboratories",
+              "founded": "1983",
+              "hq": "Westbrook, Maine"
+            },
+            {
+              "id": "co-podd",
+              "label": "PODD",
+              "fullName": "Insulet Corporation",
+              "founded": "2000",
+              "hq": "Acton, Massachusetts"
+            },
+            {
+              "id": "co-isrg",
+              "label": "ISRG",
+              "fullName": "Intuitive Surgical",
+              "founded": "1995",
+              "hq": "Sunnyvale, California"
+            },
+            {
+              "id": "co-mdt",
+              "label": "MDT",
+              "fullName": "Medtronic",
+              "founded": "1949",
+              "hq": "Galway, Ireland"
+            },
+            {
+              "id": "co-rmd",
+              "label": "RMD",
+              "fullName": "ResMed",
+              "founded": "1989",
+              "hq": "San Diego, California"
+            },
+            {
+              "id": "co-rvty",
+              "label": "RVTY",
+              "fullName": "Revvity",
+              "founded": "1937",
+              "hq": "Waltham, Massachusetts"
+            },
+            {
+              "id": "co-ste",
+              "label": "STE",
+              "fullName": "Steris",
+              "founded": "1985",
+              "hq": "Dublin, Ireland"
+            },
+            {
+              "id": "co-syk",
+              "label": "SYK",
+              "fullName": "Stryker Corporation",
+              "founded": "1941",
+              "hq": "Kalamazoo, Michigan"
+            },
+            {
+              "id": "co-zbh",
+              "label": "ZBH",
+              "fullName": "Zimmer Biomet",
+              "founded": "1927",
+              "hq": "Warsaw, Indiana"
+            }
+          ]
+        },
+        {
+          "id": "sub-biotechnology",
+          "label": "Biotechnology",
+          "children": [
+            {
+              "id": "co-abbv",
+              "label": "ABBV",
+              "fullName": "AbbVie",
+              "founded": "2013 (1888)",
+              "hq": "North Chicago, Illinois"
+            },
+            {
+              "id": "co-amgn",
+              "label": "AMGN",
+              "fullName": "Amgen",
+              "founded": "1980",
+              "hq": "Thousand Oaks, California"
+            },
+            {
+              "id": "co-biib",
+              "label": "BIIB",
+              "fullName": "Biogen",
+              "founded": "1978",
+              "hq": "Cambridge, Massachusetts"
+            },
+            {
+              "id": "co-gild",
+              "label": "GILD",
+              "fullName": "Gilead Sciences",
+              "founded": "1987",
+              "hq": "Foster City, California"
+            },
+            {
+              "id": "co-incy",
+              "label": "INCY",
+              "fullName": "Incyte",
+              "founded": "1991",
+              "hq": "Wilmington, Delaware"
+            },
+            {
+              "id": "co-mrna",
+              "label": "MRNA",
+              "fullName": "Moderna",
+              "founded": "2010",
+              "hq": "Cambridge, Massachusetts"
+            },
+            {
+              "id": "co-regn",
+              "label": "REGN",
+              "fullName": "Regeneron Pharmaceuticals",
+              "founded": "1988",
+              "hq": "Tarrytown, New York"
+            },
+            {
+              "id": "co-vrtx",
+              "label": "VRTX",
+              "fullName": "Vertex Pharmaceuticals",
+              "founded": "1989",
+              "hq": "Boston, Massachusetts"
+            }
+          ]
+        },
+        {
+          "id": "sub-life-sciences-tools---services",
+          "label": "Life Sciences Tools & Services",
+          "children": [
+            {
+              "id": "co-a",
+              "label": "A",
+              "fullName": "Agilent Technologies",
+              "founded": "1999",
+              "hq": "Santa Clara, California"
+            },
+            {
+              "id": "co-tech",
+              "label": "TECH",
+              "fullName": "Bio-Techne",
+              "founded": "1976",
+              "hq": "Minneapolis, Minnesota"
+            },
+            {
+              "id": "co-crl",
+              "label": "CRL",
+              "fullName": "Charles River Laboratories",
+              "founded": "1947",
+              "hq": "Wilmington, Massachusetts"
+            },
+            {
+              "id": "co-dhr",
+              "label": "DHR",
+              "fullName": "Danaher Corporation",
+              "founded": "1969",
+              "hq": "Washington, D.C."
+            },
+            {
+              "id": "co-iqv",
+              "label": "IQV",
+              "fullName": "IQVIA",
+              "founded": "1982",
+              "hq": "Durham, North Carolina"
+            },
+            {
+              "id": "co-mtd",
+              "label": "MTD",
+              "fullName": "Mettler Toledo",
+              "founded": "1945",
+              "hq": "Columbus, Ohio"
+            },
+            {
+              "id": "co-tmo",
+              "label": "TMO",
+              "fullName": "Thermo Fisher Scientific",
+              "founded": "2006 (1902)",
+              "hq": "Waltham, Massachusetts"
+            },
+            {
+              "id": "co-wat",
+              "label": "WAT",
+              "fullName": "Waters Corporation",
+              "founded": "1958",
+              "hq": "Milford, Massachusetts"
+            }
+          ]
+        },
+        {
+          "id": "sub-health-care-supplies",
+          "label": "Health Care Supplies",
+          "children": [
+            {
+              "id": "co-algn",
+              "label": "ALGN",
+              "fullName": "Align Technology",
+              "founded": "1997",
+              "hq": "Tempe, Arizona"
+            },
+            {
+              "id": "co-coo",
+              "label": "COO",
+              "fullName": "Cooper Companies (The)",
+              "founded": "1958",
+              "hq": "San Ramon, California"
+            },
+            {
+              "id": "co-wst",
+              "label": "WST",
+              "fullName": "West Pharmaceutical Services",
+              "founded": "1923",
+              "hq": "Exton, Pennsylvania"
+            }
+          ]
+        },
+        {
+          "id": "sub-pharmaceuticals",
+          "label": "Pharmaceuticals",
+          "children": [
+            {
+              "id": "co-bmy",
+              "label": "BMY",
+              "fullName": "Bristol Myers Squibb",
+              "founded": "1989 (1887)",
+              "hq": "New York City, New York"
+            },
+            {
+              "id": "co-jnj",
+              "label": "JNJ",
+              "fullName": "Johnson & Johnson",
+              "founded": "1886",
+              "hq": "New Brunswick, New Jersey"
+            },
+            {
+              "id": "co-lly",
+              "label": "LLY",
+              "fullName": "Lilly (Eli)",
+              "founded": "1876",
+              "hq": "Indianapolis, Indiana"
+            },
+            {
+              "id": "co-mrk",
+              "label": "MRK",
+              "fullName": "Merck & Co.",
+              "founded": "1891",
+              "hq": "Kenilworth, New Jersey"
+            },
+            {
+              "id": "co-pfe",
+              "label": "PFE",
+              "fullName": "Pfizer",
+              "founded": "1849",
+              "hq": "New York City, New York"
+            },
+            {
+              "id": "co-vtrs",
+              "label": "VTRS",
+              "fullName": "Viatris",
+              "founded": "1961",
+              "hq": "Pittsburgh, Pennsylvania"
+            },
+            {
+              "id": "co-zts",
+              "label": "ZTS",
+              "fullName": "Zoetis",
+              "founded": "1952",
+              "hq": "Parsippany, New Jersey"
+            }
+          ]
+        },
+        {
+          "id": "sub-health-care-distributors",
+          "label": "Health Care Distributors",
+          "children": [
+            {
+              "id": "co-cah",
+              "label": "CAH",
+              "fullName": "Cardinal Health",
+              "founded": "1971",
+              "hq": "Dublin, Ohio"
+            },
+            {
+              "id": "co-cor",
+              "label": "COR",
+              "fullName": "Cencora",
+              "founded": "1985",
+              "hq": "Conshohocken, Pennsylvania"
+            },
+            {
+              "id": "co-hsic",
+              "label": "HSIC",
+              "fullName": "Henry Schein",
+              "founded": "1932",
+              "hq": "Melville, New York"
+            },
+            {
+              "id": "co-mck",
+              "label": "MCK",
+              "fullName": "McKesson Corporation",
+              "founded": "1833",
+              "hq": "Irving, Texas"
+            }
+          ]
+        },
+        {
+          "id": "sub-managed-health-care",
+          "label": "Managed Health Care",
+          "children": [
+            {
+              "id": "co-cnc",
+              "label": "CNC",
+              "fullName": "Centene Corporation",
+              "founded": "1984",
+              "hq": "St. Louis, Missouri"
+            },
+            {
+              "id": "co-elv",
+              "label": "ELV",
+              "fullName": "Elevance Health",
+              "founded": "2014 (1946)",
+              "hq": "Indianapolis, Indiana"
+            },
+            {
+              "id": "co-hum",
+              "label": "HUM",
+              "fullName": "Humana",
+              "founded": "1961",
+              "hq": "Louisville, Kentucky"
+            },
+            {
+              "id": "co-unh",
+              "label": "UNH",
+              "fullName": "UnitedHealth Group",
+              "founded": "1977",
+              "hq": "Eden Prairie, Minnesota"
+            }
+          ]
+        },
+        {
+          "id": "sub-health-care-services",
+          "label": "Health Care Services",
+          "children": [
+            {
+              "id": "co-ci",
+              "label": "CI",
+              "fullName": "Cigna",
+              "founded": "1982",
+              "hq": "Bloomfield, Connecticut"
+            },
+            {
+              "id": "co-cvs",
+              "label": "CVS",
+              "fullName": "CVS Health",
+              "founded": "1996",
+              "hq": "Woonsocket, Rhode Island"
+            },
+            {
+              "id": "co-dva",
+              "label": "DVA",
+              "fullName": "DaVita",
+              "founded": "1979",
+              "hq": "Denver, Colorado"
+            },
+            {
+              "id": "co-lh",
+              "label": "LH",
+              "fullName": "Labcorp",
+              "founded": "1978",
+              "hq": "Burlington, North Carolina"
+            },
+            {
+              "id": "co-dgx",
+              "label": "DGX",
+              "fullName": "Quest Diagnostics",
+              "founded": "1967",
+              "hq": "Secaucus, New Jersey"
+            }
+          ]
+        },
+        {
+          "id": "sub-health-care-facilities",
+          "label": "Health Care Facilities",
+          "children": [
+            {
+              "id": "co-hca",
+              "label": "HCA",
+              "fullName": "HCA Healthcare",
+              "founded": "1968",
+              "hq": "Nashville, Tennessee"
+            },
+            {
+              "id": "co-uhs",
+              "label": "UHS",
+              "fullName": "Universal Health Services",
+              "founded": "1979",
+              "hq": "King of Prussia, Pennsylvania"
+            }
+          ]
+        },
+        {
+          "id": "sub-health-care-technology",
+          "label": "Health Care Technology",
+          "children": [
+            {
+              "id": "co-solv",
+              "label": "SOLV",
+              "fullName": "Solventum",
+              "founded": "2023",
+              "hq": "Saint Paul, Minnesota"
+            },
+            {
+              "id": "co-veev",
+              "label": "VEEV",
+              "fullName": "Veeva Systems",
+              "founded": "2007",
+              "hq": "Pleasanton, California"
+            }
+          ]
+        }
+      ],
+      "companyCount": 59
+    },
+    {
+      "id": "sector-information-technology",
+      "label": "Information Technology",
+      "children": [
+        {
+          "id": "sub-it-consulting---other-services",
+          "label": "IT Consulting & Other Services",
+          "children": [
+            {
+              "id": "co-acn",
+              "label": "ACN",
+              "fullName": "Accenture",
+              "founded": "1989",
+              "hq": "Dublin, Ireland"
+            },
+            {
+              "id": "co-ctsh",
+              "label": "CTSH",
+              "fullName": "Cognizant",
+              "founded": "1994",
+              "hq": "Teaneck, New Jersey"
+            },
+            {
+              "id": "co-epam",
+              "label": "EPAM",
+              "fullName": "EPAM Systems",
+              "founded": "1993",
+              "hq": "Newtown, Pennsylvania"
+            },
+            {
+              "id": "co-it",
+              "label": "IT",
+              "fullName": "Gartner",
+              "founded": "1979",
+              "hq": "Stamford, Connecticut"
+            },
+            {
+              "id": "co-ibm",
+              "label": "IBM",
+              "fullName": "IBM",
+              "founded": "1911",
+              "hq": "Armonk, New York"
+            }
+          ]
+        },
+        {
+          "id": "sub-application-software",
+          "label": "Application Software",
+          "children": [
+            {
+              "id": "co-adbe",
+              "label": "ADBE",
+              "fullName": "Adobe Inc.",
+              "founded": "1982",
+              "hq": "San Jose, California"
+            },
+            {
+              "id": "co-app",
+              "label": "APP",
+              "fullName": "AppLovin",
+              "founded": "2012",
+              "hq": "Palo Alto, California"
+            },
+            {
+              "id": "co-adsk",
+              "label": "ADSK",
+              "fullName": "Autodesk",
+              "founded": "1982",
+              "hq": "San Francisco, California"
+            },
+            {
+              "id": "co-cdns",
+              "label": "CDNS",
+              "fullName": "Cadence Design Systems",
+              "founded": "1988",
+              "hq": "San Jose, California"
+            },
+            {
+              "id": "co-ddog",
+              "label": "DDOG",
+              "fullName": "Datadog",
+              "founded": "2010",
+              "hq": "New York City, New York"
+            },
+            {
+              "id": "co-fico",
+              "label": "FICO",
+              "fullName": "Fair Isaac",
+              "founded": "1956",
+              "hq": "Bozeman, Montana"
+            },
+            {
+              "id": "co-intu",
+              "label": "INTU",
+              "fullName": "Intuit",
+              "founded": "1983",
+              "hq": "Mountain View, California"
+            },
+            {
+              "id": "co-orcl",
+              "label": "ORCL",
+              "fullName": "Oracle Corporation",
+              "founded": "1977",
+              "hq": "Austin, Texas"
+            },
+            {
+              "id": "co-pltr",
+              "label": "PLTR",
+              "fullName": "Palantir Technologies",
+              "founded": "2003",
+              "hq": "Aventura, Florida"
+            },
+            {
+              "id": "co-ptc",
+              "label": "PTC",
+              "fullName": "PTC Inc.",
+              "founded": "1985",
+              "hq": "Boston, Massachusetts"
+            },
+            {
+              "id": "co-crm",
+              "label": "CRM",
+              "fullName": "Salesforce",
+              "founded": "1999",
+              "hq": "San Francisco, California"
+            },
+            {
+              "id": "co-snps",
+              "label": "SNPS",
+              "fullName": "Synopsys",
+              "founded": "1986",
+              "hq": "Sunnyvale, California"
+            },
+            {
+              "id": "co-trmb",
+              "label": "TRMB",
+              "fullName": "Trimble Inc.",
+              "founded": "1978",
+              "hq": "Westminster, Colorado"
+            },
+            {
+              "id": "co-tyl",
+              "label": "TYL",
+              "fullName": "Tyler Technologies",
+              "founded": "1966",
+              "hq": "Plano, Texas"
+            },
+            {
+              "id": "co-wday",
+              "label": "WDAY",
+              "fullName": "Workday, Inc.",
+              "founded": "2005",
+              "hq": "Pleasanton, California"
+            }
+          ]
+        },
+        {
+          "id": "sub-semiconductors",
+          "label": "Semiconductors",
+          "children": [
+            {
+              "id": "co-amd",
+              "label": "AMD",
+              "fullName": "Advanced Micro Devices",
+              "founded": "1969",
+              "hq": "Santa Clara, California"
+            },
+            {
+              "id": "co-adi",
+              "label": "ADI",
+              "fullName": "Analog Devices",
+              "founded": "1965",
+              "hq": "Wilmington, Massachusetts"
+            },
+            {
+              "id": "co-avgo",
+              "label": "AVGO",
+              "fullName": "Broadcom",
+              "founded": "1961",
+              "hq": "Palo Alto, California"
+            },
+            {
+              "id": "co-fslr",
+              "label": "FSLR",
+              "fullName": "First Solar",
+              "founded": "1999",
+              "hq": "Tempe, Arizona"
+            },
+            {
+              "id": "co-intc",
+              "label": "INTC",
+              "fullName": "Intel",
+              "founded": "1968",
+              "hq": "Santa Clara, California"
+            },
+            {
+              "id": "co-mchp",
+              "label": "MCHP",
+              "fullName": "Microchip Technology",
+              "founded": "1989",
+              "hq": "Chandler, Arizona"
+            },
+            {
+              "id": "co-mu",
+              "label": "MU",
+              "fullName": "Micron Technology",
+              "founded": "1978",
+              "hq": "Boise, Idaho"
+            },
+            {
+              "id": "co-mpwr",
+              "label": "MPWR",
+              "fullName": "Monolithic Power Systems",
+              "founded": "1997",
+              "hq": "Kirkland, Washington"
+            },
+            {
+              "id": "co-nvda",
+              "label": "NVDA",
+              "fullName": "Nvidia",
+              "founded": "1993",
+              "hq": "Santa Clara, California"
+            },
+            {
+              "id": "co-nxpi",
+              "label": "NXPI",
+              "fullName": "NXP Semiconductors",
+              "founded": "1953",
+              "hq": "Eindhoven, Netherlands"
+            },
+            {
+              "id": "co-on",
+              "label": "ON",
+              "fullName": "ON Semiconductor",
+              "founded": "1999",
+              "hq": "Phoenix, Arizona"
+            },
+            {
+              "id": "co-qcom",
+              "label": "QCOM",
+              "fullName": "Qualcomm",
+              "founded": "1985",
+              "hq": "San Diego, California"
+            },
+            {
+              "id": "co-swks",
+              "label": "SWKS",
+              "fullName": "Skyworks Solutions",
+              "founded": "2002",
+              "hq": "Irvine, California"
+            },
+            {
+              "id": "co-txn",
+              "label": "TXN",
+              "fullName": "Texas Instruments",
+              "founded": "1930",
+              "hq": "Dallas, Texas"
+            }
+          ]
+        },
+        {
+          "id": "sub-internet-services---infrastructure",
+          "label": "Internet Services & Infrastructure",
+          "children": [
+            {
+              "id": "co-akam",
+              "label": "AKAM",
+              "fullName": "Akamai Technologies",
+              "founded": "1998",
+              "hq": "Cambridge, Massachusetts"
+            },
+            {
+              "id": "co-gddy",
+              "label": "GDDY",
+              "fullName": "GoDaddy",
+              "founded": "1997",
+              "hq": "Tempe, Arizona"
+            },
+            {
+              "id": "co-vrsn",
+              "label": "VRSN",
+              "fullName": "Verisign",
+              "founded": "1995",
+              "hq": "Reston, Virginia"
+            }
+          ]
+        },
+        {
+          "id": "sub-electronic-components",
+          "label": "Electronic Components",
+          "children": [
+            {
+              "id": "co-aph",
+              "label": "APH",
+              "fullName": "Amphenol",
+              "founded": "1932",
+              "hq": "Wallingford, Connecticut"
+            },
+            {
+              "id": "co-cohr",
+              "label": "COHR",
+              "fullName": "Coherent Corp.",
+              "founded": "1971",
+              "hq": "Saxonburg, Pennsylvania"
+            },
+            {
+              "id": "co-glw",
+              "label": "GLW",
+              "fullName": "Corning Inc.",
+              "founded": "1851",
+              "hq": "Corning, New York"
+            }
+          ]
+        },
+        {
+          "id": "sub-technology-hardware--storage---peripherals",
+          "label": "Technology Hardware, Storage & Peripherals",
+          "children": [
+            {
+              "id": "co-aapl",
+              "label": "AAPL",
+              "fullName": "Apple Inc.",
+              "founded": "1977",
+              "hq": "Cupertino, California"
+            },
+            {
+              "id": "co-dell",
+              "label": "DELL",
+              "fullName": "Dell Technologies",
+              "founded": "2016",
+              "hq": "Round Rock, Texas"
+            },
+            {
+              "id": "co-hpe",
+              "label": "HPE",
+              "fullName": "Hewlett Packard Enterprise",
+              "founded": "2015",
+              "hq": "Houston, Texas"
+            },
+            {
+              "id": "co-hpq",
+              "label": "HPQ",
+              "fullName": "HP Inc.",
+              "founded": "1939 (2015)",
+              "hq": "Palo Alto, California"
+            },
+            {
+              "id": "co-ntap",
+              "label": "NTAP",
+              "fullName": "NetApp",
+              "founded": "1992",
+              "hq": "San Jose, California"
+            },
+            {
+              "id": "co-sndk",
+              "label": "SNDK",
+              "fullName": "Sandisk",
+              "founded": "1988",
+              "hq": "Milpitas, California"
+            },
+            {
+              "id": "co-stx",
+              "label": "STX",
+              "fullName": "Seagate Technology",
+              "founded": "1979",
+              "hq": "Dublin, Ireland"
+            },
+            {
+              "id": "co-smci",
+              "label": "SMCI",
+              "fullName": "Supermicro",
+              "founded": "1993",
+              "hq": "San Jose, California"
+            },
+            {
+              "id": "co-wdc",
+              "label": "WDC",
+              "fullName": "Western Digital",
+              "founded": "1970",
+              "hq": "San Jose, California"
+            }
+          ]
+        },
+        {
+          "id": "sub-semiconductor-materials---equipment",
+          "label": "Semiconductor Materials & Equipment",
+          "children": [
+            {
+              "id": "co-amat",
+              "label": "AMAT",
+              "fullName": "Applied Materials",
+              "founded": "1967",
+              "hq": "Santa Clara, California"
+            },
+            {
+              "id": "co-klac",
+              "label": "KLAC",
+              "fullName": "KLA Corporation",
+              "founded": "1975/1977 (1997)",
+              "hq": "Milpitas, California"
+            },
+            {
+              "id": "co-lrcx",
+              "label": "LRCX",
+              "fullName": "Lam Research",
+              "founded": "1980",
+              "hq": "Fremont, California"
+            },
+            {
+              "id": "co-q",
+              "label": "Q",
+              "fullName": "Qnity Electronics",
+              "founded": "2025",
+              "hq": "Wilmington, Delaware"
+            },
+            {
+              "id": "co-ter",
+              "label": "TER",
+              "fullName": "Teradyne",
+              "founded": "1960",
+              "hq": "North Reading, Massachusetts"
+            }
+          ]
+        },
+        {
+          "id": "sub-communications-equipment",
+          "label": "Communications Equipment",
+          "children": [
+            {
+              "id": "co-anet",
+              "label": "ANET",
+              "fullName": "Arista Networks",
+              "founded": "2004",
+              "hq": "Santa Clara, California"
+            },
+            {
+              "id": "co-cien",
+              "label": "CIEN",
+              "fullName": "Ciena",
+              "founded": "1992",
+              "hq": "Hanover, Maryland"
+            },
+            {
+              "id": "co-csco",
+              "label": "CSCO",
+              "fullName": "Cisco",
+              "founded": "1984",
+              "hq": "San Jose, California"
+            },
+            {
+              "id": "co-ffiv",
+              "label": "FFIV",
+              "fullName": "F5, Inc.",
+              "founded": "1996",
+              "hq": "Seattle, Washington"
+            },
+            {
+              "id": "co-lite",
+              "label": "LITE",
+              "fullName": "Lumentum",
+              "founded": "2015",
+              "hq": "San Jose, California"
+            },
+            {
+              "id": "co-msi",
+              "label": "MSI",
+              "fullName": "Motorola Solutions",
+              "founded": "1928 (2011)",
+              "hq": "Chicago, Illinois"
+            }
+          ]
+        },
+        {
+          "id": "sub-technology-distributors",
+          "label": "Technology Distributors",
+          "children": [
+            {
+              "id": "co-cdw",
+              "label": "CDW",
+              "fullName": "CDW Corporation",
+              "founded": "1984",
+              "hq": "Vernon Hills, Illinois"
+            }
+          ]
+        },
+        {
+          "id": "sub-systems-software",
+          "label": "Systems Software",
+          "children": [
+            {
+              "id": "co-crwd",
+              "label": "CRWD",
+              "fullName": "CrowdStrike",
+              "founded": "2011",
+              "hq": "Austin, Texas"
+            },
+            {
+              "id": "co-ftnt",
+              "label": "FTNT",
+              "fullName": "Fortinet",
+              "founded": "2000",
+              "hq": "Sunnyvale, California"
+            },
+            {
+              "id": "co-gen",
+              "label": "GEN",
+              "fullName": "Gen Digital",
+              "founded": "1982",
+              "hq": "Tempe, Arizona"
+            },
+            {
+              "id": "co-msft",
+              "label": "MSFT",
+              "fullName": "Microsoft",
+              "founded": "1975",
+              "hq": "Redmond, Washington"
+            },
+            {
+              "id": "co-panw",
+              "label": "PANW",
+              "fullName": "Palo Alto Networks",
+              "founded": "2005",
+              "hq": "Santa Clara, California"
+            },
+            {
+              "id": "co-now",
+              "label": "NOW",
+              "fullName": "ServiceNow",
+              "founded": "2003",
+              "hq": "Santa Clara, California"
+            }
+          ]
+        },
+        {
+          "id": "sub-electronic-manufacturing-services",
+          "label": "Electronic Manufacturing Services",
+          "children": [
+            {
+              "id": "co-jbl",
+              "label": "JBL",
+              "fullName": "Jabil",
+              "founded": "1966",
+              "hq": "St. Petersburg, Florida"
+            },
+            {
+              "id": "co-tel",
+              "label": "TEL",
+              "fullName": "TE Connectivity",
+              "founded": "2007",
+              "hq": "Galway, Ireland"
+            }
+          ]
+        },
+        {
+          "id": "sub-electronic-equipment---instruments",
+          "label": "Electronic Equipment & Instruments",
+          "children": [
+            {
+              "id": "co-keys",
+              "label": "KEYS",
+              "fullName": "Keysight Technologies",
+              "founded": "2014 (1939)",
+              "hq": "Santa Rosa, California"
+            },
+            {
+              "id": "co-rop",
+              "label": "ROP",
+              "fullName": "Roper Technologies",
+              "founded": "1981",
+              "hq": "Sarasota, Florida"
+            },
+            {
+              "id": "co-tdy",
+              "label": "TDY",
+              "fullName": "Teledyne Technologies",
+              "founded": "1960",
+              "hq": "Thousand Oaks, California"
+            },
+            {
+              "id": "co-zbra",
+              "label": "ZBRA",
+              "fullName": "Zebra Technologies",
+              "founded": "1969",
+              "hq": "Lincolnshire, Illinois"
+            }
+          ]
+        }
+      ],
+      "companyCount": 73
+    },
+    {
+      "id": "sector-utilities",
+      "label": "Utilities",
+      "children": [
+        {
+          "id": "sub-independent-power-producers---energy-traders",
+          "label": "Independent Power Producers & Energy Traders",
+          "children": [
+            {
+              "id": "co-aes",
+              "label": "AES",
+              "fullName": "AES Corporation",
+              "founded": "1981",
+              "hq": "Arlington, Virginia"
+            },
+            {
+              "id": "co-nrg",
+              "label": "NRG",
+              "fullName": "NRG Energy",
+              "founded": "1992",
+              "hq": "Houston, Texas"
+            }
+          ]
+        },
+        {
+          "id": "sub-electric-utilities",
+          "label": "Electric Utilities",
+          "children": [
+            {
+              "id": "co-lnt",
+              "label": "LNT",
+              "fullName": "Alliant Energy",
+              "founded": "1917",
+              "hq": "Madison, Wisconsin"
+            },
+            {
+              "id": "co-aep",
+              "label": "AEP",
+              "fullName": "American Electric Power",
+              "founded": "1906",
+              "hq": "Columbus, Ohio"
+            },
+            {
+              "id": "co-ceg",
+              "label": "CEG",
+              "fullName": "Constellation Energy",
+              "founded": "1999",
+              "hq": "Baltimore, Maryland"
+            },
+            {
+              "id": "co-duk",
+              "label": "DUK",
+              "fullName": "Duke Energy",
+              "founded": "1904",
+              "hq": "Charlotte, North Carolina"
+            },
+            {
+              "id": "co-eix",
+              "label": "EIX",
+              "fullName": "Edison International",
+              "founded": "1886",
+              "hq": "Rosemead, California"
+            },
+            {
+              "id": "co-etr",
+              "label": "ETR",
+              "fullName": "Entergy",
+              "founded": "1913",
+              "hq": "New Orleans, Louisiana"
+            },
+            {
+              "id": "co-evrg",
+              "label": "EVRG",
+              "fullName": "Evergy",
+              "founded": "1909",
+              "hq": "Kansas City, Missouri"
+            },
+            {
+              "id": "co-es",
+              "label": "ES",
+              "fullName": "Eversource Energy",
+              "founded": "1966",
+              "hq": "Hartford, Connecticut"
+            },
+            {
+              "id": "co-exc",
+              "label": "EXC",
+              "fullName": "Exelon",
+              "founded": "2000",
+              "hq": "Chicago, Illinois"
+            },
+            {
+              "id": "co-fe",
+              "label": "FE",
+              "fullName": "FirstEnergy",
+              "founded": "1997",
+              "hq": "Akron, Ohio"
+            },
+            {
+              "id": "co-ppl",
+              "label": "PPL",
+              "fullName": "PPL Corporation",
+              "founded": "1920",
+              "hq": "Allentown, Pennsylvania"
+            },
+            {
+              "id": "co-peg",
+              "label": "PEG",
+              "fullName": "Public Service Enterprise Group",
+              "founded": "1903",
+              "hq": "Newark, New Jersey"
+            },
+            {
+              "id": "co-so",
+              "label": "SO",
+              "fullName": "Southern Company",
+              "founded": "1945",
+              "hq": "Atlanta, Georgia"
+            },
+            {
+              "id": "co-vst",
+              "label": "VST",
+              "fullName": "Vistra Corp.",
+              "founded": "2016",
+              "hq": "Irving, Texas"
+            },
+            {
+              "id": "co-wec",
+              "label": "WEC",
+              "fullName": "WEC Energy Group",
+              "founded": "1896",
+              "hq": "Milwaukee, Wisconsin"
+            }
+          ]
+        },
+        {
+          "id": "sub-multi-utilities",
+          "label": "Multi-Utilities",
+          "children": [
+            {
+              "id": "co-aee",
+              "label": "AEE",
+              "fullName": "Ameren",
+              "founded": "1902",
+              "hq": "St. Louis, Missouri"
+            },
+            {
+              "id": "co-cnp",
+              "label": "CNP",
+              "fullName": "CenterPoint Energy",
+              "founded": "1882",
+              "hq": "Houston, Texas"
+            },
+            {
+              "id": "co-cms",
+              "label": "CMS",
+              "fullName": "CMS Energy",
+              "founded": "1886",
+              "hq": "Jackson, Michigan"
+            },
+            {
+              "id": "co-ed",
+              "label": "ED",
+              "fullName": "Consolidated Edison",
+              "founded": "1823",
+              "hq": "New York City, New York"
+            },
+            {
+              "id": "co-d",
+              "label": "D",
+              "fullName": "Dominion Energy",
+              "founded": "1983",
+              "hq": "Richmond, Virginia"
+            },
+            {
+              "id": "co-dte",
+              "label": "DTE",
+              "fullName": "DTE Energy",
+              "founded": "1995",
+              "hq": "Detroit, Michigan"
+            },
+            {
+              "id": "co-nee",
+              "label": "NEE",
+              "fullName": "NextEra Energy",
+              "founded": "1984 (1925)",
+              "hq": "Juno Beach, Florida"
+            },
+            {
+              "id": "co-ni",
+              "label": "NI",
+              "fullName": "NiSource",
+              "founded": "1912",
+              "hq": "Merrillville, Indiana"
+            },
+            {
+              "id": "co-pcg",
+              "label": "PCG",
+              "fullName": "PG&E Corporation",
+              "founded": "1905",
+              "hq": "Oakland, California"
+            },
+            {
+              "id": "co-pnw",
+              "label": "PNW",
+              "fullName": "Pinnacle West Capital",
+              "founded": "1985",
+              "hq": "Phoenix, Arizona"
+            },
+            {
+              "id": "co-sre",
+              "label": "SRE",
+              "fullName": "Sempra",
+              "founded": "1998",
+              "hq": "San Diego, California"
+            },
+            {
+              "id": "co-xel",
+              "label": "XEL",
+              "fullName": "Xcel Energy",
+              "founded": "1909",
+              "hq": "Minneapolis, Minnesota"
+            }
+          ]
+        },
+        {
+          "id": "sub-water-utilities",
+          "label": "Water Utilities",
+          "children": [
+            {
+              "id": "co-awk",
+              "label": "AWK",
+              "fullName": "American Water Works",
+              "founded": "1886",
+              "hq": "Camden, New Jersey"
+            }
+          ]
+        },
+        {
+          "id": "sub-gas-utilities",
+          "label": "Gas Utilities",
+          "children": [
+            {
+              "id": "co-ato",
+              "label": "ATO",
+              "fullName": "Atmos Energy",
+              "founded": "1906",
+              "hq": "Dallas, Texas"
+            }
+          ]
+        }
+      ],
+      "companyCount": 31
+    },
+    {
+      "id": "sector-financials",
+      "label": "Financials",
+      "children": [
+        {
+          "id": "sub-life---health-insurance",
+          "label": "Life & Health Insurance",
+          "children": [
+            {
+              "id": "co-afl",
+              "label": "AFL",
+              "fullName": "Aflac",
+              "founded": "1955",
+              "hq": "Columbus, Georgia"
+            },
+            {
+              "id": "co-gl",
+              "label": "GL",
+              "fullName": "Globe Life",
+              "founded": "1900",
+              "hq": "McKinney, Texas"
+            },
+            {
+              "id": "co-met",
+              "label": "MET",
+              "fullName": "MetLife",
+              "founded": "1868",
+              "hq": "New York City, New York"
+            },
+            {
+              "id": "co-pfg",
+              "label": "PFG",
+              "fullName": "Principal Financial Group",
+              "founded": "1879",
+              "hq": "Des Moines, Iowa"
+            },
+            {
+              "id": "co-pru",
+              "label": "PRU",
+              "fullName": "Prudential Financial",
+              "founded": "1875",
+              "hq": "Newark, New Jersey"
+            }
+          ]
+        },
+        {
+          "id": "sub-property---casualty-insurance",
+          "label": "Property & Casualty Insurance",
+          "children": [
+            {
+              "id": "co-all",
+              "label": "ALL",
+              "fullName": "Allstate",
+              "founded": "1931",
+              "hq": "Northbrook, Illinois"
+            },
+            {
+              "id": "co-acgl",
+              "label": "ACGL",
+              "fullName": "Arch Capital Group",
+              "founded": "1995",
+              "hq": "Hamilton, Bermuda"
+            },
+            {
+              "id": "co-cb",
+              "label": "CB",
+              "fullName": "Chubb Limited",
+              "founded": "1985",
+              "hq": "Zurich, Switzerland"
+            },
+            {
+              "id": "co-cinf",
+              "label": "CINF",
+              "fullName": "Cincinnati Financial",
+              "founded": "1950",
+              "hq": "Fairfield, Ohio"
+            },
+            {
+              "id": "co-hig",
+              "label": "HIG",
+              "fullName": "Hartford (The)",
+              "founded": "1810",
+              "hq": "Hartford, Connecticut"
+            },
+            {
+              "id": "co-pgr",
+              "label": "PGR",
+              "fullName": "Progressive Corporation",
+              "founded": "1937",
+              "hq": "Mayfield Village, Ohio"
+            },
+            {
+              "id": "co-trv",
+              "label": "TRV",
+              "fullName": "Travelers Companies (The)",
+              "founded": "1853",
+              "hq": "New York City, New York"
+            },
+            {
+              "id": "co-wrb",
+              "label": "WRB",
+              "fullName": "W. R. Berkley Corporation",
+              "founded": "1967",
+              "hq": "Greenwich, Connecticut"
+            }
+          ]
+        },
+        {
+          "id": "sub-consumer-finance",
+          "label": "Consumer Finance",
+          "children": [
+            {
+              "id": "co-axp",
+              "label": "AXP",
+              "fullName": "American Express",
+              "founded": "1850",
+              "hq": "New York City, New York"
+            },
+            {
+              "id": "co-cof",
+              "label": "COF",
+              "fullName": "Capital One",
+              "founded": "1994",
+              "hq": "Tysons Corner, Virginia"
+            },
+            {
+              "id": "co-syf",
+              "label": "SYF",
+              "fullName": "Synchrony Financial",
+              "founded": "2003",
+              "hq": "Stamford, Connecticut"
+            }
+          ]
+        },
+        {
+          "id": "sub-multi-line-insurance",
+          "label": "Multi-line Insurance",
+          "children": [
+            {
+              "id": "co-aig",
+              "label": "AIG",
+              "fullName": "American International Group",
+              "founded": "1919",
+              "hq": "New York City, New York"
+            },
+            {
+              "id": "co-aiz",
+              "label": "AIZ",
+              "fullName": "Assurant",
+              "founded": "1892",
+              "hq": "Atlanta, Georgia"
+            },
+            {
+              "id": "co-l",
+              "label": "L",
+              "fullName": "Loews Corporation",
+              "founded": "1959",
+              "hq": "New York City, New York"
+            }
+          ]
+        },
+        {
+          "id": "sub-asset-management---custody-banks",
+          "label": "Asset Management & Custody Banks",
+          "children": [
+            {
+              "id": "co-amp",
+              "label": "AMP",
+              "fullName": "Ameriprise Financial",
+              "founded": "1894",
+              "hq": "Minneapolis, Minnesota"
+            },
+            {
+              "id": "co-apo",
+              "label": "APO",
+              "fullName": "Apollo Global Management",
+              "founded": "1990",
+              "hq": "New York City, New York"
+            },
+            {
+              "id": "co-ares",
+              "label": "ARES",
+              "fullName": "Ares Management",
+              "founded": "1977",
+              "hq": "Los Angeles, California"
+            },
+            {
+              "id": "co-blk",
+              "label": "BLK",
+              "fullName": "BlackRock",
+              "founded": "1988",
+              "hq": "New York City, New York"
+            },
+            {
+              "id": "co-bx",
+              "label": "BX",
+              "fullName": "Blackstone Inc.",
+              "founded": "1985",
+              "hq": "New York City, New York"
+            },
+            {
+              "id": "co-bny",
+              "label": "BNY",
+              "fullName": "BNY Mellon",
+              "founded": "1784",
+              "hq": "New York City, New York"
+            },
+            {
+              "id": "co-ben",
+              "label": "BEN",
+              "fullName": "Franklin Resources",
+              "founded": "1947",
+              "hq": "San Mateo, California"
+            },
+            {
+              "id": "co-ivz",
+              "label": "IVZ",
+              "fullName": "Invesco",
+              "founded": "1935",
+              "hq": "Atlanta, Georgia"
+            },
+            {
+              "id": "co-kkr",
+              "label": "KKR",
+              "fullName": "KKR & Co.",
+              "founded": "1976",
+              "hq": "New York City, New York"
+            },
+            {
+              "id": "co-ntrs",
+              "label": "NTRS",
+              "fullName": "Northern Trust",
+              "founded": "1889",
+              "hq": "Chicago, Illinois"
+            },
+            {
+              "id": "co-stt",
+              "label": "STT",
+              "fullName": "State Street Corporation",
+              "founded": "1792",
+              "hq": "Boston, Massachusetts"
+            },
+            {
+              "id": "co-trow",
+              "label": "TROW",
+              "fullName": "T. Rowe Price",
+              "founded": "1937",
+              "hq": "Baltimore, Maryland"
+            }
+          ]
+        },
+        {
+          "id": "sub-insurance-brokers",
+          "label": "Insurance Brokers",
+          "children": [
+            {
+              "id": "co-aon",
+              "label": "AON",
+              "fullName": "Aon plc",
+              "founded": "1982 (1919)",
+              "hq": "London, United Kingdom"
+            },
+            {
+              "id": "co-ajg",
+              "label": "AJG",
+              "fullName": "Arthur J. Gallagher & Co.",
+              "founded": "1927",
+              "hq": "Rolling Meadows, Illinois"
+            },
+            {
+              "id": "co-bro",
+              "label": "BRO",
+              "fullName": "Brown & Brown",
+              "founded": "1939",
+              "hq": "Daytona Beach, Florida"
+            },
+            {
+              "id": "co-erie",
+              "label": "ERIE",
+              "fullName": "Erie Indemnity",
+              "founded": "1925",
+              "hq": "Erie, Pennsylvania"
+            },
+            {
+              "id": "co-mrsh",
+              "label": "MRSH",
+              "fullName": "Marsh McLennan",
+              "founded": "1905",
+              "hq": "New York City, New York"
+            },
+            {
+              "id": "co-wtw",
+              "label": "WTW",
+              "fullName": "Willis Towers Watson",
+              "founded": "2016",
+              "hq": "London, United Kingdom"
+            }
+          ]
+        },
+        {
+          "id": "sub-diversified-banks",
+          "label": "Diversified Banks",
+          "children": [
+            {
+              "id": "co-bac",
+              "label": "BAC",
+              "fullName": "Bank of America",
+              "founded": "1998 (1923 / 1874)",
+              "hq": "Charlotte, North Carolina"
+            },
+            {
+              "id": "co-c",
+              "label": "C",
+              "fullName": "Citigroup",
+              "founded": "1998",
+              "hq": "New York City, New York"
+            },
+            {
+              "id": "co-jpm",
+              "label": "JPM",
+              "fullName": "JPMorgan Chase",
+              "founded": "2000 (1799 / 1871)",
+              "hq": "New York City, New York"
+            },
+            {
+              "id": "co-pnc",
+              "label": "PNC",
+              "fullName": "PNC Financial Services",
+              "founded": "1845",
+              "hq": "Pittsburgh, Pennsylvania"
+            },
+            {
+              "id": "co-tfc",
+              "label": "TFC",
+              "fullName": "Truist Financial",
+              "founded": "1872",
+              "hq": "Charlotte, North Carolina"
+            },
+            {
+              "id": "co-usb",
+              "label": "USB",
+              "fullName": "U.S. Bancorp",
+              "founded": "1968",
+              "hq": "Minneapolis, Minnesota"
+            },
+            {
+              "id": "co-wfc",
+              "label": "WFC",
+              "fullName": "Wells Fargo",
+              "founded": "1852",
+              "hq": "San Francisco, California"
+            }
+          ]
+        },
+        {
+          "id": "sub-multi-sector-holdings",
+          "label": "Multi-Sector Holdings",
+          "children": [
+            {
+              "id": "co-brk.b",
+              "label": "BRK.B",
+              "fullName": "Berkshire Hathaway",
+              "founded": "1839",
+              "hq": "Omaha, Nebraska"
+            }
+          ]
+        },
+        {
+          "id": "sub-transaction---payment-processing-services",
+          "label": "Transaction & Payment Processing Services",
+          "children": [
+            {
+              "id": "co-xyz",
+              "label": "XYZ",
+              "fullName": "Block, Inc.",
+              "founded": "2009",
+              "hq": "none"
+            },
+            {
+              "id": "co-cpay",
+              "label": "CPAY",
+              "fullName": "Corpay",
+              "founded": "2000",
+              "hq": "Atlanta, Georgia"
+            },
+            {
+              "id": "co-fis",
+              "label": "FIS",
+              "fullName": "Fidelity National Information Services",
+              "founded": "1968",
+              "hq": "Jacksonville, Florida"
+            },
+            {
+              "id": "co-fisv",
+              "label": "FISV",
+              "fullName": "Fiserv",
+              "founded": "1984",
+              "hq": "Brookfield, Wisconsin"
+            },
+            {
+              "id": "co-gpn",
+              "label": "GPN",
+              "fullName": "Global Payments",
+              "founded": "2000",
+              "hq": "Atlanta, Georgia"
+            },
+            {
+              "id": "co-jkhy",
+              "label": "JKHY",
+              "fullName": "Jack Henry & Associates",
+              "founded": "1976",
+              "hq": "Monett, Missouri"
+            },
+            {
+              "id": "co-ma",
+              "label": "MA",
+              "fullName": "Mastercard",
+              "founded": "1966",
+              "hq": "Harrison, New York"
+            },
+            {
+              "id": "co-pypl",
+              "label": "PYPL",
+              "fullName": "PayPal",
+              "founded": "1998",
+              "hq": "San Jose, California"
+            },
+            {
+              "id": "co-v",
+              "label": "V",
+              "fullName": "Visa Inc.",
+              "founded": "1958",
+              "hq": "San Francisco, California"
+            }
+          ]
+        },
+        {
+          "id": "sub-financial-exchanges---data",
+          "label": "Financial Exchanges & Data",
+          "children": [
+            {
+              "id": "co-cboe",
+              "label": "CBOE",
+              "fullName": "Cboe Global Markets",
+              "founded": "1973",
+              "hq": "Chicago, Illinois"
+            },
+            {
+              "id": "co-cme",
+              "label": "CME",
+              "fullName": "CME Group",
+              "founded": "1848",
+              "hq": "Chicago, Illinois"
+            },
+            {
+              "id": "co-coin",
+              "label": "COIN",
+              "fullName": "Coinbase",
+              "founded": "2012",
+              "hq": "New York City, New York"
+            },
+            {
+              "id": "co-fds",
+              "label": "FDS",
+              "fullName": "FactSet",
+              "founded": "1978",
+              "hq": "Norwalk, Connecticut"
+            },
+            {
+              "id": "co-ice",
+              "label": "ICE",
+              "fullName": "Intercontinental Exchange",
+              "founded": "2000",
+              "hq": "Atlanta, Georgia"
+            },
+            {
+              "id": "co-mco",
+              "label": "MCO",
+              "fullName": "Moody's Corporation",
+              "founded": "1909",
+              "hq": "New York City, New York"
+            },
+            {
+              "id": "co-msci",
+              "label": "MSCI",
+              "fullName": "MSCI Inc.",
+              "founded": "1969",
+              "hq": "New York City, New York"
+            },
+            {
+              "id": "co-ndaq",
+              "label": "NDAQ",
+              "fullName": "Nasdaq, Inc.",
+              "founded": "1971",
+              "hq": "New York City, New York"
+            },
+            {
+              "id": "co-spgi",
+              "label": "SPGI",
+              "fullName": "S&P Global",
+              "founded": "1917",
+              "hq": "New York City, New York"
+            }
+          ]
+        },
+        {
+          "id": "sub-investment-banking---brokerage",
+          "label": "Investment Banking & Brokerage",
+          "children": [
+            {
+              "id": "co-schw",
+              "label": "SCHW",
+              "fullName": "Charles Schwab Corporation",
+              "founded": "1971",
+              "hq": "Westlake, Texas"
+            },
+            {
+              "id": "co-gs",
+              "label": "GS",
+              "fullName": "Goldman Sachs",
+              "founded": "1869",
+              "hq": "New York City, New York"
+            },
+            {
+              "id": "co-ibkr",
+              "label": "IBKR",
+              "fullName": "Interactive Brokers",
+              "founded": "1977",
+              "hq": "Greenwich, Connecticut"
+            },
+            {
+              "id": "co-ms",
+              "label": "MS",
+              "fullName": "Morgan Stanley",
+              "founded": "1935",
+              "hq": "New York City, New York"
+            },
+            {
+              "id": "co-rjf",
+              "label": "RJF",
+              "fullName": "Raymond James Financial",
+              "founded": "1962",
+              "hq": "St. Petersburg, Florida"
+            },
+            {
+              "id": "co-hood",
+              "label": "HOOD",
+              "fullName": "Robinhood Markets",
+              "founded": "2013",
+              "hq": "Menlo Park, California"
+            }
+          ]
+        },
+        {
+          "id": "sub-regional-banks",
+          "label": "Regional Banks",
+          "children": [
+            {
+              "id": "co-cfg",
+              "label": "CFG",
+              "fullName": "Citizens Financial Group",
+              "founded": "1828",
+              "hq": "Providence, Rhode Island"
+            },
+            {
+              "id": "co-fitb",
+              "label": "FITB",
+              "fullName": "Fifth Third Bancorp",
+              "founded": "1858",
+              "hq": "Cincinnati, Ohio"
+            },
+            {
+              "id": "co-hban",
+              "label": "HBAN",
+              "fullName": "Huntington Bancshares",
+              "founded": "1866",
+              "hq": "Columbus, Ohio; Detroit, Michigan"
+            },
+            {
+              "id": "co-key",
+              "label": "KEY",
+              "fullName": "KeyCorp",
+              "founded": "1825",
+              "hq": "Cleveland, Ohio"
+            },
+            {
+              "id": "co-mtb",
+              "label": "MTB",
+              "fullName": "M&T Bank",
+              "founded": "1856",
+              "hq": "Buffalo, New York"
+            },
+            {
+              "id": "co-rf",
+              "label": "RF",
+              "fullName": "Regions Financial Corporation",
+              "founded": "1971",
+              "hq": "Birmingham, Alabama"
+            }
+          ]
+        },
+        {
+          "id": "sub-reinsurance",
+          "label": "Reinsurance",
+          "children": [
+            {
+              "id": "co-eg",
+              "label": "EG",
+              "fullName": "Everest Group",
+              "founded": "1973",
+              "hq": "Hamilton, Bermuda"
+            }
+          ]
+        }
+      ],
+      "companyCount": 76
+    },
+    {
+      "id": "sector-materials",
+      "label": "Materials",
+      "children": [
+        {
+          "id": "sub-industrial-gases",
+          "label": "Industrial Gases",
+          "children": [
+            {
+              "id": "co-apd",
+              "label": "APD",
+              "fullName": "Air Products",
+              "founded": "1940",
+              "hq": "Upper Macungie Township, Pennsylvania"
+            },
+            {
+              "id": "co-lin",
+              "label": "LIN",
+              "fullName": "Linde plc",
+              "founded": "1879",
+              "hq": "Guildford, United Kingdom"
+            }
+          ]
+        },
+        {
+          "id": "sub-specialty-chemicals",
+          "label": "Specialty Chemicals",
+          "children": [
+            {
+              "id": "co-alb",
+              "label": "ALB",
+              "fullName": "Albemarle Corporation",
+              "founded": "1994",
+              "hq": "Charlotte, North Carolina"
+            },
+            {
+              "id": "co-dd",
+              "label": "DD",
+              "fullName": "DuPont",
+              "founded": "2017 (1802)",
+              "hq": "Wilmington, Delaware"
+            },
+            {
+              "id": "co-ecl",
+              "label": "ECL",
+              "fullName": "Ecolab",
+              "founded": "1923",
+              "hq": "Saint Paul, Minnesota"
+            },
+            {
+              "id": "co-iff",
+              "label": "IFF",
+              "fullName": "International Flavors & Fragrances",
+              "founded": "1958 (1889)",
+              "hq": "New York City, New York"
+            },
+            {
+              "id": "co-lyb",
+              "label": "LYB",
+              "fullName": "LyondellBasell",
+              "founded": "2007",
+              "hq": "Rotterdam, Netherlands"
+            },
+            {
+              "id": "co-ppg",
+              "label": "PPG",
+              "fullName": "PPG Industries",
+              "founded": "1883",
+              "hq": "Pittsburgh, Pennsylvania"
+            },
+            {
+              "id": "co-shw",
+              "label": "SHW",
+              "fullName": "Sherwin-Williams",
+              "founded": "1866",
+              "hq": "Cleveland, Ohio"
+            }
+          ]
+        },
+        {
+          "id": "sub-paper---plastic-packaging-products---materials",
+          "label": "Paper & Plastic Packaging Products & Materials",
+          "children": [
+            {
+              "id": "co-amcr",
+              "label": "AMCR",
+              "fullName": "Amcor",
+              "founded": "2019 (1860)",
+              "hq": "Warmley, Bristol, United Kingdom"
+            },
+            {
+              "id": "co-avy",
+              "label": "AVY",
+              "fullName": "Avery Dennison",
+              "founded": "1935",
+              "hq": "Mentor, Ohio"
+            },
+            {
+              "id": "co-ip",
+              "label": "IP",
+              "fullName": "International Paper",
+              "founded": "1898",
+              "hq": "Memphis, Tennessee"
+            },
+            {
+              "id": "co-pkg",
+              "label": "PKG",
+              "fullName": "Packaging Corporation of America",
+              "founded": "1959",
+              "hq": "Lake Forest, Illinois"
+            },
+            {
+              "id": "co-sw",
+              "label": "SW",
+              "fullName": "Smurfit Westrock",
+              "founded": "1934",
+              "hq": "Dublin, Ireland"
+            }
+          ]
+        },
+        {
+          "id": "sub-metal--glass---plastic-containers",
+          "label": "Metal, Glass & Plastic Containers",
+          "children": [
+            {
+              "id": "co-ball",
+              "label": "BALL",
+              "fullName": "Ball Corporation",
+              "founded": "1880",
+              "hq": "Broomfield, Colorado"
+            }
+          ]
+        },
+        {
+          "id": "sub-fertilizers---agricultural-chemicals",
+          "label": "Fertilizers & Agricultural Chemicals",
+          "children": [
+            {
+              "id": "co-cf",
+              "label": "CF",
+              "fullName": "CF Industries",
+              "founded": "1946",
+              "hq": "Deerfield, Illinois"
+            },
+            {
+              "id": "co-ctva",
+              "label": "CTVA",
+              "fullName": "Corteva",
+              "founded": "2019",
+              "hq": "Indianapolis, Indiana"
+            },
+            {
+              "id": "co-mos",
+              "label": "MOS",
+              "fullName": "Mosaic Company (The)",
+              "founded": "2004 (1865 / 1909)",
+              "hq": "Tampa, Florida"
+            }
+          ]
+        },
+        {
+          "id": "sub-construction-materials",
+          "label": "Construction Materials",
+          "children": [
+            {
+              "id": "co-crh",
+              "label": "CRH",
+              "fullName": "CRH plc",
+              "founded": "1970",
+              "hq": "Dublin, Ireland"
+            },
+            {
+              "id": "co-mlm",
+              "label": "MLM",
+              "fullName": "Martin Marietta Materials",
+              "founded": "1993",
+              "hq": "Raleigh, North Carolina"
+            },
+            {
+              "id": "co-vmc",
+              "label": "VMC",
+              "fullName": "Vulcan Materials Company",
+              "founded": "1909",
+              "hq": "Birmingham, Alabama"
+            }
+          ]
+        },
+        {
+          "id": "sub-commodity-chemicals",
+          "label": "Commodity Chemicals",
+          "children": [
+            {
+              "id": "co-dow",
+              "label": "DOW",
+              "fullName": "Dow Inc.",
+              "founded": "2019 (1897)",
+              "hq": "Midland, Michigan"
+            }
+          ]
+        },
+        {
+          "id": "sub-copper",
+          "label": "Copper",
+          "children": [
+            {
+              "id": "co-fcx",
+              "label": "FCX",
+              "fullName": "Freeport-McMoRan",
+              "founded": "1912",
+              "hq": "Phoenix, Arizona"
+            }
+          ]
+        },
+        {
+          "id": "sub-gold",
+          "label": "Gold",
+          "children": [
+            {
+              "id": "co-nem",
+              "label": "NEM",
+              "fullName": "Newmont",
+              "founded": "1921",
+              "hq": "Denver, Colorado"
+            }
+          ]
+        },
+        {
+          "id": "sub-steel",
+          "label": "Steel",
+          "children": [
+            {
+              "id": "co-nue",
+              "label": "NUE",
+              "fullName": "Nucor",
+              "founded": "1940",
+              "hq": "Charlotte, North Carolina"
+            },
+            {
+              "id": "co-stld",
+              "label": "STLD",
+              "fullName": "Steel Dynamics",
+              "founded": "1993",
+              "hq": "Fort Wayne, Indiana"
+            }
+          ]
+        }
+      ],
+      "companyCount": 26
+    },
+    {
+      "id": "sector-consumer-discretionary",
+      "label": "Consumer Discretionary",
+      "children": [
+        {
+          "id": "sub-hotels--resorts---cruise-lines",
+          "label": "Hotels, Resorts & Cruise Lines",
+          "children": [
+            {
+              "id": "co-abnb",
+              "label": "ABNB",
+              "fullName": "Airbnb",
+              "founded": "2008",
+              "hq": "San Francisco, California"
+            },
+            {
+              "id": "co-bkng",
+              "label": "BKNG",
+              "fullName": "Booking Holdings",
+              "founded": "1996",
+              "hq": "Norwalk, Connecticut"
+            },
+            {
+              "id": "co-ccl",
+              "label": "CCL",
+              "fullName": "Carnival Corporation",
+              "founded": "1972",
+              "hq": "Miami, Florida"
+            },
+            {
+              "id": "co-expe",
+              "label": "EXPE",
+              "fullName": "Expedia Group",
+              "founded": "1996",
+              "hq": "Seattle, Washington"
+            },
+            {
+              "id": "co-hlt",
+              "label": "HLT",
+              "fullName": "Hilton Worldwide",
+              "founded": "1919",
+              "hq": "Tysons Corner, Virginia"
+            },
+            {
+              "id": "co-mar",
+              "label": "MAR",
+              "fullName": "Marriott International",
+              "founded": "1927",
+              "hq": "Bethesda, Maryland"
+            },
+            {
+              "id": "co-nclh",
+              "label": "NCLH",
+              "fullName": "Norwegian Cruise Line Holdings",
+              "founded": "2011 (1966)",
+              "hq": "Miami-Dade County, Florida[4]"
+            },
+            {
+              "id": "co-rcl",
+              "label": "RCL",
+              "fullName": "Royal Caribbean Group",
+              "founded": "1997",
+              "hq": "Miami, Florida"
+            }
+          ]
+        },
+        {
+          "id": "sub-broadline-retail",
+          "label": "Broadline Retail",
+          "children": [
+            {
+              "id": "co-amzn",
+              "label": "AMZN",
+              "fullName": "Amazon",
+              "founded": "1994",
+              "hq": "Seattle, Washington"
+            },
+            {
+              "id": "co-ebay",
+              "label": "EBAY",
+              "fullName": "eBay Inc.",
+              "founded": "1995",
+              "hq": "San Jose, California"
+            }
+          ]
+        },
+        {
+          "id": "sub-automotive-parts---equipment",
+          "label": "Automotive Parts & Equipment",
+          "children": [
+            {
+              "id": "co-aptv",
+              "label": "APTV",
+              "fullName": "Aptiv",
+              "founded": "1994",
+              "hq": "Schaffhausen, Switzerland"
+            }
+          ]
+        },
+        {
+          "id": "sub-automotive-retail",
+          "label": "Automotive Retail",
+          "children": [
+            {
+              "id": "co-azo",
+              "label": "AZO",
+              "fullName": "AutoZone",
+              "founded": "1979",
+              "hq": "Memphis, Tennessee"
+            },
+            {
+              "id": "co-cvna",
+              "label": "CVNA",
+              "fullName": "Carvana",
+              "founded": "2012",
+              "hq": "Tempe, Arizona"
+            },
+            {
+              "id": "co-orly",
+              "label": "ORLY",
+              "fullName": "O’Reilly Automotive",
+              "founded": "1957",
+              "hq": "Springfield, Missouri"
+            }
+          ]
+        },
+        {
+          "id": "sub-computer---electronics-retail",
+          "label": "Computer & Electronics Retail",
+          "children": [
+            {
+              "id": "co-bby",
+              "label": "BBY",
+              "fullName": "Best Buy",
+              "founded": "1966",
+              "hq": "Richfield, Minnesota"
+            }
+          ]
+        },
+        {
+          "id": "sub-restaurants",
+          "label": "Restaurants",
+          "children": [
+            {
+              "id": "co-cmg",
+              "label": "CMG",
+              "fullName": "Chipotle Mexican Grill",
+              "founded": "1993",
+              "hq": "Newport Beach, California"
+            },
+            {
+              "id": "co-dri",
+              "label": "DRI",
+              "fullName": "Darden Restaurants",
+              "founded": "1938",
+              "hq": "Orlando, Florida"
+            },
+            {
+              "id": "co-dpz",
+              "label": "DPZ",
+              "fullName": "Domino's",
+              "founded": "1960",
+              "hq": "Ann Arbor, Michigan"
+            },
+            {
+              "id": "co-mcd",
+              "label": "MCD",
+              "fullName": "McDonald's",
+              "founded": "1940",
+              "hq": "Chicago, Illinois"
+            },
+            {
+              "id": "co-sbux",
+              "label": "SBUX",
+              "fullName": "Starbucks",
+              "founded": "1971",
+              "hq": "Seattle, Washington"
+            },
+            {
+              "id": "co-yum",
+              "label": "YUM",
+              "fullName": "Yum! Brands",
+              "founded": "1997",
+              "hq": "Louisville, Kentucky"
+            }
+          ]
+        },
+        {
+          "id": "sub-footwear",
+          "label": "Footwear",
+          "children": [
+            {
+              "id": "co-deck",
+              "label": "DECK",
+              "fullName": "Deckers Brands",
+              "founded": "1973",
+              "hq": "Goleta, California"
+            }
+          ]
+        },
+        {
+          "id": "sub-specialized-consumer-services",
+          "label": "Specialized Consumer Services",
+          "children": [
+            {
+              "id": "co-dash",
+              "label": "DASH",
+              "fullName": "DoorDash",
+              "founded": "2012",
+              "hq": "San Francisco, California"
+            }
+          ]
+        },
+        {
+          "id": "sub-homebuilding",
+          "label": "Homebuilding",
+          "children": [
+            {
+              "id": "co-dhi",
+              "label": "DHI",
+              "fullName": "D. R. Horton",
+              "founded": "1978",
+              "hq": "Arlington, Texas"
+            },
+            {
+              "id": "co-len",
+              "label": "LEN",
+              "fullName": "Lennar",
+              "founded": "1954",
+              "hq": "Miami, Florida"
+            },
+            {
+              "id": "co-nvr",
+              "label": "NVR",
+              "fullName": "NVR, Inc.",
+              "founded": "1980",
+              "hq": "Reston, Virginia"
+            },
+            {
+              "id": "co-phm",
+              "label": "PHM",
+              "fullName": "PulteGroup",
+              "founded": "1956",
+              "hq": "Atlanta, Georgia"
+            }
+          ]
+        },
+        {
+          "id": "sub-automobile-manufacturers",
+          "label": "Automobile Manufacturers",
+          "children": [
+            {
+              "id": "co-f",
+              "label": "F",
+              "fullName": "Ford Motor Company",
+              "founded": "1903",
+              "hq": "Dearborn, Michigan"
+            },
+            {
+              "id": "co-gm",
+              "label": "GM",
+              "fullName": "General Motors",
+              "founded": "1908",
+              "hq": "Detroit, Michigan"
+            },
+            {
+              "id": "co-tsla",
+              "label": "TSLA",
+              "fullName": "Tesla, Inc.",
+              "founded": "2003",
+              "hq": "Austin, Texas"
+            }
+          ]
+        },
+        {
+          "id": "sub-consumer-electronics",
+          "label": "Consumer Electronics",
+          "children": [
+            {
+              "id": "co-grmn",
+              "label": "GRMN",
+              "fullName": "Garmin",
+              "founded": "1989",
+              "hq": "Schaffhausen, Switzerland"
+            }
+          ]
+        },
+        {
+          "id": "sub-distributors",
+          "label": "Distributors",
+          "children": [
+            {
+              "id": "co-gpc",
+              "label": "GPC",
+              "fullName": "Genuine Parts Company",
+              "founded": "1925",
+              "hq": "Atlanta, Georgia"
+            },
+            {
+              "id": "co-pool",
+              "label": "POOL",
+              "fullName": "Pool Corporation",
+              "founded": "1993",
+              "hq": "Covington, Louisiana"
+            }
+          ]
+        },
+        {
+          "id": "sub-leisure-products",
+          "label": "Leisure Products",
+          "children": [
+            {
+              "id": "co-has",
+              "label": "HAS",
+              "fullName": "Hasbro",
+              "founded": "1923",
+              "hq": "Pawtucket, Rhode Island"
+            }
+          ]
+        },
+        {
+          "id": "sub-home-improvement-retail",
+          "label": "Home Improvement Retail",
+          "children": [
+            {
+              "id": "co-hd",
+              "label": "HD",
+              "fullName": "Home Depot (The)",
+              "founded": "1978",
+              "hq": "Atlanta, Georgia"
+            },
+            {
+              "id": "co-low",
+              "label": "LOW",
+              "fullName": "Lowe's",
+              "founded": "1904/1946/1959",
+              "hq": "Mooresville, North Carolina"
+            }
+          ]
+        },
+        {
+          "id": "sub-casinos---gaming",
+          "label": "Casinos & Gaming",
+          "children": [
+            {
+              "id": "co-lvs",
+              "label": "LVS",
+              "fullName": "Las Vegas Sands",
+              "founded": "1988",
+              "hq": "Las Vegas, Nevada"
+            },
+            {
+              "id": "co-mgm",
+              "label": "MGM",
+              "fullName": "MGM Resorts",
+              "founded": "1986",
+              "hq": "Paradise, Nevada"
+            },
+            {
+              "id": "co-wynn",
+              "label": "WYNN",
+              "fullName": "Wynn Resorts",
+              "founded": "2002",
+              "hq": "Paradise, Nevada"
+            }
+          ]
+        },
+        {
+          "id": "sub-apparel--accessories---luxury-goods",
+          "label": "Apparel, Accessories & Luxury Goods",
+          "children": [
+            {
+              "id": "co-lulu",
+              "label": "LULU",
+              "fullName": "Lululemon Athletica",
+              "founded": "1998",
+              "hq": "Vancouver, Canada"
+            },
+            {
+              "id": "co-nke",
+              "label": "NKE",
+              "fullName": "Nike, Inc.",
+              "founded": "1964",
+              "hq": "Washington County, Oregon"
+            },
+            {
+              "id": "co-rl",
+              "label": "RL",
+              "fullName": "Ralph Lauren Corporation",
+              "founded": "1967",
+              "hq": "New York City, New York"
+            },
+            {
+              "id": "co-tpr",
+              "label": "TPR",
+              "fullName": "Tapestry, Inc.",
+              "founded": "2017",
+              "hq": "New York City, New York"
+            }
+          ]
+        },
+        {
+          "id": "sub-apparel-retail",
+          "label": "Apparel Retail",
+          "children": [
+            {
+              "id": "co-rost",
+              "label": "ROST",
+              "fullName": "Ross Stores",
+              "founded": "1982",
+              "hq": "Dublin, California"
+            },
+            {
+              "id": "co-tjx",
+              "label": "TJX",
+              "fullName": "TJX Companies",
+              "founded": "1987",
+              "hq": "Framingham, Massachusetts"
+            }
+          ]
+        },
+        {
+          "id": "sub-other-specialty-retail",
+          "label": "Other Specialty Retail",
+          "children": [
+            {
+              "id": "co-tsco",
+              "label": "TSCO",
+              "fullName": "Tractor Supply",
+              "founded": "1938",
+              "hq": "Brentwood, Tennessee"
+            },
+            {
+              "id": "co-ulta",
+              "label": "ULTA",
+              "fullName": "Ulta Beauty",
+              "founded": "1990",
+              "hq": "Bolingbrook, Illinois"
+            }
+          ]
+        },
+        {
+          "id": "sub-homefurnishing-retail",
+          "label": "Homefurnishing Retail",
+          "children": [
+            {
+              "id": "co-wsm",
+              "label": "WSM",
+              "fullName": "Williams-Sonoma, Inc.",
+              "founded": "1956",
+              "hq": "San Francisco, California"
+            }
+          ]
+        }
+      ],
+      "companyCount": 48
+    },
+    {
+      "id": "sector-real-estate",
+      "label": "Real Estate",
+      "children": [
+        {
+          "id": "sub-office-reits",
+          "label": "Office REITs",
+          "children": [
+            {
+              "id": "co-are",
+              "label": "ARE",
+              "fullName": "Alexandria Real Estate Equities",
+              "founded": "1994",
+              "hq": "Pasadena, California"
+            },
+            {
+              "id": "co-bxp",
+              "label": "BXP",
+              "fullName": "BXP, Inc.",
+              "founded": "1970",
+              "hq": "Boston, Massachusetts"
+            }
+          ]
+        },
+        {
+          "id": "sub-telecom-tower-reits",
+          "label": "Telecom Tower REITs",
+          "children": [
+            {
+              "id": "co-amt",
+              "label": "AMT",
+              "fullName": "American Tower",
+              "founded": "1995",
+              "hq": "Boston, Massachusetts"
+            },
+            {
+              "id": "co-cci",
+              "label": "CCI",
+              "fullName": "Crown Castle",
+              "founded": "1994",
+              "hq": "Houston, Texas"
+            },
+            {
+              "id": "co-sbac",
+              "label": "SBAC",
+              "fullName": "SBA Communications",
+              "founded": "1989",
+              "hq": "Boca Raton, Florida"
+            }
+          ]
+        },
+        {
+          "id": "sub-multi-family-residential-reits",
+          "label": "Multi-Family Residential REITs",
+          "children": [
+            {
+              "id": "co-avb",
+              "label": "AVB",
+              "fullName": "AvalonBay Communities",
+              "founded": "1978",
+              "hq": "Arlington, Virginia"
+            },
+            {
+              "id": "co-cpt",
+              "label": "CPT",
+              "fullName": "Camden Property Trust",
+              "founded": "1981",
+              "hq": "Houston, Texas"
+            },
+            {
+              "id": "co-eqr",
+              "label": "EQR",
+              "fullName": "Equity Residential",
+              "founded": "1969",
+              "hq": "Chicago, Illinois"
+            },
+            {
+              "id": "co-ess",
+              "label": "ESS",
+              "fullName": "Essex Property Trust",
+              "founded": "1971",
+              "hq": "San Mateo, California"
+            },
+            {
+              "id": "co-maa",
+              "label": "MAA",
+              "fullName": "Mid-America Apartment Communities",
+              "founded": "1977",
+              "hq": "Memphis, Tennessee"
+            },
+            {
+              "id": "co-udr",
+              "label": "UDR",
+              "fullName": "UDR, Inc.",
+              "founded": "1972",
+              "hq": "Highlands Ranch, Colorado"
+            }
+          ]
+        },
+        {
+          "id": "sub-real-estate-services",
+          "label": "Real Estate Services",
+          "children": [
+            {
+              "id": "co-cbre",
+              "label": "CBRE",
+              "fullName": "CBRE Group",
+              "founded": "1906",
+              "hq": "Dallas, Texas"
+            },
+            {
+              "id": "co-csgp",
+              "label": "CSGP",
+              "fullName": "CoStar Group",
+              "founded": "1987",
+              "hq": "Washington, D.C."
+            }
+          ]
+        },
+        {
+          "id": "sub-data-center-reits",
+          "label": "Data Center REITs",
+          "children": [
+            {
+              "id": "co-dlr",
+              "label": "DLR",
+              "fullName": "Digital Realty",
+              "founded": "2004",
+              "hq": "Austin, Texas"
+            },
+            {
+              "id": "co-eqix",
+              "label": "EQIX",
+              "fullName": "Equinix",
+              "founded": "1998",
+              "hq": "Redwood City, California"
+            }
+          ]
+        },
+        {
+          "id": "sub-self-storage-reits",
+          "label": "Self-Storage REITs",
+          "children": [
+            {
+              "id": "co-exr",
+              "label": "EXR",
+              "fullName": "Extra Space Storage",
+              "founded": "1977",
+              "hq": "Salt Lake City, Utah"
+            },
+            {
+              "id": "co-psa",
+              "label": "PSA",
+              "fullName": "Public Storage",
+              "founded": "1972",
+              "hq": "Glendale, California"
+            }
+          ]
+        },
+        {
+          "id": "sub-retail-reits",
+          "label": "Retail REITs",
+          "children": [
+            {
+              "id": "co-frt",
+              "label": "FRT",
+              "fullName": "Federal Realty Investment Trust",
+              "founded": "1962",
+              "hq": "Rockville, Maryland"
+            },
+            {
+              "id": "co-kim",
+              "label": "KIM",
+              "fullName": "Kimco Realty",
+              "founded": "1958",
+              "hq": "Jericho, New York"
+            },
+            {
+              "id": "co-o",
+              "label": "O",
+              "fullName": "Realty Income",
+              "founded": "1969",
+              "hq": "San Diego, California"
+            },
+            {
+              "id": "co-reg",
+              "label": "REG",
+              "fullName": "Regency Centers",
+              "founded": "1963",
+              "hq": "Jacksonville, Florida"
+            },
+            {
+              "id": "co-spg",
+              "label": "SPG",
+              "fullName": "Simon Property Group",
+              "founded": "2003",
+              "hq": "Indianapolis, Indiana"
+            }
+          ]
+        },
+        {
+          "id": "sub-health-care-reits",
+          "label": "Health Care REITs",
+          "children": [
+            {
+              "id": "co-doc",
+              "label": "DOC",
+              "fullName": "Healthpeak Properties",
+              "founded": "1985",
+              "hq": "Denver, Colorado"
+            },
+            {
+              "id": "co-vtr",
+              "label": "VTR",
+              "fullName": "Ventas",
+              "founded": "1998",
+              "hq": "Chicago, Illinois"
+            },
+            {
+              "id": "co-well",
+              "label": "WELL",
+              "fullName": "Welltower",
+              "founded": "1970",
+              "hq": "Toledo, Ohio"
+            }
+          ]
+        },
+        {
+          "id": "sub-hotel---resort-reits",
+          "label": "Hotel & Resort REITs",
+          "children": [
+            {
+              "id": "co-hst",
+              "label": "HST",
+              "fullName": "Host Hotels & Resorts",
+              "founded": "1993",
+              "hq": "Bethesda, Maryland"
+            },
+            {
+              "id": "co-vici",
+              "label": "VICI",
+              "fullName": "Vici Properties",
+              "founded": "2017",
+              "hq": "New York City, New York"
+            }
+          ]
+        },
+        {
+          "id": "sub-single-family-residential-reits",
+          "label": "Single-Family Residential REITs",
+          "children": [
+            {
+              "id": "co-invh",
+              "label": "INVH",
+              "fullName": "Invitation Homes",
+              "founded": "2012",
+              "hq": "Dallas, Texas"
+            }
+          ]
+        },
+        {
+          "id": "sub-other-specialized-reits",
+          "label": "Other Specialized REITs",
+          "children": [
+            {
+              "id": "co-irm",
+              "label": "IRM",
+              "fullName": "Iron Mountain",
+              "founded": "1951",
+              "hq": "Portsmouth, New Hampshire"
+            }
+          ]
+        },
+        {
+          "id": "sub-industrial-reits",
+          "label": "Industrial REITs",
+          "children": [
+            {
+              "id": "co-pld",
+              "label": "PLD",
+              "fullName": "Prologis",
+              "founded": "1983",
+              "hq": "San Francisco, California"
+            }
+          ]
+        },
+        {
+          "id": "sub-timber-reits",
+          "label": "Timber REITs",
+          "children": [
+            {
+              "id": "co-wy",
+              "label": "WY",
+              "fullName": "Weyerhaeuser",
+              "founded": "1900",
+              "hq": "Seattle, Washington"
+            }
+          ]
+        }
+      ],
+      "companyCount": 31
+    },
+    {
+      "id": "sector-communication-services",
+      "label": "Communication Services",
+      "children": [
+        {
+          "id": "sub-interactive-media---services",
+          "label": "Interactive Media & Services",
+          "children": [
+            {
+              "id": "co-googl",
+              "label": "GOOGL",
+              "fullName": "Alphabet Inc. (Class A)",
+              "founded": "1998",
+              "hq": "Mountain View, California"
+            },
+            {
+              "id": "co-goog",
+              "label": "GOOG",
+              "fullName": "Alphabet Inc. (Class C)",
+              "founded": "1998",
+              "hq": "Mountain View, California"
+            },
+            {
+              "id": "co-meta",
+              "label": "META",
+              "fullName": "Meta Platforms",
+              "founded": "2004",
+              "hq": "Menlo Park, California"
+            }
+          ]
+        },
+        {
+          "id": "sub-integrated-telecommunication-services",
+          "label": "Integrated Telecommunication Services",
+          "children": [
+            {
+              "id": "co-t",
+              "label": "T",
+              "fullName": "AT&T",
+              "founded": "1983 (1885)",
+              "hq": "Dallas, Texas"
+            },
+            {
+              "id": "co-vz",
+              "label": "VZ",
+              "fullName": "Verizon",
+              "founded": "1983 (1877)",
+              "hq": "New York City, New York"
+            }
+          ]
+        },
+        {
+          "id": "sub-cable---satellite",
+          "label": "Cable & Satellite",
+          "children": [
+            {
+              "id": "co-chtr",
+              "label": "CHTR",
+              "fullName": "Charter Communications",
+              "founded": "1993",
+              "hq": "Stamford, Connecticut"
+            },
+            {
+              "id": "co-cmcsa",
+              "label": "CMCSA",
+              "fullName": "Comcast",
+              "founded": "1963",
+              "hq": "Philadelphia, Pennsylvania"
+            }
+          ]
+        },
+        {
+          "id": "sub-wireless-telecommunication-services",
+          "label": "Wireless Telecommunication Services",
+          "children": [
+            {
+              "id": "co-sats",
+              "label": "SATS",
+              "fullName": "EchoStar",
+              "founded": "2008",
+              "hq": "Englewood, Colorado"
+            },
+            {
+              "id": "co-tmus",
+              "label": "TMUS",
+              "fullName": "T-Mobile US",
+              "founded": "1994",
+              "hq": "Bellevue, Washington"
+            }
+          ]
+        },
+        {
+          "id": "sub-interactive-home-entertainment",
+          "label": "Interactive Home Entertainment",
+          "children": [
+            {
+              "id": "co-ea",
+              "label": "EA",
+              "fullName": "Electronic Arts",
+              "founded": "1982",
+              "hq": "Redwood City, California"
+            },
+            {
+              "id": "co-ttwo",
+              "label": "TTWO",
+              "fullName": "Take-Two Interactive",
+              "founded": "1993",
+              "hq": "New York City, New York"
+            }
+          ]
+        },
+        {
+          "id": "sub-broadcasting",
+          "label": "Broadcasting",
+          "children": [
+            {
+              "id": "co-foxa",
+              "label": "FOXA",
+              "fullName": "Fox Corporation (Class A)",
+              "founded": "2019",
+              "hq": "New York City, New York"
+            },
+            {
+              "id": "co-fox",
+              "label": "FOX",
+              "fullName": "Fox Corporation (Class B)",
+              "founded": "2019",
+              "hq": "New York City, New York"
+            },
+            {
+              "id": "co-wbd",
+              "label": "WBD",
+              "fullName": "Warner Bros. Discovery",
+              "founded": "2022 (Warner Bros. 1923)",
+              "hq": "New York City, New York"
+            }
+          ]
+        },
+        {
+          "id": "sub-movies---entertainment",
+          "label": "Movies & Entertainment",
+          "children": [
+            {
+              "id": "co-lyv",
+              "label": "LYV",
+              "fullName": "Live Nation Entertainment",
+              "founded": "2010",
+              "hq": "Beverly Hills, California"
+            },
+            {
+              "id": "co-nflx",
+              "label": "NFLX",
+              "fullName": "Netflix",
+              "founded": "1997",
+              "hq": "Los Gatos, California"
+            },
+            {
+              "id": "co-psky",
+              "label": "PSKY",
+              "fullName": "Paramount Skydance Corporation",
+              "founded": "2025 (Paramount Pictures 1912)",
+              "hq": "Los Angeles, California"
+            },
+            {
+              "id": "co-tko",
+              "label": "TKO",
+              "fullName": "TKO Group Holdings",
+              "founded": "2023",
+              "hq": "New York City, New York"
+            },
+            {
+              "id": "co-dis",
+              "label": "DIS",
+              "fullName": "Walt Disney Company (The)",
+              "founded": "1923",
+              "hq": "Burbank, California"
+            }
+          ]
+        },
+        {
+          "id": "sub-publishing",
+          "label": "Publishing",
+          "children": [
+            {
+              "id": "co-nwsa",
+              "label": "NWSA",
+              "fullName": "News Corp (Class A)",
+              "founded": "2013 (News Corporation 1980)",
+              "hq": "New York City, New York"
+            },
+            {
+              "id": "co-nws",
+              "label": "NWS",
+              "fullName": "News Corp (Class B)",
+              "founded": "2013 (News Corporation 1980)",
+              "hq": "New York City, New York"
+            }
+          ]
+        },
+        {
+          "id": "sub-advertising",
+          "label": "Advertising",
+          "children": [
+            {
+              "id": "co-omc",
+              "label": "OMC",
+              "fullName": "Omnicom Group",
+              "founded": "1986",
+              "hq": "New York City, New York"
+            },
+            {
+              "id": "co-ttd",
+              "label": "TTD",
+              "fullName": "Trade Desk (The)",
+              "founded": "2009",
+              "hq": "Ventura, California"
+            }
+          ]
+        }
+      ],
+      "companyCount": 23
+    },
+    {
+      "id": "sector-consumer-staples",
+      "label": "Consumer Staples",
+      "children": [
+        {
+          "id": "sub-tobacco",
+          "label": "Tobacco",
+          "children": [
+            {
+              "id": "co-mo",
+              "label": "MO",
+              "fullName": "Altria",
+              "founded": "1985",
+              "hq": "Richmond, Virginia"
+            },
+            {
+              "id": "co-pm",
+              "label": "PM",
+              "fullName": "Philip Morris International",
+              "founded": "2008 (1847)",
+              "hq": "New York City, New York"
+            }
+          ]
+        },
+        {
+          "id": "sub-agricultural-products---services",
+          "label": "Agricultural Products & Services",
+          "children": [
+            {
+              "id": "co-adm",
+              "label": "ADM",
+              "fullName": "Archer Daniels Midland",
+              "founded": "1902",
+              "hq": "Chicago, Illinois"
+            },
+            {
+              "id": "co-bg",
+              "label": "BG",
+              "fullName": "Bunge Global",
+              "founded": "1818",
+              "hq": "Chesterfield, Missouri"
+            }
+          ]
+        },
+        {
+          "id": "sub-distillers---vintners",
+          "label": "Distillers & Vintners",
+          "children": [
+            {
+              "id": "co-bf.b",
+              "label": "BF.B",
+              "fullName": "Brown–Forman",
+              "founded": "1870",
+              "hq": "Louisville, Kentucky"
+            },
+            {
+              "id": "co-stz",
+              "label": "STZ",
+              "fullName": "Constellation Brands",
+              "founded": "1945",
+              "hq": "Rochester, New York"
+            }
+          ]
+        },
+        {
+          "id": "sub-packaged-foods---meats",
+          "label": "Packaged Foods & Meats",
+          "children": [
+            {
+              "id": "co-cpb",
+              "label": "CPB",
+              "fullName": "Campbell's Company (The)",
+              "founded": "1869",
+              "hq": "Camden, New Jersey"
+            },
+            {
+              "id": "co-cag",
+              "label": "CAG",
+              "fullName": "Conagra Brands",
+              "founded": "1919",
+              "hq": "Chicago, Illinois"
+            },
+            {
+              "id": "co-gis",
+              "label": "GIS",
+              "fullName": "General Mills",
+              "founded": "1856",
+              "hq": "Golden Valley, Minnesota"
+            },
+            {
+              "id": "co-hsy",
+              "label": "HSY",
+              "fullName": "Hershey Company (The)",
+              "founded": "1894",
+              "hq": "Hershey, Pennsylvania"
+            },
+            {
+              "id": "co-hrl",
+              "label": "HRL",
+              "fullName": "Hormel Foods",
+              "founded": "1891",
+              "hq": "Austin, Minnesota"
+            },
+            {
+              "id": "co-khc",
+              "label": "KHC",
+              "fullName": "Kraft Heinz",
+              "founded": "2015 (1869)",
+              "hq": "Chicago, Illinois; Pittsburgh, Pennsylvania"
+            },
+            {
+              "id": "co-mkc",
+              "label": "MKC",
+              "fullName": "McCormick & Company",
+              "founded": "1889",
+              "hq": "Hunt Valley, Maryland"
+            },
+            {
+              "id": "co-mdlz",
+              "label": "MDLZ",
+              "fullName": "Mondelez International",
+              "founded": "2012",
+              "hq": "Chicago, Illinois"
+            },
+            {
+              "id": "co-sjm",
+              "label": "SJM",
+              "fullName": "J.M. Smucker Company (The)",
+              "founded": "1897",
+              "hq": "Orrville, Ohio"
+            },
+            {
+              "id": "co-tsn",
+              "label": "TSN",
+              "fullName": "Tyson Foods",
+              "founded": "1935",
+              "hq": "Springdale, Arkansas"
+            }
+          ]
+        },
+        {
+          "id": "sub-food-retail",
+          "label": "Food Retail",
+          "children": [
+            {
+              "id": "co-casy",
+              "label": "CASY",
+              "fullName": "Casey's",
+              "founded": "1967",
+              "hq": "Ankeny, Iowa"
+            },
+            {
+              "id": "co-kr",
+              "label": "KR",
+              "fullName": "Kroger",
+              "founded": "1883",
+              "hq": "Cincinnati, Ohio"
+            }
+          ]
+        },
+        {
+          "id": "sub-household-products",
+          "label": "Household Products",
+          "children": [
+            {
+              "id": "co-chd",
+              "label": "CHD",
+              "fullName": "Church & Dwight",
+              "founded": "1847",
+              "hq": "Ewing, New Jersey"
+            },
+            {
+              "id": "co-clx",
+              "label": "CLX",
+              "fullName": "Clorox",
+              "founded": "1913",
+              "hq": "Oakland, California"
+            },
+            {
+              "id": "co-cl",
+              "label": "CL",
+              "fullName": "Colgate-Palmolive",
+              "founded": "1806",
+              "hq": "New York City, New York"
+            },
+            {
+              "id": "co-kmb",
+              "label": "KMB",
+              "fullName": "Kimberly-Clark",
+              "founded": "1872",
+              "hq": "Irving, Texas"
+            }
+          ]
+        },
+        {
+          "id": "sub-soft-drinks---non-alcoholic-beverages",
+          "label": "Soft Drinks & Non-alcoholic Beverages",
+          "children": [
+            {
+              "id": "co-ko",
+              "label": "KO",
+              "fullName": "Coca-Cola Company (The)",
+              "founded": "1886",
+              "hq": "Atlanta, Georgia"
+            },
+            {
+              "id": "co-kdp",
+              "label": "KDP",
+              "fullName": "Keurig Dr Pepper",
+              "founded": "1981",
+              "hq": "Burlington, Massachusetts"
+            },
+            {
+              "id": "co-mnst",
+              "label": "MNST",
+              "fullName": "Monster Beverage",
+              "founded": "2012 (1935)",
+              "hq": "Corona, California"
+            },
+            {
+              "id": "co-pep",
+              "label": "PEP",
+              "fullName": "PepsiCo",
+              "founded": "1898",
+              "hq": "Purchase, New York"
+            }
+          ]
+        },
+        {
+          "id": "sub-consumer-staples-merchandise-retail",
+          "label": "Consumer Staples Merchandise Retail",
+          "children": [
+            {
+              "id": "co-cost",
+              "label": "COST",
+              "fullName": "Costco",
+              "founded": "1976",
+              "hq": "Issaquah, Washington"
+            },
+            {
+              "id": "co-dg",
+              "label": "DG",
+              "fullName": "Dollar General",
+              "founded": "1939",
+              "hq": "Goodlettsville, Tennessee"
+            },
+            {
+              "id": "co-dltr",
+              "label": "DLTR",
+              "fullName": "Dollar Tree",
+              "founded": "1986",
+              "hq": "Chesapeake, Virginia"
+            },
+            {
+              "id": "co-tgt",
+              "label": "TGT",
+              "fullName": "Target Corporation",
+              "founded": "1902",
+              "hq": "Minneapolis, Minnesota"
+            },
+            {
+              "id": "co-wmt",
+              "label": "WMT",
+              "fullName": "Walmart",
+              "founded": "1962",
+              "hq": "Bentonville, Arkansas"
+            }
+          ]
+        },
+        {
+          "id": "sub-personal-care-products",
+          "label": "Personal Care Products",
+          "children": [
+            {
+              "id": "co-el",
+              "label": "EL",
+              "fullName": "Estée Lauder Companies (The)",
+              "founded": "1946",
+              "hq": "New York City, New York"
+            },
+            {
+              "id": "co-kvue",
+              "label": "KVUE",
+              "fullName": "Kenvue",
+              "founded": "2022 (Johnson & Johnson spinoff)",
+              "hq": "Skillman, New Jersey"
+            },
+            {
+              "id": "co-pg",
+              "label": "PG",
+              "fullName": "Procter & Gamble",
+              "founded": "1837",
+              "hq": "Cincinnati, Ohio"
+            }
+          ]
+        },
+        {
+          "id": "sub-brewers",
+          "label": "Brewers",
+          "children": [
+            {
+              "id": "co-tap",
+              "label": "TAP",
+              "fullName": "Molson Coors Beverage Company",
+              "founded": "2005 (Molson 1786, Coors 1873)",
+              "hq": "Chicago, Illinois"
+            }
+          ]
+        },
+        {
+          "id": "sub-food-distributors",
+          "label": "Food Distributors",
+          "children": [
+            {
+              "id": "co-syy",
+              "label": "SYY",
+              "fullName": "Sysco",
+              "founded": "1969",
+              "hq": "Houston, Texas"
+            }
+          ]
+        }
+      ],
+      "companyCount": 36
+    },
+    {
+      "id": "sector-energy",
+      "label": "Energy",
+      "children": [
+        {
+          "id": "sub-oil---gas-exploration---production",
+          "label": "Oil & Gas Exploration & Production",
+          "children": [
+            {
+              "id": "co-apa",
+              "label": "APA",
+              "fullName": "APA Corporation",
+              "founded": "1954",
+              "hq": "Houston, Texas"
+            },
+            {
+              "id": "co-cop",
+              "label": "COP",
+              "fullName": "ConocoPhillips",
+              "founded": "2002",
+              "hq": "Houston, Texas"
+            },
+            {
+              "id": "co-dvn",
+              "label": "DVN",
+              "fullName": "Devon Energy",
+              "founded": "1971",
+              "hq": "Oklahoma City, Oklahoma"
+            },
+            {
+              "id": "co-fang",
+              "label": "FANG",
+              "fullName": "Diamondback Energy",
+              "founded": "2007",
+              "hq": "Midland, Texas"
+            },
+            {
+              "id": "co-eog",
+              "label": "EOG",
+              "fullName": "EOG Resources",
+              "founded": "1999",
+              "hq": "Houston, Texas"
+            },
+            {
+              "id": "co-eqt",
+              "label": "EQT",
+              "fullName": "EQT Corporation",
+              "founded": "1888",
+              "hq": "Pittsburgh, Pennsylvania"
+            },
+            {
+              "id": "co-exe",
+              "label": "EXE",
+              "fullName": "Expand Energy",
+              "founded": "1989",
+              "hq": "Oklahoma City, Oklahoma"
+            },
+            {
+              "id": "co-oxy",
+              "label": "OXY",
+              "fullName": "Occidental Petroleum",
+              "founded": "1920",
+              "hq": "Houston, Texas"
+            },
+            {
+              "id": "co-tpl",
+              "label": "TPL",
+              "fullName": "Texas Pacific Land Corporation",
+              "founded": "1888",
+              "hq": "Dallas, Texas"
+            }
+          ]
+        },
+        {
+          "id": "sub-oil---gas-equipment---services",
+          "label": "Oil & Gas Equipment & Services",
+          "children": [
+            {
+              "id": "co-bkr",
+              "label": "BKR",
+              "fullName": "Baker Hughes",
+              "founded": "2017",
+              "hq": "Houston, Texas"
+            },
+            {
+              "id": "co-hal",
+              "label": "HAL",
+              "fullName": "Halliburton",
+              "founded": "1919",
+              "hq": "Houston, Texas"
+            },
+            {
+              "id": "co-slb",
+              "label": "SLB",
+              "fullName": "Schlumberger",
+              "founded": "1926",
+              "hq": "Houston, Texas"
+            }
+          ]
+        },
+        {
+          "id": "sub-integrated-oil---gas",
+          "label": "Integrated Oil & Gas",
+          "children": [
+            {
+              "id": "co-cvx",
+              "label": "CVX",
+              "fullName": "Chevron Corporation",
+              "founded": "1879",
+              "hq": "Houston, Texas"
+            },
+            {
+              "id": "co-xom",
+              "label": "XOM",
+              "fullName": "ExxonMobil",
+              "founded": "1999",
+              "hq": "Irving, Texas"
+            }
+          ]
+        },
+        {
+          "id": "sub-oil---gas-storage---transportation",
+          "label": "Oil & Gas Storage & Transportation",
+          "children": [
+            {
+              "id": "co-kmi",
+              "label": "KMI",
+              "fullName": "Kinder Morgan",
+              "founded": "1997",
+              "hq": "Houston, Texas"
+            },
+            {
+              "id": "co-oke",
+              "label": "OKE",
+              "fullName": "Oneok",
+              "founded": "1906",
+              "hq": "Tulsa, Oklahoma"
+            },
+            {
+              "id": "co-trgp",
+              "label": "TRGP",
+              "fullName": "Targa Resources",
+              "founded": "2005",
+              "hq": "Houston, Texas"
+            },
+            {
+              "id": "co-wmb",
+              "label": "WMB",
+              "fullName": "Williams Companies",
+              "founded": "1908",
+              "hq": "Tulsa, Oklahoma"
+            }
+          ]
+        },
+        {
+          "id": "sub-oil---gas-refining---marketing",
+          "label": "Oil & Gas Refining & Marketing",
+          "children": [
+            {
+              "id": "co-mpc",
+              "label": "MPC",
+              "fullName": "Marathon Petroleum",
+              "founded": "2009 (1887)",
+              "hq": "Findlay, Ohio"
+            },
+            {
+              "id": "co-psx",
+              "label": "PSX",
+              "fullName": "Phillips 66",
+              "founded": "2012 (1917)",
+              "hq": "Houston, Texas"
+            },
+            {
+              "id": "co-vlo",
+              "label": "VLO",
+              "fullName": "Valero Energy",
+              "founded": "1980",
+              "hq": "San Antonio, Texas"
+            }
+          ]
+        }
+      ],
+      "companyCount": 21
+    }
+  ]
+}

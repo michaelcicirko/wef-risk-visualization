@@ -1,0 +1,146 @@
+.container {
+  background: #ffffff;
+  min-height: 100vh;
+  padding: 40px 24px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  color: #1a1a2e;
+}
+
+.header {
+  max-width: 1000px;
+  margin: 0 auto 24px;
+}
+
+.title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin: 0 0 8px;
+  background: linear-gradient(135deg, #3b82f6, #6366f1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.subtitle {
+  font-size: 0.95rem;
+  color: #64748b;
+  margin: 0;
+  max-width: 700px;
+}
+
+.backLink {
+  display: inline-block;
+  margin-bottom: 16px;
+  color: #6366f1;
+  text-decoration: none;
+  font-size: 0.85rem;
+}
+
+.backLink:hover {
+  text-decoration: underline;
+}
+
+.chartWrapper {
+  max-width: 1000px;
+  margin: 0 auto;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  background: #fafbfc;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.04);
+  padding: 32px 24px;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  gap: 16px;
+}
+
+.rowLabel {
+  width: 140px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #1a1a2e;
+  text-align: right;
+  flex-shrink: 0;
+}
+
+.rowIcons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3px;
+}
+
+.rowValue {
+  font-size: 0.75rem;
+  color: #64748b;
+  margin-left: 12px;
+  flex-shrink: 0;
+}
+
+.controls {
+  max-width: 1000px;
+  margin: 24px auto 0;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.sliderLabel {
+  font-size: 0.75rem;
+  color: #64748b;
+  white-space: nowrap;
+}
+
+.slider {
+  flex: 1;
+  accent-color: #6366f1;
+}
+
+.yearValue {
+  font-size: 1.2rem;
+  font-weight: 900;
+  color: #6366f1;
+  min-width: 50px;
+  text-align: right;
+}
+
+.legend {
+  max-width: 1000px;
+  margin: 16px auto 0;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.legendItem {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.8rem;
+  color: #64748b;
+}
+
+.legendIcon {
+  width: 16px;
+  height: 16px;
+}
+
+.stats {
+  max-width: 1000px;
+  margin: 16px auto 0;
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.stat {
+  font-size: 0.8rem;
+  color: #64748b;
+}
+
+.statValue {
+  color: #6366f1;
+  font-weight: 700;
+}

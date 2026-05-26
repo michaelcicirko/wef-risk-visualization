@@ -52,6 +52,11 @@ export default function WMOExtremeEvents() {
       .polygonAltitude(0.005);
 
     globeInstanceRef.current = g;
+
+    return () => {
+      g._destructor?.();
+      globeInstanceRef.current = null;
+    };
   }, [worldData]);
 
   // Add event points when data loads

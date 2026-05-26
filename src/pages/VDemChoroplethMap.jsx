@@ -6,7 +6,8 @@ import { feature } from 'topojson-client';
 import { select } from 'd3-selection';
 import { scaleSequential } from 'd3-scale';
 import { interpolateRdBu } from 'd3-scale-chromatic';
-import { VDEM_DATA, VDEM_COUNTRIES, VDEM_YEARS, DEMOCRACY_INDICES, getYearData } from '../data/vdemDemocracy.js';
+import { DEMOCRACY_INDICES } from '../data/vdemDemocracy.js';
+import { useVdemData } from '../data/useVdemData.js';
 import styles from './VDemChoroplethMap.module.css';
 
 // Memoized country path component to prevent unnecessary re-renders
@@ -80,10 +81,11 @@ const YEAR_START = 1789;
 const YEAR_END = 2025;
 
 function VDemChoroplethMap() {
+  const { data: VDEM_DATA, loading: vdemLoading, error: vdemError } = useVdemData();
   const svgRef = useRef(null);
   const [worldData, setWorldData] = useState(null);
-  const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
+  const [mapLoading, setMapLoading] = useState(true);
+  const [mapError, setMapError] = useState(null);
   const [year, setYear] = useState(1950); // Start at mid-point for demo
   const [isPlaying, setIsPlaying] = useState(false);
   const [selectedIndex, setSelectedIndex] = useState('v2x_libdem');
@@ -91,10 +93,19 @@ function VDemChoroplethMap() {
   const [tooltipPos, setTooltipPos] = useState({ x: 0, y: 0 });
   const playRef = useRef(null);
 
+  const VDEM_COUNTRIES = useMemo(() => {
+    if (!VDEM_DATA) return [];
+    const seen = new Map();
+    VDEM_DATA.forEach(d => {
+      if (!seen.has(d.country_id)) seen.set(d.country_id, { id: d.country_id, name: d.country_name, code: d.country_text_id, region: d.region });
+    });
+    return Array.from(seen.values());
+  }, [VDEM_DATA]);
+
   // Fetch world TopoJSON
   useEffect(() => {
-    setLoading(true);
-    setError(null);
+    setMapLoading(true);
+    setMapError(null);
     fetch('https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json')
       .then(res => {
         if (!res.ok) throw new Error('Failed to load map data');
@@ -103,19 +114,20 @@ function VDemChoroplethMap() {
       .then(topo => {
         const countries = feature(topo, topo.objects.countries);
         setWorldData(countries);
-        setLoading(false);
+        setMapLoading(false);
       })
       .catch(err => {
         console.error('Map fetch error:', err);
-        setError('Failed to load world map. Please refresh.');
-        setLoading(false);
+        setMapError('Failed to load world map. Please refresh.');
+        setMapLoading(false);
       });
   }, []);
 
   // Get data for current year
   const yearData = useMemo(() => {
-    return getYearData(year);
-  }, [year]);
+    if (!VDEM_DATA) return [];
+    return VDEM_DATA.filter(d => d.year === year);
+  }, [VDEM_DATA, year]);
 
   // Build lookup: country code -> score
   const scoreMap = useMemo(() => {
@@ -133,7 +145,7 @@ function VDemChoroplethMap() {
     const vdemCode = ISO_TO_VDEM[isoCode];
     if (!vdemCode) return null;
     return VDEM_COUNTRIES.find(c => c.code === vdemCode);
-  }, []);
+  }, [VDEM_COUNTRIES]);
 
   // Color scale
   const colorScale = useMemo(() => getColorScale(), []);
@@ -259,11 +271,11 @@ function VDemChoroplethMap() {
         </div>
 
         <div className={styles.mapContainer} ref={svgRef}>
-          {loading && (
-            <div className={styles.loading}>Loading world map...</div>
+          {(vdemLoading || mapLoading) && (
+            <div className={styles.loading}>Loading...</div>
           )}
-          {error && (
-            <div className={styles.error}>{error}</div>
+          {(vdemError || mapError) && (
+            <div className={styles.error}>{vdemError || mapError}</div>
           )}
           {worldData && (
             <svg

@@ -131,6 +131,27 @@ const VDemConnectedScatter          = lazy(() => import('./pages/VDemConnectedSc
 const VDemBumpChart                 = lazy(() => import('./pages/VDemBumpChart.jsx'));
 const VDemComparativeLines          = lazy(() => import('./pages/VDemComparativeLines.jsx'));
 const VDemCountryProfile            = lazy(() => import('./pages/VDemCountryProfile.jsx'));
+const VDemHierarchyTree             = lazy(() => import('./pages/VDemHierarchyTree.jsx'));
+const ClimateCandlestick            = lazy(() => import('./pages/ClimateCandlestick.jsx'));
+const NATOExpenditureStream         = lazy(() => import('./pages/NATOExpenditureStream.jsx'));
+const DemocracyHierarchy3D          = lazy(() => import('./pages/DemocracyHierarchy3D.jsx'));
+const RiskCausalityFlow             = lazy(() => import('./pages/RiskCausalityFlow.jsx'));
+const ParticleMigration             = lazy(() => import('./pages/ParticleMigration.jsx'));
+const RiskTerrain                   = lazy(() => import('./pages/RiskTerrain.jsx'));
+const HistoricalDemocracySketch     = lazy(() => import('./pages/HistoricalDemocracySketch.jsx'));
+const CesiumWeatherGlobe            = lazy(() => import('./pages/CesiumWeatherGlobe.jsx'));
+const HighDensityTelemetry          = lazy(() => import('./pages/HighDensityTelemetry.jsx'));
+const GPUForceNetwork               = lazy(() => import('./pages/GPUForceNetwork.jsx'));
+const DemocracySonification         = lazy(() => import('./pages/DemocracySonification.jsx'));
+const VDemRadarClean                = lazy(() => import('./pages/VDemRadarClean.jsx'));
+const RiskPipelineFlow              = lazy(() => import('./pages/RiskPipelineFlow.jsx'));
+const PlinkoDistribution            = lazy(() => import('./pages/PlinkoDistribution.jsx'));
+const ASCIITerminal                 = lazy(() => import('./pages/ASCIITerminal.jsx'));
+const IsotypeChart                  = lazy(() => import('./pages/IsotypeChart.jsx'));
+const FluidSimulation               = lazy(() => import('./pages/FluidSimulation.jsx'));
+const MapLibreVelocity              = lazy(() => import('./pages/MapLibreVelocity.jsx'));
+const WebGPUMassData                = lazy(() => import('./pages/WebGPUMassData.jsx'));
+const GPUPhysicsNetwork2            = lazy(() => import('./pages/GPUPhysicsNetwork.jsx'));
 
 function App() {
   return (
@@ -182,6 +203,27 @@ function App() {
         <Route path="/vdem-bump-chart" element={<VDemBumpChart />} />
         <Route path="/vdem-comparative-lines" element={<VDemComparativeLines />} />
         <Route path="/vdem-country-profile" element={<VDemCountryProfile />} />
+        <Route path="/vdem-hierarchy-tree" element={<VDemHierarchyTree />} />
+        <Route path="/climate-candlestick" element={<ClimateCandlestick />} />
+        <Route path="/nato-expenditure-stream" element={<NATOExpenditureStream />} />
+        <Route path="/democracy-hierarchy-3d" element={<DemocracyHierarchy3D />} />
+        <Route path="/risk-causality-flow" element={<RiskCausalityFlow />} />
+        <Route path="/particle-migration" element={<ParticleMigration />} />
+        <Route path="/risk-terrain" element={<RiskTerrain />} />
+        <Route path="/historical-democracy-sketch" element={<HistoricalDemocracySketch />} />
+        <Route path="/cesium-weather-globe" element={<CesiumWeatherGlobe />} />
+        <Route path="/high-density-telemetry" element={<HighDensityTelemetry />} />
+        <Route path="/gpu-force-network" element={<GPUForceNetwork />} />
+        <Route path="/democracy-sonification" element={<DemocracySonification />} />
+        <Route path="/vdem-radar-clean" element={<VDemRadarClean />} />
+        <Route path="/risk-pipeline-flow" element={<RiskPipelineFlow />} />
+        <Route path="/plinko-distribution" element={<PlinkoDistribution />} />
+        <Route path="/ascii-terminal" element={<ASCIITerminal />} />
+        <Route path="/isotype-chart" element={<IsotypeChart />} />
+        <Route path="/fluid-simulation" element={<FluidSimulation />} />
+        <Route path="/maplibre-velocity" element={<MapLibreVelocity />} />
+        <Route path="/webgpu-mass-data" element={<WebGPUMassData />} />
+        <Route path="/gpu-physics-network" element={<GPUPhysicsNetwork2 />} />
       </Routes>
       </RouteErrorBoundary>
       </Suspense>

@@ -9,6 +9,14 @@
 
 .nav {
   padding: 16px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navControls {
+  display: flex;
+  gap: 8px;
 }
 
 .backLink {
@@ -46,44 +54,47 @@
   flex-direction: column;
   padding: 0 24px 32px;
   gap: 16px;
-  max-width: 900px;
+  max-width: 1100px;
   margin: 0 auto;
   width: 100%;
   box-sizing: border-box;
 }
 
+/* View toggle */
+.viewToggle {
+  display: flex;
+  gap: 4px;
+  justify-content: center;
+}
+
+.toggleButton {
+  background: #1e1e2e;
+  color: #7f8c8d;
+  border: 1px solid #3a3a5a;
+  border-radius: 6px;
+  padding: 8px 18px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, border-color 0.2s;
+}
+
+.toggleButton:hover {
+  color: #ffffff;
+  border-color: #5a5a8a;
+}
+
+.toggleActive {
+  background: #2a2a4a;
+  color: #ffffff;
+  border-color: #6a6aaa;
+}
+
 /* Legend */
 .legend {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
   gap: 12px;
-}
-
-.legendCategories {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-}
-
-.legendItem {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  font-size: 12px;
-  color: #aaaacc;
-}
-
-.legendDot {
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  flex-shrink: 0;
-}
-
-.legendLabel {
-  text-transform: capitalize;
 }
 
 .legendScale {
@@ -95,10 +106,18 @@
 }
 
 .legendGradient {
-  width: 80px;
+  width: 100px;
   height: 10px;
   border-radius: 4px;
-  background: linear-gradient(to right, #deebf7, #084594);
+  background: linear-gradient(to right, #000004, #420a68, #932667, #dd513a, #fca50a);
+  border: 1px solid #2a2a4a;
+}
+
+.legendGradientDiverging {
+  width: 120px;
+  height: 10px;
+  border-radius: 4px;
+  background: linear-gradient(to right, #b2182b, #d6604d, #f4a582, #fddbc7, #f7f7f7, #d1e5f0, #92c5de, #4393c3, #2166ac);
   border: 1px solid #2a2a4a;
 }
 
@@ -118,9 +137,8 @@
 
 .matrix {
   display: grid;
-  grid-template-columns: 220px repeat(3, 80px);
-  gap: 4px;
-  min-width: 460px;
+  gap: 3px;
+  min-width: 600px;
 }
 
 .rowLabelSpacer {
@@ -153,8 +171,8 @@
 }
 
 .cell {
-  height: 40px;
-  border-radius: 4px;
+  height: 36px;
+  border-radius: 3px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -163,10 +181,16 @@
   border: 1px solid #2a2a4a;
 }
 
-.cellRank {
-  font-size: 11px;
+.cellValue {
+  font-size: 10px;
   font-weight: 700;
-  color: rgba(0, 0, 0, 0.75);
+  color: rgba(255, 255, 255, 0.9);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+}
+
+.cellNull {
+  font-size: 10px;
+  color: #3a3a5a;
 }
 
 /* Tooltip */

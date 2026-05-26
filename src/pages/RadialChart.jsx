@@ -1,6 +1,5 @@
-import { useState, useEffect, useCallback, useRef, useMemo } from 'react';
+import { useState, useEffect, useCallback, useRef } from 'react';
 import { Link } from 'react-router-dom';
-import { motion, AnimatePresence } from 'framer-motion';
 import { riskData, categoryColors, YEAR_MIN, YEAR_MAX, YEAR_MID } from '../data/risks.js';
 import styles from './RadialChart.module.css';
 
@@ -33,7 +32,8 @@ const R_OUTER = 190;
 const R_INNER = 100;
 const SVG_W = 680;
 const SVG_H = 480;
-const GAP_ANGLE = 0.03; // radians between slices
+const GAP_ANGLE = 0.03;
+const TWEEN_MS = 850;
 
 // Convert polar to cartesian
 function polar(cx, cy, r, angleRad) {
@@ -62,51 +62,102 @@ function arcPath(cx, cy, rOuter, rInner, startAngle, endAngle) {
   ].join(' ');
 }
 
-// Build slices for a given year's scores
-function buildSlices(year) {
+// Easing: cubic ease-in-out
+function easeInOut(t) {
+  return t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
+}
+
+// Compute target angles for a given year
+function getTargetAngles(year) {
   const scores = getCategoryScores(year);
   const total = ALL_CATEGORIES.reduce((s, c) => s + (scores[c] || 0), 0);
   let angle = 0;
   return ALL_CATEGORIES.map(cat => {
     const score = scores[cat] || 0;
     const sweep = total > 0 ? (score / total) * 2 * Math.PI : 0;
-    const startAngle = angle;
-    const endAngle = angle + sweep;
-    const midAngle = startAngle + sweep / 2;
-    angle = endAngle;
-    const [lx, ly] = polar(CX, CY, R_OUTER + 22, midAngle);
-    return {
-      cat, score, startAngle, endAngle, midAngle,
-      path: arcPath(CX, CY, R_OUTER, R_INNER, startAngle, endAngle),
-      labelX: lx,
-      labelY: ly,
-      labelAnchor: Math.cos(midAngle - Math.PI / 2) > 0 ? 'start' : 'end',
-    };
+    const start = angle;
+    const end = angle + sweep;
+    angle = end;
+    return { cat, score, start, end, total };
   });
 }
 
-// Pre-build slices for all years
-const SLICES_BY_YEAR = {};
-YEARS.forEach(y => { SLICES_BY_YEAR[y] = buildSlices(y); });
+// Pre-compute targets for all years
+const TARGETS_BY_YEAR = {};
+YEARS.forEach(y => { TARGETS_BY_YEAR[y] = getTargetAngles(y); });
 
 function RadialChart() {
   const yearIndexRef = useRef(0);
+  const rafRef = useRef(null);
+  const tweenStartRef = useRef(null);
+  const fromAnglesRef = useRef(null);
+  const toAnglesRef = useRef(null);
 
   const [yearIndex, setYearIndex]     = useState(0);
   const [isPlaying, setIsPlaying]     = useState(true);
-  const [flashingCat, setFlashingCat] = useState(null);
   const [hoveredCat, setHoveredCat]   = useState(null);
 
   const [holdDuration, setHoldDuration] = useState(2400);
   const [initialHold, setInitialHold]   = useState(800);
   const [timingInputs, setTimingInputs] = useState({ holdDuration: 2400, initialHold: 800 });
 
-  const currentYear  = YEARS[yearIndex];
-  const slices       = SLICES_BY_YEAR[currentYear];
-  const scores       = getCategoryScores(currentYear);
-  const total        = ALL_CATEGORIES.reduce((s, c) => s + (scores[c] || 0), 0);
+  // Current interpolated render state (angles + scores + total)
+  const [renderState, setRenderState] = useState(() => {
+    const targets = TARGETS_BY_YEAR[YEARS[0]];
+    const total = targets[0]?.total || 0;
+    return targets.map(t => ({
+      cat: t.cat, score: t.score, start: t.start, end: t.end, total,
+    }));
+  });
 
-  // ── Animation: cycle through years ──
+  const currentYear = YEARS[yearIndex];
+
+  // Kick off a tween whenever yearIndex changes
+  useEffect(() => {
+    const target = TARGETS_BY_YEAR[YEARS[yearIndex]];
+    // Capture the current render state as "from"
+    fromAnglesRef.current = renderState.map(s => ({ start: s.start, end: s.end, score: s.score, total: s.total }));
+    toAnglesRef.current = target;
+    tweenStartRef.current = performance.now();
+
+    const tick = (now) => {
+      const elapsed = now - tweenStartRef.current;
+      const t = Math.min(elapsed / TWEEN_MS, 1);
+      const eased = easeInOut(t);
+
+      const from = fromAnglesRef.current;
+      const to = toAnglesRef.current;
+
+      const interpolated = ALL_CATEGORIES.map((cat, i) => {
+        const fStart = from[i]?.start ?? 0;
+        const fEnd   = from[i]?.end ?? 0;
+        const fScore = from[i]?.score ?? 0;
+        const fTotal = from[i]?.total ?? 0;
+        const tStart = to[i]?.start ?? 0;
+        const tEnd   = to[i]?.end ?? 0;
+        const tScore = to[i]?.score ?? 0;
+        const tTotal = to[i]?.total ?? 0;
+        return {
+          cat,
+          start: fStart + (tStart - fStart) * eased,
+          end:   fEnd + (tEnd - fEnd) * eased,
+          score: Math.round(fScore + (tScore - fScore) * eased),
+          total: Math.round(fTotal + (tTotal - fTotal) * eased),
+        };
+      });
+
+      setRenderState(interpolated);
+
+      if (t < 1) {
+        rafRef.current = requestAnimationFrame(tick);
+      }
+    };
+
+    rafRef.current = requestAnimationFrame(tick);
+    return () => { if (rafRef.current) cancelAnimationFrame(rafRef.current); };
+  }, [yearIndex]);
+
+  // ── Auto-play: cycle through years ──
   useEffect(() => {
     if (!isPlaying) return;
     let timeoutId;
@@ -119,8 +170,6 @@ function RadialChart() {
       }
       yearIndexRef.current = next;
       setYearIndex(next);
-      setFlashingCat('all');
-      setTimeout(() => setFlashingCat(null), 450);
       timeoutId = setTimeout(advance, holdDuration);
     };
 
@@ -133,7 +182,6 @@ function RadialChart() {
     setIsPlaying(false);
     yearIndexRef.current = 0;
     setYearIndex(0);
-    setFlashingCat(null);
     setTimeout(() => setIsPlaying(true), 100);
   }, []);
 
@@ -142,8 +190,10 @@ function RadialChart() {
     setIsPlaying(false);
     yearIndexRef.current = idx;
     setYearIndex(idx);
-    setFlashingCat(null);
   }, []);
+
+  // Derive display values from renderState
+  const displayTotal = renderState[0]?.total || 0;
 
   return (
     <div className={styles.page}>
@@ -177,50 +227,47 @@ function RadialChart() {
               preserveAspectRatio="xMidYMid meet"
             >
               {/* Slices */}
-              {slices.map(slice => {
-                const isFlashing = flashingCat === 'all';
-                const isHovered  = hoveredCat === slice.cat;
+              {renderState.map(slice => {
+                const isHovered = hoveredCat === slice.cat;
                 const color = categoryColors[slice.cat] || '#5a5a8a';
                 const rOuter = isHovered ? R_OUTER + 10 : R_OUTER;
+                const path = arcPath(CX, CY, rOuter, R_INNER, slice.start, slice.end);
+                const midAngle = (slice.start + slice.end) / 2;
+                const sweep = slice.end - slice.start;
 
                 return (
-                  <g key={slice.cat}
+                  <g
+                    key={slice.cat}
                     onMouseEnter={() => setHoveredCat(slice.cat)}
                     onMouseLeave={() => setHoveredCat(null)}
                     style={{ cursor: 'pointer' }}
+                    opacity={hoveredCat && !isHovered ? 0.5 : 1}
                   >
-                    <motion.path
-                      d={arcPath(CX, CY, rOuter, R_INNER, slice.startAngle, slice.endAngle)}
-                      fill={isFlashing ? '#ff00ff' : color}
-                      opacity={hoveredCat && !isHovered ? 0.45 : 0.88}
-                      animate={{
-                        d: arcPath(CX, CY, rOuter, R_INNER, slice.startAngle, slice.endAngle),
-                        fill: isFlashing ? '#ff00ff' : color,
-                      }}
-                      transition={{ duration: 0.85, ease: [0.34, 1.2, 0.64, 1] }}
-                      stroke="#0d0d1a"
-                      strokeWidth={2}
-                    />
+                    {path && (
+                      <path
+                        d={path}
+                        fill={color}
+                        opacity={0.88}
+                        stroke="#0d0d1a"
+                        strokeWidth={2}
+                      />
+                    )}
                     {/* Label line + text — only for larger slices */}
-                    {slice.endAngle - slice.startAngle > 0.3 && (
-                      <motion.g
-                        animate={{ opacity: 1 }}
-                        initial={{ opacity: 0 }}
-                        transition={{ delay: 0.4, duration: 0.3 }}
-                      >
+                    {sweep > 0.3 && (
+                      <g>
                         <line
-                          x1={polar(CX, CY, R_OUTER + 4, slice.midAngle)[0]}
-                          y1={polar(CX, CY, R_OUTER + 4, slice.midAngle)[1]}
-                          x2={polar(CX, CY, R_OUTER + 18, slice.midAngle)[0]}
-                          y2={polar(CX, CY, R_OUTER + 18, slice.midAngle)[1]}
+                          x1={polar(CX, CY, R_OUTER + 4, midAngle)[0]}
+                          y1={polar(CX, CY, R_OUTER + 4, midAngle)[1]}
+                          x2={polar(CX, CY, R_OUTER + 18, midAngle)[0]}
+                          y2={polar(CX, CY, R_OUTER + 18, midAngle)[1]}
                           stroke={color}
                           strokeWidth={1.5}
                           opacity={0.7}
                         />
                         <text
-                          x={slice.labelX}
-                          y={slice.labelY}
-                          textAnchor={slice.labelAnchor}
+                          x={polar(CX, CY, R_OUTER + 22, midAngle)[0]}
+                          y={polar(CX, CY, R_OUTER + 22, midAngle)[1]}
+                          textAnchor={Math.cos(midAngle - Math.PI / 2) > 0 ? 'start' : 'end'}
                           dominantBaseline="middle"
                           fill={color}
                           fontSize={11}
@@ -228,7 +275,7 @@ function RadialChart() {
                         >
                           {CATEGORY_LABELS[slice.cat]}
                         </text>
-                      </motion.g>
+                      </g>
                     )}
                   </g>
                 );
@@ -236,7 +283,7 @@ function RadialChart() {
 
               {/* Centre label */}
               <text x={CX} y={CY - 14} textAnchor="middle" fill="#ffffff" fontSize={38} fontWeight={900}>
-                {total}
+                {displayTotal}
               </text>
               <text x={CX} y={CY + 16} textAnchor="middle" fill="#7f8c8d" fontSize={12}>
                 total score
@@ -249,8 +296,8 @@ function RadialChart() {
 
           {/* Legend */}
           <div className={styles.legend}>
-            {slices.map(slice => {
-              const pct = total > 0 ? ((slice.score / total) * 100).toFixed(1) : '0.0';
+            {renderState.map(slice => {
+              const pct = displayTotal > 0 ? ((slice.score / displayTotal) * 100).toFixed(1) : '0.0';
               const isHovered = hoveredCat === slice.cat;
               return (
                 <div
@@ -263,10 +310,13 @@ function RadialChart() {
                   <div className={styles.legendText}>
                     <span className={styles.legendName}>{CATEGORY_LABELS[slice.cat]}</span>
                     <div className={styles.legendBar}>
-                      <motion.div
+                      <div
                         className={styles.legendBarFill}
-                        animate={{ width: `${pct}%`, background: categoryColors[slice.cat] }}
-                        transition={{ duration: 0.85, ease: 'easeInOut' }}
+                        style={{
+                          width: `${pct}%`,
+                          background: categoryColors[slice.cat],
+                          transition: 'width 0.1s linear',
+                        }}
                       />
                     </div>
                   </div>
@@ -285,7 +335,7 @@ function RadialChart() {
           <button className={styles.controlButton} onClick={() => setIsPlaying(p => !p)}>
             {isPlaying ? 'Pause' : 'Play'}
           </button>
-          <button className={styles.controlButton} onClick={handleReplay} disabled={isPlaying}>
+          <button className={styles.controlButton} onClick={handleReplay}>
             Replay
           </button>
         </div>

@@ -1,8 +1,7 @@
 .chartContainer {
-  width: 100%;
   max-width: 520px;
-  margin: 0 auto;
   overflow: visible;
+  flex-shrink: 0;
 }
 
 .chart {

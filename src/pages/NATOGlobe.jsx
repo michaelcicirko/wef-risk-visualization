@@ -149,6 +149,11 @@ function NATOGlobe() {
     globeInstanceRef.current = g;
     // Apply initial colors immediately
     refreshGlobeColors();
+
+    return () => {
+      g._destructor?.();
+      globeInstanceRef.current = null;
+    };
   }, [worldData, refreshGlobeColors]);
 
   // ── Show label over country on globe ──

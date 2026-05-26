@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback, useMemo } from 'react';
+import { useState, useEffect, useCallback, useMemo, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { natoMembers, YEAR_START, YEAR_END, getNewMembersForYear } from '../data/natoMembers.js';
@@ -51,6 +51,9 @@ function NATOTimelineHorizontal() {
   const [year, setYear] = useState(YEAR_START);
   const [isPlaying, setIsPlaying] = useState(true);
   const [visibleMembers, setVisibleMembers] = useState([]);
+  const elapsedRef = useRef(0);
+  const runningRef = useRef(true);
+  const rafRef = useRef(null);
   
   // Calculate which members should be visible based on current year
   // Sort by year (chronological), then alphabetically within each year
@@ -66,9 +69,15 @@ function NATOTimelineHorizontal() {
   
   // Variable speed animation with dynamic timing
   useEffect(() => {
-    if (!isPlaying) return;
+    if (!isPlaying) {
+      runningRef.current = false;
+      if (rafRef.current) cancelAnimationFrame(rafRef.current);
+      return;
+    }
     
-    const startTime = Date.now();
+    runningRef.current = true;
+    const resumeFrom = elapsedRef.current;
+    const startTime = Date.now() - resumeFrom;
     
     // Calculate durations from TIME_SEGMENTS
     const segmentDurations = TIME_SEGMENTS.map(([start, end, speed]) => {
@@ -86,12 +95,16 @@ function NATOTimelineHorizontal() {
     }
     
     const animate = () => {
+      if (!runningRef.current) return;
+      
       const elapsed = Date.now() - startTime;
+      elapsedRef.current = elapsed;
       const lastSegmentEnd = segmentEndTimes[segmentEndTimes.length - 1] || TOTAL_DURATION;
       
       if (elapsed >= lastSegmentEnd) {
         setYear(YEAR_END);
         setIsPlaying(false);
+        runningRef.current = false;
         return;
       }
       
@@ -128,16 +141,26 @@ function NATOTimelineHorizontal() {
       }
       
       setYear(currentYear);
-      requestAnimationFrame(animate);
+      rafRef.current = requestAnimationFrame(animate);
     };
     
-    const animationId = requestAnimationFrame(animate);
-    return () => cancelAnimationFrame(animationId);
+    rafRef.current = requestAnimationFrame(animate);
+    return () => {
+      runningRef.current = false;
+      if (rafRef.current) cancelAnimationFrame(rafRef.current);
+    };
   }, [isPlaying]);
   
+  const handleToggle = useCallback(() => {
+    setIsPlaying(prev => !prev);
+  }, []);
+  
   const handleReplay = useCallback(() => {
+    runningRef.current = false;
+    if (rafRef.current) cancelAnimationFrame(rafRef.current);
     setYear(YEAR_START);
     setVisibleMembers([]);
+    elapsedRef.current = 0;
     setIsPlaying(true);
   }, []);
   
@@ -168,6 +191,20 @@ function NATOTimelineHorizontal() {
     <div className={styles.page}>
       <nav className={styles.nav}>
         <Link to="/" className={styles.backLink}>← Back to Dashboard</Link>
+        <div className={styles.navControls}>
+          <button 
+            className={styles.controlButton}
+            onClick={handleToggle}
+          >
+            {isPlaying ? 'Pause' : 'Play'}
+          </button>
+          <button 
+            className={styles.controlButton}
+            onClick={handleReplay}
+          >
+            Replay
+          </button>
+        </div>
       </nav>
 
       <header className={styles.header}>
@@ -241,23 +278,6 @@ function NATOTimelineHorizontal() {
               ))}
             </AnimatePresence>
           </motion.div>
-        </div>
-        
-        {/* Controls */}
-        <div className={styles.controls}>
-          <button 
-            className={styles.controlButton}
-            onClick={() => setIsPlaying(!isPlaying)}
-          >
-            {isPlaying ? 'Pause' : 'Play'}
-          </button>
-          <button 
-            className={styles.controlButton}
-            onClick={handleReplay}
-            disabled={isPlaying}
-          >
-            Replay
-          </button>
         </div>
         
         {/* Progress bar */}

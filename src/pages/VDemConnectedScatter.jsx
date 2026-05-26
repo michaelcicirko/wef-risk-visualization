@@ -3,7 +3,8 @@ import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { scaleLinear } from 'd3-scale';
 import { line, curveCatmullRom } from 'd3-shape';
-import { VDEM_DATA, VDEM_COUNTRIES, DEMOCRACY_INDICES } from '../data/vdemDemocracy.js';
+import { DEMOCRACY_INDICES } from '../data/vdemDemocracy.js';
+import { useVdemData } from '../data/useVdemData.js';
 import styles from './VDemConnectedScatter.module.css';
 
 const MARGIN = { top: 40, right: 120, bottom: 60, left: 70 };
@@ -21,6 +22,7 @@ const REGION_COLORS = {
 };
 
 function VDemConnectedScatter() {
+  const { data: VDEM_DATA, loading, error } = useVdemData();
   const [year, setYear] = useState(1950);
   const [isPlaying, setIsPlaying] = useState(false);
   const [xIndex, setXIndex] = useState('v2x_polyarchy');
@@ -33,18 +35,30 @@ function VDemConnectedScatter() {
   const xIndexInfo = DEMOCRACY_INDICES.find(d => d.key === xIndex);
   const yIndexInfo = DEMOCRACY_INDICES.find(d => d.key === yIndex);
 
+  const VDEM_COUNTRIES = useMemo(() => {
+    if (!VDEM_DATA) return [];
+    const seen = new Map();
+    VDEM_DATA.forEach(d => {
+      if (!seen.has(d.country_id)) seen.set(d.country_id, { id: d.country_id, name: d.country_name, code: d.country_text_id, region: d.region });
+    });
+    return Array.from(seen.values());
+  }, [VDEM_DATA]);
+
   // Get all years
   const years = useMemo(() => {
+    if (!VDEM_DATA) return [];
     const uniqueYears = [...new Set(VDEM_DATA.map(d => d.year))].sort((a, b) => a - b);
     return uniqueYears;
-  }, []);
+  }, [VDEM_DATA]);
 
   // Get data for current and trailing years
   const currentData = useMemo(() => {
+    if (!VDEM_DATA) return [];
     return VDEM_DATA.filter(d => d.year === year && d[xIndex] !== null && d[yIndex] !== null);
-  }, [year, xIndex, yIndex]);
+  }, [VDEM_DATA, year, xIndex, yIndex]);
 
   const trailData = useMemo(() => {
+    if (!VDEM_DATA) return {};
     const trailYears = [];
     for (let i = 0; i < trailLength; i++) {
       const trailYear = year - i;
@@ -54,7 +68,7 @@ function VDemConnectedScatter() {
     
     const data = {};
     trailYears.forEach(ty => {
-      const yearData = VDEM_DATA.filter(d => d.year === ty && d[xIndex] !== null && d[yIndex] !== null);
+      const yearData = (VDEM_DATA || []).filter(d => d.year === ty && d[xIndex] !== null && d[yIndex] !== null);
       yearData.forEach(d => {
         if (!data[d.country_id]) data[d.country_id] = [];
         data[d.country_id].push({
@@ -117,6 +131,9 @@ function VDemConnectedScatter() {
   const getCountryInfo = useCallback((countryId) => {
     return VDEM_COUNTRIES.find(c => c.id === countryId);
   }, []);
+
+  if (loading) return <div className={styles.container}>Loading data...</div>;
+  if (error) return <div className={styles.container}>Error loading data: {error}</div>;
 
   return (
     <div className={styles.container}>

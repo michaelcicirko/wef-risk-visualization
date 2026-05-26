@@ -70,6 +70,26 @@
   background: #f5f7f9;
 }
 
+.cardReviewed {
+  background: #e6f9e6;
+  border-color: #b2dfb2;
+}
+
+.cardReviewed:hover {
+  background: #d4f0d4;
+  border-color: #6cbf6c;
+}
+
+.cardPending {
+  background: #fce8e8;
+  border-color: #f0c0c0;
+}
+
+.cardPending:hover {
+  background: #f8d4d4;
+  border-color: #e08080;
+}
+
 .cardTitle {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   font-size: 0.8rem;

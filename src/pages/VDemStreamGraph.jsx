@@ -5,7 +5,7 @@ import { scaleLinear } from 'd3-scale';
 import { area, curveBasis } from 'd3-shape';
 import { stack, stackOffsetWiggle } from 'd3-shape';
 import { extent } from 'd3-array';
-import { VDEM_DATA } from '../data/vdemDemocracy.js';
+import { useVdemData } from '../data/useVdemData.js';
 import styles from './VDemStreamGraph.module.css';
 
 const MARGIN = { top: 40, right: 120, bottom: 60, left: 80 };
@@ -54,6 +54,7 @@ const REGIME_LABELS = {
 };
 
 function VDemStreamGraph() {
+  const { data: VDEM_DATA, loading, error } = useVdemData();
   const [isPlaying, setIsPlaying] = useState(false);
   const [highlightYear, setHighlightYear] = useState(1950);
   const [showPercent, setShowPercent] = useState(false);
@@ -61,8 +62,9 @@ function VDemStreamGraph() {
 
   // Process data
   const streamData = useMemo(() => {
+    if (!VDEM_DATA) return [];
     return processStreamData(VDEM_DATA);
-  }, []);
+  }, [VDEM_DATA]);
 
   // Scales
   const xScale = useMemo(() => {
@@ -173,9 +175,9 @@ function VDemStreamGraph() {
     };
   }, [highlightYear, streamData]);
 
-  if (streamData.length === 0) {
-    return <div className={styles.container}>Loading data...</div>;
-  }
+  if (loading) return <div className={styles.container}>Loading data...</div>;
+  if (error) return <div className={styles.container}>Error loading data: {error}</div>;
+  if (streamData.length === 0) return <div className={styles.container}>Loading data...</div>;
 
   return (
     <div className={styles.container}>
