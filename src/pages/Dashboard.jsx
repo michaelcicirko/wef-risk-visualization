@@ -241,31 +241,11 @@ const visualizations = [
       path: '/echarts-showcase'
     },
     {
-      id: 'sigma-graph',
-      title: 'Risk Knowledge Graph — Sigma.js',
-      description: 'WEF global risk interconnections rendered as a WebGL network by Sigma.js with ForceAtlas2 layout. Hover a node to highlight its causal connections. Filter by risk category. Node size encodes connection degree, edge width encodes causal strength.',
-      tag: 'WebGL · Graph · ForceAtlas2 · Sigma.js',
-      path: '/sigma-graph'
-    },
-    {
-      id: 'nivo-showcase',
-      title: 'Nivo Showcase — Marimekko · Circle Packing · Bump',
-      description: 'Three declarative React charts from Nivo with built-in spring animation: Marimekko (category width × risk height), Circle Packing (nested risk hierarchy), and Bump chart (rank trajectories 2026–2036). Switch year to animate transitions.',
-      tag: 'Nivo · Marimekko · Circle Packing · Bump',
-      path: '/nivo-showcase'
-    },
-    {
-      id: 'risk-map',
-      title: 'NATO Defence Spending Map — MapLibre GL',
-      description: 'WebGL choropleth map of all NATO members coloured by % GDP spent on defence. Click any country for details and spending data. Switch between 2021, 2022, and 2023 to see the dramatic post-Ukraine surge. No API key required.',
-      tag: 'MapLibre · WebGL Map · Choropleth · Geospatial',
-      path: '/risk-map'
-    },
-    {
       id: 'wmo-extreme-events',
       title: 'WMO Extreme Weather Events — Deck.gl Globe',
       description: '408 extreme weather events (Dec 2024–Jun 2026) from the World Meteorological Organisation visualized on an interactive 3D globe with 2D map toggle. Filter by event type, severity, and time. Click events for detailed impact descriptions. Hex clustering, 3D extruded columns for significant events.',
       tag: 'Deck.gl · 3D Globe · Geospatial · Time Filter',
+      status: 'reviewed',
       path: '/wmo-extreme-events'
     },
     {
@@ -273,6 +253,7 @@ const visualizations = [
       title: 'V-Dem Democracy Map',
       description: 'Animated world choropleth showing democracy scores across 202 countries from 1789–2025. Watch the spread of democracy through time with a year slider and play controls.',
       tag: 'Map · Choropleth · 237 Years',
+      status: 'reviewed',
       path: '/vdem-choropleth-map'
     },
     {

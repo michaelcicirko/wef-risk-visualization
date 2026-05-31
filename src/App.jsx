@@ -117,9 +117,6 @@ const BumpChart                     = lazy(() => import('./pages/BumpChart.jsx')
 const DotPlotMatrix                 = lazy(() => import('./pages/DotPlotMatrix.jsx'));
 const PackedCircles                 = lazy(() => import('./pages/PackedCircles.jsx'));
 const EChartsShowcase               = lazy(() => import('./pages/EChartsShowcase.jsx'));
-const SigmaGraph                    = lazy(() => import('./pages/SigmaGraph.jsx'));
-const NivoShowcase                  = lazy(() => import('./pages/NivoShowcase.jsx'));
-const RiskMap                       = lazy(() => import('./pages/RiskMap.jsx'));
 const WMOExtremeEvents              = lazy(() => import('./pages/WMOExtremeEvents.jsx'));
 const VDemChoroplethMap             = lazy(() => import('./pages/VDemChoroplethMap.jsx'));
 const VDemRidgelinePlot             = lazy(() => import('./pages/VDemRidgelinePlot.jsx'));
@@ -187,9 +184,6 @@ function App() {
         <Route path="/dot-plot-matrix" element={<DotPlotMatrix />} />
         <Route path="/packed-circles" element={<PackedCircles />} />
         <Route path="/echarts-showcase" element={<EChartsShowcase />} />
-        <Route path="/sigma-graph" element={<SigmaGraph />} />
-        <Route path="/nivo-showcase" element={<NivoShowcase />} />
-        <Route path="/risk-map" element={<RiskMap />} />
         <Route path="/wmo-extreme-events" element={<WMOExtremeEvents />} />
         <Route path="/vdem-choropleth-map" element={<VDemChoroplethMap />} />
         <Route path="/vdem-ridgeline-plot" element={<VDemRidgelinePlot />} />

@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import Globe from 'globe.gl';
 import { feature } from 'topojson-client';
-import { loadProcessedWMOData } from '../data/wmoExtremeEvents.js';
+import { loadProcessedWMOData, EVENT_TYPE_COLORS, EVENT_TYPE_ICONS } from '../data/wmoExtremeEvents.js';
 import styles from './WMOExtremeEvents.module.css';
 
 export default function WMOExtremeEvents() {
@@ -34,14 +34,12 @@ export default function WMOExtremeEvents() {
     const g = Globe()(globeContainerRef.current);
 
     g.backgroundColor('#0a0a14')
-      .showAtmosphere(true)
-      .atmosphereColor('#1a3a5a')
-      .atmosphereAltitude(0.1)
+      .showAtmosphere(false)
       .width(globeContainerRef.current.clientWidth)
       .height(globeContainerRef.current.clientHeight);
 
     g.controls().autoRotate = true;
-    g.controls().autoRotateSpeed = 0.5;
+    g.controls().autoRotateSpeed = 0.2;
 
     // Add landmass polygons
     const countries = feature(worldData, worldData.objects.countries);
@@ -59,23 +57,46 @@ export default function WMOExtremeEvents() {
     };
   }, [worldData]);
 
-  // Add event points when data loads
+  // Add event markers when data loads
   useEffect(() => {
     const g = globeInstanceRef.current;
     if (!g || events.length === 0) return;
 
-    g.pointsData(events)
-      .pointLat(d => d.position[1])
-      .pointLng(d => d.position[0])
-      .pointColor(d => d.color)
-      .pointRadius(d => 0.4 + d.severityScore * 0.2)
-      .pointAltitude(d => d.isMostSignificant ? 0.08 : 0.04)
-      .pointResolution(12)
-      .onPointClick(point => {
-        setSelectedEvent(point);
-        if (globeInstanceRef.current) {
-          globeInstanceRef.current.controls().autoRotate = false;
-        }
+    // Debug: log unique event types
+    const uniqueTypes = [...new Set(events.map(e => e.eventType))];
+    console.log('Event types in data:', uniqueTypes);
+    console.log('Available icons:', Object.keys(EVENT_TYPE_ICONS));
+
+    // Helper to create SVG icon
+    const createIcon = (event) => {
+      const path = EVENT_TYPE_ICONS[event.eventType] || EVENT_TYPE_ICONS['Other'];
+      const color = event.color || '#ffffff';
+      const size = event.isMostSignificant ? 32 : 24;
+      
+      return `
+        <svg width="${size}" height="${size}" viewBox="0 0 64 64">
+          <circle cx="32" cy="32" r="28" fill="${color}" opacity="0.85"/>
+          <path d="${path}" fill="white"/>
+        </svg>
+      `;
+    };
+
+    g.htmlElementsData(events)
+      .htmlLat(d => d.position[1])
+      .htmlLng(d => d.position[0])
+      .htmlAltitude(d => d.isMostSignificant ? 0.08 : 0.04)
+      .htmlElement(d => {
+        const el = document.createElement('div');
+        el.innerHTML = createIcon(d);
+        el.style.cursor = 'pointer';
+        el.style.pointerEvents = 'auto';
+        el.onclick = () => {
+          setSelectedEvent(d);
+          if (globeInstanceRef.current) {
+            globeInstanceRef.current.controls().autoRotate = false;
+          }
+        };
+        return el;
       });
   }, [events]);
 

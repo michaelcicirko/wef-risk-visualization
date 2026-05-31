@@ -127,12 +127,15 @@ function ParallelCoords() {
 // ── Chart 3: ThemeRiver — WEF Risk Category Flows ─────────────────────────
 function ThemeRiver() {
   const riverData = [];
+  // Data must be sorted by date first for ThemeRiver to work
   YEARS.forEach(y => {
-    CATEGORIES.forEach(cat => {
+    CATEGORIES.forEach((cat, idx) => {
       const total = (riskData[y] || []).filter(r => r.category === cat).reduce((s, r) => s + r.value, 0);
-      riverData.push([String(y), total, cat.charAt(0).toUpperCase() + cat.slice(1)]);
+      // Sort order by category index to maintain consistent river flow
+      riverData.push([String(y), total, cat.charAt(0).toUpperCase() + cat.slice(1), idx]);
     });
   });
+  console.log('ThemeRiver data:', riverData);
 
   const option = {
     backgroundColor: '#13131f',
@@ -149,17 +152,21 @@ function ThemeRiver() {
       top: 10,
     },
     singleAxis: {
-      top: 60, bottom: 50,
+      left: 60, right: 60,
+      top: 40, bottom: 40,
       type: 'category',
       data: YEARS.map(String),
       axisLine: { lineStyle: { color: '#3a3a5a' } },
-      axisLabel: { color: '#aaaacc', fontSize: 13, fontWeight: 'bold' },
+      axisLabel: { color: '#aaaacc', fontSize: 13, fontWeight: 'bold', margin: 10 },
+      splitLine: { show: true, lineStyle: { color: '#3a3a5a', type: 'dashed' } },
     },
     series: [{
       type: 'themeRiver',
+      orient: 'horizontal',
       data: riverData,
       emphasis: { focus: 'series' },
       label: { show: true, color: '#ffffff', fontSize: 10 },
+      itemStyle: { borderWidth: 0 },
       color: CAT_COLORS_ARR,
     }],
   };
@@ -168,7 +175,7 @@ function ThemeRiver() {
     <div className={styles.chartBox}>
       <div className={styles.chartTitle}>ThemeRiver — WEF Risk Category Flows</div>
       <div className={styles.chartSub}>Stream width encodes total category severity. Watch geopolitical give way to environmental by 2036.</div>
-      <ReactECharts option={option} style={{ height: 300 }} />
+      <ReactECharts option={option} style={{ height: 350, width: '100%' }} opts={{ renderer: 'canvas' }} notMerge={true} />
     </div>
   );
 }
