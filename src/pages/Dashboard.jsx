@@ -261,21 +261,8 @@ const visualizations = [
       title: 'V-Dem Ridgeline Plot',
       description: 'Distribution of democracy scores by decade showing how the global distribution has shifted from mostly autocratic (1800s) to mixed (2000s). Each ridge is a kernel density estimate.',
       tag: 'Distribution · Joy Plot · 24 Decades',
+      status: 'reviewed',
       path: '/vdem-ridgeline-plot'
-    },
-    {
-      id: 'vdem-stream-graph',
-      title: 'V-Dem Stream Graph',
-      description: 'Population living under different regime types over time — watch the democracy waves as billions of people transition from autocracy to democracy. Wiggle layout with animated timeline.',
-      tag: 'Stream · Population · Regime Types',
-      path: '/vdem-stream-graph'
-    },
-    {
-      id: 'vdem-connected-scatter',
-      title: 'V-Dem Connected Scatter',
-      description: 'Relationship between democracy dimensions over time — see how countries evolve on two indices simultaneously with animated trails. X/Y axis selectable.',
-      tag: 'Scatter · Trails · Dimensions',
-      path: '/vdem-connected-scatter'
     },
     {
       id: 'vdem-bump-chart',
@@ -289,6 +276,7 @@ const visualizations = [
       title: 'V-Dem Comparative Lines',
       description: 'Compare democracy trajectories across countries — select up to 8 countries to see how their scores diverge or converge over time. Multi-select with animated playback.',
       tag: 'Lines · Compare · Multi-Select',
+      status: 'reviewed',
       path: '/vdem-comparative-lines'
     },
     {
@@ -296,97 +284,31 @@ const visualizations = [
       title: 'V-Dem Country Profile',
       description: 'Deep-dive analysis for any country — all 6 democracy indices with sparklines, best/worst years, trends, and regional/global rankings. Country selector with quick compare.',
       tag: 'Profile · Deep-dive · Sparklines',
+      status: 'reviewed',
       path: '/vdem-country-profile'
-    },
-    {
-      id: 'vdem-hierarchy-tree',
-      title: 'V-Dem Hierarchy Tree',
-      description: 'WebGL 3D tree visualization of democracy indices — Liberal Democracy as root, branching into sub-components, regions, and 202 countries. Camera spirals through the structure with Reagraph.',
-      tag: '3D Tree · WebGL · Hierarchy',
-      path: '/vdem-hierarchy-tree'
     },
     {
       id: 'climate-candlestick',
       title: 'Climate Severity Candlestick',
       description: 'WMO extreme weather severity reframed as financial OHLC candlestick data — wicks represent theoretical max damage, bodies represent realized median. 260 weeks of synthesized climate severity rendered via Lightweight Charts.',
       tag: 'Candlestick · Canvas · Financial Metaphor',
+      status: 'reviewed',
       path: '/climate-candlestick'
-    },
-    {
-      id: 'nato-expenditure-stream',
-      title: 'NATO Defence Expenditure Stream',
-      description: 'Simulated daily defence burn rates across 32 NATO member states as a dense multi-series area chart. Over 35,000 data points rendered at 60fps via uPlot canvas engine. Drag to zoom.',
-      tag: 'uPlot · Canvas · High-frequency · Dense',
-      path: '/nato-expenditure-stream'
-    },
-    {
-      id: 'democracy-hierarchy-3d',
-      title: 'S&P 500 Sector Hierarchy — 3D Tree',
-      description: 'All 503 S&P 500 constituents arranged as a 3D top-down tree: Root → 11 GICS Sectors → 127 Sub-Industries → individual companies. Node size encodes group weight; colour encodes sector. Click any node for details. Rendered via Reagraph WebGL.',
-      tag: 'Reagraph · 3D Tree · WebGL · S&P 500',
-      path: '/democracy-hierarchy-3d'
-    },
-    {
-      id: 'risk-causality-flow',
-      title: 'WEF Risk Causality Flow',
-      description: 'Directed acyclic graph of WEF risk cascade — 15 global risks connected by causal pathways. Advance the policy timeline slider to reveal additional feedback loops as interventions fail. Powered by AntV G6.',
-      tag: 'AntV G6 · DAG · Animated · Timeline',
-      path: '/risk-causality-flow'
-    },
-    {
-      id: 'particle-migration',
-      title: 'Particle Migration Simulation',
-      description: '100k WebGL sprites as population particles — trigger a democratic collapse to activate Boids flocking/migration physics. Particles converge then scatter on recovery. Imperative PixiJS via useRef at 60fps.',
-      tag: 'PixiJS · WebGL · 100k Particles · Physics',
-      path: '/particle-migration'
-    },
-    {
-      id: 'risk-terrain',
-      title: 'WEF Risk Terrain',
-      description: '15 WEF risk severities drive Perlin noise amplitude on a 3D polygon mesh. Advance from 2026 to 2036 to watch terrain grow more volatile. Rendered in p5.js WebGL mode.',
-      tag: 'p5.js · WebGL · Perlin Noise · 3D Terrain',
-      path: '/risk-terrain'
     },
     {
       id: 'historical-democracy-sketch',
       title: 'Historical Democracy Sketch',
       description: 'Democracy scores rendered with high roughness for pre-1900 data, transitioning to crisp lines post-1950. Roughjs applied to D3-generated SVG paths — sketchy rendering evokes historical measurement uncertainty.',
       tag: 'roughjs · D3 · SVG · Sketch Style',
+      status: 'reviewed',
       path: '/historical-democracy-sketch'
-    },
-    {
-      id: 'cesium-weather-globe',
-      title: 'Cesium Weather Globe',
-      description: 'Photorealistic 3D globe with WMO extreme weather events rendered as volumetric CesiumJS cylinders. Click any event to fly the camera to its location. 8 real-world disaster events with severity-scaled height.',
-      tag: 'Resium · CesiumJS · 3D Globe · Volumetric',
-      path: '/cesium-weather-globe'
-    },
-    {
-      id: 'high-density-telemetry',
-      title: 'High-Density Telemetry',
-      description: '1M+ simulated barometric readings rendered as a density heatmap via Observable Plot. Cyclone event clusters emerge from Gaussian noise. Render time displayed in real-time.',
-      tag: 'Observable Plot · 1M Points · Density · Heatmap',
-      path: '/high-density-telemetry'
-    },
-    {
-      id: 'gpu-force-network',
-      title: 'GPU Force Network',
-      description: '2,000 micro-risk nodes with 5,000 edges rendered via Sigma.js WebGL. Adjust the gravity slider to invert clustering dynamics — watch risk categories separate and merge in real-time via ForceAtlas2.',
-      tag: 'Sigma.js · WebGL · ForceAtlas2 · Interactive',
-      path: '/gpu-force-network'
-    },
-    {
-      id: 'democracy-sonification',
-      title: 'Democracy Sonification',
-      description: 'V-Dem stability index mapped to Web Audio API oscillator frequency (80–800Hz). Lower democracy scores produce lower, ominous tones. Real-time frequency spectrum visualizer. Audio starts on user click.',
-      tag: 'Web Audio API · Sonification · Canvas · Interactive',
-      path: '/democracy-sonification'
     },
     {
       id: 'vdem-radar-clean',
       title: 'V-Dem Democracy Radar',
       description: '6 V-Dem democracy indices for 4 countries as overlapping radar polygons. Advance the year slider from 1970 to 2024 to watch each country\'s democratic profile morph over time. Pure SVG rendering.',
       tag: 'D3 · SVG · Radar Chart · Animated',
+      status: 'reviewed',
       path: '/vdem-radar-clean'
     },
     {
@@ -394,6 +316,7 @@ const visualizations = [
       title: 'Risk Pipeline Flow',
       description: 'Interactive node-based diagram mapping WEF systemic risk cascade. 12 risk nodes with severity readouts connected by 14 animated causal edges. Drag nodes to reorganise the flow. Powered by React Flow.',
       tag: '@xyflow/react · Node Graph · Interactive · Causal',
+      status: 'reviewed',
       path: '/risk-pipeline-flow'
     },
     {
@@ -401,6 +324,7 @@ const visualizations = [
       title: 'Plinko Distribution',
       description: 'Galton board simulation: synthetic data points fall through staggered pegs and sort into 5 WEF risk category bins. Live distribution forms as 300 balls cascade through Matter.js 2D physics.',
       tag: 'Matter.js · Physics · Distribution · Simulation',
+      status: 'reviewed',
       path: '/plinko-distribution'
     },
     {
@@ -408,6 +332,7 @@ const visualizations = [
       title: 'ASCII Terminal',
       description: 'Retro terminal with rotating ASCII globe (equirectangular-to-character projection) and risk time-series charts. CRT scanline overlay, phosphor green palette, authentic terminal chrome.',
       tag: 'ASCII · Custom Renderer · asciichart · CRT Aesthetic',
+      status: 'reviewed',
       path: '/ascii-terminal'
     },
     {
@@ -415,39 +340,15 @@ const visualizations = [
       title: 'Isotype Chart',
       description: 'Repeated SVG person icons forming bar lengths — one icon = N million affected. 5 humanitarian categories stagger-animate on timeline advance. Year slider from 2020 to 2024.',
       tag: 'SVG · Isotype · Pictogram · Animated',
+      status: 'reviewed',
       path: '/isotype-chart'
-    },
-    {
-      id: 'fluid-simulation',
-      title: 'Fluid Simulation',
-      description: 'Incompressible fluid via WebGL2 ping-pong FBO with GLSL advection shaders. Three coloured dye streams represent data migration flows. Click and drag to inject turbulence into the field.',
-      tag: 'WebGL2 · Navier-Stokes · GLSL · Interactive',
-      path: '/fluid-simulation'
-    },
-    {
-      id: 'maplibre-velocity',
-      title: 'MapLibre Velocity Layer',
-      description: '800 animated particles following a synthetic wind vector field over a light base map. Bilinear interpolation samples velocity at particle position. Trails fade and respawn at map edges.',
-      tag: 'MapLibre GL · Velocity · Particles · Geospatial',
-      path: '/maplibre-velocity'
-    },
-    {
-      id: 'webgpu-mass-data',
-      title: 'WebGPU Mass Data',
-      description: '1M+ simulated event density points with WebGPU feature detection. Falls back to OffscreenCanvas WebWorker rendering when WebGPU is unavailable. 5 synthetic clusters with additive colour blending.',
-      tag: 'WebGPU · Canvas · WebWorker · 1M Points',
-      path: '/webgpu-mass-data'
-    },
-    {
-      id: 'gpu-physics-network',
-      title: 'GPU Physics Network',
-      description: '10,000 risk micro-nodes with 25,000 edges. Gravity and repulsion sliders trigger visible clustering/explosion phase transitions via ForceAtlas2 web worker. Sigma.js WebGL rendering.',
-      tag: 'Sigma.js · WebGL · ForceAtlas2 · 10K Nodes',
-      path: '/gpu-physics-network'
     }
   ];
 
 function Dashboard() {
+  const reviewed = visualizations.filter(v => v.status === 'reviewed');
+  const buggy = visualizations.filter(v => v.status !== 'reviewed');
+
   return (
     <div className={styles.dashboard}>
       <header className={styles.header}>
@@ -459,16 +360,33 @@ function Dashboard() {
 
       <main className={styles.main}>
         <div className={styles.grid}>
-          {visualizations.map((viz) => (
-            <Link 
-              key={viz.id} 
-              to={viz.path} 
-              className={`${styles.card} ${viz.status === 'reviewed' ? styles.cardReviewed : styles.cardPending}`}
+          {reviewed.map((viz) => (
+            <Link
+              key={viz.id}
+              to={viz.path}
+              className={`${styles.card} ${styles.cardReviewed}`}
             >
               <span className={styles.cardTitle}>{viz.title}</span>
             </Link>
           ))}
         </div>
+
+        {buggy.length > 0 && (
+          <>
+            <h2 className={styles.buggyHeading}>Buggy</h2>
+            <div className={styles.grid}>
+              {buggy.map((viz) => (
+                <Link
+                  key={viz.id}
+                  to={viz.path}
+                  className={`${styles.card} ${styles.cardPending}`}
+                >
+                  <span className={styles.cardTitle}>{viz.title}</span>
+                </Link>
+              ))}
+            </div>
+          </>
+        )}
       </main>
 
       <footer className={styles.footer}>

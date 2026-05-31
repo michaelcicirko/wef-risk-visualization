@@ -42,12 +42,33 @@ function VDemRidgelinePlot() {
   const { data: VDEM_DATA, loading, error } = useVdemData();
   const [selectedIndex, setSelectedIndex] = useState('v2x_libdem');
   const [hoveredDecade, setHoveredDecade] = useState(null);
+  const [hoveredLegendPeriod, setHoveredLegendPeriod] = useState(null);
+
+  // Map legend period index to decade ranges
+  const getPeriodDecades = useCallback((periodIndex) => {
+    const periods = [
+      { start: 1780, end: 1899 },  // 1800s
+      { start: 1900, end: 1919 },  // 1900-1910s
+      { start: 1920, end: 1949 },  // 1920-1940s
+      { start: 1950, end: 1989 },  // 1950-1980s
+      { start: 1990, end: 2019 },  // 1990-2010s
+      { start: 2020, end: 2100 },  // 2020s+
+    ];
+    return periods[periodIndex];
+  }, []);
+
+  // Check if a decade is in the hovered legend period
+  const isInHoveredPeriod = useCallback((decade) => {
+    if (hoveredLegendPeriod === null) return true;
+    const period = getPeriodDecades(hoveredLegendPeriod);
+    return decade >= period.start && decade <= period.end;
+  }, [hoveredLegendPeriod, getPeriodDecades]);
 
   const selectedIndexInfo = DEMOCRACY_INDICES.find(d => d.key === selectedIndex);
 
   // Prepare data
   const decadeData = useMemo(() => {
-    if (!VDEM_DATA) return [];
+    if (!VDEM_DATA || VDEM_DATA.length === 0) return [];
     const grouped = groupByDecade(VDEM_DATA, selectedIndex);
     const decades = Object.keys(grouped).map(Number).sort((a, b) => a - b);
     
@@ -69,7 +90,7 @@ function VDemRidgelinePlot() {
         median: sortedScores[Math.floor(sortedScores.length / 2)]
       };
     }).filter(Boolean);
-  }, [selectedIndex]);
+  }, [selectedIndex, VDEM_DATA]);
 
   // Scales
   const xScale = useMemo(() => {
@@ -98,15 +119,19 @@ function VDemRidgelinePlot() {
       .defined(d => !isNaN(d[0]) && !isNaN(d[1]));
   }, [xScale]);
 
-  // Get color for decade (cool to warm gradient)
+  // Get color for decade (distinct color bands matching legend periods)
   const getDecadeColor = useCallback((decade, index) => {
-    const total = decadeData.length;
-    const t = index / (total - 1);
-    // Cool (blue) to warm (orange/red)
-    if (t < 0.33) return `rgba(100, 149, 237, ${hoveredDecade === decade ? 0.9 : 0.6})`; // Blue
-    if (t < 0.66) return `rgba(147, 112, 219, ${hoveredDecade === decade ? 0.9 : 0.6})`; // Purple
-    return `rgba(255, 140, 66, ${hoveredDecade === decade ? 0.9 : 0.6})`; // Orange
-  }, [decadeData.length, hoveredDecade]);
+    const opacity = hoveredDecade === decade ? 0.95 : 0.75;
+    
+    // Match legend period colors exactly
+    if (decade >= 1780 && decade <= 1899) return `rgba(66, 133, 244, ${opacity})`;    // Deep Blue (1800s)
+    if (decade >= 1900 && decade <= 1919) return `rgba(52, 168, 83, ${opacity})`;    // Green (1900-1910s)
+    if (decade >= 1920 && decade <= 1949) return `rgba(251, 188, 5, ${opacity})`;    // Yellow (1920-1940s)
+    if (decade >= 1950 && decade <= 1989) return `rgba(234, 67, 53, ${opacity})`;    // Red (1950-1980s)
+    if (decade >= 1990 && decade <= 2019) return `rgba(171, 71, 188, ${opacity})`;   // Purple (1990-2010s)
+    if (decade >= 2020) return `rgba(0, 150, 136, ${opacity})`;                  // Teal (2020s+)
+    return `rgba(127, 140, 141, ${opacity})`;  // Fallback gray
+  }, [hoveredDecade]);
 
   // Stats for hovered decade
   const hoveredStats = hoveredDecade ? decadeData.find(d => d.decade === hoveredDecade) : null;
@@ -205,15 +230,18 @@ function VDemRidgelinePlot() {
                 <motion.g
                   key={d.decade}
                   initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
+                  animate={{ 
+                    opacity: isInHoveredPeriod(d.decade) ? 1 : 0,
+                    y: 0 
+                  }}
                   exit={{ opacity: 0 }}
                   transition={{ delay: i * 0.03 }}
                   transform={`translate(0, ${yScale(d.decade)})`}
                   onMouseEnter={() => setHoveredDecade(d.decade)}
                   onMouseLeave={() => setHoveredDecade(null)}
                   className={styles.ridge}
+                  style={{ pointerEvents: isInHoveredPeriod(d.decade) ? 'auto' : 'none' }}
                 >
-                  {/* Area */}
                   <path
                     d={areaGenerator(d.density)}
                     fill={`url(#grad-${d.decade})`}
@@ -222,7 +250,6 @@ function VDemRidgelinePlot() {
                     transform="scale(1, -1)"
                   />
                   
-                  {/* Decade label */}
                   <text
                     x={MARGIN.left - 10}
                     y={0}
@@ -240,14 +267,26 @@ function VDemRidgelinePlot() {
 
           {/* Legend */}
           <div className={styles.legend}>
-            <div className={styles.legendTitle}>Time Period</div>
-            <div className={styles.legendGradient}>
-              <div className={styles.gradientBar} />
-            </div>
-            <div className={styles.legendLabels}>
-              <span>1780s</span>
-              <span>1900s</span>
-              <span>2020s</span>
+            <div className={styles.legendTitle}>Time Periods</div>
+            <div className={styles.legendBands}>
+              {['1800s', '1900-1910s', '1920-1940s', '1950-1980s', '1990-2010s', '2020s+'].map((label, idx) => (
+                <div 
+                  key={label}
+                  className={styles.legendBand} 
+                  style={{ 
+                    background: hoveredLegendPeriod === idx 
+                      ? ['rgba(66, 133, 244, 1)', 'rgba(52, 168, 83, 1)', 'rgba(251, 188, 5, 1)', 'rgba(234, 67, 53, 1)', 'rgba(171, 71, 188, 1)', 'rgba(0, 150, 136, 1)'][idx]
+                      : ['rgba(66, 133, 244, 0.6)', 'rgba(52, 168, 83, 0.6)', 'rgba(251, 188, 5, 0.6)', 'rgba(234, 67, 53, 0.6)', 'rgba(171, 71, 188, 0.6)', 'rgba(0, 150, 136, 0.6)'][idx],
+                    cursor: 'pointer',
+                    transform: hoveredLegendPeriod === idx ? 'scale(1.02)' : 'scale(1)',
+                    transition: 'all 0.2s ease'
+                  }}
+                  onMouseEnter={() => setHoveredLegendPeriod(idx)}
+                  onMouseLeave={() => setHoveredLegendPeriod(null)}
+                >
+                  <span>{label}</span>
+                </div>
+              ))}
             </div>
           </div>
         </div>
