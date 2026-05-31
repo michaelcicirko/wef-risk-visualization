@@ -106,7 +106,6 @@ const StreamChart                   = lazy(() => import('./pages/StreamChart.jsx
 const LollipopChart                 = lazy(() => import('./pages/LollipopChart.jsx'));
 const Sunburst                      = lazy(() => import('./pages/Sunburst.jsx'));
 const ArcDiagram                    = lazy(() => import('./pages/ArcDiagram.jsx'));
-const RidgelinePlot                 = lazy(() => import('./pages/RidgelinePlot.jsx'));
 const RadialBarChart                = lazy(() => import('./pages/RadialBarChart.jsx'));
 const SankeyChart                   = lazy(() => import('./pages/SankeyChart.jsx'));
 const ChordDiagram                  = lazy(() => import('./pages/ChordDiagram.jsx'));
@@ -114,11 +113,9 @@ const RadarChartPage                = lazy(() => import('./pages/RadarChart.jsx'
 const ForceGraph3D                  = lazy(() => import('./pages/ForceGraph3D.jsx'));
 const RiskBubbles3D                 = lazy(() => import('./pages/RiskBubbles3D.jsx'));
 const ScrollytellReport             = lazy(() => import('./pages/ScrollytellReport.jsx'));
-const PhysicsBubbles                = lazy(() => import('./pages/PhysicsBubbles.jsx'));
 const BumpChart                     = lazy(() => import('./pages/BumpChart.jsx'));
 const DotPlotMatrix                 = lazy(() => import('./pages/DotPlotMatrix.jsx'));
 const PackedCircles                 = lazy(() => import('./pages/PackedCircles.jsx'));
-const VizzuMorph                    = lazy(() => import('./pages/VizzuMorph.jsx'));
 const EChartsShowcase               = lazy(() => import('./pages/EChartsShowcase.jsx'));
 const SigmaGraph                    = lazy(() => import('./pages/SigmaGraph.jsx'));
 const NivoShowcase                  = lazy(() => import('./pages/NivoShowcase.jsx'));
@@ -152,6 +149,7 @@ const FluidSimulation               = lazy(() => import('./pages/FluidSimulation
 const MapLibreVelocity              = lazy(() => import('./pages/MapLibreVelocity.jsx'));
 const WebGPUMassData                = lazy(() => import('./pages/WebGPUMassData.jsx'));
 const GPUPhysicsNetwork2            = lazy(() => import('./pages/GPUPhysicsNetwork.jsx'));
+const AllianceArc                   = lazy(() => import('./pages/AllianceArc.jsx'));
 
 function App() {
   return (
@@ -178,7 +176,6 @@ function App() {
         <Route path="/lollipop-chart" element={<LollipopChart />} />
         <Route path="/sunburst" element={<Sunburst />} />
         <Route path="/arc-diagram" element={<ArcDiagram />} />
-        <Route path="/ridgeline-plot" element={<RidgelinePlot />} />
         <Route path="/radial-bar-chart" element={<RadialBarChart />} />
         <Route path="/sankey-chart" element={<SankeyChart />} />
         <Route path="/chord-diagram" element={<ChordDiagram />} />
@@ -186,11 +183,9 @@ function App() {
         <Route path="/force-graph-3d" element={<ForceGraph3D />} />
         <Route path="/risk-bubbles-3d" element={<RiskBubbles3D />} />
         <Route path="/scrollytell-report" element={<ScrollytellReport />} />
-        <Route path="/physics-bubbles" element={<PhysicsBubbles />} />
         <Route path="/bump-chart" element={<BumpChart />} />
         <Route path="/dot-plot-matrix" element={<DotPlotMatrix />} />
         <Route path="/packed-circles" element={<PackedCircles />} />
-        <Route path="/vizzu-morph" element={<VizzuMorph />} />
         <Route path="/echarts-showcase" element={<EChartsShowcase />} />
         <Route path="/sigma-graph" element={<SigmaGraph />} />
         <Route path="/nivo-showcase" element={<NivoShowcase />} />
@@ -224,6 +219,7 @@ function App() {
         <Route path="/maplibre-velocity" element={<MapLibreVelocity />} />
         <Route path="/webgpu-mass-data" element={<WebGPUMassData />} />
         <Route path="/gpu-physics-network" element={<GPUPhysicsNetwork2 />} />
+        <Route path="/alliance-arc" element={<AllianceArc />} />
       </Routes>
       </RouteErrorBoundary>
       </Suspense>

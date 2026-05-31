@@ -31,7 +31,6 @@ const FULL_DATA = buildGraphData(null);
 const ALL_EDGE_KEYS = new Set(riskEdges.map(e => `${e.source}→${e.target}`));
 const EDGE_LIST = riskEdges.map(e => `${e.source}→${e.target}`);
 
-const CAMERA_DISTANCE = 320;
 
 export default function ForceGraph3D() {
   const fgRef = useRef();
@@ -39,10 +38,10 @@ export default function ForceGraph3D() {
   const [dimensions, setDimensions] = useState({ w: 900, h: 600 });
   const [revealCount, setRevealCount] = useState(EDGE_LIST.length);
   const [isPlaying, setIsPlaying] = useState(false);
-  const [autoOrbit, setAutoOrbit] = useState(true);
   const [showParticles, setShowParticles] = useState(true);
   const [hoveredNode, setHoveredNode] = useState(null);
   const [clickedNode, setClickedNode] = useState(null);
+  const [cameraPos, setCameraPos] = useState({ x: 0, y: 0, z: 300 });
   const revealRef = useRef(EDGE_LIST.length);
 
   // Responsive sizing
@@ -55,22 +54,12 @@ export default function ForceGraph3D() {
     return () => obs.disconnect();
   }, []);
 
-  // Auto-orbit
-  useEffect(() => {
-    if (!fgRef.current || !autoOrbit) return;
-    let frame;
-    let angle = 0;
-    const orbit = () => {
-      angle += 0.003;
-      fgRef.current.cameraPosition({
-        x: CAMERA_DISTANCE * Math.sin(angle),
-        z: CAMERA_DISTANCE * Math.cos(angle),
-      });
-      frame = requestAnimationFrame(orbit);
-    };
-    frame = requestAnimationFrame(orbit);
-    return () => cancelAnimationFrame(frame);
-  }, [autoOrbit]);
+  // Zoom to fit once force simulation settles
+  const handleEngineStop = useCallback(() => {
+    if (fgRef.current) {
+      fgRef.current.zoomToFit(400, 50); // 400ms transition, 50px padding
+    }
+  }, []);
 
   // Replay animation
   useEffect(() => {
@@ -99,7 +88,6 @@ export default function ForceGraph3D() {
   // Node click — zoom to node
   const handleNodeClick = useCallback((node) => {
     setClickedNode(node);
-    setAutoOrbit(false);
     const dist = 80;
     const distRatio = 1 + dist / Math.hypot(node.x || 1, node.y || 1, node.z || 1);
     fgRef.current.cameraPosition(
@@ -111,7 +99,11 @@ export default function ForceGraph3D() {
 
   const handleBgClick = useCallback(() => {
     setClickedNode(null);
-    setAutoOrbit(true);
+  }, []);
+
+  // Track camera position changes
+  const handleCameraChange = useCallback((pos) => {
+    setCameraPos({ x: Math.round(pos.x), y: Math.round(pos.y), z: Math.round(pos.z) });
   }, []);
 
   // Neighbours of clicked/hovered node
@@ -172,7 +164,7 @@ export default function ForceGraph3D() {
         <p className={styles.subtitle}>
           15 WEF global risks as glowing nodes in 3D space, connected by causal links.
           Node size = connection degree. Click a node to zoom in and highlight neighbours.
-          Drag to orbit · Scroll to zoom · Click background to reset.
+          Drag nodes to reposition · Scroll to zoom · Right-click+drag to pan · Left-drag to orbit.
         </p>
       </header>
 
@@ -180,10 +172,6 @@ export default function ForceGraph3D() {
         {/* Controls bar */}
         <div className={styles.controlsBar}>
           <div className={styles.toggleGroup}>
-            <button
-              className={`${styles.toggle} ${autoOrbit ? styles.toggleOn : ''}`}
-              onClick={() => setAutoOrbit(p => !p)}
-            >Auto-orbit {autoOrbit ? 'ON' : 'OFF'}</button>
             <button
               className={`${styles.toggle} ${showParticles ? styles.toggleOn : ''}`}
               onClick={() => setShowParticles(p => !p)}
@@ -232,6 +220,9 @@ export default function ForceGraph3D() {
 
         {/* 3D Graph */}
         <div className={styles.graphWrapper} ref={containerRef}>
+          <div className={styles.coordOverlay}>
+            x: {cameraPos.x} | y: {cameraPos.y} | z: {cameraPos.z}
+          </div>
           <ForceGraph3DComponent
             ref={fgRef}
             width={dimensions.w}
@@ -257,6 +248,16 @@ export default function ForceGraph3D() {
             onBackgroundClick={handleBgClick}
             showNavInfo={false}
             enableNodeDrag={true}
+            enableZoom={true}
+            enablePan={true}
+            enableRotate={true}
+            onEngineStop={handleEngineStop}
+            onEngineTick={() => {
+              if (fgRef.current) {
+                const pos = fgRef.current.cameraPosition();
+                handleCameraChange(pos);
+              }
+            }}
             d3AlphaDecay={0.02}
             d3VelocityDecay={0.3}
             warmupTicks={60}

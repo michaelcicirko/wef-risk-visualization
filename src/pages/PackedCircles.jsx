@@ -127,8 +127,8 @@ export default function PackedCircles() {
         <div className={styles.chartWrapper}>
           <svg viewBox={`0 0 ${SVG_W} ${SVG_H}`} className={styles.svg}>
 
-            {/* Category cluster labels when clustered */}
-            {mode === 'clustered' && Object.entries(CLUSTER_POSITIONS).map(([cat, pos]) => (
+            {/* Category cluster labels when clustered - only show if has bubbles */}
+            {mode === 'clustered' && Object.entries(CLUSTER_POSITIONS).filter(([cat]) => nodes.some(n => n.category === cat)).map(([cat, pos]) => (
               <text
                 key={cat}
                 x={pos.x} y={pos.y - 70}
@@ -163,15 +163,13 @@ export default function PackedCircles() {
                       strokeWidth={isHov ? 2.5 : 1}
                       strokeOpacity={dimmed ? 0.2 : 0.8}
                     />
-                    {node.r >= 22 && (
-                      <text
-                        textAnchor="middle" dominantBaseline="central"
-                        fontSize={Math.min(node.r * 0.38, 12)}
-                        fill={dimmed ? 'transparent' : '#ffffff'}
-                        fontWeight={700}
-                        style={{ pointerEvents: 'none', userSelect: 'none' }}
-                      >#{node.rank}</text>
-                    )}
+                    <text
+                      textAnchor="middle" dominantBaseline="central"
+                      fontSize={Math.min(node.r * 0.4, 11)}
+                      fill={dimmed ? 'transparent' : '#ffffff'}
+                      fontWeight={700}
+                      style={{ pointerEvents: 'none', userSelect: 'none' }}
+                    >#{node.rank}</text>
                     {isHov && (
                       <text
                         y={node.r + 14}
@@ -190,9 +188,9 @@ export default function PackedCircles() {
           </svg>
         </div>
 
-        {/* Category legend */}
+        {/* Category legend - only show if has bubbles */}
         <div className={styles.legend}>
-          {Object.entries(categoryColors).map(([cat, color]) => (
+          {Object.entries(categoryColors).filter(([cat]) => nodes.some(n => n.category === cat)).map(([cat, color]) => (
             <div key={cat} className={styles.legendItem}>
               <span className={styles.legendDot} style={{ background: color }} />
               <span style={{ textTransform: 'capitalize' }}>{cat}</span>

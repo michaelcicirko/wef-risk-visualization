@@ -240,7 +240,7 @@ export default function DotPlotMatrix() {
                               strokeWidth={isHov ? 1.5 : 0.5}
                               strokeOpacity={0.5}
                             />
-                            {isHov && rank && (
+                            {rank && (
                               <text
                                 x={cx} y={cy + 3.5}
                                 textAnchor="middle" fontSize={8}

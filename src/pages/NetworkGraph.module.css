@@ -169,166 +169,44 @@
   color: #ffffff;
 }
 
-/* Category legend */
+/* Category legend / filter */
 .categoryLegend {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 8px;
   justify-content: center;
 }
 
-.legendItem {
+.catButton {
   display: flex;
   align-items: center;
   gap: 6px;
   font-size: 12px;
-  color: #aaaacc;
   text-transform: capitalize;
+  background: #13131f;
+  border: 1px solid #3a3a5a;
+  border-radius: 20px;
+  padding: 6px 14px;
+  cursor: pointer;
+  transition: all 0.2s;
+  color: #5a5a8a;
+}
+
+.catButton:hover {
+  background: #1e1e2e;
+}
+
+.catButtonActive {
+  background: #1a1a2e;
 }
 
 .legendDot {
-  width: 10px;
-  height: 10px;
+  width: 8px;
+  height: 8px;
   border-radius: 50%;
   flex-shrink: 0;
 }
 
-.legendLabel {
-  color: #aaaacc;
-}
-
-/* Controls */
-.controls {
-  display: flex;
-  gap: 12px;
-  justify-content: center;
-}
-
-.controlButton {
-  background: #1e1e2e;
-  color: #ffffff;
-  border: 1px solid #3a3a5a;
-  border-radius: 6px;
-  padding: 8px 20px;
-  font-size: 13px;
-  cursor: pointer;
-  transition: background 0.2s, border-color 0.2s;
-}
-
-.controlButton:hover {
-  background: #2a2a3a;
-  border-color: #5a5a8a;
-}
-
-.controlButton:disabled {
-  opacity: 0.4;
-  cursor: not-allowed;
-}
-
-/* Scrubber */
-.scrubberContainer {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.scrubberYear {
-  font-size: 11px;
-  color: #5a5a8a;
-  flex-shrink: 0;
-  font-variant-numeric: tabular-nums;
-}
-
-.scrubber {
-  flex: 1;
-  -webkit-appearance: none;
-  appearance: none;
-  height: 4px;
-  background: #2a2a4a;
-  border-radius: 2px;
-  outline: none;
-  cursor: pointer;
-}
-
-.scrubber::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  appearance: none;
-  width: 14px;
-  height: 14px;
-  border-radius: 50%;
-  background: #1a5276;
-  border: 2px solid #ffffff;
-  cursor: pointer;
-  transition: background 0.2s, transform 0.1s;
-}
-
-.scrubber::-webkit-slider-thumb:hover {
-  background: #2471a3;
-  transform: scale(1.2);
-}
-
-.scrubber::-moz-range-thumb {
-  width: 14px;
-  height: 14px;
-  border-radius: 50%;
-  background: #1a5276;
-  border: 2px solid #ffffff;
-  cursor: pointer;
-}
-
-/* Timing */
-.timingControls {
-  background: #1e1e2e;
-  border: 1px solid #2a2a3a;
-  border-radius: 8px;
-  padding: 16px;
-}
-
-.timingGrid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 12px;
-  margin-bottom: 12px;
-}
-
-.timingField {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-}
-
-.timingField label {
-  font-size: 11px;
-  color: #7f8c8d;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-}
-
-.timingField input {
-  background: #0d0d1a;
-  border: 1px solid #3a3a5a;
-  border-radius: 4px;
-  color: #ffffff;
-  padding: 6px 8px;
-  font-size: 13px;
-  width: 100%;
-  box-sizing: border-box;
-}
-
-.confirmButton {
-  background: #1a5276;
-  color: #ffffff;
-  border: none;
-  border-radius: 6px;
-  padding: 8px 24px;
-  font-size: 13px;
-  cursor: pointer;
-  transition: background 0.2s;
-}
-
-.confirmButton:hover {
-  background: #2471a3;
-}
 
 .footer {
   text-align: center;

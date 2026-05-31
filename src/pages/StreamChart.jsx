@@ -10,7 +10,7 @@ import styles from './StreamChart.module.css';
 
 const SVG_W = 820;
 const SVG_H = 480;
-const MARGIN = { top: 30, right: 30, bottom: 50, left: 52 };
+const MARGIN = { top: 30, right: 30, bottom: 50, left: 60 };
 const W = SVG_W - MARGIN.left - MARGIN.right;
 const H = SVG_H - MARGIN.top - MARGIN.bottom;
 
@@ -96,11 +96,11 @@ function StreamChart() {
   const visibleYears = STREAM_YEARS.slice(0, revealCount);
 
   // Clip-path progress: how far across the chart to reveal (0→W)
-  const clipX = revealCount >= TOTAL_POINTS
-    ? W
-    : revealCount === 0
-      ? 0
-      : xScale(STREAM_YEARS[Math.min(revealCount, TOTAL_POINTS - 1)]);
+  const clipX = revealCount <= 0
+    ? 0
+    : revealCount >= TOTAL_POINTS
+      ? W
+      : (xScale(STREAM_YEARS[revealCount - 1]) ?? 0);
 
   // ── Animation loop ──
   useEffect(() => {
@@ -207,11 +207,11 @@ function StreamChart() {
           >
             <defs>
               <clipPath id="revealClip">
-                <motion.rect
-                  x={0} y={-10}
-                  height={H + 40}
-                  animate={{ width: clipX + 4 }}
-                  transition={{ duration: 0.25, ease: 'linear' }}
+                <rect
+                  x={-2} y={-H}
+                  width={Math.max(0, clipX + 6)}
+                  height={H * 3}
+                  style={{ transition: 'width 0.25s linear' }}
                 />
               </clipPath>
             </defs>
@@ -272,6 +272,7 @@ function StreamChart() {
                 if (annIdx >= revealCount) return null;
                 const ax = xScale(ann.year);
                 const lines = ann.label.split('\n');
+                const alignLeft = ax < 60 ? true : ann.align === 'left';
                 return (
                   <g key={ann.year}>
                     <line
@@ -285,9 +286,9 @@ function StreamChart() {
                     {lines.map((line, li) => (
                       <text
                         key={li}
-                        x={ax + (ann.align === 'left' ? 5 : -5)}
+                        x={ax + (alignLeft ? 5 : -5)}
                         y={12 + li * 13}
-                        textAnchor={ann.align === 'left' ? 'start' : 'end'}
+                        textAnchor={alignLeft ? 'start' : 'end'}
                         fontSize={9}
                         fill="#7f8c8d"
                         style={{ userSelect: 'none', pointerEvents: 'none' }}
@@ -407,7 +408,7 @@ function StreamChart() {
           <button className={styles.controlButton} onClick={() => setIsPlaying(p => !p)}>
             {isPlaying ? 'Pause' : 'Play'}
           </button>
-          <button className={styles.controlButton} onClick={handleReplay} disabled={isPlaying}>
+          <button className={styles.controlButton} onClick={handleReplay}>
             Replay
           </button>
         </div>

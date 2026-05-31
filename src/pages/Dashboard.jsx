@@ -104,77 +104,88 @@ const visualizations = [
       title: 'Network Graph',
       description: 'Force-directed network of WEF global risk interconnections — causal links between risks reveal one by one, with hover to highlight connected nodes.',
       tag: 'Network · Force-directed · Causal Links',
-      path: '/network-graph'
+      path: '/network-graph',
+      status: 'reviewed'
     },
     {
       id: 'treemap',
       title: 'Treemap — NATO Defence Spending',
       description: 'Hierarchical rectangles where area encodes % of GDP spent on defence — grouped by region, colour-coded by spend level, with 2021/2022/2023 snapshots showing the post-Ukraine surge.',
       tag: 'Treemap · Hierarchy · Comparative',
-      path: '/treemap'
+      path: '/treemap',
+      status: 'reviewed'
     },
     {
       id: 'stream-chart',
       title: 'Stream Chart — NATO Spending Over Time',
       description: 'Flowing stacked areas showing regional defence spending from 2014–2023 — reveals the Wales Summit pledge, Trump-era pressure, and dramatic post-Ukraine surge. Three view modes: Stream, Proportional, Stacked.',
       tag: 'Stream Chart · Stacked Area · Time Series',
-      path: '/stream-chart'
+      path: '/stream-chart',
+      status: 'reviewed'
     },
     {
       id: 'lollipop-chart',
       title: 'Lollipop Chart — NATO Defence Spending Ranked',
       description: 'All 32 NATO members ranked by % GDP defence spending — stems grow up and dots pop in sequentially, highest first. Shows which members meet the 2% target across 2021, 2022, and 2023.',
       tag: 'Lollipop · Ranked · Comparative',
-      path: '/lollipop-chart'
+      path: '/lollipop-chart',
+      status: 'reviewed'
     },
     {
       id: 'sunburst',
       title: 'Sunburst Diagram — WEF Risk Hierarchy',
       description: 'Concentric ring chart: inner ring = risk categories, outer ring = individual risks. Arc area encodes severity score. Risks reveal one by one, transitions across 2026 / 2028 / 2036 with hover to isolate categories.',
       tag: 'Sunburst · Hierarchy · Radial',
-      path: '/sunburst'
+      path: '/sunburst',
+      status: 'reviewed'
     },
     {
       id: 'arc-diagram',
       title: 'Arc Diagram — WEF Risk Interconnections',
       description: '15 WEF global risks on a baseline connected by curved arcs — arc height encodes connection distance, stroke weight encodes strength. Reveals in narrative order: geopolitical → tech → societal → economic → environmental.',
       tag: 'Arc Diagram · Network · Causal Links',
-      path: '/arc-diagram'
+      path: '/arc-diagram',
+      status: 'reviewed'
     },
     {
-      id: 'ridgeline-plot',
-      title: 'Ridgeline Plot — WEF Risk Score Profiles',
-      description: 'Stacked overlapping area curves — one row per risk category, one layer per year (2026 / 2028 / 2036). Shows how each category\'s severity profile shifts over time, from geopolitical dominance in 2026 to environmental in 2036.',
-      tag: 'Ridgeline · Joy Plot · Temporal',
-      path: '/ridgeline-plot'
+      id: 'alliance-arc',
+      title: 'Alliance Network Evolution',
+      description: 'Global alliance agreements 1816–2024 from the Correlates of War dataset. 180 nations arranged by region along a baseline; arcs encode alliance type (mutual defense, entente, non-aggression). Scrub through history to watch blocs form and collapse.',
+      tag: 'Arc Diagram · Historical · CoW Dataset',
+      path: '/alliance-arc',
+      status: 'reviewed'
     },
     {
       id: 'radial-bar-chart',
       title: 'Radial Bar Chart — NATO Defence Spending',
       description: '32 NATO members arranged in a full circle, grouped by region. Each arc radiates outward proportional to % of GDP spent on defence. The dashed ring marks the 2% target. Arcs reveal clockwise across 2021, 2022, and 2023.',
       tag: 'Radial Bar · Circular · Comparative',
-      path: '/radial-bar-chart'
+      path: '/radial-bar-chart',
+      status: 'reviewed'
     },
     {
       id: 'sankey-chart',
       title: 'Sankey Diagram — WEF Risk Flows',
       description: 'Three-layer flow diagram: risk categories → individual risks → impact domains. Link width encodes severity score. Flows reveal left-to-right showing how geopolitical, environmental, and technological risks cascade into security, economic, and digital impacts.',
       tag: 'Sankey · Flow · Causal Pathways',
-      path: '/sankey-chart'
+      path: '/sankey-chart',
+      status: 'reviewed'
     },
     {
       id: 'chord-diagram',
-      title: 'Chord Diagram — WEF Risk Category Interactions',
-      description: 'Five WEF risk categories in a circle connected by ribbons — ribbon width encodes interaction strength between categories. Reveals chord by chord and transitions across 2026, 2028, 2036 to show shifting risk dominance patterns.',
-      tag: 'Chord · Circular · Cross-category',
-      path: '/chord-diagram'
+      title: 'Chord Diagram — Global Migration Flows',
+      description: '8 major global regions arranged in a circle connected by ribbons showing migration flows. Ribbon width encodes migrant count. Transitions across 1990, 1995, 2000, 2005, 2010, 2015, 2020, 2024 show shifting migration patterns.',
+      tag: 'Chord · Circular · Migration',
+      path: '/chord-diagram',
+      status: 'reviewed'
     },
     {
       id: 'radar-chart',
       title: 'Radar Chart — WEF Risk Category Profiles',
       description: 'Five-axis spider chart showing total severity per risk category. Overlay mode stacks all three years simultaneously; animated mode cycles 2026 → 2028 → 2036 with transitions. Clearly shows geopolitical dominance in 2026 giving way to environmental by 2036.',
       tag: 'Radar · Spider · Multi-year',
-      path: '/radar-chart'
+      path: '/radar-chart',
+      status: 'reviewed'
     },
     {
       id: 'force-graph-3d',
@@ -195,42 +206,32 @@ const visualizations = [
       title: 'Scrollytelling Report — The World\'s Greatest Risks',
       description: 'A full scroll-driven narrative report powered by GSAP ScrollTrigger. Three pinned sections reveal data as you scroll: top risks for 2026, category shift to 2036, and NATO defence spending progress — all in one cinematic journey.',
       tag: 'Scrollytelling · GSAP · Narrative · Advanced',
-      path: '/scrollytell-report'
-    },
-    {
-      id: 'physics-bubbles',
-      title: 'Physics Bubbles — WEF Risks',
-      description: 'WEF risks as rigid-body spheres with real Rapier WASM physics simulation. Change gravity (down, up, zero, chaos) or hit Explode to scatter the scene. GPU bloom glow. Click a bubble to inspect it.',
-      tag: '3D · Physics · Rapier · Advanced',
-      path: '/physics-bubbles'
+      path: '/scrollytell-report',
+      status: 'reviewed'
     },
     {
       id: 'bump-chart',
       title: 'Bump Chart — WEF Risk Rank Changes',
       description: 'Each line traces a risk\'s rank position across 2026, 2028, and 2036. Crossing lines reveal risks overtaking each other over the decade. Hover to isolate a single risk\'s trajectory. Animate or scrub the reveal.',
       tag: 'Bump Chart · Rank Trajectory · Time Series',
-      path: '/bump-chart'
+      path: '/bump-chart',
+      status: 'reviewed'
     },
     {
       id: 'dot-plot-matrix',
       title: 'Dot Plot Matrix — WEF Risk Scores',
       description: 'All WEF risks as rows, all three years as columns. Dot size encodes severity score. Sort by 2026 rank, 2036 rank, most-changed, or category. Hover any row to compare scores side-by-side across all years.',
       tag: 'Dot Plot · Matrix · Comparative',
-      path: '/dot-plot-matrix'
+      path: '/dot-plot-matrix',
+      status: 'reviewed'
     },
     {
       id: 'packed-circles',
       title: 'Packed Circles — WEF Risk Landscape',
       description: 'WEF risks as circles sized by severity, clustered by category using D3 force simulation. Switch between clustered view (risks group by category) and packed view (all risks collapse into one mass). Watch circles drift and re-settle in real time.',
       tag: 'Force Layout · Packed Circles · Clustered',
-      path: '/packed-circles'
-    },
-    {
-      id: 'vizzu-morph',
-      title: 'Chart Morphing Story — Vizzu',
-      description: 'A single canvas that fluidly morphs between six chart types: bar → grouped → stacked area → scatter → bubble → radial. The transition between charts IS the story. Powered by Vizzu — a C++ engine compiled to WebAssembly.',
-      tag: 'Morphing · WASM · Animated · Unique',
-      path: '/vizzu-morph'
+      path: '/packed-circles',
+      status: 'reviewed'
     },
     {
       id: 'echarts-showcase',

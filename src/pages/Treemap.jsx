@@ -69,7 +69,6 @@ function Treemap() {
   const [yearIndex, setYearIndex]       = useState(0);
   const [revealIndex, setRevealIndex]   = useState(0);
   const [isPlaying, setIsPlaying]       = useState(true);
-  const [flashingId, setFlashingId]     = useState(null);
   const [tooltip, setTooltip]           = useState(null);
   const [phase, setPhase]               = useState('reveal'); // 'reveal' | 'done'
 
@@ -123,8 +122,6 @@ function Treemap() {
       const leaf = allLeaves[idx];
       revealIndexRef.current += 1;
       setRevealIndex(revealIndexRef.current);
-      setFlashingId(leaf.data.id);
-      setTimeout(() => setFlashingId(null), 300);
       timeoutId = setTimeout(reveal, nodeRevealDelay);
     };
 
@@ -139,7 +136,6 @@ function Treemap() {
     setRevealIndex(0);
     setYearIndex(0);
     setPhase('reveal');
-    setFlashingId(null);
     setTimeout(() => setIsPlaying(true), 100);
   }, []);
 
@@ -150,7 +146,6 @@ function Treemap() {
     revealIndexRef.current = LAYOUTS[SNAPSHOT_YEARS[idx]].leaves().length;
     setRevealIndex(revealIndexRef.current);
     setPhase('done');
-    setFlashingId(null);
   }, []);
 
   // Stats for current year
@@ -231,9 +226,8 @@ function Treemap() {
                 const y = leaf.y0;
                 const w = leaf.x1 - leaf.x0;
                 const h = leaf.y1 - leaf.y0;
-                const isFlashing = flashingId === id;
                 const metPct = gdpPct >= NATO_TARGET_PCT;
-                const fillColor = isFlashing ? '#ff00ff' : getColor(gdpPct);
+                const fillColor = getColor(gdpPct);
 
                 return (
                   <motion.g
@@ -329,7 +323,7 @@ function Treemap() {
           <button className={styles.controlButton} onClick={() => setIsPlaying(p => !p)}>
             {isPlaying ? 'Pause' : 'Play'}
           </button>
-          <button className={styles.controlButton} onClick={handleReplay} disabled={isPlaying}>
+          <button className={styles.controlButton} onClick={handleReplay}>
             Replay
           </button>
         </div>

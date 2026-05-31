@@ -44,8 +44,6 @@
   flex-direction: column;
   padding: 0 24px 32px;
   gap: 14px;
-  max-width: 900px;
-  margin: 0 auto;
   width: 100%;
   box-sizing: border-box;
 }
@@ -82,12 +80,13 @@
 .statValue { font-size: 20px; font-weight: 900; color: #ffffff; }
 
 .chartWrapper {
-  background: #13131f;
-  border: 1px solid #2a2a4a;
+  background: transparent;
+  border: none;
   border-radius: 50%;
-  overflow: hidden;
-  width: min(560px, 100%);
+  overflow: visible;
+  width: min(600px, 100%);
   margin: 0 auto;
+  position: relative;
 }
 
 .svg { width: 100%; height: auto; display: block; }

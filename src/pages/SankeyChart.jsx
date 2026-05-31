@@ -5,9 +5,9 @@ import { sankey, sankeyLinkHorizontal, sankeyLeft } from 'd3-sankey';
 import { sankeyNodes, sankeyLinks, nodeColors, LINK_REVEAL_ORDER } from '../data/riskSankey.js';
 import styles from './SankeyChart.module.css';
 
-const SVG_W = 860;
+const SVG_W = 1200;
 const SVG_H = 500;
-const MARGIN = { top: 20, right: 20, bottom: 20, left: 20 };
+const MARGIN = { top: 20, right: 120, bottom: 20, left: 120 };
 const W = SVG_W - MARGIN.left - MARGIN.right;
 const H = SVG_H - MARGIN.top - MARGIN.bottom;
 

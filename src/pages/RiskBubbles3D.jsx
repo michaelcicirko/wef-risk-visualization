@@ -1,36 +1,29 @@
-import { useRef, useState, useMemo, useCallback, Suspense } from 'react';
+import { useRef, useState, useMemo, useCallback, useEffect, Suspense } from 'react';
 import { Link } from 'react-router-dom';
 import { Canvas, useFrame, useThree } from '@react-three/fiber';
-import { OrbitControls, Float, Text, Billboard, Stars, Environment } from '@react-three/drei';
+import { CameraControls, Float, Text, Billboard, Stars, Environment } from '@react-three/drei';
 import { EffectComposer, Bloom } from '@react-three/postprocessing';
 import * as THREE from 'three';
-import { riskData, categoryColors } from '../data/risks.js';
+import { topRiskCountries, riskClassColors, POSITION_SCALE, getBubbleRadius } from '../data/informRisk.js';
 import styles from './RiskBubbles3D.module.css';
 
-const TIME_STATES = [2026, 2028, 2036];
+const COUNTRIES = topRiskCountries;
+console.log('COUNTRIES loaded:', COUNTRIES.length, COUNTRIES[0]);
 
-// Spread bubbles across 3D space in a sphere distribution
-function buildPositions(n, seed = 42) {
-  const positions = [];
-  const phi = Math.PI * (Math.sqrt(5) - 1); // golden angle
-  for (let i = 0; i < n; i++) {
-    const y = 1 - (i / (n - 1)) * 2;
-    const r = Math.sqrt(1 - y * y);
-    const theta = phi * i;
-    positions.push([
-      r * Math.cos(theta) * 6,
-      y * 6,
-      r * Math.sin(theta) * 6,
-    ]);
-  }
-  return positions;
+// Build 3D position from risk dimensions: X=Hazard, Y=Vulnerability, Z=Coping
+function buildPosition(country) {
+  return [
+    country.hazard * POSITION_SCALE,
+    country.vulnerability * POSITION_SCALE,
+    country.coping * POSITION_SCALE,
+  ];
 }
 
-// Individual risk bubble
-function RiskBubble({ risk, position, isActive, isHovered, onClick, onPointerOver, onPointerOut }) {
+// Individual country bubble
+function CountryBubble({ country, position, isActive, isHovered, onClick, onPointerOver, onPointerOut }) {
   const meshRef = useRef();
-  const color = categoryColors[risk.category] || '#5a5a8a';
-  const radius = 0.18 + risk.value * 0.09;
+  const color = riskClassColors[country.riskClass] || '#5a5a8a';
+  const radius = getBubbleRadius(country.riskScore);
   const emissiveIntensity = isHovered ? 2.2 : isActive ? 1.4 : 0.6;
 
   useFrame((state) => {
@@ -64,15 +57,15 @@ function RiskBubble({ risk, position, isActive, isHovered, onClick, onPointerOve
         {/* Rank badge */}
         <Billboard>
           <Text
-            position={[0, radius + 0.18, 0]}
-            fontSize={0.2}
+            position={[0, radius + 0.3, 0]}
+            fontSize={0.18}
             color="#ffffff"
             anchorX="center"
             anchorY="middle"
             outlineWidth={0.02}
             outlineColor="#000000"
           >
-            #{risk.rank}
+            {country.id}
           </Text>
         </Billboard>
 
@@ -90,7 +83,7 @@ function RiskBubble({ risk, position, isActive, isHovered, onClick, onPointerOve
               outlineWidth={0.015}
               outlineColor="#000000"
             >
-              {risk.title}
+              {country.title}
             </Text>
           </Billboard>
         )}
@@ -99,23 +92,25 @@ function RiskBubble({ risk, position, isActive, isHovered, onClick, onPointerOve
   );
 }
 
-// Category cluster label
-function CategoryLabel({ category, position }) {
-  const color = categoryColors[category] || '#5a5a8a';
+// Data center for axis positioning (based on actual data cluster)
+const DATA_CENTER = [72, 72, 66]; // Center of 64-country dataset
+
+// 3D Axis labels - positioned at data cluster center, not origin
+function AxisLabels({ visible }) {
+  if (!visible) return null;
+  const [cx, cy, cz] = DATA_CENTER;
   return (
-    <Billboard position={position}>
-      <Text
-        fontSize={0.22}
-        color={color}
-        anchorX="center"
-        anchorY="middle"
-        outlineWidth={0.02}
-        outlineColor="#000000"
-        fontWeight={700}
-      >
-        {category.toUpperCase()}
-      </Text>
-    </Billboard>
+    <>
+      <Billboard position={[cx + 60, cy, cz]}>
+        <Text fontSize={2} color="#ff6b6b" anchorX="center">Hazard →</Text>
+      </Billboard>
+      <Billboard position={[cx, cy + 60, cz]}>
+        <Text fontSize={2} color="#4ecdc4" anchorX="center">Vulnerability →</Text>
+      </Billboard>
+      <Billboard position={[cx, cy, cz + 60]}>
+        <Text fontSize={2} color="#95e1d3" anchorX="center">Coping →</Text>
+      </Billboard>
+    </>
   );
 }
 
@@ -134,26 +129,30 @@ function AutoOrbit({ enabled }) {
 }
 
 // Main scene
-function Scene({ yearIndex, setHovered, hovered, setClicked, clicked, autoOrbit }) {
-  const risks = riskData[TIME_STATES[yearIndex]] || [];
-  const positions = useMemo(() => buildPositions(risks.length), [risks.length]);
+function Scene({ setHovered, hovered, setClicked, clicked, autoOrbit, showAxes, cameraControlsRef }) {
+  const countries = COUNTRIES;
+  const groupRef = useRef();
+  const positions = useMemo(() => 
+    countries.map(c => buildPosition(c)), 
+    [countries]
+  );
 
-  // Category centroid positions for labels
-  const catCentroids = useMemo(() => {
-    const cats = {};
-    risks.forEach((r, i) => {
-      if (!cats[r.category]) cats[r.category] = { sum: [0, 0, 0], count: 0 };
-      const p = positions[i] || [0, 0, 0];
-      cats[r.category].sum[0] += p[0];
-      cats[r.category].sum[1] += p[1];
-      cats[r.category].sum[2] += p[2];
-      cats[r.category].count += 1;
-    });
-    return Object.entries(cats).map(([cat, { sum, count }]) => ({
-      cat,
-      pos: sum.map(v => v / count + 0.5),
-    }));
-  }, [risks, positions]);
+  // Fit camera to all bubbles on initial load
+  useEffect(() => {
+    const fitCamera = () => {
+      if (cameraControlsRef?.current && groupRef.current) {
+        cameraControlsRef.current.fitToBox(groupRef.current, true, {
+          paddingLeft: 0.15,
+          paddingRight: 0.15,
+          paddingTop: 0.15,
+          paddingBottom: 0.15,
+        });
+      }
+    };
+    // Delay to ensure CameraControls is mounted
+    const timer = setTimeout(fitCamera, 300);
+    return () => clearTimeout(timer);
+  }, []);
 
   return (
     <>
@@ -161,24 +160,24 @@ function Scene({ yearIndex, setHovered, hovered, setClicked, clicked, autoOrbit 
       <ambientLight intensity={0.3} />
       <pointLight position={[10, 10, 10]} intensity={1.2} color="#ffffff" />
       <pointLight position={[-10, -5, -10]} intensity={0.5} color="#4444ff" />
-      <Stars radius={40} depth={30} count={2000} factor={3} fade speed={0.5} />
+      <Stars radius={25} depth={20} count={1000} factor={2} fade speed={0.5} />
 
-      {risks.map((risk, i) => (
-        <RiskBubble
-          key={risk.id}
-          risk={risk}
-          position={positions[i] || [0, 0, 0]}
-          isActive={!clicked || clicked === risk.id}
-          isHovered={hovered === risk.id}
-          onClick={() => setClicked(c => c === risk.id ? null : risk.id)}
-          onPointerOver={(e) => { e.stopPropagation(); setHovered(risk.id); }}
-          onPointerOut={() => setHovered(null)}
-        />
-      ))}
+      <group ref={groupRef} data-bounds>
+        {countries.map((country, i) => (
+          <CountryBubble
+            key={country.id}
+            country={country}
+            position={positions[i] || [0, 0, 0]}
+            isActive={!clicked || clicked === country.id}
+            isHovered={hovered === country.id}
+            onClick={() => setClicked(c => c === country.id ? null : country.id)}
+            onPointerOver={(e) => { e.stopPropagation(); setHovered(country.id); }}
+            onPointerOut={() => setHovered(null)}
+          />
+        ))}
+      </group>
 
-      {catCentroids.map(({ cat, pos }) => (
-        <CategoryLabel key={cat} category={cat} position={pos} />
-      ))}
+      <AxisLabels visible={showAxes} />
 
       <EffectComposer>
         <Bloom
@@ -192,14 +191,14 @@ function Scene({ yearIndex, setHovered, hovered, setClicked, clicked, autoOrbit 
 }
 
 export default function RiskBubbles3D() {
-  const [yearIndex, setYearIndex] = useState(0);
   const [autoOrbit, setAutoOrbit] = useState(true);
+  const [showAxes, setShowAxes] = useState(true);
   const [hovered, setHovered] = useState(null);
   const [clicked, setClicked] = useState(null);
+  const cameraControlsRef = useRef();
 
-  const currentYear = TIME_STATES[yearIndex];
-  const risks = riskData[currentYear] || [];
-  const focusRisk = clicked ? risks.find(r => r.id === clicked) : hovered ? risks.find(r => r.id === hovered) : null;
+  const countries = COUNTRIES;
+  const focusCountry = clicked ? countries.find(c => c.id === clicked) : hovered ? countries.find(c => c.id === hovered) : null;
 
   return (
     <div className={styles.page}>
@@ -208,52 +207,57 @@ export default function RiskBubbles3D() {
       </nav>
 
       <header className={styles.header}>
-        <h1 className={styles.title}>3D Risk Bubbles — WEF Global Risks</h1>
+        <h1 className={styles.title}>3D Risk Profile — INFORM Index 2026</h1>
         <p className={styles.subtitle}>
-          10 WEF global risks floating in 3D space as glowing spheres. Size = severity rank.
-          GPU bloom glow, spring physics, auto-orbit camera. Click a bubble to lock focus.
-          Drag to orbit · Scroll to zoom.
+          All countries by risk class positioned in 3D risk space.
+          X=Hazard & Exposure · Y=Vulnerability · Z=Coping Capacity · Size=Risk Score.
+          Drag to orbit · Scroll to zoom · Toggle axes for orientation.
         </p>
       </header>
 
       <main className={styles.main}>
         {/* Controls */}
         <div className={styles.controlsBar}>
-          <div className={styles.yearPills}>
-            {TIME_STATES.map((y, i) => (
-              <button
-                key={y}
-                className={`${styles.yearPill} ${i === yearIndex ? styles.yearPillActive : ''}`}
-                onClick={() => { setYearIndex(i); setClicked(null); }}
-              >{y}</button>
-            ))}
-          </div>
           <div className={styles.toggleGroup}>
             <button
               className={`${styles.toggle} ${autoOrbit ? styles.toggleOn : ''}`}
               onClick={() => setAutoOrbit(p => !p)}
             >Auto-orbit {autoOrbit ? 'ON' : 'OFF'}</button>
+            <button
+              className={`${styles.toggle} ${showAxes ? styles.toggleOn : ''}`}
+              onClick={() => setShowAxes(p => !p)}
+            >Axes {showAxes ? 'ON' : 'OFF'}</button>
+            <button
+              className={styles.replayButton}
+              onClick={() => {
+                if (cameraControlsRef.current) {
+                  cameraControlsRef.current.fitToBox(document.querySelector('[data-bounds]'), true, {
+                    paddingLeft: 0.1, paddingRight: 0.1, paddingTop: 0.1, paddingBottom: 0.1
+                  });
+                }
+              }}
+            >↺ Reset View</button>
           </div>
         </div>
 
         {/* Info card */}
-        <div className={`${styles.infoCard} ${focusRisk ? styles.infoCardVisible : ''}`}>
-          {focusRisk && (
+        <div className={`${styles.infoCard} ${focusCountry ? styles.infoCardVisible : ''}`}>
+          {focusCountry && (
             <>
               <span
                 className={styles.infoDot}
-                style={{ background: categoryColors[focusRisk.category] }}
+                style={{ background: riskClassColors[focusCountry.riskClass] }}
               />
-              <span className={styles.infoRank}>#{focusRisk.rank}</span>
-              <span className={styles.infoTitle}>{focusRisk.title}</span>
+              <span className={styles.infoTitle}>{focusCountry.title}</span>
               <span
                 className={styles.infoCat}
-                style={{ color: categoryColors[focusRisk.category] }}
-              >{focusRisk.category}</span>
-              <span className={styles.infoScore}>Score: {focusRisk.value}</span>
+                style={{ color: riskClassColors[focusCountry.riskClass] }}
+              >{focusCountry.riskClass}</span>
+              <span className={styles.infoScore}>Risk: {focusCountry.riskScore.toFixed(1)}</span>
+              <span className={styles.infoScore}>H:{focusCountry.hazard.toFixed(1)} V:{focusCountry.vulnerability.toFixed(1)} C:{focusCountry.coping.toFixed(1)}</span>
             </>
           )}
-          {!focusRisk && (
+          {!focusCountry && (
             <span className={styles.infoHint}>Hover or click a bubble to inspect</span>
           )}
         </div>
@@ -261,7 +265,7 @@ export default function RiskBubbles3D() {
         {/* 3D Canvas */}
         <div className={styles.canvasWrapper}>
           <Canvas
-            camera={{ position: [0, 0, 18], fov: 50 }}
+            camera={{ position: [60, 60, 100], fov: 60 }}
             gl={{ antialias: true, alpha: false }}
             dpr={[1, 2]}
             style={{ background: '#0d0d1a' }}
@@ -269,33 +273,40 @@ export default function RiskBubbles3D() {
           >
             <Suspense fallback={null}>
               <Scene
-                yearIndex={yearIndex}
                 setHovered={setHovered}
                 hovered={hovered}
                 setClicked={setClicked}
                 clicked={clicked}
                 autoOrbit={autoOrbit}
+                showAxes={showAxes}
               />
             </Suspense>
-            {!autoOrbit && <OrbitControls enablePan={false} minDistance={6} maxDistance={30} />}
+            <CameraControls
+              ref={cameraControlsRef}
+              enabled={!autoOrbit}
+              minDistance={30}
+              maxDistance={500}
+              dollySpeed={0.8}
+              truckSpeed={1.0}
+            />
           </Canvas>
         </div>
 
-        {/* Category legend */}
+        {/* Risk class legend */}
         <div className={styles.legend}>
-          {Object.entries(categoryColors).map(([cat, color]) => (
-            <div key={cat} className={styles.legendItem}>
+          {Object.entries(riskClassColors).map(([riskClass, color]) => (
+            <div key={riskClass} className={styles.legendItem}>
               <span className={styles.legendDot} style={{ background: color, boxShadow: `0 0 6px ${color}` }} />
-              <span style={{ textTransform: 'capitalize' }}>{cat}</span>
+              <span>{riskClass}</span>
             </div>
           ))}
           <div className={styles.legendItem}>
-            <span className={styles.legendNote}>Sphere size = severity score</span>
+            <span className={styles.legendNote}>Size = Risk Score · Position = Hazard/Vulnerability/Coping</span>
           </div>
         </div>
 
         <footer className={styles.footer}>
-          <p className={styles.source}>Source: WEF Global Risks Report 2025</p>
+          <p className={styles.source}>Source: INFORM Risk Index 2026 — Sample of 64 Countries</p>
         </footer>
       </main>
     </div>

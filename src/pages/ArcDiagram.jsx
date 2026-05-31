@@ -5,13 +5,13 @@ import { riskNodes, riskEdges, EDGE_REVEAL_ORDER } from '../data/riskNetwork.js'
 import { categoryColors } from '../data/risks.js';
 import styles from './ArcDiagram.module.css';
 
-const SVG_W = 860;
-const SVG_H = 480;
-const MARGIN = { top: 20, right: 30, bottom: 100, left: 30 };
+const SVG_W = 1200;
+const SVG_H = 540;
+const MARGIN = { top: 40, right: 60, bottom: 140, left: 60 };
 const W = SVG_W - MARGIN.left - MARGIN.right;
 const NODE_Y = SVG_H - MARGIN.bottom;
-const NODE_R = 9;
-const ARC_AREA_H = SVG_H - MARGIN.top - MARGIN.bottom - 20;
+const NODE_R = 10;
+const ARC_AREA_H = SVG_H - MARGIN.top - MARGIN.bottom - 40;
 
 // Sort nodes: group by category for cleaner arcs
 const CATEGORY_ORDER = ['geopolitical', 'economic', 'societal', 'technological', 'environmental'];
@@ -39,7 +39,7 @@ function arcPath(srcId, tgtId, strength) {
   const cx = (x1 + x2) / 2;
   // Arc height proportional to distance, capped
   const dist = Math.abs(x2 - x1);
-  const arcH = Math.min(dist * 0.55, ARC_AREA_H);
+  const arcH = Math.min(dist * 0.6, ARC_AREA_H);
   const cy = NODE_Y - arcH;
   return `M ${x1} ${NODE_Y} Q ${cx} ${cy} ${x2} ${NODE_Y}`;
 }
@@ -252,25 +252,28 @@ function ArcDiagram() {
                   />
                   {degree > 0 && (
                     <text
-                      y={-r - 4}
+                      y={-r - 6}
                       textAnchor="middle"
-                      fontSize={8}
+                      fontSize={10}
                       fill={color}
                       opacity={dimmed ? 0.2 : 0.8}
-                      style={{ userSelect: 'none', pointerEvents: 'none' }}
+                      style={{ userSelect: 'none', pointerEvents: 'none', fontWeight: 600 }}
                     >{degree}</text>
                   )}
-                  {/* Node labels below baseline */}
-                  {node.label.split('\n').map((line, li) => (
-                    <text
-                      key={li}
-                      y={r + 14 + li * 11}
-                      textAnchor="middle"
-                      fontSize={8.5}
-                      fill={dimmed ? '#3a3a5a' : isHighlighted ? '#ffffff' : '#aaaacc'}
-                      style={{ userSelect: 'none', pointerEvents: 'none', transition: 'fill 0.2s' }}
-                    >{line}</text>
-                  ))}
+                  {/* Rotated Node labels below baseline */}
+                  <g transform={`translate(0, ${r + 12}) rotate(45)`}>
+                    {node.label.split('\n').map((line, li) => (
+                      <text
+                        key={li}
+                        y={li * 13}
+                        textAnchor="start"
+                        fontSize={10.5}
+                        fontWeight={500}
+                        fill={dimmed ? '#3a3a5a' : isHighlighted ? '#ffffff' : '#aaaacc'}
+                        style={{ userSelect: 'none', pointerEvents: 'none', transition: 'fill 0.2s' }}
+                      >{line}</text>
+                    ))}
+                  </g>
                 </g>
               );
             })}

@@ -27,8 +27,8 @@ function RiskBarsSection({ sectionRef }) {
       scrollTrigger: {
         trigger: sectionRef.current,
         start: 'top 60%',
-        end: 'bottom 20%',
-        scrub: 1.2,
+        end: 'center center',
+        scrub: 0.8,
       },
     });
 
@@ -91,9 +91,9 @@ function CategorySection({ sectionRef }) {
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: sectionRef.current,
-        start: 'top 60%',
-        end: 'bottom 30%',
-        scrub: 1.5,
+        start: 'top 70%',
+        end: 'center center',
+        scrub: 0.8,
       },
     });
 
@@ -162,9 +162,9 @@ function NATOSection({ sectionRef }) {
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: sectionRef.current,
-        start: 'top 65%',
-        end: 'bottom 20%',
-        scrub: 1.4,
+        start: 'top 70%',
+        end: 'center center',
+        scrub: 0.8,
       },
     });
 

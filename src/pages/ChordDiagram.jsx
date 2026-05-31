@@ -3,66 +3,49 @@ import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { chord, chordDirected, ribbon, ribbonArrow } from 'd3-chord';
 import { arc } from 'd3-shape';
-import { categoryColors, riskData } from '../data/risks.js';
 import styles from './ChordDiagram.module.css';
 
-const SVG_W = 580;
-const SVG_H = 580;
+const SVG_W = 600;
+const SVG_H = 600;
 const CX = SVG_W / 2;
 const CY = SVG_H / 2;
-const OUTER_R = 230;
-const INNER_R = 210;
-const LABEL_R = OUTER_R + 22;
+const OUTER_R = 200;
+const INNER_R = 170;
+const LABEL_R = 260;
 
-const CATEGORIES = ['geopolitical', 'economic', 'societal', 'technological', 'environmental'];
-const TIME_STATES = [2026, 2028, 2036];
+const TIME_STATES = [1990, 1995, 2000, 2005, 2010, 2015, 2020, 2024];
 
-// Build 5×5 flow matrix from risk data
-// Matrix[i][j] = sum of risk values that flow from category i to category j
-// We define "flow" as: when a category has a risk in both years, it flows to its new category
-// For single-year: use cross-category interactions from riskNetwork edges (simplified)
-// Here we compute: how many risks from category i in this year appear in category j in next year
-// For single-year chord: use co-occurrence of risks in top-10 scoring
-// Approach: matrix[i][j] = combined score of risks shared between categories i and j
-// (using risk values as weights; diagonal = within-category total)
-
-function buildMatrix(year) {
-  const risks = riskData[year] || [];
-  const n = CATEGORIES.length;
+// Build region-to-region migration matrix
+// Returns { matrix, regions } where regions is array of region objects
+function buildMatrix(year, data) {
+  if (!data) return null;
+  
+  const snapshot = data.snapshots[year];
+  if (!snapshot) return null;
+  
+  // Use all regions from data
+  const regions = data.regions.map((region, idx) => ({ idx, ...region }));
+  const regionIndices = new Map(regions.map((r, i) => [i, i]));
+  const n = regions.length;
   const matrix = Array.from({ length: n }, () => new Array(n).fill(0));
-
-  // Diagonal: sum of risk values within each category
-  risks.forEach(r => {
-    const i = CATEGORIES.indexOf(r.category);
-    if (i >= 0) matrix[i][i] += r.value;
+  
+  // Build matrix from migration data
+  snapshot.forEach(([destIdx, origIdx, migrants]) => {
+    const i = destIdx;
+    const j = origIdx;
+    
+    if (i !== undefined && j !== undefined) {
+      matrix[i][j] += migrants;
+    }
   });
-
-  // Off-diagonal: pre-defined cross-category interaction weights
-  // Based on WEF interconnection relationships (geopolitical ↔ economic, etc.)
-  const interactions = [
-    [0, 1, 8], [0, 2, 6], [0, 3, 5], [0, 4, 3], // geo → eco, soc, tech, env
-    [1, 2, 7], [1, 3, 4], [1, 4, 3],              // eco → soc, tech, env
-    [2, 3, 5], [2, 4, 4],                          // soc → tech, env
-    [3, 4, 6],                                     // tech → env
-  ];
-
-  // Scale interactions by the year's total risk score
-  const totalScore = risks.reduce((s, r) => s + r.value, 0);
-  const scale = totalScore / 55; // baseline total for 2026
-
-  interactions.forEach(([i, j, w]) => {
-    const v = Math.round(w * scale * 10) / 10;
-    matrix[i][j] += v;
-    matrix[j][i] += v;
-  });
-
-  return matrix;
+  
+  return { matrix, regions };
 }
 
 // Compute chord layout for a given matrix
 function computeChords(matrix) {
   const chordGen = chord()
-    .padAngle(0.04)
+    .padAngle(0.06)
     .sortSubgroups((a, b) => b.value - a.value);
   return chordGen(matrix);
 }
@@ -70,14 +53,9 @@ function computeChords(matrix) {
 // Arc generator for outer segments
 const arcGen = arc();
 
-// Pre-compute all layouts
-const LAYOUTS = {};
-TIME_STATES.forEach(y => {
-  const matrix = buildMatrix(y);
-  LAYOUTS[y] = { matrix, chords: computeChords(matrix) };
-});
-
 function ChordDiagram() {
+  const [data, setData] = useState(null);
+  const [loading, setLoading] = useState(true);
   const revealRef = useRef(0);
   const [yearIndex, setYearIndex]     = useState(0);
   const [revealCount, setRevealCount] = useState(0);
@@ -92,15 +70,28 @@ function ChordDiagram() {
     chordRevealDelay: 180, holdDuration: 2200, initialHold: 700
   });
 
+  // ── Load data ──────────────────────────────────────────────────────────────
+  useEffect(() => {
+    fetch('/migration-data.json')
+      .then(r => r.json())
+      .then(d => {
+        setData(d);
+        setLoading(false);
+      });
+  }, []);
+
   const currentYear = TIME_STATES[yearIndex];
-  const { chords, matrix } = LAYOUTS[currentYear];
+  const layout = data ? buildMatrix(currentYear, data) : null;
+  const chords = layout ? computeChords(layout.matrix) : [];
+  const matrix = layout?.matrix || [];
+  const regions = layout?.regions || [];
   const TOTAL_CHORDS = chords.length;
 
   const visibleChords = useMemo(() => chords.slice(0, revealCount), [chords, revealCount]);
 
   // ── Animation loop ──
   useEffect(() => {
-    if (!isPlaying) return;
+    if (!isPlaying || !data || TOTAL_CHORDS === 0) return;
     let timeoutId;
 
     const reveal = () => {
@@ -127,7 +118,7 @@ function ChordDiagram() {
 
     timeoutId = setTimeout(reveal, initialHold);
     return () => clearTimeout(timeoutId);
-  }, [isPlaying, chordRevealDelay, holdDuration, initialHold, yearIndex, TOTAL_CHORDS]);
+  }, [isPlaying, chordRevealDelay, holdDuration, initialHold, yearIndex, TOTAL_CHORDS, data]);
 
   const handleReplay = useCallback(() => {
     setIsPlaying(false);
@@ -141,10 +132,13 @@ function ChordDiagram() {
   const handleYearClick = useCallback((idx) => {
     setIsPlaying(false);
     setYearIndex(idx);
-    revealRef.current = LAYOUTS[TIME_STATES[idx]].chords.length;
+    const year = TIME_STATES[idx];
+    const newLayout = data ? buildMatrix(year, data) : null;
+    const newChords = newLayout ? computeChords(newLayout.matrix) : [];
+    revealRef.current = newChords.length;
     setRevealCount(revealRef.current);
     setFlashIdx(null);
-  }, []);
+  }, [data]);
 
   const handleScrub = useCallback((val) => {
     setIsPlaying(false);
@@ -157,6 +151,25 @@ function ChordDiagram() {
   // Ribbon path generator
   const ribbonGen = ribbon().radius(INNER_R);
 
+  if (loading) {
+    return (
+      <div className={styles.page}>
+        <nav className={styles.nav}>
+          <Link to="/" className={styles.backLink}>← Back to Dashboard</Link>
+        </nav>
+        <div style={{ 
+          display: 'flex', 
+          alignItems: 'center', 
+          justifyContent: 'center', 
+          minHeight: '100vh',
+          color: '#7f8c8d'
+        }}>
+          <p>Loading migration data...</p>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div className={styles.page}>
       <nav className={styles.nav}>
@@ -164,11 +177,11 @@ function ChordDiagram() {
       </nav>
 
       <header className={styles.header}>
-        <h1 className={styles.title}>Chord Diagram — WEF Risk Category Interactions</h1>
+        <h1 className={styles.title}>Chord Diagram — Global Migration Flows</h1>
         <p className={styles.subtitle}>
-          Five WEF risk categories arranged in a circle. Ribbons show the strength of cross-category
-          interactions — wider ribbons = stronger relationship. Diagonal segments show within-category
-          severity. Transitions across 2026, 2028, 2036 show shifting risk dominance.
+          8 major global regions arranged in a circle. Ribbons show migration flows from origin to destination —
+          wider ribbons = more migrants. Colors indicate regional grouping.
+          Transitions across 1990, 1995, 2000, 2005, 2010, 2015, 2020, 2024 show shifting migration patterns.
         </p>
       </header>
 
@@ -192,6 +205,18 @@ function ChordDiagram() {
 
         {/* Chart */}
         <div className={styles.chartWrapper}>
+          {!layout && (
+            <div style={{ 
+              position: 'absolute', 
+              top: '50%', 
+              left: '50%', 
+              transform: 'translate(-50%, -50%)', 
+              textAlign: 'center',
+              color: '#7f8c8d'
+            }}>
+              <p>No alliance data for {currentYear}</p>
+            </div>
+          )}
           <svg
             viewBox={`0 0 ${SVG_W} ${SVG_H}`}
             className={styles.svg}
@@ -201,10 +226,10 @@ function ChordDiagram() {
 
               {/* Ribbons */}
               <AnimatePresence>
-                {visibleChords.map((c, i) => {
-                  const srcCat = CATEGORIES[c.source.index];
-                  const tgtCat = CATEGORIES[c.target.index];
-                  const color = categoryColors[srcCat] || '#5a5a8a';
+                {visibleChords?.map((c, i) => {
+                  const srcRegion = regions[c.source.index];
+                  const tgtRegion = regions[c.target.index];
+                  const color = srcRegion?.color || '#5a5a8a';
                   const isFlash = flashIdx === i;
                   const dimmed = hoveredGroup !== null &&
                     c.source.index !== hoveredGroup &&
@@ -238,11 +263,13 @@ function ChordDiagram() {
               </AnimatePresence>
 
               {/* Outer arc segments */}
-              {chords.groups.map(group => {
-                const cat = CATEGORIES[group.index];
-                const color = categoryColors[cat] || '#5a5a8a';
+              {chords?.groups?.map(group => {
+                const region = regions[group.index];
+                const color = region?.color || '#5a5a8d';
                 const isHov = hoveredGroup === group.index;
-                const dimmed = hoveredGroup !== null && !isHov;
+                const isConnected = hoveredGroup !== null && 
+                  (matrix?.[hoveredGroup]?.[group.index] > 0 || matrix?.[group.index]?.[hoveredGroup] > 0);
+                const dimmed = hoveredGroup !== null && !isHov && !isConnected;
 
                 const d = arcGen({
                   innerRadius: INNER_R + 4,
@@ -253,16 +280,20 @@ function ChordDiagram() {
 
                 // Label position
                 const midA = (group.startAngle + group.endAngle) / 2 - Math.PI / 2;
-                const lx = Math.cos(midA) * LABEL_R;
-                const ly = Math.sin(midA) * LABEL_R;
-                const flip = midA > 0 && midA < Math.PI;
-
-                // Score from matrix diagonal
-                const score = matrix[group.index][group.index];
+                
+                // Callout line start (at outer edge of arc)
+                const lineStartR = OUTER_R + 5;
+                const lineStartX = Math.cos(midA) * lineStartR;
+                const lineStartY = Math.sin(midA) * lineStartR;
+                
+                // Callout line end (at label position)
+                const lineEndR = LABEL_R - 10;
+                const lineEndX = Math.cos(midA) * lineEndR;
+                const lineEndY = Math.sin(midA) * lineEndR;
 
                 return (
                   <g
-                    key={cat}
+                    key={region?.idx || group.index}
                     style={{ cursor: 'pointer' }}
                     onMouseEnter={() => setHoveredGroup(group.index)}
                     onMouseLeave={() => setHoveredGroup(null)}
@@ -270,36 +301,22 @@ function ChordDiagram() {
                     <path
                       d={d}
                       fill={color}
-                      fillOpacity={dimmed ? 0.2 : isHov ? 1 : 0.85}
+                      fillOpacity={dimmed ? 0.2 : isHov ? 1 : isConnected ? 0.95 : 0.85}
                       stroke="#0d0d1a"
                       strokeWidth={1.5}
                       style={{ transition: 'fill-opacity 0.2s' }}
                     />
-                    {/* Category label */}
-                    <text
-                      x={lx} y={ly}
-                      textAnchor="middle"
-                      dominantBaseline="middle"
-                      fontSize={10}
-                      fontWeight={isHov ? 700 : 500}
-                      fill={dimmed ? '#3a3a5a' : isHov ? '#ffffff' : '#aaaacc'}
-                      style={{
-                        userSelect: 'none',
-                        textTransform: 'capitalize',
-                        transition: 'fill 0.2s',
-                      }}
-                    >{cat}</text>
-
-                    {/* Score badge on hover */}
-                    {isHov && (
-                      <text
-                        x={lx} y={ly + 12}
-                        textAnchor="middle"
-                        fontSize={8}
-                        fill={color}
-                        style={{ userSelect: 'none' }}
-                      >{score.toFixed(0)} pts</text>
-                    )}
+                    {/* Callout line */}
+                    <line
+                      x1={lineStartX}
+                      y1={lineStartY}
+                      x2={lineEndX}
+                      y2={lineEndY}
+                      stroke="#5a5a8a"
+                      strokeWidth={1}
+                      opacity={dimmed ? 0.1 : 0.4}
+                      style={{ transition: 'opacity 0.2s' }}
+                    />
                   </g>
                 );
               })}
@@ -310,25 +327,64 @@ function ChordDiagram() {
               >{currentYear}</text>
               <text textAnchor="middle" y={12} fontSize={10} fill="#7f8c8d"
                 style={{ userSelect: 'none' }}
-              >risk interactions</text>
+              >migration flows</text>
 
             </g>
           </svg>
+          
+          {/* HTML Labels - positioned absolutely over SVG */}
+          {chords?.groups?.map(group => {
+            const region = regions[group.index];
+            const isHov = hoveredGroup === group.index;
+            const isConnected = hoveredGroup !== null && 
+              (matrix?.[hoveredGroup]?.[group.index] > 0 || matrix?.[group.index]?.[hoveredGroup] > 0);
+            const dimmed = hoveredGroup !== null && !isHov && !isConnected;
+            
+            // Calculate position as percentage of SVG
+            const midA = (group.startAngle + group.endAngle) / 2 - Math.PI / 2;
+            const percentX = 50 + (Math.cos(midA) * LABEL_R / SVG_W) * 100;
+            const percentY = 50 + (Math.sin(midA) * LABEL_R / SVG_H) * 100;
+            
+            // Determine anchor side
+            const isRightSide = midA > -Math.PI/2 && midA < Math.PI/2;
+            
+            return (
+              <div
+                key={`label-${region?.idx || group.index}`}
+                style={{
+                  position: 'absolute',
+                  left: `${percentX}%`,
+                  top: `${percentY}%`,
+                  transform: isRightSide ? 'translateY(-50%)' : 'translate(-100%, -50%)',
+                  fontSize: '10px',
+                  fontWeight: isHov ? 700 : isConnected ? 600 : 500,
+                  color: dimmed ? '#3a3a5a' : isHov ? '#ffffff' : isConnected ? '#ffffff' : '#aaaacc',
+                  whiteSpace: 'nowrap',
+                  pointerEvents: 'none',
+                  userSelect: 'none',
+                  transition: 'color 0.2s',
+                  zIndex: 10,
+                }}
+              >
+                {region?.name || ''}
+              </div>
+            );
+          })}
         </div>
 
-        {/* Category legend */}
+        {/* Region legend */}
         <div className={styles.legend}>
-          {CATEGORIES.map(cat => (
+          {regions.slice(0, 12).map((region, i) => (
             <div
-              key={cat}
-              className={`${styles.legendItem} ${hoveredGroup === CATEGORIES.indexOf(cat) ? styles.legendItemActive : ''}`}
-              onMouseEnter={() => setHoveredGroup(CATEGORIES.indexOf(cat))}
+              key={region.idx}
+              className={`${styles.legendItem} ${hoveredGroup === i ? styles.legendItemActive : ''}`}
+              onMouseEnter={() => setHoveredGroup(i)}
               onMouseLeave={() => setHoveredGroup(null)}
             >
-              <span className={styles.legendDot} style={{ background: categoryColors[cat] }} />
-              <span style={{ textTransform: 'capitalize' }}>{cat}</span>
+              <span className={styles.legendDot} style={{ background: region?.color || '#7f8c8d' }} />
+              <span>{region.name}</span>
               <span className={styles.legendScore}>
-                {matrix[CATEGORIES.indexOf(cat)][CATEGORIES.indexOf(cat)].toFixed(0)}
+                {matrix?.[i]?.[i] || 0}
               </span>
             </div>
           ))}
@@ -387,7 +443,7 @@ function ChordDiagram() {
         </div>
 
         <footer className={styles.footer}>
-          <p className={styles.source}>Source: WEF Global Risks Report 2025 — Cross-category interaction model</p>
+          <p className={styles.source}>Source: Correlates of War Alliance Dataset v4.1 — 1816–2024</p>
         </footer>
       </main>
     </div>
